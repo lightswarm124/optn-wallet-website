@@ -1,0 +1,6 @@
+<!-- Save this as user-friendly.svg in the public/images directory -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100" height="100">
+  <circle cx="32" cy="24" r="12" fill="#66fcf1"/>
+  <path d="M24 44h16v4H24z" fill="#1f2833"/>
+  <path d="M16 48h32v4H16z" fill="#1f2833"/>
+</svg>

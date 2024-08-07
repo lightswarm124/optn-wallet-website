@@ -1,0 +1,6 @@
+<!-- Save this as explore-use-cases.svg in the public/images directory -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100" height="100">
+  <circle cx="32" cy="32" r="20" fill="#66fcf1"/>
+  <path d="M32 12a20 20 0 100 40 20 20 0 100-40zm0 36a16 16 0 110-32 16 16 0 010 32z" fill="#1f2833"/>
+  <path d="M32 24v16M24 32h16" stroke="#1f2833" stroke-width="2" stroke-linecap="round"/>
+</svg>

@@ -1,0 +1,6 @@
+<!-- Save this as rwa.svg in the public/images directory -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100" height="100">
+  <path d="M32 8l16 24H16L32 8z" fill="#66fcf1"/>
+  <rect x="24" y="32" width="16" height="24" rx="2" ry="2" fill="#66fcf1"/>
+  <path d="M28 36h8v4h-8zM28 44h8v4h-8z" fill="#1f2833"/>
+</svg>
