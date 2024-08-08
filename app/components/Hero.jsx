@@ -27,7 +27,7 @@ export default function Hero() {
             <button className="hero-button">Download for Android</button>
           </a>
         </Link>
-        <Link href="https://t.me/+u7yGBhnCEOo3NDIx" legacyBehavior>
+        <Link href="https://t.me/+KLBMsVW0xHY1YWI5" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer">
             <button className="hero-button bg-accent-primary text-background-dark">
               Join our Telegram

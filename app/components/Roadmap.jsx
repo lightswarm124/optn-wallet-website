@@ -14,9 +14,6 @@ export default function Roadmap() {
             <li>Explore initial test use cases:</li>
             <li>Non-custodial escrow / cross-chain swap.</li>
             <li>Multi-party transaction.</li>
-            <li>Real-world asset (RWA) control.</li>
-
-            <li>Establish foundational wallet features and user interface.</li>
           </ul>
         </div>
         <div className="p-6 bg-background-light text-gray-100 rounded-lg shadow-md">
@@ -30,6 +27,7 @@ export default function Roadmap() {
               flows.
             </li>
             <li>Conduct extensive testing and gather user feedback.</li>
+            <li>Establish foundational wallet features and user interface.</li>
           </ul>
         </div>
         <div className="p-6 bg-background-light text-gray-100 rounded-lg shadow-md">
@@ -42,9 +40,10 @@ export default function Roadmap() {
               On-board initial B2B users and clients for feedback and iterative
               improvements.
             </li>
+            <li>Real-world asset (RWA) control.</li>
             <li>
-              Launch comprehensive marketing campaign to attract individual and
-              institutional users.
+              Launch marketing campaign to attract individual and institutional
+              users.
             </li>
           </ul>
         </div>

@@ -1,7 +1,7 @@
 <!-- Save this as secure-transactions.svg in the public/images directory -->
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" width="100" height="100">
   <rect x="12" y="20" width="40" height="24" rx="4" ry="4" fill="#66fcf1"/>
-  <path d="M22 28h20v8H22z" fill="#1f2833"/>
-  <path d="M28 20v-4a4 4 0 018 0v4" fill="none" stroke="#1f2833" stroke-width="2"/>
+  <path d="M22 28h20v8H22z" fill="#ffffff"/>
+  <path d="M28 20v-4a4 4 0 018 0v4" fill="none" stroke="#ffffff" stroke-width="2"/>
   <path d="M28 20h8v4h-8z" fill="#c5c6c7"/>
 </svg>

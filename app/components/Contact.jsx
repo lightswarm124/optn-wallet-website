@@ -7,7 +7,7 @@ export default function Contact() {
           Join our Telegram group for the latest updates and support:
         </p>
         <a
-          href="https://t.me/+u7yGBhnCEOo3NDIx"
+          href="https://t.me/+KLBMsVW0xHY1YWI5"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent-primary hover:text-accent-secondary"
