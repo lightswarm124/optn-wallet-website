@@ -9,14 +9,13 @@ export default function Roadmap() {
           <h3 className="text-xl font-semibold mb-4">
             Phase 1: Development and Testing
           </h3>
-          <ul className="list-disc pl-6">
+          <ul className="list-disc pl-6 space-y-2">
             <li>Develop covenant transactions on Bitcoin Cash (BCH).</li>
             <li>Explore initial test use cases:</li>
-            <ul className="list-disc pl-6">
-              <li>Non-custodial escrow / cross-chain swap.</li>
-              <li>Multi-party transaction.</li>
-              <li>Real-world asset (RWA) control.</li>
-            </ul>
+            <li>Non-custodial escrow / cross-chain swap.</li>
+            <li>Multi-party transaction.</li>
+            <li>Real-world asset (RWA) control.</li>
+
             <li>Establish foundational wallet features and user interface.</li>
           </ul>
         </div>
@@ -24,7 +23,7 @@ export default function Roadmap() {
           <h3 className="text-xl font-semibold mb-4">
             Phase 2: Expansion and Integration
           </h3>
-          <ul className="list-disc pl-6">
+          <ul className="list-disc pl-6 space-y-2">
             <li>Extend support to Bitcoin Core (BTC).</li>
             <li>
               Develop marketplace for user-friendly transaction interfaces and
@@ -37,7 +36,7 @@ export default function Roadmap() {
           <h3 className="text-xl font-semibold mb-4">
             Phase 3: Broader Adoption
           </h3>
-          <ul className="list-disc pl-6">
+          <ul className="list-disc pl-6 space-y-2">
             <li>Integrate Ethereum (ETH) and other EVM-compatible chains.</li>
             <li>
               On-board initial B2B users and clients for feedback and iterative
