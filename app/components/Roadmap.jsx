@@ -10,10 +10,10 @@ export default function Roadmap() {
             Phase 1: Development and Testing
           </h3>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Develop covenant transactions on Bitcoin Cash (BCH).</li>
-            <li>Explore initial test use cases:</li>
-            <li>Non-custodial escrow / cross-chain swap.</li>
-            <li>Multi-party transaction.</li>
+            <li>Develop covenant transactions on Bitcoin Cash (BCH)</li>
+            <li>Explore initial covenant use cases</li>
+            <li>Non-custodial escrow / cross-chain swap</li>
+            <li>Set up multi-party transaction</li>
           </ul>
         </div>
         <div className="p-6 bg-background-light text-gray-100 rounded-lg shadow-md">
@@ -21,13 +21,10 @@ export default function Roadmap() {
             Phase 2: Expansion and Integration
           </h3>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Extend support to Bitcoin Core (BTC).</li>
-            <li>
-              Develop marketplace for user-friendly transaction interfaces and
-              flows.
-            </li>
-            <li>Conduct extensive testing and gather user feedback.</li>
-            <li>Establish foundational wallet features and user interface.</li>
+            <li>Extend support to Bitcoin Core (BTC)</li>
+            <li>Integrate Ethereum (ETH) and other EVM-compatible chains</li>
+            <li>Conduct beta testing and gather feedback</li>
+            <li>Establish foundational wallet features and user interface</li>
           </ul>
         </div>
         <div className="p-6 bg-background-light text-gray-100 rounded-lg shadow-md">
@@ -35,15 +32,13 @@ export default function Roadmap() {
             Phase 3: Broader Adoption
           </h3>
           <ul className="list-disc pl-6 space-y-2">
-            <li>Integrate Ethereum (ETH) and other EVM-compatible chains.</li>
+            <li>Develop marketplace for user-friendly covenant interfaces</li>
+            <li>On-board initial retail / B2B users for feedback</li>
             <li>
-              On-board initial B2B users and clients for feedback and iterative
-              improvements.
+              Get pilot projects to explore real world asset (RWA) control
             </li>
-            <li>Real-world asset (RWA) control.</li>
             <li>
-              Launch marketing campaign to attract individual and institutional
-              users.
+              Provide supporting blockchain infrastructure for wallet features
             </li>
           </ul>
         </div>
