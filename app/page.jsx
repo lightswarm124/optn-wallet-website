@@ -4,6 +4,7 @@ import Features from "./components/Features";
 import Roadmap from "./components/Roadmap";
 import UseCases from "./components/UseCases";
 import Contact from "./components/Contact";
+import Resources from "./components/Resources";
 
 export default function Home() {
   return (
@@ -24,6 +25,9 @@ export default function Home() {
         </div>
         <div className="gradient-section">
           <UseCases />
+        </div>
+        <div>
+          <Resources />
         </div>
         <div className="gradient-section">
           <Contact />
