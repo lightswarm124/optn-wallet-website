@@ -3,7 +3,7 @@ export default function Contact() {
     <section id="contact" className="section text-center">
       <h2 className="text-3xl font-semibold text-center mb-12">Contact Us</h2>
       <div className="text-center">
-        <p className="mb-4">
+        <p className="m-4">
           Join our Telegram group for the latest updates and support:
         </p>
         <a
@@ -14,7 +14,7 @@ export default function Contact() {
         >
           Telegram Group
         </a>
-        <p className="mt-4">
+        <p className="m-4">
           Check out our GitHub repository for the latest code and documentation:
         </p>
         <a

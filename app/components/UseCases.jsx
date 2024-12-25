@@ -18,11 +18,10 @@ export default function UseCases() {
             />
           </div>
           <h3 className="mt-4 text-xl font-semibold">
-            Non-Custodial Escrow / Cross-Chain Swap
+            Non-Custodial Escrow
           </h3>
           <p className="mt-2">
-            Enable secure, trustless escrow services and cross-chain
-            transactions without relying on third-party custodians.
+            Enable secure, trustless escrow services without storing funds with third-party custodians.
           </p>
         </div>
         <div className="text-center">

@@ -12,7 +12,7 @@ export default function Roadmap() {
           <ul className="list-disc pl-6 space-y-2">
             <li>Develop covenant transactions on Bitcoin Cash (BCH)</li>
             <li>Explore initial covenant use cases</li>
-            <li>Non-custodial escrow / cross-chain swap</li>
+            <li>Non-custodial escrow</li>
             <li>Set up multi-party transaction</li>
           </ul>
         </div>
@@ -24,7 +24,7 @@ export default function Roadmap() {
             <li>Extend support to Bitcoin Core (BTC)</li>
             <li>Integrate Ethereum (ETH) and other EVM-compatible chains</li>
             <li>Conduct beta testing and gather feedback</li>
-            <li>Establish foundational wallet features and user interface</li>
+            <li>Refine basic wallet features and user interface</li>
           </ul>
         </div>
         <div className="p-6 bg-background-light text-gray-100 rounded-lg shadow-md">

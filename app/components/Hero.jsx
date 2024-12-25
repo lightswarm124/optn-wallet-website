@@ -14,9 +14,7 @@ export default function Hero() {
         />
       </div>
       <p className="hero-description text-lg mb-8 max-w-xl mx-auto mt-4">
-        OPTN is a revolutionary crypto wallet focused on building Bitcoin
-        covenants on Bitcoin Core (BTC) and Bitcoin Cash (BCH). The wallet is
-        currently in alpha development phase.
+        OPTN is a revolutionary crypto wallet focused on covenant transactions on Bitcoin Cash (BCH). The wallet is currently in beta development and testing phase, with plans to support Bitcoin Core (BTC) covenants.
       </p>
       <div className="flex space-x-4 justify-center">
         <Link
@@ -30,7 +28,7 @@ export default function Hero() {
         <Link href="https://t.me/+KLBMsVW0xHY1YWI5" legacyBehavior>
           <a target="_blank" rel="noopener noreferrer">
             <button className="hero-button bg-accent-primary text-background-dark">
-              Join our Telegram
+              Join Telegram
             </button>
           </a>
         </Link>

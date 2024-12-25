@@ -19,8 +19,7 @@ export default function Features() {
           </div>
           <h3 className="mt-4 text-xl font-semibold">Secure Transactions</h3>
           <p className="mt-2">
-            Utilizing Bitcoin covenants to ensure secure, non-custodial
-            transactions.
+            Utilize covenant transactions to enforce transactions intent, with or without custodial support.
           </p>
         </div>
         <div className="text-center">
@@ -34,7 +33,7 @@ export default function Features() {
           </div>
           <h3 className="mt-4 text-xl font-semibold">User Friendly</h3>
           <p className="mt-2">
-            Designed with a user-friendly interface to enhance user experience.
+            User-friendly interface design to enhance experience with custom transaction setup.
           </p>
         </div>
         <div className="text-center">
@@ -48,8 +47,7 @@ export default function Features() {
           </div>
           <h3 className="mt-4 text-xl font-semibold">Explore Use Cases</h3>
           <p className="mt-2">
-            Supporting a variety of use cases including multi-party transactions
-            and asset management.
+            Supporting a variety of use cases including multi-party transactions and enforcing transaction recipients.
           </p>
         </div>
       </div>
