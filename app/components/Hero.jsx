@@ -18,7 +18,7 @@ export default function Hero() {
       </p>
       <div className="flex space-x-4 justify-center">
         <Link
-          href="https://github.com/BitcoinBay/OPTNWallet/releases/tag/v0.1-beta"
+          href="https://github.com/BitcoinBay/OPTNWallet/releases/tag/v0.3-alpha"
           legacyBehavior
         >
           <a target="_blank" rel="noopener noreferrer">
