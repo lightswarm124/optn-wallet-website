@@ -6,7 +6,7 @@ import realWorldAssetSvg from "../../public/images/real-world-asset.svg";
 export default function UseCases() {
   return (
     <section id="use-cases" className="section text-center">
-      <h2 className="text-3xl font-semibold text-center mb-12">Use Cases</h2>
+      <h2 className="text-3xl font-semibold text-center mb-12">Covenant Use Cases</h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="text-center">
           <div className="flex justify-center">

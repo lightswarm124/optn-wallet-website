@@ -2,7 +2,7 @@ export default function Roadmap() {
   return (
     <section id="roadmap" className="section text-center">
       <h2 className="text-3xl font-semibold text-center mb-12">
-        Product Roadmap
+        OPTN Roadmap
       </h2>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <div className="p-6 bg-background-light text-gray-100 rounded-lg shadow-md">

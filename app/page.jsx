@@ -5,6 +5,7 @@ import Roadmap from "./components/Roadmap";
 import UseCases from "./components/UseCases";
 import Contact from "./components/Contact";
 import Resources from "./components/Resources";
+import ScreenshotCarousel from "./components/ScreenshotCarousel";
 
 export default function Home() {
   return (
@@ -19,6 +20,9 @@ export default function Home() {
         <Hero />
         <div className="gradient-section">
           <Features />
+        </div>
+        <div className="gradient-section">
+          <ScreenshotCarousel />
         </div>
         <div className="gradient-section">
           <Roadmap />
