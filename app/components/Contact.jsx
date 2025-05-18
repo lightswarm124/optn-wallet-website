@@ -4,18 +4,16 @@ export default function Contact() {
       <h2 className="text-3xl font-semibold text-center mb-12">Contact Us</h2>
       <div className="text-center">
         <p className="m-4">
-          Join our Telegram group for the latest updates and support:
+          For inquiries, reach out to us at:
         </p>
         <a
-          href="https://t.me/+KLBMsVW0xHY1YWI5"
-          target="_blank"
-          rel="noopener noreferrer"
+          href="mailto:info@optnlabs.com"
           className="text-accent-primary hover:text-accent-secondary"
         >
-          Telegram Group
+          info@optnlabs.com
         </a>
         <p className="m-4">
-          Check out our GitHub repository for the latest code and documentation:
+          View our open-source codebase:
         </p>
         <a
           href="https://github.com/BitcoinBay/OPTNWallet"
