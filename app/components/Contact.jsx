@@ -16,7 +16,7 @@ export default function Contact() {
           View our open-source codebase:
         </p>
         <a
-          href="https://github.com/BitcoinBay/OPTNWallet"
+          href="https://github.com/OPTNLabs/OPTNWallet"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent-primary hover:text-accent-secondary"
