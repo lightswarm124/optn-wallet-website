@@ -64,7 +64,7 @@ export default function PrivacyPolicy() {
         </li>
         <li>
           <a href="#childrens-privacy" className="hover:underline">
-            Children's Privacy
+            Children&apos;s Privacy
           </a>
         </li>
         <li>
@@ -77,12 +77,12 @@ export default function PrivacyPolicy() {
       <section id="introduction" className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Introduction</h2>
         <p>
-          Welcome to the OPTN Crypto Wallet App ("we," "our," or "us"). This
-          Privacy Policy explains how we handle your information when you use
-          our app. We are committed to protecting your privacy and ensuring the
-          security of your data. Since the app does not collect or send off any
-          user data, this policy focuses on local data storage, security
-          measures, and your rights.
+          Welcome to the OPTN Crypto Wallet App (&quot;we&quot;,
+          &quot;our&quot;, or &quot;us&quot;). This Privacy Policy explains how
+          we handle your information when you use our app. We are committed to
+          protecting your privacy and ensuring the security of your data. Since
+          the app does not collect or send off any user data, this policy
+          focuses on local data storage, security measures, and your rights.
         </p>
       </section>
 
@@ -130,8 +130,8 @@ export default function PrivacyPolicy() {
       <section id="app-permissions" className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">App Permissions</h2>
         <p>
-          The OPTN Crypto Wallet App requests permission to use your device’s
-          camera solely for scanning QR codes to:
+          The OPTN Crypto Wallet App requests permission to use your
+          device&apos;s camera solely for scanning QR codes to:
         </p>
         <ul className="list-disc pl-6">
           <li>Import wallet addresses</li>
@@ -212,7 +212,7 @@ export default function PrivacyPolicy() {
       </section>
 
       <section id="childrens-privacy" className="mb-8">
-        <h2 className="text-2xl font-semibold mb-2">Children's Privacy</h2>
+        <h2 className="text-2xl font-semibold mb-2">Children&apos;s Privacy</h2>
         <p>
           The app is not intended for use by children under the age of 13. We do
           not knowingly collect any information from children.
@@ -222,7 +222,7 @@ export default function PrivacyPolicy() {
       <section id="data-retention" className="mb-8">
         <h2 className="text-2xl font-semibold mb-2">Data Retention</h2>
         <p>
-          We do not retain any data beyond what is necessary for the app’s
+          We do not retain any data beyond what is necessary for the app&apos;s
           functionality. Any locally stored data is managed by you and can be
           removed by uninstalling the app.
         </p>
