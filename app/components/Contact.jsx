@@ -12,15 +12,15 @@ export default function Contact() {
         >
           info@optnlabs.com
         </a>
-        <p className="m-4">View our open-source codebase:</p>
-        <a
+        <p className="m-4">Read our Privacy Policy</p>
+        {/* <a
           href="https://github.com/OPTNLabs/OPTNWallet"
           target="_blank"
           rel="noopener noreferrer"
           className="text-accent-primary hover:text-accent-secondary"
         >
           GitHub Repository
-        </a>
+        </a> */}
         <Link href="/policy">Privacy Policy</Link>
       </div>
     </section>

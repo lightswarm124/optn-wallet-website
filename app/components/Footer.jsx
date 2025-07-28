@@ -1,4 +1,9 @@
-import { FaTwitter, FaLinkedin, FaTelegramPlane } from "react-icons/fa";
+import {
+  FaTwitter,
+  FaLinkedin,
+  FaTelegramPlane,
+  FaGithub,
+} from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -28,8 +33,18 @@ export default function Footer() {
         >
           <FaTelegramPlane size={24} />
         </a>
+        <a
+          href="https://github.com/OPTNLabs/OPTNWallet"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="hover:text-accent-primary transition-colors"
+        >
+          <FaGithub size={24} />
+        </a>
       </div>
-      <p>&copy; {new Date().getFullYear()} OPTN Labs Inc. All rights reserved.</p>
+      <p>
+        &copy; {new Date().getFullYear()} OPTN Labs Inc. All rights reserved.
+      </p>
     </footer>
   );
 }
