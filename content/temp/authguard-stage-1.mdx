@@ -1,0 +1,158 @@
+---
+title: "CashTokens Hands-On: Authority Gating & Token Flows with CashScript (Local Mocknet)"
+description: "Practical guide to CashTokens and covenants. Build AuthGuard in CashScript, simulate UTXOs locally, test NFT-gated issuance, fungible split/merge, and authority rotation. Build real intuition for Bitcoin Cash."
+date: "2026-01-25"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - CashScript
+  - UTXO
+  - Smart Contracts
+  - Testing
+  - Mocknet
+---
+
+import { Callout } from "@/components/Callout";
+
+# CashTokens Hands-On: Authority Gating & Token Flows (Local Mocknet)
+
+The Kickoff explained the model: tokens live on UTXOs, covenants enforce rules via transaction inspection.
+
+This hands-on step makes it executable. We implement the **AuthGuard** pattern (CHIP-2023-08), simulate everything locally with CashScript, and run tests that prove gating, conservation, and rotation work.
+
+All in-memory—no network, no fees, just logic you can trust.<sup>[1](https://bitcoincashresearch.org/t/chip-2023-08-authguard-standard/1130)</sup>
+
+<Callout type="info" title="What you'll run & verify">
+  - AuthGuard covenant (NFT-required spend) - Gated issuance from reserve -
+  Fungible split/merge - Authority rotation via NFT transfer
+</Callout>
+
+## AuthGuard Pattern: Guarded Authority Chain
+
+AuthGuard creates a secure, movable control primitive for token reserves.<sup>[1](https://bitcoincashresearch.org/t/chip-2023-08-authguard-standard/1130)</sup><sup>[2](https://github.com/mr-zwets/AuthGuard)</sup>
+
+- **AuthHead** — Covenant-locked UTXO with reserved fungible tokens
+- **AuthKey** — NFT held in a normal wallet (often minting-capable)
+- **AuthGuard** — Covenant requiring AuthKey in `inputs[1]` to spend AuthHead
+
+Why input[1]? Convention: input[0] = AuthHead, input[1] = authority proof. This prevents accidental spends while allowing rotation.
+
+<Callout type="tip" title="Why it feels powerful">
+  Authority is an asset you control—not contract memory. Transfer the NFT,
+  control follows. Covenant checks every spend.
+</Callout>
+
+## Local Setup
+
+```bash
+npm install
+npm run build:contracts   # Compiles AuthGuard.cash → artifacts/AuthGuard.json
+npm test                  # Vitest runs the suite
+```
+
+Uses `MockNetworkProvider` for in-memory UTXOs and tx validation.<sup>[3](https://cashscript.org/docs/sdk/network-provider)</sup>
+
+<Callout type="info" title="Mocknet advantage">
+  Instant feedback on invariants. Failures show exactly where rules break.
+</Callout>
+
+## The Covenant Code
+
+`contracts/AuthGuard.cash`:
+
+```cash
+pragma cashscript ^0.12.0;
+
+contract AuthGuard(bytes tokenId) {
+  function unlockWithNft(bool keepGuarded) {
+    require(tx.inputs[1].tokenCategory == tokenId, "AUTHKEY_WRONG_CATEGORY");
+    require(tx.inputs[1].tokenAmount == 0, "AUTHKEY_NOT_NFT_ONLY");
+
+    if (keepGuarded) {
+      require(
+        tx.outputs[0].lockingBytecode == tx.inputs[this.activeInputIndex].lockingBytecode,
+        "AUTHHEAD_NOT_PRESERVED"
+      );
+    }
+  }
+}
+```
+
+- Introspects `tx.inputs[1]` for category match & NFT-only (amount=0)
+- Optional self-replication via bytecode match on output[0]
+- No loops or storage—pure tx constraint<sup>[4](https://cashscript.org/docs/guides/covenants)</sup>
+
+## Token-Aware Addresses (Non-Negotiable)
+
+Token outputs **must** use token-capable address formats.<sup>[5](https://cashtokens.org/docs/spec/chip)</sup>
+
+- Contract → `contract.tokenAddress`
+- P2PKH → derived token-aware variant (`test-keys.ts` handles)
+
+Protocol rejects mismatch.
+
+<Callout type="warning" title="Address discipline">
+  Always use token-aware addresses for token outputs. Helpers derive them from
+  BIP39 paths.
+</Callout>
+
+## Test Helpers
+
+- `test-keys.ts` — Deterministic identities with token-aware addresses
+- `helpers.ts` — UTXO factories, tokenId reversal (introspection needs reversed bytes), provider setup
+
+Keeps tests focused on behavior.
+
+## Test 1: NFT-Gated Issuance
+
+`test/authguard.test.ts`:
+
+- Bad tx (no AuthKey in input[1]) → fails "AUTHKEY_WRONG_CATEGORY"
+- Good tx → issue FT, reduce reserve, recreate AuthHead (if `keepGuarded`), recreate AuthKey
+
+Conservation enforced: input FT ≥ output FT (SDK blocks implicit burns by default)
+
+## Test 2: Fungible Split & Merge
+
+`test/ft-split-merge.test.ts`:
+
+- One FT UTXO → split to two (sum preserved) → merge to one (new owner)
+
+"Balance" = sum of controlled UTXOs. Protocol verifies conservation.
+
+## Test 3: Authority Rotation
+
+`test/authguard-rotation.test.ts`:
+
+- Transfer AuthKey NFT
+- Old issuer fails (can't present AuthKey)
+- New issuer succeeds
+
+Authority moves with the asset—covenant enforces presentation.
+
+> Key consideration:  
+> Fixed input position is convention. Audit scripts for correct ordering and edge cases.
+
+<Callout type="warning" title="Core design trade-off">
+  Tx-proof authority is predictable and auditable, but less dynamic than full VM
+  storage.
+</Callout>
+
+## Takeaways from Hands-On
+
+- Tokens = UTXOs you control
+- Covenants = tx-boundary rules via introspection
+- Authority NFTs = portable, explicit proofs
+
+These are the building blocks for efficient, verifiable apps on BCH.
+
+---
+
+<Callout type="info" title="Next: CashTokens on Chipnet">
+  Move the same pattern to chipnet: fund real UTXOs, pay fees, broadcast, debug
+  live.
+</Callout>
+
+At OPTN Labs, we're shipping these patterns: fast payments, tokenized assets, covenant protocols. BCH 2026 is still early—modest TVL today, but May hard fork upgrades, ecosystem funding, and active community signal serious upside. If you're looking beyond account-model constraints, this foundation scales.
