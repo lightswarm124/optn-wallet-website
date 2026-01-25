@@ -6,7 +6,7 @@
 
 :root {
   --background-dark: #0b0c10;
-  --background-light: #d3d3d3; /* Light gray */
+  --background-light: #1f2833;
   --text-light: #c5c6c7;
   --text-dark: #1f2833;
   --accent-primary: #66fcf1;
@@ -96,11 +96,12 @@ body.light-mode button {
     @apply fixed top-0 left-0 w-full z-50;
     background: var(--background-dark);
     color: var(--text-light);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06);
   }
 
   body.light-mode .header {
     background: var(--background-light);
-    color: var (--text-dark);
+    color: var(--text-dark);
   }
 
   .header .container {
