@@ -1,138 +1,121 @@
 "use client";
 
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import logo from "../../public/images/OPTNUIkeyline2.png";
-import { Bars3Icon } from "@heroicons/react/24/outline";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 import { Link as ScrollLink } from "react-scroll";
+
+function NavItem({ label, to, isHome, onClick }) {
+  // On home page: smooth scroll. Else: link back to home with hash.
+  if (isHome) {
+    return (
+      <ScrollLink
+        to={to}
+        smooth={true}
+        offset={-70}
+        duration={500}
+        className="hover:text-accent-primary cursor-pointer"
+        onClick={onClick}
+      >
+        {label}
+      </ScrollLink>
+    );
+  }
+
+  return (
+    <Link
+      href={`/#${to}`}
+      className="hover:text-accent-primary"
+      onClick={onClick}
+    >
+      {label}
+    </Link>
+  );
+}
 
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
-  const [darkMode, setDarkMode] = useState(true);
+  const pathname = usePathname();
+  const isHome = pathname === "/";
 
-  useEffect(() => {
-    if (darkMode) {
-      document.body.classList.remove("light-mode");
-    } else {
-      document.body.classList.add("light-mode");
-    }
-  }, [darkMode]);
-
-  const toggleSidebar = () => {
-    setSidebarOpen(!sidebarOpen);
-  };
-
-  const toggleDarkMode = () => {
-    setDarkMode(!darkMode);
-  };
+  const toggleSidebar = () => setSidebarOpen((v) => !v);
+  const closeSidebar = () => setSidebarOpen(false);
 
   return (
-    <header className="header">
+    <header className="header w-full">
       <div className="container">
-        <Link href="/" legacyBehavior>
-          <a>
-            <Image src={logo} alt="OPTN Logo" width={50} height={50} priority />
-          </a>
+        <Link href="/" className="flex items-center gap-3">
+          <Image src={logo} alt="OPTN Logo" width={50} height={50} priority />
         </Link>
+
         <div className="flex items-center space-x-4">
-          {/* <div className="toggle-container" onClick={toggleDarkMode}>
-            <div
-              className={`toggle-circle ${
-                darkMode ? "" : "transform translate-x-6"
-              }`}
-            ></div>
-          </div> */}
           <div className="menu-button z-50">
             <button onClick={toggleSidebar} aria-label="Toggle menu">
-              <Bars3Icon className="h-6 w-6 text-accent-primary" />
+              {sidebarOpen ? (
+                <XMarkIcon className="h-6 w-6 text-accent-primary" />
+              ) : (
+                <Bars3Icon className="h-6 w-6 text-accent-primary" />
+              )}
             </button>
           </div>
         </div>
-        <nav className="hidden lg:flex space-x-4">
-          <ScrollLink
-            to="features"
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="hover:text-accent-primary cursor-pointer"
-          >
-            Features
-          </ScrollLink>
-          <ScrollLink
-            to="roadmap"
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="hover:text-accent-primary cursor-pointer"
-          >
-            Roadmap
-          </ScrollLink>
-          <ScrollLink
-            to="use-cases"
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="hover:text-accent-primary cursor-pointer"
-          >
-            Use Cases
-          </ScrollLink>
-          <ScrollLink
-            to="contact"
-            smooth={true}
-            offset={-70}
-            duration={500}
-            className="hover:text-accent-primary cursor-pointer"
-          >
-            Contact
-          </ScrollLink>
+
+        {/* Desktop nav */}
+        <nav className="hidden lg:flex items-center space-x-5">
+          <NavItem label="Features" to="features" isHome={isHome} />
+          <NavItem label="Roadmap" to="roadmap" isHome={isHome} />
+          <NavItem label="Use Cases" to="use-cases" isHome={isHome} />
+          <NavItem label="Contact" to="contact" isHome={isHome} />
+
+          {/* NEW: Blog */}
+          <Link href="/blog" className="hover:text-accent-primary">
+            Blog
+          </Link>
         </nav>
       </div>
+
+      {/* Mobile menu */}
       <div
         className={`mobile-menu ${
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <ScrollLink
+        <NavItem
+          label="Features"
           to="features"
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="hover:text-accent-primary text-xl cursor-pointer"
-          onClick={toggleSidebar}
-        >
-          Features
-        </ScrollLink>
-        <ScrollLink
+          isHome={isHome}
+          onClick={closeSidebar}
+        />
+        <NavItem
+          label="Roadmap"
           to="roadmap"
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="hover:text-accent-primary text-xl cursor-pointer"
-          onClick={toggleSidebar}
-        >
-          Roadmap
-        </ScrollLink>
-        <ScrollLink
+          isHome={isHome}
+          onClick={closeSidebar}
+        />
+        <NavItem
+          label="Use Cases"
           to="use-cases"
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="hover:text-accent-primary text-xl cursor-pointer"
-          onClick={toggleSidebar}
-        >
-          Use Cases
-        </ScrollLink>
-        <ScrollLink
+          isHome={isHome}
+          onClick={closeSidebar}
+        />
+        <NavItem
+          label="Contact"
           to="contact"
-          smooth={true}
-          offset={-70}
-          duration={500}
-          className="hover:text-accent-primary text-xl cursor-pointer"
-          onClick={toggleSidebar}
+          isHome={isHome}
+          onClick={closeSidebar}
+        />
+
+        {/* NEW: Blog */}
+        <Link
+          href="/blog"
+          className="hover:text-accent-primary text-xl"
+          onClick={closeSidebar}
         >
-          Contact
-        </ScrollLink>
+          Blog
+        </Link>
       </div>
     </header>
   );

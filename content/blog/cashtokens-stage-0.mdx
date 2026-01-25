@@ -1,0 +1,183 @@
+---
+title: "CashTokens Kickoff: Tokens & Covenants on Bitcoin Cash – A Practical Alternative for Web3 Builders"
+description: "Introduction to CashTokens and covenants on BCH. Explore the UTXO token model and transaction constraints as an option beyond EVM gas costs, state management issues, and Solana reliability concerns. With ongoing upgrades and growing community momentum, BCH is positioning itself as an emerging contender with significant upside."
+date: "2026-01-22"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - Covenants
+  - UTXO
+  - Smart Contracts
+  - Web3 Alternatives
+---
+
+import { Callout } from "@/components/Callout";
+
+# CashTokens Kickoff: Tokens & Covenants on Bitcoin Cash
+
+If you're navigating high gas fees on EVM chains, intermittent outages on Solana, or the ongoing complexities of state migrations and reentrancy risks, **Bitcoin Cash offers a compelling alternative path** that's gaining real traction in 2026.
+
+CashTokens bring tokens natively into the UTXO model, paired with covenants for enforceable spend rules—delivering programmable capabilities without persistent contract storage or global state overhead.
+
+From its current modest position (relative TVL and adoption), BCH is building serious momentum through network upgrades, ecosystem funding, and a dedicated community pushing scalable, low-cost utility.<sup>[1](https://coinmarketcap.com/cmc-ai/bitcoin-cash/latest-updates)</sup>
+
+Tokens on BCH move exactly like native coins: consume inputs to create new outputs. This design reduces certain vulnerabilities tied to mutable state systems and sets the stage for broader growth.
+
+<Callout type="info" title="Quick start">
+  This post covers the conceptual model—no code yet. For hands-on examples, move
+  to **CashTokens Hands-On** and reference back here as concepts solidify.
+</Callout>
+
+## The UTXO Model: How It Differs and Where It Provides Value
+
+In EVM or Solana setups:
+
+- Token balances live in **contract storage**.
+- Transfers update that storage through calls or instructions.
+- Risks include reentrancy (historical exploits) and upgrade-related state challenges.
+
+On BCH with CashTokens:
+
+- No central balance variables in contracts.
+- Holdings aggregate token amounts across **controlled UTXOs**.
+- Transfers spend existing UTXOs to produce new ones.
+- Ownership enforces natively at the protocol level.
+
+Observed benefits in current deployments:
+
+- **Cost efficiency** — Transactions frequently cost fractions of a cent.
+- **Verification simplicity** — Protocol handles ownership checks.
+- **Reduced migration friction** — Assets transfer via standard spends.
+
+This model suits applications prioritizing predictable, atomic operations—exactly the foundation attracting growing developer and user interest as BCH upgrades roll out.
+
+---
+
+## CashTokens Fundamentals
+
+CashTokens extend Bitcoin Cash outputs with an optional **token prefix** (codepoint 0xef) that encodes token data before the locking bytecode.<sup>[2](https://cashtokens.org/docs/spec/chip)</sup>
+
+### Token Representation on Outputs
+
+- Each output carries **at most one NFT** and fungible tokens from **only one category**.
+- Protocol enforces conservation: input tokens ≥ output tokens per category (implicit burning allowed).
+
+### Fungible Tokens
+
+- Undifferentiated units (like BCH sats).
+- Defined by a **32-byte category ID** + amount (1 to ~9 quintillion).
+- All supply created in the **genesis transaction** — no later minting.
+
+### Non-Fungible Tokens (NFTs)
+
+- Unique items with a **commitment** (0–40 bytes, attested by issuer).
+- Commitments can hold metadata, state, or IDs.
+- Multiple NFTs can share commitments unless covenants enforce uniqueness.
+
+### NFT Capabilities (4-bit field)
+
+- **None (immutable)** — Fixed commitment.
+- **Mutable** — Spending tx can update commitment.
+- **Minting** — Spending tx can create any number of new NFTs.
+
+Capabilities enable powerful patterns: controlled issuance (minting NFT as "admin key"), updatable state, or restricted mutation.
+
+### Token Categories & Genesis
+
+- Category ID = TXID of the **genesis transaction** (from input spending output 0).
+- Genesis creates full fungible supply + initial NFTs.
+- Protocol prevents over-minting or invalid transitions.
+
+Ownership follows UTXO control — ledger-verified, no extra layers.
+
+<Callout type="tip" title="Why this matters">
+  Native integration means basic token flows are protocol-enforced — no contract
+  can misrepresent ownership.
+  <sup>[2](https://cashtokens.org/docs/spec/chip)</sup>
+</Callout>
+
+---
+
+## Covenants: Enforcing Spend Conditions
+
+Covenants embed constraints into an output's locking script using **native introspection** (expanded since 2022/2023).<sup>[3](https://cashscript.org/docs/guides/covenants)</sup>
+
+### How Covenants Work
+
+- Scripts inspect the spending transaction via opcodes/variables:
+  - `tx.inputs[i].tokenAmount`, `tx.outputs[i].nftCommitment`
+  - `this.activeInputIndex`, `this.age`, `tx.time`, etc.
+- No persistent state — evaluated fresh per spend.
+- Logic checks the **entire tx structure** (inputs, outputs, tokens) against rules.
+
+This creates **constraint-based programming**: enforce what the next tx must look like, rather than mutating state over time.
+
+### Common Enforcement Patterns
+
+- Require specific output destinations (e.g., match P2PKH hash160).
+- Conserve value/tokens exactly (deduct fee, redistribute).
+- Gate actions with NFTs (require minting capability for issuance).
+- Use NFT commitments for "state" (timestamps, counters).
+- Timelocks, heartbeats, or inheritance after timeout.
+
+### Differences from EVM-Style Contracts
+
+Covenants trade unbounded loops/global storage for:
+
+- Predictable, lightweight validation
+- No reentrancy risk (single tx execution)
+- Easier auditing (tx boundary focus)
+- Movable state via NFTs instead of upgrades
+
+While less flexible than Turing-complete VMs, they provide strong guarantees in financial primitives.
+
+<Callout type="tip" title="Application considerations">
+  DEXs with minimal intermediation, stablecoins with peg logic, funding models
+  with safeguards — this reduces failure modes (always audit scripts
+  rigorously).<sup>[3](https://cashscript.org/docs/guides/covenants)</sup>
+</Callout>
+
+---
+
+## Translating Authority Patterns: NFTs as Control Mechanisms
+
+EVM: Admin = stored address/role → upgrade dependencies.  
+Solana: Authority = signers/PDAs → still mutable.
+
+BCH: Authority via **NFT**
+
+- Covenant requires NFT inclusion (often specific capability) for sensitive ops.
+- Transfer NFT → reassign control. No code changes, no migrations.
+
+> Key consideration:  
+> Authority demands explicit tx proof every time — predictable in constrained scenarios, but requires careful design to avoid unintended spends.
+
+<Callout type="warning" title="Core design shift">
+  BCH prioritizes transaction-level proofs over stored state — more auditable,
+  movable authority ideal where constraints drive security.
+</Callout>
+
+---
+
+## Next Steps in the Series
+
+**CashTokens Hands-On** covers implementation:
+
+1. NFT-controlled issuance
+2. Fungible token flows
+3. Authority reassignment via NFT transfer
+
+All on local CashScript mocknet for clear, testable mechanics.
+
+<Callout type="info" title="Continue exploring">
+  Next: **CashTokens Hands-On** — Issuance, Gating & Flows with CashScript (Local Mocknet)
+
+{/* Your dedicated next-article navigation component goes here */}
+
+</Callout>
+
+At OPTN Labs, we're building on these primitives in live scenarios—from efficient payments to tokenized assets and covenant-driven protocols.
+
+Bitcoin Cash sits at an exciting inflection point in 2026: low relative TVL today, but with recent ecosystem investments, upcoming upgrades (like the May 2026 hard fork),<sup>[4](https://bitcoincashresearch.org/t/2026-layla-upgrade-lock-in-chip-endorsements-thread/1672)</sup> and a vibrant community fueling massive potential upside. If you're scouting alternatives to established account models, this series shows a grounded, high-potential path forward.
