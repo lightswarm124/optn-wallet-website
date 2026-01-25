@@ -17,7 +17,9 @@ body {
   @apply font-inter;
   background: var(--background-dark);
   color: var(--text-light);
-  transition: background 0.3s ease, color 0.3s ease;
+  transition:
+    background 0.3s ease,
+    color 0.3s ease;
 }
 
 body.light-mode {
@@ -164,4 +166,14 @@ body.light-mode button {
       margin-top: 1rem;
     }
   }
+}
+
+/* nicer text selection */
+::selection {
+  background: rgba(34, 211, 238, 0.25);
+}
+
+/* prevent prose code blocks from looking cramped */
+.prose pre code {
+  font-size: 0.9em;
 }

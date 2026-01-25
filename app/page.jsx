@@ -16,27 +16,25 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-      <main>
-        <Hero />
-        <div className="gradient-section">
-          <Features />
-        </div>
-        <div className="gradient-section">
-          <ScreenshotCarousel />
-        </div>
-        <div className="gradient-section">
-          <Roadmap />
-        </div>
-        <div className="gradient-section">
-          <UseCases />
-        </div>
-        <div>
-          <Resources />
-        </div>
-        <div className="gradient-section">
-          <Contact />
-        </div>
-      </main>
+      <Hero />
+      <div className="gradient-section">
+        <Features />
+      </div>
+      <div className="gradient-section">
+        <ScreenshotCarousel />
+      </div>
+      <div className="gradient-section">
+        <Roadmap />
+      </div>
+      <div className="gradient-section">
+        <UseCases />
+      </div>
+      <div>
+        <Resources />
+      </div>
+      <div className="gradient-section">
+        <Contact />
+      </div>
     </div>
   );
 }

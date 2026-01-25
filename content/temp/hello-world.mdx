@@ -1,0 +1,122 @@
+---
+title: "CashTokens on Chipnet: From Mocknet to Live Testnet Transactions"
+description: "Move from local simulation to chipnet execution. Fund UTXOs, handle fees, broadcast CashScript covenants, and debug real failures. Practical bridge for CashTokens on Bitcoin Cash."
+date: "2026-01-26"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - CashScript
+  - Chipnet
+  - UTXO
+  - Developer Education
+---
+
+import { Callout } from "@/components/Callout";
+
+# CashTokens on Chipnet: From Mocknet to Live Testnet
+
+You've validated AuthGuard logic locally. Now run it on **chipnet** (Bitcoin Cash testnet).
+
+The covenant code stays the same. What changes: real UTXOs, fee funding, broadcasting, and live error handling.
+
+This guide executes the same gated issuance pattern on chipnet—one AuthHead created, one spend broadcast.
+
+<Callout type="info" title="Milestone goal">
+  Create a real AuthHead UTXO on chipnet and spend it once with AuthKey gating.
+  Same tx shape as mocknet, now live.
+</Callout>
+
+## What Remains Identical
+
+- Token ownership = controlled UTXOs
+- Covenants = introspection on tx structure
+- Authority = AuthKey in `inputs[1]`
+- Conservation = input FT ≥ output FT
+
+Tx construction code ports directly.
+
+## Practical Changes & Gotchas
+
+1. **UTXO Discovery**  
+   Mocknet: `addUtxo()`.  
+   Chipnet: `await provider.getUtxos(address)` (real network query).
+
+2. **Fees & Dust**  
+   ~1000–2000 sats/kB miner fee + ≥546 sats/output dust limit.  
+   Token inputs often insufficient—add plain BCH input for fees.
+
+3. **Broadcast & Errors**  
+   `await tx.send()` submits to network.  
+   Failures: construction (template), mempool policy, consensus (e.g., wrong address).  
+   Use `tx.debug()`, explorer, or `provider.getRawTransaction()`.
+
+4. **Provider Switch**
+   ```ts
+   import { ElectrumNetworkProvider } from "cashscript";
+   const provider = new ElectrumNetworkProvider("chipnet");
+   ```
+
+<Callout type="tip" title="Chipnet essentials">
+  - Faucet: https://tbch.googol.cash/ (tBCH) - Explorer:
+  https://chipnet.imaginary.cash/ or similar - Prefix: bchtest: Chipnet is
+  unstable by design—expect occasional resets.
+</Callout>
+
+## Step-by-Step: First Live Gated Spend
+
+1. **Switch to Chipnet Provider**
+   Update contract/provider instantiation to use `ElectrumNetworkProvider('chipnet')`.
+
+2. **Fund a Test Wallet**
+   - Generate chipnet address (use `test-keys.ts` or Electron Cash testnet mode)
+   - Claim tBCH from faucet
+   - Confirm 1–2 blocks
+
+3. **Create AuthHead & AuthKey**
+   - Build tx: plain BCH input (fees), AuthHead output (FT reserve to `contract.tokenAddress`), AuthKey NFT output
+   - Broadcast & wait for confirmation (explorer)
+
+4. **Execute Gated Issuance**
+   - Fetch UTXOs: `await provider.getUtxos(authGuardTokenAddress)`
+   - Build tx:
+     - Input 0: AuthHead → `unlockWithNft(true)`
+     - Input 1: AuthKey → P2PKH unlock
+     - Outputs: recreated AuthHead, issued FT, recreated AuthKey
+     - Add fee input if needed
+   - `await tx.send()`
+   - Verify on explorer
+
+<Callout type="warning" title="Common live failures">
+  - Fee too low → "insufficient priority" - Wrong input order →
+  "AUTHKEY_WRONG_CATEGORY" - Non-token address → protocol reject - Dust output →
+  rejected - Implicit burn → conservation fail
+</Callout>
+
+## Debugging Live Transactions
+
+- `tx.debug()` before send (local simulation)
+- Explorer: raw hex, token data, input/output inspection
+- `provider.getRawTransaction(tx.id)` for post-broadcast view
+- Common fixes: verify token-aware addresses, sum conservation, input ordering
+
+> Key mindset:
+> Chipnet failures teach real-world constraints. Master fee estimation, UTXO selection, and explorer workflows—they transfer to mainnet.
+
+## Takeaways
+
+- Covenant logic is network-agnostic
+- Live adds funding, discovery, fees, broadcast
+- Start small: one guarded output + one spend
+
+This completes the mocknet-to-live bridge.
+
+---
+
+<Callout type="info" title="Next Steps">
+  Production patterns: genesis flows, issuance schedules, composable covenants
+  on chipnet/mainnet.
+</Callout>
+
+At OPTN Labs, we're deploying these in real systems: payments, assets, protocols. BCH 2026 is undervalued—modest TVL now, but May hard fork, funding, and community momentum point to significant upside. If you're building beyond account-model limitations, this path is ready.
