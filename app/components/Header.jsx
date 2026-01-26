@@ -74,15 +74,6 @@ export default function Header() {
             Blog
           </Link>
 
-          {/* <a
-            href={STATUS_URL}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="hover:text-accent-primary"
-          >
-            Status
-          </a> */}
-
           <NavItem label="Contact" to="contact" isHome={isHome} />
 
           <a
@@ -121,16 +112,6 @@ export default function Header() {
         >
           Blog
         </Link>
-
-        {/* <a
-          href={STATUS_URL}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-accent-primary text-xl"
-          onClick={closeSidebar}
-        >
-          Status
-        </a> */}
 
         <NavItem
           label="Contact"
