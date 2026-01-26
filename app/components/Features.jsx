@@ -40,7 +40,7 @@ export default function Features() {
         Products & Services
       </h2>
       <p className="text-white/70 max-w-3xl mx-auto mb-10">
-        OPTN Labs ships the world's first Covenant-enabled wallet, operates
+        OPTN Labs ships the world&apos;s first Covenant-enabled wallet, operates
         hosted Bitcoin Cash infrastructure endpoints, and offers hands-on
         engineering support—so teams can integrate quickly without running the
         plumbing themselves.
