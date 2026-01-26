@@ -3,34 +3,25 @@ import secureTransactionsSvg from "../../public/images/secure-transactions.svg";
 import userFriendlySvg from "../../public/images/user-friendly.svg";
 import exploreUseCasesSvg from "../../public/images/explore-use-cases.svg";
 
-function ProductCard({
-  icon,
-  title,
-  description,
-  bestFor,
-  deliverable,
-  href = "#docs",
-  hrefLabel = "Learn more",
-}) {
+function Card({ icon, title, description, points, href, hrefLabel }) {
   return (
-    <div className="text-center bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-accent-primary/60 transition-colors">
-      <div className="flex justify-center">
-        <Image src={icon} alt={title} width={72} height={72} />
+    <div className="text-left bg-white/5 border border-white/10 rounded-2xl p-6 hover:border-accent-primary/60 transition-colors h-full">
+      <div className="flex items-center gap-3">
+        <Image src={icon} alt={title} width={44} height={44} />
+        <h3 className="text-xl font-semibold text-white">{title}</h3>
       </div>
-
-      <h3 className="mt-4 text-xl font-semibold text-white">{title}</h3>
-
-      {bestFor ? (
-        <div className="mt-2 text-xs text-white/60">{bestFor}</div>
-      ) : null}
 
       <p className="mt-3 text-white/80">{description}</p>
 
-      {deliverable ? (
-        <p className="mt-3 text-sm text-white/70">
-          <span className="text-white/80 font-semibold">Deliverable:</span>{" "}
-          {deliverable}
-        </p>
+      {points?.length ? (
+        <ul className="mt-4 text-sm text-white/70 space-y-2">
+          {points.map((p) => (
+            <li key={p} className="flex gap-2">
+              <span className="text-accent-primary">•</span>
+              <span>{p}</span>
+            </li>
+          ))}
+        </ul>
       ) : null}
 
       <div className="mt-5">
@@ -45,73 +36,55 @@ function ProductCard({
 export default function Features() {
   return (
     <section id="products" className="section text-center">
-      <h2 className="text-3xl font-semibold text-center mb-3">Products</h2>
+      <h2 className="text-3xl font-semibold text-center mb-3">
+        Products & Services
+      </h2>
       <p className="text-white/70 max-w-3xl mx-auto mb-10">
-        OPTN Labs provides production infrastructure and developer tooling for
-        Bitcoin Cash: indexing, connectivity, token metadata, and covenant-ready
-        primitives—hardened in the OPTN Wallet.
+        OPTN Labs ships the world's first Covenant-enabled wallet, operates
+        hosted Bitcoin Cash infrastructure endpoints, and offers hands-on
+        engineering support—so teams can integrate quickly without running the
+        plumbing themselves.
       </p>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
-        <ProductCard
-          icon={secureTransactionsSvg}
-          title="Chaingraph Indexing (GraphQL)"
-          bestFor="Best for: explorers, backends, analytics"
-          description="Query transactions, token activity, and app-visible history with a developer-friendly GraphQL interface."
-          deliverable="A query layer you can integrate into your app backend for history + token views."
-        />
-
-        <ProductCard
+      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+        <Card
           icon={userFriendlySvg}
-          title="Electrum Connectivity"
-          bestFor="Best for: wallets, payment monitoring"
-          description="Reliable network access for wallets and backends: monitoring, broadcasting, and confirmation tracking."
-          deliverable="A connectivity layer pattern for monitoring + broadcast flows."
+          title="OPTN Wallet"
+          description="A covenant-focused Bitcoin Cash wallet and reference implementation for complex transactions and CashTokens flows."
+          points={[
+            "Advanced transaction-building UX",
+            "CashTokens support + metadata handling patterns",
+            "New paradigm for wallet security through covenants",
+          ]}
+          href="https://play.google.com/store/apps/details?id=optn.wallet.app"
+          hrefLabel="Get it on Google Play"
         />
 
-        <ProductCard
-          icon={exploreUseCasesSvg}
-          title="BCMR Token Metadata"
-          bestFor="Best for: token UX, launch quality"
-          description="Resolve and serve CashTokens metadata cleanly across apps with caching and retrieval patterns."
-          deliverable="Metadata resolution patterns that keep token names/icons consistent across apps."
-        />
-
-        <ProductCard
+        <Card
           icon={secureTransactionsSvg}
-          title="IPFS Gateway Patterns"
-          bestFor="Best for: token media hosting"
-          description="Serve token media + metadata faster with IPFS gateway integration and caching approaches."
-          deliverable="Gateway + caching approach for dependable token media delivery."
-        />
-
-        <ProductCard
-          icon={userFriendlySvg}
-          title="Wallet Reference Implementation"
-          bestFor="Best for: learning + shipping faster"
-          description="OPTN Wallet as a living reference for covenant-focused UX, token flows, and advanced transaction building."
-          deliverable="Open-source reference code you can study and adapt."
-          hrefLabel="View repo"
-          href="https://github.com/OPTNLabs/OPTNWallet"
-        />
-
-        <ProductCard
-          icon={exploreUseCasesSvg}
-          title="Dedicated Capacity (Teams)"
-          bestFor="Best for: production workloads"
-          description="Higher limits, dedicated capacity, and integration support for production apps and partners."
-          deliverable="A tailored setup based on your workload and reliability needs."
+          title="Hosted Infrastructure Endpoints"
+          description="We run and maintain production endpoints for common BCH services (e.g., indexing, connectivity, metadata) and help teams integrate them safely."
+          points={[
+            "Chaingraph (GraphQL) access for history & analytics",
+            "Electrum connectivity for monitoring + broadcast",
+            "BCMR resolution + practical delivery patterns",
+          ]}
           href="#contact"
           hrefLabel="Request access"
         />
-      </div>
 
-      <div className="mt-10 text-sm text-white/60">
-        Want the fastest path to integration?{" "}
-        <a href="#contact" className="text-accent-primary hover:underline">
-          Tell us what you’re building
-        </a>{" "}
-        and we’ll point you to the right components.
+        <Card
+          icon={exploreUseCasesSvg}
+          title="Engineering & Advisory"
+          description="Integration and build support for teams launching on BCH—plus advisory-only options when you already have strong BCH experience."
+          points={[
+            "Integration planning + go-live support",
+            "Reliability patterns for wallets and backends",
+            "Covenant / complex transaction flow guidance",
+          ]}
+          href="#contact"
+          hrefLabel="Talk to us"
+        />
       </div>
     </section>
   );

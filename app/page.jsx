@@ -27,10 +27,6 @@ export default function Home() {
         <ScreenshotCarousel />
       </div>
 
-      <div>
-        <Resources />
-      </div>
-
       <div className="gradient-section">
         <Pricing />
       </div>
@@ -43,7 +39,7 @@ export default function Home() {
         <UseCases />
       </div>
 
-      <div className="gradient-section">
+      <div id="contact" className="gradient-section">
         <Contact />
       </div>
     </div>
