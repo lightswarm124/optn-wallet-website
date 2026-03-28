@@ -15,11 +15,24 @@ export async function generateMetadata({ params }) {
   try {
     const post = getPostBySlug(slug);
     return {
-      title: `${post.frontmatter.title} | OPTN Wallet`,
+      title: `${post.frontmatter.title} | OPTN Labs`,
       description: post.frontmatter.description,
+      alternates: {
+        canonical: `https://www.optnlabs.com/blog/${slug}`,
+      },
+      openGraph: {
+        title: `${post.frontmatter.title} | OPTN Labs`,
+        description: post.frontmatter.description,
+        url: `https://www.optnlabs.com/blog/${slug}`,
+        type: "article",
+      },
+      twitter: {
+        title: `${post.frontmatter.title} | OPTN Labs`,
+        description: post.frontmatter.description,
+      },
     };
   } catch {
-    return { title: "Post not found | OPTN Wallet" };
+    return { title: "Post not found | OPTN Labs" };
   }
 }
 

@@ -2,8 +2,8 @@ import Link from "next/link";
 import { getAllPostsMeta } from "../../lib/blog";
 
 export const metadata = {
-  title: "Blog | OPTN Wallet",
-  description: "Product updates, BCH engineering, and security notes.",
+  title: "Blog | OPTN Labs",
+  description: "Product updates, BCH engineering notes, and CashTokens content.",
 };
 
 function formatDate(dateStr) {

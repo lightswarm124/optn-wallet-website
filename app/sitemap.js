@@ -6,6 +6,10 @@ export default function sitemap() {
 
   const staticRoutes = [
     { url: `${base}/`, lastModified: new Date() },
+    { url: `${base}/wallet`, lastModified: new Date() },
+    { url: `${base}/tokenindex`, lastModified: new Date() },
+    { url: `${base}/infrastructure`, lastModified: new Date() },
+    { url: `${base}/engineering`, lastModified: new Date() },
     { url: `${base}/blog`, lastModified: new Date() },
     { url: `${base}/policy`, lastModified: new Date() },
   ];

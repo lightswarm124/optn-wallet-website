@@ -20,6 +20,14 @@ export const metadata = {
   },
   description:
     "OPTN Labs supports teams building on Bitcoin Cash with a production wallet, hosted infrastructure access, and hands-on engineering for CashTokens and covenant-style transaction flows.",
+  keywords: [
+    "OPTN Labs",
+    "Bitcoin Cash",
+    "CashTokens",
+    "covenants",
+    "wallet infrastructure",
+    "BCH engineering",
+  ],
   alternates: {
     canonical: "https://www.optnlabs.com/",
   },
@@ -59,13 +67,25 @@ export default function RootLayout({ children }) {
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
-              "@type": "Organization",
-              name: "OPTN Labs",
-              url: "https://www.optnlabs.com",
-              logo: "https://www.optnlabs.com/images/OPTNUIkeyline2.png",
-              sameAs: [
-                "https://x.com/OPTNLabs",
-                "https://www.linkedin.com/company/optnlabs/",
+              "@graph": [
+                {
+                  "@type": "Organization",
+                  name: "OPTN Labs",
+                  url: "https://www.optnlabs.com",
+                  logo: "https://www.optnlabs.com/images/OPTNUIkeyline2.png",
+                  sameAs: [
+                    "https://x.com/OPTNLabs",
+                    "https://www.linkedin.com/company/optnlabs/",
+                    "https://github.com/OPTNLabs/OPTNWallet",
+                  ],
+                },
+                {
+                  "@type": "WebSite",
+                  name: "OPTN Labs",
+                  url: "https://www.optnlabs.com",
+                  description:
+                    "BCH infrastructure, wallet UX, and engineering support for teams building with CashTokens and covenant-ready transaction flows.",
+                },
               ],
             }),
           }}

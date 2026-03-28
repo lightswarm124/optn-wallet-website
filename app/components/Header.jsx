@@ -36,6 +36,16 @@ function NavItem({ label, to, isHome, onClick }) {
   );
 }
 
+function HashLink({ href, isHome, onClick, className, children }) {
+  const resolvedHref = isHome ? href : `/${href}`;
+
+  return (
+    <Link href={resolvedHref} className={className} onClick={onClick}>
+      {children}
+    </Link>
+  );
+}
+
 export default function Header() {
   const [sidebarOpen, setSidebarOpen] = useState(false);
   const pathname = usePathname();
@@ -43,9 +53,6 @@ export default function Header() {
 
   const toggleSidebar = () => setSidebarOpen((v) => !v);
   const closeSidebar = () => setSidebarOpen(false);
-
-  // Leave status as-is for now (you'll wire this later)
-  const STATUS_URL = "https://status.optnlabs.com";
 
   return (
     <header className="header w-full">
@@ -68,20 +75,29 @@ export default function Header() {
 
         {/* Desktop nav */}
         <nav className="hidden lg:flex items-center space-x-5">
-          <NavItem label="Pricing" to="pricing" isHome={isHome} />
-          <NavItem label="Products" to="products" isHome={isHome} />
+          <Link href="/wallet" className="hover:text-accent-primary">
+            Wallet
+          </Link>
+          <Link href="/tokenindex" className="hover:text-accent-primary">
+            TokenIndex
+          </Link>
+          <Link href="/infrastructure" className="hover:text-accent-primary">
+            Infrastructure
+          </Link>
+          <Link href="/engineering" className="hover:text-accent-primary">
+            Engineering
+          </Link>
           <Link href="/blog" className="hover:text-accent-primary">
             Blog
           </Link>
-
           <NavItem label="Contact" to="contact" isHome={isHome} />
-
-          <a
+          <HashLink
             href="#contact"
+            isHome={isHome}
             className="ml-2 inline-flex items-center justify-center h-10 px-5 rounded-full bg-white text-background-dark hover:bg-white/90 transition-colors"
           >
-            Get Access
-          </a>
+            Contact
+          </HashLink>
         </nav>
       </div>
 
@@ -91,19 +107,37 @@ export default function Header() {
           sidebarOpen ? "translate-x-0" : "translate-x-full"
         }`}
       >
-        <NavItem
-          label="Products"
-          to="products"
-          isHome={isHome}
+        <Link
+          href="/wallet"
+          className="hover:text-accent-primary text-xl"
           onClick={closeSidebar}
-        />
+        >
+          Wallet
+        </Link>
 
-        <NavItem
-          label="Pricing"
-          to="pricing"
-          isHome={isHome}
+        <Link
+          href="/tokenindex"
+          className="hover:text-accent-primary text-xl"
           onClick={closeSidebar}
-        />
+        >
+          TokenIndex
+        </Link>
+
+        <Link
+          href="/infrastructure"
+          className="hover:text-accent-primary text-xl"
+          onClick={closeSidebar}
+        >
+          Infrastructure
+        </Link>
+
+        <Link
+          href="/engineering"
+          className="hover:text-accent-primary text-xl"
+          onClick={closeSidebar}
+        >
+          Engineering
+        </Link>
 
         <Link
           href="/blog"
@@ -120,13 +154,14 @@ export default function Header() {
           onClick={closeSidebar}
         />
 
-        <a
+        <HashLink
           href="#contact"
+          isHome={isHome}
           className="hero-button bg-white rounded-3xl text-background-dark w-56 h-12 flex items-center justify-center"
           onClick={closeSidebar}
         >
-          Get Access
-        </a>
+          Contact
+        </HashLink>
       </div>
     </header>
   );

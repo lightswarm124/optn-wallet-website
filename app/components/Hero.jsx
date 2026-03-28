@@ -1,7 +1,6 @@
 import Image from "next/image";
+import Link from "next/link";
 import heroImage from "../../public/images/OPTNWelcome1.png";
-import playStoreImage from "../../public/images/play-store-icon.png";
-import { FaTelegramPlane } from "react-icons/fa";
 
 export default function Hero() {
   return (
@@ -16,42 +15,67 @@ export default function Hero() {
         />
       </div>
 
+      <p className="mt-6 text-sm font-medium uppercase tracking-[0.22em] text-accent-primary/90">
+        Products and infrastructure for Bitcoin Cash
+      </p>
+
       <h1 className="text-4xl md:text-5xl font-semibold mt-6">
-        Build on Bitcoin Cash with Confidence
+        Wallet software, token data, and hosted services for Bitcoin Cash
       </h1>
 
       <p className="hero-description text-lg mb-7 max-w-2xl mx-auto mt-4 text-white/80">
-        We help teams ship covenant-ready apps—reliable infra, CashTokens
-        support, and practical guidance
+        OPTN Labs builds products and infrastructure for the BCH ecosystem,
+        from end-user wallet software to developer tooling and hosted backend
+        services.
       </p>
 
-      {/* Primary buttons */}
+      <div className="mx-auto mb-8 grid max-w-4xl gap-3 text-left md:grid-cols-3">
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <div className="text-sm font-medium text-accent-primary">Wallet</div>
+          <div className="mt-2 text-sm text-white/75">
+            A BCH wallet with token creation, app connections, and an add-on marketplace.
+          </div>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <div className="text-sm font-medium text-accent-primary">Token data</div>
+          <div className="mt-2 text-sm text-white/75">
+            TokenIndex for address portfolios, holder data, and token metadata.
+          </div>
+        </div>
+        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
+          <div className="text-sm font-medium text-accent-primary">Hosted access</div>
+          <div className="mt-2 text-sm text-white/75">
+            Electrum, Chaingraph, BCMR, IPFS, and related BCH backend services.
+          </div>
+        </div>
+      </div>
+
       <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
         <a
-          href="https://play.google.com/store/apps/details?id=optn.wallet.app"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hero-button relative w-56 h-12 flex items-center justify-center"
-          aria-label="Download OPTN Wallet on Google Play"
+          href="#products"
+          className="inline-flex h-12 w-56 items-center justify-center rounded-full bg-white text-background-dark font-medium hover:bg-white/90 transition-colors"
         >
-          <Image
-            src={playStoreImage}
-            alt="Google Play"
-            fill
-            style={{ objectFit: "contain" }}
-          />
+          View products
         </a>
 
         <a
-          href="https://t.me/+KLBMsVW0xHY1YWI5"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hero-button bg-white/10 rounded-3xl text-white w-56 h-12 flex items-center justify-center hover:bg-white/15 transition-colors"
+          href="/infrastructure"
+          className="inline-flex h-12 w-56 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white font-medium hover:bg-white/15 transition-colors"
         >
-          <FaTelegramPlane size={18} />
-          <span className="ml-2">Join Telegram</span>
+          Hosted services
         </a>
+
+        <Link
+          href="/blog"
+          className="inline-flex h-12 w-56 items-center justify-center rounded-full border border-white/10 bg-transparent text-white font-medium hover:border-accent-primary/50 hover:bg-white/5 transition-colors"
+        >
+          Read blog
+        </Link>
       </div>
+
+      <p className="mt-5 text-sm text-white/60">
+        We also help teams build wallet products, token systems, contracts, and backend services on BCH.
+      </p>
     </section>
   );
 }

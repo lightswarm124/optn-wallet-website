@@ -13,11 +13,16 @@
 
 body {
   @apply font-inter;
-  background: var(--background-dark);
+  background-color: #071018;
+  background-image:
+    radial-gradient(circle at top left, rgba(102, 252, 241, 0.08), transparent 24%),
+    radial-gradient(circle at 100% 0%, rgba(69, 162, 158, 0.08), transparent 22%),
+    linear-gradient(180deg, #071018 0%, #0a1018 100%);
   color: var(--text-light);
   transition:
     background 0.3s ease,
     color 0.3s ease;
+  background-attachment: fixed;
 }
 
 body.light-mode {
@@ -26,12 +31,7 @@ body.light-mode {
 }
 
 .gradient-section {
-  background: linear-gradient(
-    180deg,
-    var(--background-dark),
-    var(--background-light) 50%,
-    var(--background-dark)
-  );
+  background: transparent;
 }
 
 body.light-mode .gradient-section {
@@ -92,9 +92,10 @@ body.light-mode button {
 
   .header {
     @apply fixed top-0 left-0 w-full z-50;
-    background: var(--background-dark);
+    background: rgba(7, 16, 24, 0.74);
     color: var(--text-light);
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+    backdrop-filter: blur(14px);
   }
 
   body.light-mode .header {
@@ -118,11 +119,12 @@ body.light-mode button {
     @apply lg:hidden;
   }
 
-  .mobile-menu {
+.mobile-menu {
     @apply lg:hidden z-40 flex flex-col items-center justify-center space-y-4 fixed inset-0 transform transition-transform duration-300 ease-in-out;
-    background: var(--background-dark);
+    background: rgba(7, 16, 24, 0.98);
     color: var(--text-light);
     transform: translateX(100%);
+    backdrop-filter: blur(14px);
   }
 
   body.light-mode .mobile-menu {
@@ -152,7 +154,7 @@ body.light-mode button {
   }
 
   .section {
-    @apply py-20 section-padding bg-gradient-to-br from-background-dark to-background-light text-white;
+    @apply py-20 section-padding text-white;
   }
 
   body.light-mode .section {
@@ -165,6 +167,28 @@ body.light-mode button {
       margin-top: 1rem;
     }
   }
+}
+
+.site-shell {
+  position: relative;
+  overflow: hidden;
+}
+
+.site-shell::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 12% 16%, rgba(102, 252, 241, 0.06), transparent 16%),
+    radial-gradient(circle at 88% 8%, rgba(69, 162, 158, 0.05), transparent 16%);
+}
+
+.surface-panel {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid rgba(255, 255, 255, 0.07);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.14);
+  backdrop-filter: blur(8px);
 }
 
 /* nicer text selection */
