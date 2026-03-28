@@ -2,6 +2,7 @@ import Image from "next/image";
 import secureTransactionsSvg from "../../public/images/secure-transactions.svg";
 import userFriendlySvg from "../../public/images/user-friendly.svg";
 import exploreUseCasesSvg from "../../public/images/explore-use-cases.svg";
+import realWorldAssetSvg from "../../public/images/real-world-asset.svg";
 
 function Card({ icon, title, description, points, href, hrefLabel }) {
   return (
@@ -36,54 +37,62 @@ function Card({ icon, title, description, points, href, hrefLabel }) {
 export default function Features() {
   return (
     <section id="products" className="section text-center">
-      <h2 className="text-3xl font-semibold text-center mb-3">
-        Products & Services
-      </h2>
+      <h2 className="text-3xl font-semibold text-center mb-3">Products</h2>
       <p className="text-white/70 max-w-3xl mx-auto mb-10">
-        OPTN Labs ships the world&apos;s first Covenant-enabled wallet, operates
-        hosted Bitcoin Cash infrastructure endpoints, and offers hands-on
-        engineering support—so teams can integrate quickly without running the
-        plumbing themselves.
+        The main things we offer today.
       </p>
 
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-8 max-w-6xl mx-auto">
         <Card
           icon={userFriendlySvg}
           title="OPTN Wallet"
-          description="A covenant-focused Bitcoin Cash wallet and reference implementation for complex transactions and CashTokens flows."
+          description="A BCH wallet for end users and a reference app for developers."
           points={[
-            "Advanced transaction-building UX",
-            "CashTokens support + metadata handling patterns",
-            "New paradigm for wallet security through covenants",
+            "Create and manage CashTokens",
+            "Connect to web apps through WalletConnect",
+            "Add-on marketplace inside the wallet",
           ]}
-          href="https://play.google.com/store/apps/details?id=optn.wallet.app"
-          hrefLabel="Get it on Google Play"
+          href="/wallet"
+          hrefLabel="Explore wallet"
+        />
+
+        <Card
+          icon={realWorldAssetSvg}
+          title="TokenIndex"
+          description="A token data service that ties CashTokens to addresses and portfolios."
+          points={[
+            "Address-based token portfolios",
+            "Holder and balance data",
+            "Open source and self-hostable",
+          ]}
+          href="/tokenindex"
+          hrefLabel="Explore TokenIndex"
         />
 
         <Card
           icon={secureTransactionsSvg}
-          title="Hosted Infrastructure Endpoints"
-          description="We run and maintain production endpoints for common BCH services (e.g., indexing, connectivity, metadata) and help teams integrate them safely."
+          title="Hosted BCH Services"
+          description="Hosted BCH infrastructure for teams that need backend access without running the full stack."
           points={[
-            "Chaingraph (GraphQL) access for history & analytics",
-            "Electrum connectivity for monitoring + broadcast",
-            "BCMR resolution + practical delivery patterns",
+            "Electrum, Chaingraph, BCMR, and IPFS",
+            "Public endpoints and request-based access",
+            "Built to support wallet and app teams",
           ]}
-          href="#contact"
-          hrefLabel="Request access"
+          href="/infrastructure"
+          hrefLabel="Explore infrastructure"
         />
 
         <Card
           icon={exploreUseCasesSvg}
-          title="Engineering & Advisory"
-          description="Integration and build support for teams launching on BCH—plus advisory-only options when you already have strong BCH experience."
+          title="Engineering Support"
+          description="Direct engineering help for teams building products on BCH."
           points={[
-            "Integration planning + go-live support",
-            "Reliability patterns for wallets and backends",
-            "Covenant / complex transaction flow guidance",
+            "Wallet and token integration work",
+            "Contract and transaction flow design",
+            "Backend architecture and launch support",
           ]}
-          href="#contact"
-          hrefLabel="Talk to us"
+          href="/engineering"
+          hrefLabel="Explore engineering"
         />
       </div>
     </section>

@@ -30,20 +30,16 @@ function UseCaseCard({ icon, title, description, points }) {
 export default function UseCases() {
   return (
     <section id="use-cases" className="section text-center">
-      <h2 className="text-3xl font-semibold text-center mb-3">
-        Build with OPTN Labs
-      </h2>
+      <h2 className="text-3xl font-semibold text-center mb-3">Use cases</h2>
       <p className="text-white/70 max-w-2xl mx-auto mb-10">
-        OPTN Labs provides infrastructure and developer primitives that help
-        teams ship reliable Bitcoin Cash applications—especially when
-        transactions get complex.
+        The kinds of products we most often support.
       </p>
 
       <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
         <UseCaseCard
           icon={nonCustodialSvg}
           title="Payments & App Backends"
-          description="Run wallets and apps that depend on reliable transaction monitoring, metadata, and history—without building the plumbing from scratch."
+          description="Wallets, payment products, and app backends that need BCH monitoring, metadata, and history."
           points={[
             "Index and query on-chain activity",
             "Serve token metadata and media",
@@ -54,7 +50,7 @@ export default function UseCases() {
         <UseCaseCard
           icon={multiPartySvg}
           title="Covenant-Powered Workflows"
-          description="Enable transaction flows with enforced rules—useful for escrow, programmable payouts, and safer authorization patterns."
+          description="Escrow, staged spends, restricted transfers, and other custom transaction flows."
           points={[
             "Escrow and conditional releases",
             "Restricted spends and recipient controls",
@@ -65,7 +61,7 @@ export default function UseCases() {
         <UseCaseCard
           icon={realWorldAssetSvg}
           title="Token Launch & Control"
-          description="Launch CashTokens with metadata that resolves cleanly across apps, and build policies around issuance and movement."
+          description="CashTokens projects that need metadata, issuance controls, and lifecycle visibility."
           points={[
             "BCMR + metadata distribution",
             "Media hosting via IPFS gateway patterns",
@@ -75,8 +71,8 @@ export default function UseCases() {
       </div>
 
       <div className="mt-10">
-        <a href="#docs" className="text-accent-primary hover:underline">
-          Start from the Quickstart docs →
+        <a href="#resources" className="text-accent-primary hover:underline">
+          More writing and references →
         </a>
       </div>
     </section>

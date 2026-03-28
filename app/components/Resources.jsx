@@ -1,4 +1,5 @@
 import Link from "next/link";
+import { getAllPostsMeta } from "../../lib/blog";
 
 function ResourceCard({ title, description, href, external = true, pill }) {
   const inner = (
@@ -32,22 +33,42 @@ function ResourceCard({ title, description, href, external = true, pill }) {
 }
 
 export default function Resources() {
+  const latestPost = getAllPostsMeta()[0] ?? null;
+
   return (
     <section id="resources" className="section text-center">
       <h2 className="text-3xl font-semibold text-center mb-3">
-        Blog & Resources
+        Writing & code
       </h2>
-      <p className="text-white/70 max-w-3xl mx-auto mb-10">
-        We’re publishing build notes and updates as we expand hosted access and
-        ship the wallet. Here are a few useful references in the meantime.
+      <p className="text-white/70 max-w-3xl mx-auto mb-10 text-sm leading-6 md:text-base">
+        Recent writing, source code, and a few references tied to our work.
       </p>
+
+      {latestPost ? (
+        <div className="mx-auto mb-8 max-w-4xl rounded-3xl border border-accent-primary/30 bg-white/[0.05] p-6 text-left">
+          <h3 className="mt-3 text-2xl font-semibold text-white">
+            {latestPost.title}
+          </h3>
+          <p className="mt-3 text-sm text-white/70">
+            {latestPost.date} {latestPost.description ? `• ${latestPost.description}` : ""}
+          </p>
+          <div className="mt-5">
+            <Link
+              href={`/blog/${latestPost.slug}`}
+              className="inline-flex h-11 items-center justify-center rounded-full bg-white px-5 text-sm font-medium text-background-dark hover:bg-white/90 transition-colors"
+            >
+              Read the latest post
+            </Link>
+          </div>
+        </div>
+      ) : null}
 
       <div className="flex flex-col sm:flex-row gap-3 justify-center items-center mb-10">
         <Link
           href="/blog"
           className="hero-button bg-white rounded-3xl text-background-dark w-56 h-12 flex items-center justify-center hover:bg-white/90 transition-colors"
         >
-          Browse the Blog
+          Read the blog
         </Link>
 
         <a
@@ -63,21 +84,21 @@ export default function Resources() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
         <ResourceCard
           title="CashScript Covenants Guide"
-          description="A practical primer for covenant-like spending constraints using CashScript."
+          description="Reference material for covenant design on BCH."
           href="https://cashscript.org/docs/guides/covenants"
           pill="CashScript"
         />
         <ResourceCard
           title="CashScript Examples"
-          description="Example contracts to copy, run, and adapt for your own apps."
+          description="Contract examples and patterns."
           href="https://github.com/CashScript/cashscript/tree/master/examples"
           pill="Examples"
         />
         <ResourceCard
-          title="Bitcoin Covenants (Overview)"
-          description="High-level overview of covenant concepts and design space."
-          href="https://covenants.info/"
-          pill="Reference"
+          title="OPTN Wallet Repository"
+          description="The public repository for OPTN Wallet."
+          href="https://github.com/OPTNLabs/OPTNWallet"
+          pill="Open source"
         />
       </div>
     </section>

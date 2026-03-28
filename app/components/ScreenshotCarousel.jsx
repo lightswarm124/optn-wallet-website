@@ -24,12 +24,13 @@ export default function ScreenshotCarousel() {
   return (
     <section id="screenshots" className="section text-center">
       <h2 className="text-3xl font-semibold mb-3">
-        Battle-tested in OPTN Wallet
+        Product proof from OPTN Wallet
       </h2>
       <p className="text-white/70 max-w-2xl mx-auto mb-10">
-        OPTN Wallet is our proving ground—where advanced BCH transactions, token
-        flows, and covenant-ready UX get hardened before they become reusable
-        primitives for teams.
+        The wallet is not separate from the Labs story. It is where advanced
+        BCH transaction flows, token UX, and covenant-oriented patterns get
+        tested before they become guidance, product decisions, or reusable
+        implementation patterns for teams.
       </p>
 
       <ScreenshotCarouselClient images={images} />
