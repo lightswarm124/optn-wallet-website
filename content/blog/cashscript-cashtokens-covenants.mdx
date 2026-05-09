@@ -1,0 +1,247 @@
+---
+title: "CashScript Covenant Patterns for CashTokens"
+description: "A technical follow-up for developers working with CashTokens on BCH. This post focuses on covenant patterns, transaction introspection, token-aware output checks, and how to split responsibility between the contract and the transaction builder."
+date: "2026-05-19"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - CashScript
+  - Covenants
+  - Developers
+---
+
+import { Callout } from "@/components/Callout";
+
+# CashScript Covenant Patterns for CashTokens
+
+This post follows our CashTokens walkthrough and assumes you already have the
+basic mental model:
+
+- CashTokens live on UTXOs
+- the transaction builder creates token-bearing outputs
+- the covenant enforces the allowed transition
+
+The goal here is to show how that looks in practice when you are building
+token-related flows with CashScript.
+
+## Start With the Transition, Not the Token
+
+A common mistake when teams first work with CashTokens is to design the token
+first and the spend flow second.
+
+On BCH, that usually leads to the wrong mental model.
+
+The better sequence is:
+
+1. Define the action.
+   - mint
+   - transfer
+   - release
+   - redemption
+
+2. Define the allowed transaction shape.
+   - which outputs must exist
+   - which output carries the token
+   - what authorization is required
+
+3. Define what the builder must assemble.
+   - token category
+   - token amount
+   - recipient locking bytecode
+   - BCH change / fee outputs
+
+4. Put the covenant in charge of checking that the shape is valid.
+
+That split is what keeps CashTokens projects maintainable.
+
+<Callout type="info" title="Practical rule">
+  The builder creates the transaction. The contract checks the transition.
+  Keep those responsibilities separate.
+</Callout>
+
+## The Contract Pattern
+
+For token flows, CashScript covenants usually fall into one of a few shapes:
+
+- issuer-gated release
+- token-preserving transfer
+- bounded mint/release
+- redemption with strict output rules
+
+The example below is an issuer-gated release flow. It assumes the token-bearing
+output is assembled by the builder and the covenant verifies the output shape.
+
+```cashscript
+pragma cashscript ^0.12.0;
+
+contract TokenRelease(
+  pubkey issuer,
+  bytes32 tokenGroupId,
+  bytes25 recipientLock,
+  int tokenAmount
+) {
+  function release(sig issuerSig) {
+    // The issuer must authorize the spend.
+    require(checkSig(issuerSig, issuer));
+
+    // We expect exactly two outputs:
+    // 0 = token recipient
+    // 1 = BCH change / fee remainder
+    require(tx.outputs.length == 2);
+
+    // Verify the token-bearing output.
+    require(tx.outputs[0].lockingBytecode == recipientLock);
+    require(tx.outputs[0].tokenGroupId == tokenGroupId);
+    require(tx.outputs[0].tokenAmount == tokenAmount);
+
+    // Keep the second output non-negative and present.
+    // In a real contract you would usually verify the exact value and change rule.
+    require(tx.outputs[1].value >= 0);
+  }
+}
+```
+
+The important point is not the exact contract name. It is the structure:
+
+- authorization check
+- output count check
+- recipient locking bytecode check
+- token category check
+- token amount check
+
+That is the minimum shape readers should know how to reason about.
+
+## Why The Output Checks Matter
+
+Once you start using CashTokens in production, the failure modes are usually not
+abstract.
+
+They are things like:
+
+- the token ended up on the wrong output
+- the category was wrong
+- the amount was wrong
+- the recipient locking bytecode did not match the intended destination
+- the transaction had an unexpected number of outputs
+
+This is why covenant design should focus on the transaction boundary.
+
+If the spend is valid, the token moves exactly as intended.
+If it is invalid, the transaction never gets accepted.
+
+## A Transfer Flow Is Usually Two Layers
+
+Most real token flows are split into:
+
+### 1. Contract enforcement
+
+The covenant checks:
+
+- who is allowed to spend
+- what the output structure must look like
+- whether the token-bearing output is preserved
+
+### 2. Builder responsibility
+
+The transaction builder constructs:
+
+- the token output
+- the BCH change output
+- the recipient locking bytecode
+- the correct token category and amount
+
+That is the clean separation to keep in mind if you are coming from
+account-based systems.
+
+The contract is not a stateful token manager.
+It is a validator for a very specific transaction shape.
+
+## A Developer Walkthrough
+
+If you are building this for the first time, I would approach it in this order:
+
+1. Write the business rule in one sentence.
+   - Example: "Only the issuer can release the token to the recipient."
+
+2. Write the transaction shape in plain language.
+   - Example: "One token-bearing output to the recipient, one BCH change output."
+
+3. Write the contract checks.
+   - signature validation
+   - output count
+   - locking bytecode
+   - token category
+   - token amount
+
+4. Write the builder.
+   - add inputs
+   - create the token-bearing output
+   - attach token metadata
+   - add change
+
+5. Test the failure cases first.
+   - wrong recipient
+   - wrong token amount
+   - wrong token category
+   - missing output
+   - extra output
+
+That testing order is important because it proves the contract is checking the
+thing you think it is checking.
+
+<Callout type="tip" title="What to verify first">
+  Before you worry about wallet UX or metadata indexing, make sure the covenant
+  rejects malformed transactions and accepts only the exact spend shape you
+  intend.
+</Callout>
+
+## How This Connects To The Previous Post
+
+The previous CashTokens walkthrough focused on the migration mental model:
+
+- how CashTokens differ from account-based tokens
+- what wallets need to support
+- when a covenant is needed at all
+
+This post narrows the lens to one implementation layer: how the covenant and the
+builder share responsibility for a token flow.
+
+If the previous post answered "what should my team build?",
+this one answers "how do we enforce it?"
+
+## Common Mistakes
+
+The mistakes we see most often are straightforward:
+
+- checking the token too late in the flow
+- mixing builder logic into the covenant
+- assuming the contract will assemble the correct output by itself
+- not writing failure-case tests for malformed outputs
+
+The fix is also straightforward:
+
+- keep the covenant focused on rules
+- keep the builder focused on construction
+- test the transaction shape explicitly
+
+## Where To Go Next
+
+Once you have the covenant pattern in place, the next technical layer is usually
+one of these:
+
+- token-aware wallet flows
+- metadata resolution and indexing
+- issuer authority and NFT control objects
+- end-to-end build / sign / broadcast flows
+
+That is where the next post should go.
+
+---
+
+### Sources
+
+1. [CashScript home and SDK overview](https://cashscript.org/)
+2. [CashTokens CHIP specification](https://cashtokens.org/docs/spec/chip)
+3. [CashTokens introduction and wallet compatibility guidance](https://cashtokens.org/docs/intro)

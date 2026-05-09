@@ -1,0 +1,241 @@
+---
+title: "CashTokens in Production: Wallet Flows, NFT Control Objects, and Failure Cases"
+description: "A technical CashTokens follow-up for developers. This post covers token-aware wallet flows, NFT-based control objects, and the failure modes and tests teams should write before shipping CashScript-based token systems."
+date: "2026-05-26"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - CashScript
+  - Wallets
+  - NFTs
+  - Testing
+---
+
+import { Callout } from "@/components/Callout";
+
+# CashTokens in Production: Wallet Flows, NFT Control Objects, and Failure Cases
+
+This post follows the earlier CashTokens and CashScript articles. It assumes
+you already know the basic model:
+
+- token state lives on UTXOs
+- the builder creates the transaction
+- the covenant enforces the transition
+
+Here we go one layer deeper and cover the three things teams usually need next:
+
+1. token-aware wallet flows
+2. NFT-based control objects
+3. failure cases and test coverage
+
+## 1. Token-Aware Wallet Flows
+
+Wallet support is where CashTokens become real for users.
+
+The wallet has to do more than show a balance. It needs to know whether a
+destination can receive tokens, whether a transfer is token-aware, and whether
+the transaction it builds is valid before broadcast.<sup>[1](https://cashtokens.org/docs/intro)</sup>
+
+### The wallet responsibilities
+
+For a token send flow, the wallet usually needs to:
+
+- identify the token category being sent
+- validate the destination as token-capable
+- construct the token-bearing output
+- include the right BCH change output
+- fail before broadcast if the destination or token shape is invalid
+
+The wallet is not just a UI layer. It is part of the transaction builder.
+
+### A minimal builder shape
+
+```ts
+type TokenSendRequest = {
+  recipientLockingBytecode: string;
+  tokenGroupId: string;
+  tokenAmount: bigint;
+  changeLockingBytecode: string;
+};
+
+function buildTokenSendTx(request: TokenSendRequest) {
+  return {
+    outputs: [
+      {
+        lockingBytecode: request.recipientLockingBytecode,
+        tokenGroupId: request.tokenGroupId,
+        tokenAmount: request.tokenAmount,
+      },
+      {
+        lockingBytecode: request.changeLockingBytecode,
+      },
+    ],
+  };
+}
+```
+
+The important point is not the exact SDK shape. It is the separation of
+concerns:
+
+- wallet validates the destination and intent
+- builder assembles the transaction
+- covenant validates the spend when a contract is involved
+
+<Callout type="info" title="Practical rule">
+  If the wallet cannot explain the token destination clearly, the user should
+  not reach the broadcast step.
+</Callout>
+
+## 2. NFT Control Objects
+
+NFTs are where CashTokens become useful for control and authority patterns.
+
+You do not need an NFT for every token product. But when you do need one, the
+first question is: what is this NFT controlling?
+
+Common control-object uses include:
+
+- issuance authority
+- release authority
+- upgrade or mutation rights
+- configuration state
+- app-level permissions that should move with the UTXO
+
+That is why NFT commitments and capabilities matter.<sup>[2](https://cashtokens.org/docs/spec/chip)</sup>
+
+### Thinking about authority
+
+If you are coming from an account-based system, it is tempting to think of the
+NFT as an asset first and a control object second.
+
+On BCH, it is often better to think the other way around:
+
+- the NFT is the proof of authority
+- the contract checks whether that authority is present
+- the transaction carries the result of the action
+
+### Example: issuer-controlled release
+
+```cashscript
+pragma cashscript ^0.12.0;
+
+contract ControlledRelease(
+  pubkey issuer,
+  bytes32 tokenGroupId,
+  bytes25 recipientLock,
+  int tokenAmount
+) {
+  function release(sig issuerSig) {
+    // The issuer must authorize the release.
+    require(checkSig(issuerSig, issuer));
+
+    // Expect one token-bearing output plus one BCH output.
+    require(tx.outputs.length == 2);
+
+    // The release destination must match the expected recipient.
+    require(tx.outputs[0].lockingBytecode == recipientLock);
+
+    // The token category and amount must be preserved.
+    require(tx.outputs[0].tokenGroupId == tokenGroupId);
+    require(tx.outputs[0].tokenAmount == tokenAmount);
+  }
+}
+```
+
+This pattern is useful for:
+
+- issuer-gated mint or release actions
+- configuration updates controlled by an NFT
+- token flows that should only happen when authority is present
+
+The contract does not create authority. It verifies that authority is present in
+the spend.
+
+## 3. Failure Cases and Test Coverage
+
+Most token bugs are not deep protocol bugs. They are shape bugs.
+
+That means the test suite should focus on the transaction edge cases most
+likely to break in production.
+
+### Failure modes to cover
+
+- wrong token category
+- wrong token amount
+- wrong recipient locking bytecode
+- missing token-bearing output
+- extra outputs that violate the contract shape
+- stale or missing authority NFT
+- wallet building the wrong destination type
+
+### What to test
+
+The first tests I would write are the negative ones:
+
+1. reject a transaction with the correct authorization but the wrong output
+   shape
+2. reject a transaction with the right output shape but the wrong token category
+3. reject a transaction where the token amount is incorrect
+4. reject a transaction where the intended recipient cannot receive tokens
+5. reject a transaction where the authority NFT is missing
+
+That gives you confidence that the covenant is checking the transaction you
+think it is checking.
+
+### Example test intent
+
+```ts
+it("rejects a release to the wrong recipient", async () => {
+  const tx = buildControlledReleaseTx({
+    recipientLockingBytecode: wrongRecipientLock,
+    tokenGroupId,
+    tokenAmount,
+  });
+
+  await expect(contract.release(tx)).to.be.rejected;
+});
+```
+
+The details will vary by SDK and test harness, but the goal is consistent:
+
+- test the shape
+- test the authority
+- test the token preservation rules
+
+<Callout type="tip" title="Test strategy">
+  Start with malformed transactions. If the contract accepts those, the
+  production flow is not safe yet.
+</Callout>
+
+## How These Three Pieces Fit Together
+
+These are separate concerns, but they form one product flow:
+
+1. The wallet checks whether the destination and intent are valid.
+2. The builder assembles the token-bearing transaction.
+3. The covenant verifies the action, authority, and output shape.
+4. The test suite proves the system rejects malformed versions of the same flow.
+
+That is the production model for CashTokens.
+
+## What To Build Next
+
+If you have these three pieces working, the next layer is usually one of:
+
+- metadata and indexing
+- multi-step token flows
+- contract-driven mint/release systems
+- wallet UX for token-aware destinations
+
+That is the point where teams usually need to connect product, builder, and
+contract code into one system.
+
+---
+
+### Sources
+
+1. [CashTokens introduction and wallet compatibility guidance](https://cashtokens.org/docs/intro)
+2. [CashTokens CHIP specification](https://cashtokens.org/docs/spec/chip)
+3. [CashScript home and SDK overview](https://cashscript.org/)

@@ -58,15 +58,15 @@ export default function Features() {
 
         <Card
           icon={realWorldAssetSvg}
-          title="TokenIndex"
-          description="A token data service that ties CashTokens to addresses and portfolios."
+          title="Hosted BCH Services"
+          description="Hosted BCH infrastructure that includes token data access alongside core backend services."
           points={[
-            "Address-based token portfolios",
-            "Holder and balance data",
-            "Open source and self-hostable",
+            "Electrum, Chaingraph, BCMR, IPFS, and TokenIndex",
+            "Public endpoints and request-based access",
+            "Built to support wallet and app teams",
           ]}
-          href="/tokenindex"
-          hrefLabel="Explore TokenIndex"
+          href="/infrastructure"
+          hrefLabel="Explore infrastructure"
         />
 
         <Card

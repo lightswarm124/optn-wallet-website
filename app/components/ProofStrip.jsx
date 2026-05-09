@@ -3,7 +3,7 @@ import Link from "next/link";
 const proofItems = [
   {
     label: "Products",
-    value: "OPTN Wallet, TokenIndex, and a hosted BCH stack built around the same ecosystem.",
+    value: "OPTN Wallet and a hosted BCH stack built around the same ecosystem, including token data access.",
   },
   {
     label: "Focus",

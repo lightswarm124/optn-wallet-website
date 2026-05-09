@@ -78,9 +78,6 @@ export default function Header() {
           <Link href="/wallet" className="hover:text-accent-primary">
             Wallet
           </Link>
-          <Link href="/tokenindex" className="hover:text-accent-primary">
-            TokenIndex
-          </Link>
           <Link href="/infrastructure" className="hover:text-accent-primary">
             Infrastructure
           </Link>
@@ -113,14 +110,6 @@ export default function Header() {
           onClick={closeSidebar}
         >
           Wallet
-        </Link>
-
-        <Link
-          href="/tokenindex"
-          className="hover:text-accent-primary text-xl"
-          onClick={closeSidebar}
-        >
-          TokenIndex
         </Link>
 
         <Link

@@ -39,7 +39,7 @@ export default function Hero() {
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
           <div className="text-sm font-medium text-accent-primary">Token data</div>
           <div className="mt-2 text-sm text-white/75">
-            TokenIndex for address portfolios, holder data, and token metadata.
+            Token data access for address portfolios, holder data, and token metadata.
           </div>
         </div>
         <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
