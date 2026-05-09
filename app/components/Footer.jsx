@@ -14,12 +14,6 @@ export default function Footer() {
           Wallet
         </Link>
         <Link
-          href="/tokenindex"
-          className="hover:text-accent-primary transition-colors"
-        >
-          TokenIndex
-        </Link>
-        <Link
           href="/infrastructure"
           className="hover:text-accent-primary transition-colors"
         >

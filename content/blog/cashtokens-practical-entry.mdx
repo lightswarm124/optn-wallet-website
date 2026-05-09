@@ -1,0 +1,217 @@
+---
+title: "CashTokens in Practice: Why Web3 Teams Should Build on BCH with Native Tokens"
+description: "A follow-up to our BCH introduction for developers and founders. This post explains how CashTokens work in practice, what wallets and contracts actually need to support, and why native token infrastructure matters for BCH ecosystem growth."
+date: "2026-05-12"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - Wallets
+  - Covenants
+  - Founders
+  - Developers
+---
+
+import { Callout } from "@/components/Callout";
+
+# CashTokens in Practice: Why BCH Teams Should Build on Native Tokens
+
+Our last post was the high-level case for Bitcoin Cash as an alternative for teams that want lower-fee, simpler transaction flow and less dependency on account-based state systems.
+
+This follow-up is for teams coming from other ecosystems - Ethereum, Solana, or
+any account-based stack - who want to understand what changes when tokens live
+natively inside BCH transactions.
+
+The core shift is simple: token state lives on UTXOs, and the application must
+build valid transactions around that state.<sup>[1](https://cashtokens.org/docs/spec/chip)</sup>
+
+If you already understand account-based tokens, translate that into this model:
+
+- token state moves with spendable outputs
+- the transaction builder assembles the next state
+- the covenant verifies the transition
+
+Everything below is about that workflow.
+
+## Why Wallet Support Is Not Optional
+
+## The Developer Mental Model
+
+If you are approaching CashTokens from another chain, start with this sequence:
+
+1. Identify the token primitive.
+   - fungible token
+   - NFT
+   - NFT used as a control object
+
+2. Identify the spend transition.
+   - mint
+   - transfer
+   - redemption
+   - gated release
+
+3. Identify the wallet responsibilities.
+   - show token balances
+   - validate destinations
+   - construct a valid transaction
+   - fail safely before broadcast
+
+4. Identify whether a covenant is needed.
+   - If yes, define the transaction shape the contract must enforce.
+   - If no, keep the logic in the wallet or backend builder.
+
+5. Test the exact transaction path end to end.
+   - build
+   - sign
+   - broadcast
+   - confirm
+
+## What Covenants Add
+
+CashTokens are the asset layer. Covenants are the enforcement layer.
+
+With CashScript, developers can build smart contract transactions using a TypeScript SDK and a contract language modeled after Solidity.<sup>[3](https://cashscript.org/)</sup>
+
+The important point is not that CashScript makes BCH "like EVM." It does not.
+The important point is that BCH scripts can inspect transactions and enforce
+rules about what the next spend must look like.
+
+<Callout type="tip" title="Design principle">
+  If the product can be expressed as a valid transaction transition, BCH is a
+  strong fit. If it needs persistent shared mutable state, you should design
+  carefully instead of assuming a contract VM will solve the architecture for
+  you.
+</Callout>
+
+## Covenant Flows For Token Actions
+
+For token-related products, the covenant usually does not "own" the token logic
+in the abstract. It enforces the transaction transition that is allowed:
+
+- who can authorize the action
+- which outputs must exist
+- where the token-bearing output should go
+- whether the spend is an issuance, transfer, or redemption flow
+
+That distinction matters. The covenant is the rule engine. The token itself is
+still attached to a UTXO and moved by the transaction.
+
+In practice, a token workflow often looks like this:
+
+1. A contract or issuer NFT authorizes a mint or release action.
+2. The transaction builder creates the token-bearing output.
+3. The covenant checks that the transaction shape matches the allowed flow.
+4. A wallet or app broadcasts only if the full transaction is valid.
+
+That is the model BCH teams should design around.
+
+### Walkthrough: token-gated release
+
+The sample below shows the pattern for an issuer-gated token release flow. The
+transaction builder still assembles the token-bearing output, while the covenant
+uses introspection to verify the important parts of the spend.
+
+```cashscript
+pragma cashscript ^0.12.0;
+
+contract TokenRelease(pubkey issuer, bytes32 tokenGroupId, bytes25 recipientLock, int tokenAmount) {
+  function release(sig issuerSig) {
+    // Step 1: the issuer must authorize the spend.
+    require(checkSig(issuerSig, issuer));
+
+    // Step 2: require exactly two outputs:
+    // - output 0: the token recipient
+    // - output 1: BCH change or fee remainder
+    require(tx.outputs.length == 2);
+
+    // Step 3: verify the token-bearing output shape.
+    require(tx.outputs[0].lockingBytecode == recipientLock);
+    require(tx.outputs[0].tokenGroupId == tokenGroupId);
+    require(tx.outputs[0].tokenAmount == tokenAmount);
+
+    // Step 4: verify the follow-up BCH output still exists.
+    // In a production contract you would also check the exact value and any
+    // change logic you require.
+    require(tx.outputs[1].value >= 0);
+  }
+}
+```
+
+The surrounding application or SDK then builds the transaction so the
+token-bearing output matches the flow the contract expects:
+
+1. Build the transaction with the correct token category and amount.
+2. Attach the token to the intended output.
+3. Include the covenant spend only when the authorization rule passes.
+4. Broadcast only after the full transaction shape matches the contract rules.
+
+That separation is the right mental model for BCH: the contract verifies the
+transition, while the builder assembles the token state.
+
+## A Practical Integration Checklist
+
+If your team is evaluating CashTokens, this is the sequence I would recommend:
+
+1. Define the product primitive first.
+   - Is it a fungible token?
+   - Is it an NFT-based control flow?
+   - Is it just metadata?
+
+2. Decide what the wallet must do.
+   - Show balances
+   - Show token type
+   - Validate token-capable destinations
+   - Prevent accidental unsupported sends
+
+3. Decide whether the product needs a covenant.
+   - If yes, define the transaction constraints first
+   - Then build the contract logic around the transaction shape
+
+4. Define your metadata story.
+   - Where does token metadata come from?
+   - How do wallets and apps resolve it?
+   - How do you keep it consistent?
+
+5. Test the actual transaction flow end to end.
+   - creation
+   - receipt
+   - transfer
+   - failure cases
+   - unsupported wallet behavior
+
+That is the point where many teams realize they need help with integration,
+indexing, and backend endpoints, not just contract code.
+
+## Where We Think BCH Teams Should Go Next
+
+If you are a founder or technical lead, the next questions are usually not abstract. They are operational:
+
+- Can my wallet support this safely?
+- Can my product team explain the transaction model to users?
+- Do I need token indexing or metadata support?
+- Do I need contract constraints or just native token transfer logic?
+
+Those are the questions we help teams answer.
+
+CashTokens are a good example of why BCH can be more than "cheap
+transactions." They are a protocol-native primitive that turns token design
+into a transaction design problem, which is much easier to reason about when
+you are shipping a product.
+
+<Callout type="info" title="Continue the series">
+  Next we can go deeper into one of three directions:
+  - wallet integration for CashTokens
+  - covenant-driven token flows in CashScript
+  - metadata and indexing for token-aware BCH apps
+</Callout>
+
+If your team is working on a BCH product and CashTokens are part of the plan, we should talk.
+
+---
+
+### Sources
+
+1. [CashTokens CHIP specification](https://cashtokens.org/docs/spec/chip)
+2. [CashTokens introduction and wallet compatibility guidance](https://cashtokens.org/docs/intro)
+3. [CashScript home and SDK overview](https://cashscript.org/)
