@@ -42,12 +42,6 @@ export default function ScreenshotCarouselClient({ images }) {
     >
       {images.map((src, idx) => (
         <div key={src} className="flex justify-center items-center px-3">
-          {/* Width control:
-              - mobile: w-full
-              - md: 90%
-              - lg: 75%
-              - xl: 55% (close to 50% you wanted, but still readable)
-          */}
           <div className="w-full md:w-[90%] lg:w-[75%] xl:w-[55%]">
             <Image
               src={src}
