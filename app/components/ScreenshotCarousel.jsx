@@ -11,7 +11,7 @@ export default function ScreenshotCarousel() {
   const screenshotsDir = path.join(process.cwd(), "public", "screenshots");
   let files = [];
   try {
-    files = fs.readdirSync(screenshotsDir).filter((f) => f.endsWith(".jpg"));
+    files = fs.readdirSync(screenshotsDir).filter((f) => f.endsWith(".png"));
   } catch (err) {
     console.warn("Could not read screenshots directory:", err);
   }
