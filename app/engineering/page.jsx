@@ -1,174 +1,77 @@
-import Link from "next/link";
+import {
+  ArrowLink,
+  ButtonLink,
+  EngineeringGraphic,
+  FinalCTA,
+  FlowSteps,
+  Icon,
+  SectionLabel,
+} from "../components/SitePrimitives";
+import { createPageMetadata } from "../../lib/seo";
 
-function WorkCard({ title, body }) {
-  return (
-    <div className="surface-panel rounded-3xl p-5">
-      <h3 className="text-lg font-semibold text-white">{title}</h3>
-      <p className="mt-2 text-sm leading-6 text-white/75">{body}</p>
-    </div>
-  );
-}
-
-export const metadata = {
-  title: "Engineering Support | BCH Product Work from OPTN Labs",
+export const metadata = createPageMetadata({
+  title: "OPTN Labs Engineering | Bitcoin Cash Development",
   description:
-    "OPTN Labs provides engineering support for teams building on Bitcoin Cash, including wallet work, token systems, contract design, backend integration, and launch support.",
-  alternates: {
-    canonical: "https://www.optnlabs.com/engineering",
-  },
-};
+    "OPTN Labs helps teams build Bitcoin Cash wallets, CashToken applications, and controlled transaction workflows with architecture, implementation, testing, and release support.",
+  path: "/engineering",
+});
+
+const areas = [
+  ["wallet", "Wallet and application integration", "Connect products to BCH applications and transaction workflows."],
+  ["stack", "CashTokens and BCMR", "Design token handling and metadata-aware product experiences."],
+  ["code", "CashScript and covenant patterns", "Build constrained transaction paths within a defined technical scope."],
+  ["gear", "Backend and testing", "Support transaction construction, indexing, test harnesses, and release review."],
+];
+
+const process = [
+  { title: "Scope", body: "Define the product, constraints, and target workflow." },
+  { title: "Build or review", body: "Work through architecture, implementation, or transaction design." },
+  { title: "Validate", body: "Test behavior, review integration points, and prepare for release." },
+];
 
 export default function EngineeringPage() {
   return (
-    <main className="site-shell min-h-screen text-white">
-      <section className="px-6 pb-8 pt-16 md:pt-24">
-        <div className="mx-auto grid max-w-6xl gap-8 lg:grid-cols-[1fr_360px] lg:items-start">
+    <div className="page-shell">
+      <section className="page-hero">
+        <div className="site-container page-hero-grid">
           <div>
-            <p className="text-sm font-medium uppercase tracking-[0.22em] text-accent-primary/90">
-              Engineering support
-            </p>
-            <h1 className="mt-4 text-4xl font-semibold tracking-tight text-white md:text-5xl">
-              Engineering support for BCH product teams
-            </h1>
-            <p className="mt-5 max-w-3xl text-base leading-7 text-white/75 md:text-lg md:leading-8">
-              We work with teams that need help with wallet work, token
-              systems, contract design, backend integration, or launch support
-              for BCH products.
-            </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
-              <Link
-                href="/#contact"
-                className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-medium text-background-dark transition-colors hover:bg-white/90"
-              >
-                Talk to engineering
-              </Link>
-              <Link
-                href="/infrastructure"
-                className="inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 text-sm font-medium text-white transition-colors hover:border-accent-primary/50 hover:bg-white/10"
-              >
-                See infrastructure
-              </Link>
-            </div>
+            <SectionLabel>Engineering</SectionLabel>
+            <h1>Engineering for products that move value.</h1>
+            <p className="page-hero-copy">OPTN Labs helps teams build Bitcoin Cash wallets, CashToken applications, and controlled transaction workflows—with architecture, implementation, testing, and release support.</p>
+            <div className="hero-actions"><ButtonLink href="/#contact">Talk to engineering</ButtonLink><ArrowLink href="/developers">Explore developer resources</ArrowLink></div>
           </div>
+          <EngineeringGraphic />
+        </div>
+      </section>
 
-          <div className="rounded-[2rem] border border-accent-primary/25 bg-white/[0.06] p-6">
-            <div className="text-sm font-medium text-accent-primary">
-              We help with
-            </div>
-            <ul className="mt-4 space-y-3 text-sm text-white/80">
-              <li>Wallet and app integration</li>
-              <li>CashTokens and contract design</li>
-              <li>Backend and data architecture</li>
-              <li>Launch review and support</li>
-            </ul>
+      <section className="site-section">
+        <div className="site-container">
+          <SectionLabel>Work across the transaction stack</SectionLabel>
+          <div className="technical-grid control-grid">
+            {areas.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
           </div>
         </div>
       </section>
 
-      <section className="px-6 py-10">
-        <div className="mx-auto grid max-w-6xl gap-6 md:grid-cols-3">
-          <WorkCard
-            title="Architecture"
-            body="Support for product and technical decisions before the build gets expensive."
-          />
-          <WorkCard
-            title="Implementation"
-            body="Help when wallet flows, token logic, contracts, or backend work start adding complexity."
-          />
-          <WorkCard
-            title="Launch support"
-            body="Extra review and support when the product is moving closer to release."
-          />
+      <section className="site-section">
+        <div className="site-container process-grid">
+          <div><SectionLabel>From technical question to tested implementation</SectionLabel><FlowSteps steps={process} /></div>
+          <div><SectionLabel>Grounded in working BCH products</SectionLabel><div className="product-list proof-products">
+            <div className="product-row"><span className="icon-circle"><Icon name="wallet" /></span><div><h3>OPTN Wallet <span className="status-inline">Shipped</span></h3><p>BCH and CashTokens wallet</p><ArrowLink href="/wallet">Explore Wallet</ArrowLink></div></div>
+            <div className="product-row"><span className="icon-circle"><Icon name="stack" /></span><div><h3>FundMe.cash <span className="status-inline">Shipped</span></h3><p>Covenant-based crowdfunding</p></div></div>
+            <div className="product-row"><span className="icon-circle"><Icon name="route" /></span><div><h3>Covenant coordination <span className="status-inline">Built and tested locally · In development</span></h3><p>Research for controlled payment workflows</p></div></div>
+          </div></div>
         </div>
       </section>
 
-      <section className="px-6 py-10">
-        <div className="mx-auto grid max-w-6xl gap-6 lg:grid-cols-2">
-          <div className="surface-panel rounded-[2rem] p-6 md:p-8">
-            <h2 className="text-3xl font-semibold text-white">Teams</h2>
-            <div className="mt-6 grid gap-4">
-              <div className="rounded-3xl border border-white/10 bg-black/20 p-4">
-                <div className="text-sm font-medium text-accent-primary">
-                  Founders and product leads
-                </div>
-                <p className="mt-2 text-sm leading-6 text-white/75">
-                  People who need a second set of eyes before committing more time or budget.
-                </p>
-              </div>
-              <div className="rounded-3xl border border-white/10 bg-black/20 p-4">
-                <div className="text-sm font-medium text-accent-primary">
-                  Engineering teams
-                </div>
-                <p className="mt-2 text-sm leading-6 text-white/75">
-                  Teams working through wallet integrations, contract logic,
-                  backend architecture, or token-related product work.
-                </p>
-              </div>
-              <div className="rounded-3xl border border-white/10 bg-black/20 p-4">
-                <div className="text-sm font-medium text-accent-primary">
-                  Launch-stage projects
-                </div>
-                <p className="mt-2 text-sm leading-6 text-white/75">
-                  Teams that want experienced review before shipping.
-                </p>
-              </div>
-            </div>
-          </div>
-
-          <div className="surface-panel rounded-[2rem] p-6 md:p-8">
-            <h2 className="text-3xl font-semibold text-white">Work</h2>
-            <div className="mt-6 space-y-5 text-sm text-white/80">
-              <div>
-                <div className="font-medium text-white">Planning</div>
-                <p className="mt-2 leading-6 text-white/75">
-                  Token design, contract structure, and transaction planning
-                  before implementation gets expensive.
-                </p>
-              </div>
-              <div>
-                <div className="font-medium text-white">Build work</div>
-                <p className="mt-2 leading-6 text-white/75">
-                  Support for wallet flows, backend services, app integration,
-                  and more involved transaction behavior.
-                </p>
-              </div>
-              <div>
-                <div className="font-medium text-white">Release preparation</div>
-                <p className="mt-2 leading-6 text-white/75">
-                  Help when the product is moving toward launch and the
-                  remaining technical decisions matter more.
-                </p>
-              </div>
-            </div>
-          </div>
+      <section className="site-section">
+        <div className="site-container resource-strip">
+          <div><SectionLabel>Technical resources</SectionLabel><div className="resource-links"><ArrowLink href="/developers">Developers</ArrowLink><ArrowLink href="/cashtokens">CashTokens</ArrowLink><ArrowLink href="/covenants-on-bitcoin-cash">Covenants</ArrowLink><ArrowLink href="/bcmr-token-metadata">BCMR</ArrowLink><ArrowLink href="/blog">Blog</ArrowLink><ArrowLink href="https://github.com/OPTNLabs/OPTNWallet">GitHub</ArrowLink></div></div>
+          <div className="boundary-note"><SectionLabel>Current technical boundary</SectionLabel><p>Fund-level enforcement currently applies to BCH and CashToken funds placed under BCH covenant control.</p><ArrowLink href="/platform">Read the Platform boundary</ArrowLink></div>
         </div>
       </section>
 
-      <section className="px-6 pb-16 pt-10">
-        <div className="mx-auto max-w-6xl rounded-[2rem] border border-accent-primary/30 bg-gradient-to-br from-white/[0.1] to-transparent p-6 md:p-8">
-          <h2 className="text-3xl font-semibold text-white">
-            Need engineering help?
-          </h2>
-          <p className="mt-3 max-w-2xl text-sm leading-6 text-white/75 md:text-base">
-            Send us a short note about the product, the stage, and where you
-            need help.
-          </p>
-          <div className="mt-6 flex flex-col gap-3 sm:flex-row">
-            <Link
-              href="/#contact"
-              className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-medium text-background-dark transition-colors hover:bg-white/90"
-            >
-              Get in touch
-            </Link>
-            <Link
-              href="/blog"
-              className="inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 text-sm font-medium text-white transition-colors hover:border-accent-primary/50 hover:bg-white/10"
-            >
-              Read updates
-            </Link>
-          </div>
-        </div>
-      </section>
-    </main>
+      <FinalCTA title="Have a technical question or use case?" body="Let’s talk about how OPTN can help." />
+    </div>
   );
 }

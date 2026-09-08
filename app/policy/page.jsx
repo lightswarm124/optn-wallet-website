@@ -1,8 +1,16 @@
 import React from "react";
+import { createPageMetadata } from "../../lib/seo";
+
+export const metadata = createPageMetadata({
+  title: "Privacy Policy | OPTN Labs",
+  description:
+    "Read the OPTN Crypto Wallet App privacy policy, including local data storage, third-party services, permissions, security, and contact information.",
+  path: "/policy",
+});
 
 export default function PrivacyPolicy() {
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="supporting-page container mx-auto px-4 py-8">
       <h1 className="text-3xl font-bold mb-4">
         OPTN Crypto Wallet App Privacy Policy
       </h1>

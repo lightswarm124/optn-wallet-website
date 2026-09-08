@@ -1,5 +1,4 @@
 // app/layout.jsx
-import Script from "next/script";
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
@@ -15,28 +14,20 @@ const inter = Inter({
 export const metadata = {
   metadataBase: new URL("https://www.optnlabs.com"),
   title: {
-    default: "OPTN Labs — Build on Bitcoin Cash, made easier",
+    default: "OPTN Labs | Bitcoin Cash Wallets, Tools & Infrastructure",
     template: "%s | OPTN Labs",
   },
   description:
-    "OPTN Labs supports teams building on Bitcoin Cash with a production wallet, hosted infrastructure access, and hands-on engineering for CashTokens and covenant-style transaction flows.",
-  keywords: [
-    "OPTN Labs",
-    "Bitcoin Cash",
-    "CashTokens",
-    "covenants",
-    "wallet infrastructure",
-    "BCH engineering",
-  ],
+    "OPTN Labs builds Bitcoin Cash wallets, developer tools, infrastructure, CashToken integrations, and programmable transaction systems.",
   alternates: {
     canonical: "https://www.optnlabs.com/",
   },
   openGraph: {
     type: "website",
     url: "https://www.optnlabs.com/",
-    title: "OPTN Labs — Build on Bitcoin Cash, made easier",
+    title: "OPTN Labs | Bitcoin Cash Wallets, Tools & Infrastructure",
     description:
-      "Production wallet + hosted infrastructure access + engineering support for teams building on Bitcoin Cash.",
+      "Bitcoin Cash products for users and builders, from OPTN Wallet and developer tooling to infrastructure and programmable transaction systems.",
     siteName: "OPTN Labs",
     images: [
       {
@@ -49,9 +40,9 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OPTN Labs — Build on Bitcoin Cash, made easier",
+    title: "OPTN Labs | Bitcoin Cash Wallets, Tools & Infrastructure",
     description:
-      "Wallet, hosted endpoints, and engineering support for teams building on Bitcoin Cash.",
+      "Bitcoin Cash products for users and builders, from OPTN Wallet and developer tooling to infrastructure and programmable transaction systems.",
     images: ["/og.png"],
   },
 };
@@ -59,11 +50,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${inter.className}`}>
-      <body className="min-h-screen bg-black text-white">
-        <Script
-          id="ld-org"
+      <body className="min-h-screen">
+        <script
           type="application/ld+json"
-          strategy="afterInteractive"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify({
               "@context": "https://schema.org",
@@ -72,7 +61,7 @@ export default function RootLayout({ children }) {
                   "@type": "Organization",
                   name: "OPTN Labs",
                   url: "https://www.optnlabs.com",
-                  logo: "https://www.optnlabs.com/images/OPTNUIkeyline2.png",
+                  logo: "https://www.optnlabs.com/assets/images/OPTNUIkeyline2.png",
                   sameAs: [
                     "https://x.com/OPTNLabs",
                     "https://www.linkedin.com/company/optnlabs/",
@@ -83,20 +72,14 @@ export default function RootLayout({ children }) {
                   "@type": "WebSite",
                   name: "OPTN Labs",
                   url: "https://www.optnlabs.com",
-                  description:
-                    "BCH infrastructure, wallet UX, and engineering support for teams building with CashTokens and covenant-ready transaction flows.",
+                  description: "Bitcoin Cash products for users and builders, from OPTN Wallet and developer tooling to infrastructure and programmable transaction systems.",
                 },
               ],
             }),
           }}
         />
-
-        <div className="fixed top-0 left-0 right-0 z-50">
-          <Header />
-        </div>
-
-        {/* Content is padded down so it never sits under the header */}
-        <main className="pt-[88px]">{children}</main>
+        <Header />
+        <main>{children}</main>
 
         <Footer />
       </body>

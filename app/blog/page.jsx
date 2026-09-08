@@ -1,10 +1,13 @@
 import Link from "next/link";
 import { getAllPostsMeta } from "../../lib/blog";
+import { createPageMetadata } from "../../lib/seo";
 
-export const metadata = {
-  title: "Blog | OPTN Labs",
-  description: "Product updates, BCH engineering notes, and CashTokens content.",
-};
+export const metadata = createPageMetadata({
+  title: "OPTN Labs Blog | Builder Notes",
+  description:
+    "Builder notes, product updates, and technical field notes from OPTN Labs.",
+  path: "/blog",
+});
 
 function formatDate(dateStr) {
   if (!dateStr) return null;
@@ -17,17 +20,17 @@ export default function BlogIndex() {
   const posts = getAllPostsMeta();
 
   return (
-    <main className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-black">
+    <div className="supporting-page blog-page min-h-screen">
       <div className="mx-auto max-w-6xl px-6 py-14">
         {/* Header */}
         <header className="mb-10">
           <p className="text-sm font-medium text-cyan-300/90">OPTN Labs Blog</p>
           <h1 className="mt-3 text-4xl font-semibold tracking-tight text-white">
-            Engineering notes, product updates, and security deep-dives
+            Builder notes, product updates, and technical field notes
           </h1>
           <p className="mt-3 max-w-2xl text-base text-slate-300">
-            CashTokens, CashScript, wallet architecture, and the infrastructure
-            we’re shipping to grow BCH.
+            CashTokens, covenants, wallet architecture, and the infrastructure
+            we’re shipping to make BCH easier to build on.
           </p>
         </header>
 
@@ -64,11 +67,9 @@ export default function BlogIndex() {
               <h2 className="mt-4 text-xl font-semibold text-white">
                 <Link
                   href={`/blog/${p.slug}`}
-                  className="outline-none focus-visible:underline"
+                  className="blog-card-title outline-none focus-visible:underline"
                 >
-                  <span className="bg-gradient-to-r from-white to-slate-200 bg-clip-text text-transparent group-hover:from-cyan-200 group-hover:to-white">
-                    {p.title}
-                  </span>
+                  {p.title}
                 </Link>
               </h2>
 
@@ -89,13 +90,7 @@ export default function BlogIndex() {
             </article>
           ))}
         </div>
-
-        {/* Footer hint */}
-        <div className="mt-12 text-sm text-slate-500">
-          Tip: posts are stored as MDX in{" "}
-          <code className="text-slate-300">content/blog</code>.
-        </div>
       </div>
-    </main>
+    </div>
   );
 }

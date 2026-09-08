@@ -1,83 +1,81 @@
 import Link from "next/link";
-import {
-  FaTwitter,
-  FaLinkedin,
-  FaTelegramPlane,
-  FaGithub,
-} from "react-icons/fa";
+import Image from "next/image";
+import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+
+const footerGroups = [
+  {
+    title: "Explore",
+    links: [
+      ["Wallet", "/wallet"],
+      ["Platform", "/platform"],
+      ["Solutions", "/solutions"],
+      ["Pricing", "/pricing"],
+    ],
+  },
+  {
+    title: "Build",
+    links: [
+      ["Developers", "/developers"],
+      ["Engineering", "/engineering"],
+      ["Infrastructure", "/infrastructure"],
+    ],
+  },
+  {
+    title: "Learn",
+    links: [
+      ["About", "/about"],
+      ["Blog", "/blog"],
+      ["CashTokens", "/cashtokens"],
+      ["Covenants", "/covenants-on-bitcoin-cash"],
+      ["BCMR", "/bcmr-token-metadata"],
+      ["FAQ", "/faq"],
+    ],
+  },
+];
+
+function LinkGroup({ title, links }) {
+  return (
+    <div className="footer-link-group">
+      <h2>{title}</h2>
+      {links.map(([label, href]) => (
+        <Link key={href} href={href}>{label}</Link>
+      ))}
+    </div>
+  );
+}
 
 export default function Footer() {
   return (
-    <footer className="py-6 bg-background-dark text-white text-center">
-      <div className="mb-6 flex flex-wrap justify-center gap-x-6 gap-y-2 text-sm text-white/70">
-        <Link href="/wallet" className="hover:text-accent-primary transition-colors">
-          Wallet
-        </Link>
-        <Link
-          href="/infrastructure"
-          className="hover:text-accent-primary transition-colors"
-        >
-          Infrastructure
-        </Link>
-        <Link
-          href="/engineering"
-          className="hover:text-accent-primary transition-colors"
-        >
-          Engineering
-        </Link>
-        <Link href="/blog" className="hover:text-accent-primary transition-colors">
-          Blog
-        </Link>
-        <Link href="/#contact" className="hover:text-accent-primary transition-colors">
-          Contact
-        </Link>
-        <Link href="/policy" className="hover:text-accent-primary transition-colors">
-          Privacy
-        </Link>
-        <a
-          href="mailto:info@optnlabs.com"
-          className="hover:text-accent-primary transition-colors"
-        >
-          info@optnlabs.com
-        </a>
+    <footer className="site-footer">
+      <div className="site-container footer-grid">
+        <div className="footer-brand">
+          <Link href="/" className="brand" aria-label="OPTN Labs home">
+            <Image src="/assets/images/OPTNUIkeyline2.png" alt="" width={40} height={40} />
+            <span className="brand-label"><strong>OPTN</strong> Labs</span>
+          </Link>
+          <p>Bitcoin Cash wallets, tools, infrastructure, and engineering.</p>
+        </div>
+        <div className="footer-links">
+          {footerGroups.map((group) => <LinkGroup key={group.title} {...group} />)}
+        </div>
+        <div className="footer-contact">
+          <h2>Contact</h2>
+          <a className="footer-contact-link" href="mailto:info@optnlabs.com?subject=OPTN%20Labs%20inquiry">Talk to OPTN →</a>
+          <a className="footer-email" href="mailto:info@optnlabs.com">info@optnlabs.com</a>
+          <div className="footer-social" aria-label="Social links">
+            <a href="https://x.com/OPTNLabs" target="_blank" rel="noopener noreferrer" aria-label="OPTN Labs on X"><FaTwitter aria-hidden="true" /></a>
+            <a href="https://www.linkedin.com/company/optnlabs/" target="_blank" rel="noopener noreferrer" aria-label="OPTN Labs on LinkedIn"><FaLinkedin aria-hidden="true" /></a>
+            <a href="https://github.com/OPTNLabs/OPTNWallet" target="_blank" rel="noopener noreferrer" aria-label="OPTN Labs on GitHub"><FaGithub aria-hidden="true" /></a>
+          </div>
+        </div>
       </div>
-      <div className="flex justify-center space-x-6 mb-4">
-        <a
-          href="https://x.com/OPTNLabs"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-accent-primary transition-colors"
-        >
-          <FaTwitter size={24} />
-        </a>
-        <a
-          href="https://www.linkedin.com/company/optnlabs/"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-accent-primary transition-colors"
-        >
-          <FaLinkedin size={24} />
-        </a>
-        <a
-          href="https://t.me/+KLBMsVW0xHY1YWI5"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-accent-primary transition-colors"
-        >
-          <FaTelegramPlane size={24} />
-        </a>
-        <a
-          href="https://github.com/OPTNLabs/OPTNWallet"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hover:text-accent-primary transition-colors"
-        >
-          <FaGithub size={24} />
-        </a>
+      <div className="site-container footer-bottom">
+        <span>&copy; {new Date().getFullYear()} OPTN Labs Inc.</span>
+        <div>
+          <Link href="/policy">Privacy</Link>
+          <a href="mailto:info@optnlabs.com">info@optnlabs.com</a>
+        </div>
       </div>
-      <p>
-        &copy; {new Date().getFullYear()} OPTN Labs Inc. All rights reserved.
-      </p>
     </footer>
   );
 }

@@ -1,81 +1,159 @@
 import Image from "next/image";
 import Link from "next/link";
-import heroImage from "../../public/images/OPTNWelcome1.png";
+import heroImage from "../../public/assets/images/OPTNWelcome1.png";
+
+const heroLinks = [
+  { href: "/#contact", label: "Build with OPTN", primary: true },
+  { href: "/#stack", label: "See the stack" },
+  { href: "/wallet", label: "Explore OPTN Wallet" },
+  { href: "/#use-cases", label: "View use cases" },
+];
+
+function HeroVisual() {
+  const primitiveStack = ["CashTokens", "Covenants", "Low fees", "UTXO transactions"];
+
+  const optnStack = [
+    "OPTN Wallet",
+    "TokenIndexer",
+    "Public BCH services",
+    "Covenant-aware patterns",
+    "Builder / integration support",
+  ];
+
+  const launchStack = [
+    "Wallet-ready apps",
+    "Token-aware apps",
+    "BCH service access",
+    "Controlled payouts / escrow",
+    "BCH product launches",
+  ];
+
+  return (
+    <div className="hero-diagram surface-panel rounded-[2rem] p-5 md:p-6">
+      <div className="relative mb-5 flex items-center justify-center">
+        <div className="relative h-20 w-full max-w-[280px]">
+          <Image
+            src={heroImage}
+            alt="OPTN Labs"
+            fill
+            priority
+            style={{ objectFit: "contain" }}
+          />
+        </div>
+      </div>
+
+      <div className="rounded-2xl border border-white/10 bg-black/25 p-4">
+        <div className="section-chip">Transformation diagram</div>
+        <div className="mt-3 text-sm leading-6 text-white/75">
+          BCH primitives become usable product infrastructure when OPTN turns
+          them into a stack teams can ship with.
+        </div>
+        <div className="mt-4 rounded-full border border-white/10 bg-black/30 px-4 py-2 text-center text-xs uppercase tracking-[0.2em] text-white/65">
+          BCH primitives → OPTN stack → launched app flows
+        </div>
+        <div className="mt-4 grid gap-3">
+          <StackGroup title="BCH primitives" items={primitiveStack} />
+          <ArrowLabel />
+          <StackGroup title="OPTN stack" items={optnStack} accent />
+          <ArrowLabel />
+          <StackGroup title="Launchable apps" items={launchStack} />
+        </div>
+      </div>
+
+      <div className="mt-4 rounded-2xl border border-white/10 bg-black/20 p-4 text-sm leading-6 text-white/70">
+        BCH primitives → OPTN infrastructure → launched apps
+      </div>
+    </div>
+  );
+}
+
+function ArrowLabel() {
+  return (
+    <div className="flex items-center justify-center">
+      <div className="rounded-full border border-white/10 bg-black/30 px-3 py-1 text-[11px] font-medium uppercase tracking-[0.22em] text-accent-primary/90">
+        ↓
+      </div>
+    </div>
+  );
+}
+
+function StackGroup({ title, items, accent = false }) {
+  return (
+    <div
+      className={`rounded-2xl border px-4 py-3 ${
+        accent ? "border-accent-primary/25 bg-black/30" : "border-white/10 bg-black/20"
+      }`}
+    >
+      <div className="text-xs font-medium uppercase tracking-[0.18em] text-accent-primary/90">
+        {title}
+      </div>
+      <div className="mt-3 grid gap-2">
+        {items.map((item) => (
+          <div
+            key={item}
+            className="rounded-xl border border-white/10 bg-white/[0.03] px-3 py-2 text-sm text-white/80"
+          >
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+}
 
 export default function Hero() {
   return (
-    <section id="hero" className="section text-center">
-      <div className="relative w-full max-w-2xl h-28 md:h-32 mx-auto">
-        <Image
-          src={heroImage}
-          alt="OPTN"
-          fill
-          style={{ objectFit: "contain" }}
-          priority
-        />
-      </div>
+    <section id="hero" className="section">
+      <div className="mx-auto grid max-w-6xl gap-10 lg:grid-cols-[1.05fr_0.95fr] lg:items-center">
+        <div className="max-w-2xl">
+          <div className="section-chip">Bitcoin Cash app infrastructure</div>
 
-      <p className="mt-6 text-sm font-medium uppercase tracking-[0.22em] text-accent-primary/90">
-        Products and infrastructure for Bitcoin Cash
-      </p>
+          <h1 className="mt-6 text-4xl font-semibold tracking-tight text-white md:text-6xl">
+            Ship Bitcoin Cash apps without rebuilding the stack
+          </h1>
 
-      <h1 className="text-4xl md:text-5xl font-semibold mt-6">
-        Wallet software, token data, and hosted services for Bitcoin Cash
-      </h1>
+          <p className="mt-6 max-w-2xl text-lg leading-8 text-white/80 md:text-xl">
+            OPTN Labs gives BCH teams a working app stack: wallet UX,
+            TokenIndexer, public BCH services, covenant-aware transaction
+            patterns, and integration support.
+          </p>
 
-      <p className="hero-description text-lg mb-7 max-w-2xl mx-auto mt-4 text-white/80">
-        OPTN Labs builds products and infrastructure for the BCH ecosystem,
-        from end-user wallet software to developer tooling and hosted backend
-        services.
-      </p>
+          <p className="mt-5 max-w-2xl text-base leading-7 text-white/70">
+            From OPTN Wallet to TokenIndexer and public BCH services, we turn
+            BCH primitives into practical product infrastructure for wallets,
+            apps, token projects, and builders.
+          </p>
 
-      <div className="mx-auto mb-8 grid max-w-4xl gap-3 text-left md:grid-cols-3">
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <div className="text-sm font-medium text-accent-primary">Wallet</div>
-          <div className="mt-2 text-sm text-white/75">
-            A BCH wallet with token creation, app connections, and an add-on marketplace.
+          <div className="mt-8 grid gap-3 sm:grid-cols-2">
+            {heroLinks.map((link) =>
+              link.primary ? (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-medium text-background-dark transition-colors hover:bg-white/90"
+                >
+                  {link.label}
+                </Link>
+              ) : (
+                <Link
+                  key={link.label}
+                  href={link.href}
+                  className="inline-flex h-12 items-center justify-center rounded-full border border-white/10 bg-white/5 px-6 text-sm font-medium text-white transition-colors hover:border-accent-primary/50 hover:bg-white/10"
+                >
+                  {link.label}
+                </Link>
+              ),
+            )}
           </div>
+
+          <p className="mt-5 text-sm text-white/60">
+            Best for BCH builders, wallet and exchange teams, token projects,
+            and product teams evaluating BCH app infrastructure.
+          </p>
         </div>
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <div className="text-sm font-medium text-accent-primary">Token data</div>
-          <div className="mt-2 text-sm text-white/75">
-            Token data access for address portfolios, holder data, and token metadata.
-          </div>
-        </div>
-        <div className="rounded-2xl border border-white/10 bg-white/5 p-4">
-          <div className="text-sm font-medium text-accent-primary">Hosted access</div>
-          <div className="mt-2 text-sm text-white/75">
-            Electrum, Chaingraph, BCMR, IPFS, and related BCH backend services.
-          </div>
-        </div>
+
+        <HeroVisual />
       </div>
-
-      <div className="flex flex-col sm:flex-row gap-3 justify-center items-center">
-        <a
-          href="#products"
-          className="inline-flex h-12 w-56 items-center justify-center rounded-full bg-white text-background-dark font-medium hover:bg-white/90 transition-colors"
-        >
-          View products
-        </a>
-
-        <a
-          href="/infrastructure"
-          className="inline-flex h-12 w-56 items-center justify-center rounded-full border border-white/10 bg-white/10 text-white font-medium hover:bg-white/15 transition-colors"
-        >
-          Hosted services
-        </a>
-
-        <Link
-          href="/blog"
-          className="inline-flex h-12 w-56 items-center justify-center rounded-full border border-white/10 bg-transparent text-white font-medium hover:border-accent-primary/50 hover:bg-white/5 transition-colors"
-        >
-          Read blog
-        </Link>
-      </div>
-
-      <p className="mt-5 text-sm text-white/60">
-        We also help teams build wallet products, token systems, contracts, and backend services on BCH.
-      </p>
     </section>
   );
 }

@@ -5,12 +5,21 @@ export default function sitemap() {
   const base = "https://www.optnlabs.com";
 
   const staticRoutes = [
-    { url: `${base}/`, lastModified: new Date() },
-    { url: `${base}/wallet`, lastModified: new Date() },
-    { url: `${base}/infrastructure`, lastModified: new Date() },
-    { url: `${base}/engineering`, lastModified: new Date() },
-    { url: `${base}/blog`, lastModified: new Date() },
-    { url: `${base}/policy`, lastModified: new Date() },
+    { url: `${base}/` },
+    { url: `${base}/platform` },
+    { url: `${base}/solutions` },
+    { url: `${base}/pricing` },
+    { url: `${base}/wallet` },
+    { url: `${base}/infrastructure` },
+    { url: `${base}/engineering` },
+    { url: `${base}/about` },
+    { url: `${base}/developers` },
+    { url: `${base}/blog` },
+    { url: `${base}/cashtokens` },
+    { url: `${base}/covenants-on-bitcoin-cash` },
+    { url: `${base}/bcmr-token-metadata` },
+    { url: `${base}/faq` },
+    { url: `${base}/policy` },
   ];
 
   // Blog posts (if your blog util works at build time)
@@ -18,7 +27,7 @@ export default function sitemap() {
   try {
     posts = getAllPostsMeta().map((p) => ({
       url: `${base}/blog/${p.slug}`,
-      lastModified: p.date ? new Date(p.date) : new Date(),
+      ...(p.date ? { lastModified: new Date(p.date) } : {}),
     }));
   } catch {
     posts = [];

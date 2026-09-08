@@ -5,6 +5,7 @@ import Callout from "../_components/Callout";
 import FeatureCard from "../_components/FeatureCard";
 import { getAllPostsMeta, getPostBySlug } from "../../../lib/blog";
 import ReadingProgress from "../_components/ReadingProgress";
+import { createPageMetadata } from "../../../lib/seo";
 
 export function generateStaticParams() {
   return getAllPostsMeta().map((p) => ({ slug: p.slug }));
@@ -14,25 +15,15 @@ export async function generateMetadata({ params }) {
   const { slug } = params;
   try {
     const post = getPostBySlug(slug);
-    return {
+    return createPageMetadata({
       title: `${post.frontmatter.title} | OPTN Labs`,
       description: post.frontmatter.description,
-      alternates: {
-        canonical: `https://www.optnlabs.com/blog/${slug}`,
-      },
-      openGraph: {
-        title: `${post.frontmatter.title} | OPTN Labs`,
-        description: post.frontmatter.description,
-        url: `https://www.optnlabs.com/blog/${slug}`,
-        type: "article",
-      },
-      twitter: {
-        title: `${post.frontmatter.title} | OPTN Labs`,
-        description: post.frontmatter.description,
-      },
-    };
+      path: `/blog/${slug}`,
+      type: "article",
+      publishedTime: post.frontmatter.date || undefined,
+    });
   } catch {
-    return { title: "Post not found | OPTN Labs" };
+    return { title: "Post not found" };
   }
 }
 
@@ -91,6 +82,10 @@ function parseDateMs(dateStr) {
   return Number.isFinite(ms) ? ms : 0;
 }
 
+function removeLeadingTitleHeading(source) {
+  return String(source || "").replace(/(^|\n)#\s+[^\n]+\n+/, "$1");
+}
+
 export default async function BlogPost({ params }) {
   const { slug } = params;
 
@@ -118,7 +113,7 @@ export default async function BlogPost({ params }) {
       : null;
 
   const { content } = await compileMDX({
-    source: post.content,
+    source: removeLeadingTitleHeading(post.content),
     options: { parseFrontmatter: false },
     components: {
       h2: HeadingWithId("h2"),
@@ -135,9 +130,9 @@ export default async function BlogPost({ params }) {
   });
 
   return (
-    <main
+    <div
       id="top"
-      className="min-h-screen bg-gradient-to-b from-slate-950 via-slate-950 to-black"
+      className="supporting-page blog-page min-h-screen"
     >
       <ReadingProgress toc={toc} />
 
@@ -312,6 +307,6 @@ export default async function BlogPost({ params }) {
           </a>
         </div>
       </div>
-    </main>
+    </div>
   );
 }
