@@ -50,8 +50,13 @@ export default function Footer() {
       <div className="site-container footer-grid">
         <div className="footer-brand">
           <Link href="/" className="brand" aria-label="OPTN Labs home">
-            <Image src="/assets/images/OPTNUIkeyline2.png" alt="" width={40} height={40} />
-            <span className="brand-label"><strong>OPTN</strong> Labs</span>
+            <Image
+              className="brand-logo"
+              src="/assets/images/OPTNWelcome1.png"
+              alt="OPTN Labs"
+              width={500}
+              height={153}
+            />
           </Link>
           <p>Bitcoin Cash wallets, tools, infrastructure, and engineering.</p>
         </div>

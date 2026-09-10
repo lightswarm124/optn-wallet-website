@@ -213,16 +213,10 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .home-engagement-item { min-height: 0; }
 .home-build-item h3 { margin-top: 16px; }
 .home-build-item p { flex: 1; margin: 0 0 20px; }
-.home-founders-section { padding-bottom: 68px; }
-.home-founders { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 24px; margin-top: 32px; }
-.home-founder { display: flex; align-items: center; gap: 16px; padding: 20px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.home-founder h3 { margin: 0; color: var(--ink); font-size: 1rem; }
-.home-founder p { margin: 5px 0 0; color: var(--ink-soft); font-size: .82rem; }
 .home-final-cta { display: flex; align-items: center; justify-content: space-between; gap: 28px; margin-top: 56px; padding: 26px 30px; border-radius: 9px; background: var(--mint); }
 .home-final-cta h2 { margin: 0; color: var(--ink); font-size: 1.35rem; }
 .home-final-cta p { max-width: 620px; margin: 7px 0 0; color: var(--ink-soft); font-size: .84rem; line-height: 1.45; }
 .home-final-actions { display: flex; flex-wrap: wrap; align-items: center; justify-content: flex-end; gap: 14px; }
-.about-section-link { margin-top: 14px; }
 
 :root[data-theme="dark"] .home-wallet-artwork-wrap { background: var(--paper-deep); }
 :root[data-theme="dark"] .home-flow-node-dark { border-color: #32644f; }
@@ -485,7 +479,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .about-team-photo { width: 84px; height: 84px; }
   .about-boundary { grid-template-columns: 1fr; gap: 18px; margin-top: 32px; padding: 22px 20px; }
   .about-next-grid { grid-template-columns: 1fr; }
-  .home-founders { grid-template-columns: 1fr; }
   .home-final-cta { padding: 22px; }
   .home-pillar { min-height: 0; }
   .hero-actions { display: grid; }

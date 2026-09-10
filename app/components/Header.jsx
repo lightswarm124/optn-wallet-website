@@ -11,6 +11,7 @@ const navItems = [
   { href: "/solutions", label: "Solutions" },
   { href: "/wallet", label: "Wallet" },
   { href: "/engineering", label: "Engineering" },
+  { href: "/about", label: "About" },
 ];
 
 export default function Header() {

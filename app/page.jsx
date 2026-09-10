@@ -222,38 +222,15 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="founders" className="site-section home-founders-section">
-        <div className="site-container">
-          <SectionLabel>OPTN Labs</SectionLabel>
-          <h2>Built by people who build on BCH.</h2>
-          <div className="about-section-link"><ArrowLink href="/about">Meet the team</ArrowLink></div>
-          <div className="home-founders">
-            <article className="home-founder">
-              <span className="icon-circle"><Icon name="person" /></span>
-              <div>
-                <h3>Jerry Qian</h3>
-                <p>Founder</p>
-              </div>
-            </article>
-            <article className="home-founder">
-              <span className="icon-circle"><Icon name="person" /></span>
-              <div>
-                <h3>Kyle Wildeman</h3>
-                <p>Co-founder</p>
-              </div>
-            </article>
-          </div>
-          <div className="home-final-cta" id="contact">
-            <div>
-              <h2>Use the tools. Build something new.</h2>
-              <p>Start with OPTN Wallet and the public developer ecosystem, or talk to us about a more specialized workflow.</p>
-            </div>
-            <div className="home-final-actions">
-              <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
-              <ButtonLink href={contactHref} variant="secondary">Talk to OPTN</ButtonLink>
-              <ArrowLink href="/developers">Developer resources</ArrowLink>
-            </div>
-          </div>
+      <section className="site-container home-final-cta" id="contact">
+        <div>
+          <h2>Use the tools. Build something new.</h2>
+          <p>Start with OPTN Wallet and the public developer ecosystem, or talk to us about a more specialized workflow.</p>
+        </div>
+        <div className="home-final-actions">
+          <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
+          <ButtonLink href={contactHref} variant="secondary">Talk to OPTN</ButtonLink>
+          <ArrowLink href="/developers">Developer resources</ArrowLink>
         </div>
       </section>
     </div>
