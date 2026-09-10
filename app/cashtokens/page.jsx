@@ -76,12 +76,12 @@ export default function CashTokensPage() {
         <div className="site-container page-hero-grid">
           <div>
             <SectionLabel>CashTokens on Bitcoin Cash</SectionLabel>
-            <h1>CashTokens are native token primitives for Bitcoin Cash applications.</h1>
+            <h1>CashTokens make Bitcoin Cash useful for more than payments.</h1>
             <p className="page-hero-copy">
-              CashTokens carry fungible-token and NFT state in Bitcoin Cash
-              transaction outputs. This guide explains what wallets, indexers,
-              and applications need to handle when they build token-aware
-              products.
+              CashTokens let products issue, display, and move fungible tokens
+              and NFTs directly on Bitcoin Cash. This guide explains what
+              wallets, apps, and product teams need to make those experiences
+              work.
             </p>
             <div className="hero-actions">
               <a className="button" href="#integration">
@@ -124,18 +124,16 @@ export default function CashTokensPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>The primitive</SectionLabel>
-          <h2>A token is state carried by a UTXO.</h2>
+          <SectionLabel>The foundation</SectionLabel>
+          <h2>The building blocks for token-powered BCH products.</h2>
           <p className="section-intro">
-            CashTokens extend the Bitcoin Cash UTXO model with native token
-            state. The protocol defines what can be carried by an output; the
-            wallet, indexer, and application decide how that state becomes a
-            usable product.
+            CashTokens add native token state to Bitcoin Cash. The protocol
+            defines what an output can carry; wallets, indexers, and apps turn
+            that foundation into a product people can use.
           </p>
           <p className="section-intro">
-            A token-bearing output can contain a fungible amount, one NFT, or
-            both, with all token data in that output belonging to the same
-            category.
+            An output can carry a fungible amount, one NFT, or both, with all
+            token data in that output belonging to the same category.
           </p>
           <div className="four-columns technical-grid">
             {primitiveLayers.map(([icon, title, body]) => (
@@ -154,12 +152,12 @@ export default function CashTokensPage() {
       <section className="site-section" id="integration">
         <div className="site-container boundary">
           <div>
-            <SectionLabel>From primitive to product</SectionLabel>
-            <h2>Wallets and applications must handle token state explicitly.</h2>
+            <SectionLabel>From foundation to product</SectionLabel>
+            <h2>Make token experiences work from end to end.</h2>
             <p className="section-intro">
-              CashTokens are not an account balance stored in an application
-              database. Every token-aware action has to be reflected in the
-              inputs and outputs of a BCH transaction.
+              A CashToken balance is built from the outputs that hold it, not
+              from an account balance in an app database. Every token-aware
+              action therefore has to be reflected in a BCH transaction.
             </p>
             <div className="hero-actions">
               <ArrowLink href="/bcmr-token-metadata">

@@ -58,7 +58,7 @@ export default function Footer() {
               height={153}
             />
           </Link>
-          <p>Bitcoin Cash wallets, tools, infrastructure, and engineering.</p>
+          <p>Practical Bitcoin Cash tools for users, builders, and teams.</p>
         </div>
         <div className="footer-links">
           {footerGroups.map((group) => <LinkGroup key={group.title} {...group} />)}

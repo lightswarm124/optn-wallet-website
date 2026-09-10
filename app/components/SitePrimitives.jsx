@@ -51,11 +51,11 @@ export function PolicyGraphic({ compact = false }) {
 export function ArchitectureGraphic() {
   return (
     <div className="architecture-graphic">
-      <div className="architecture-node"><Icon name="code" size={25} /><div><strong>Application / AI agent</strong><small>Request actions</small></div></div>
+      <div className="architecture-node"><Icon name="code" size={25} /><div><strong>Your application</strong><small>Requests an action</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN coordination</strong><small>Validate and construct transactions</small></div></div>
+      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN workflow</strong><small>Plans and constructs the transaction</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>BCH covenant rules</strong><small>Enforce permitted outcomes</small></div></div>
+      <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>BCH rules</strong><small>Keep outcomes within bounds</small></div></div>
       <p>Illustrative architecture. Not a live deployment.</p>
     </div>
   );
@@ -64,12 +64,12 @@ export function ArchitectureGraphic() {
 export function EngineeringGraphic() {
   return (
     <div className="engineering-graphic">
-      <div className="architecture-node"><Icon name="wallet" size={25} /><div><strong>Product or wallet</strong><small>Your application or product</small></div></div>
+      <div className="architecture-node"><Icon name="wallet" size={25} /><div><strong>Your product or wallet</strong><small>The experience you want to ship</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>BCH transaction layer</strong><small>CashTokens · covenants · construction</small></div></div>
+      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>BCH transaction layer</strong><small>Tokens · rules · transaction design</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node"><Icon name="cube" size={25} /><div><strong>Tested integration</strong><small>Wallets, services, and real-world workflows</small></div></div>
-      <p>Illustrative engineering workflow</p>
+      <div className="architecture-node"><Icon name="cube" size={25} /><div><strong>Ready-to-use integration</strong><small>Wallets, services, and real workflows</small></div></div>
+      <p>Illustrative engineering path</p>
     </div>
   );
 }

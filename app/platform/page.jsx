@@ -16,10 +16,10 @@ export const metadata = createPageMetadata({
 });
 
 const controls = [
-  ["person", "Recipients", "Where funds may go."],
-  ["stack", "Amounts", "Per-payment and cumulative limits."],
-  ["route", "Next states", "What happens after a payment."],
-  ["shield", "Recovery", "How control returns to the owner."],
+  ["person", "Recipients", "Who can be paid."],
+  ["stack", "Amounts", "How much can move at once."],
+  ["route", "Next steps", "What the workflow can do next."],
+  ["shield", "Recovery", "How control returns when something goes wrong."],
 ];
 
 export default function PlatformPage() {
@@ -29,8 +29,8 @@ export default function PlatformPage() {
         <div className="site-container page-hero-grid">
           <div>
             <SectionLabel>Platform</SectionLabel>
-            <h1>A control layer for software-operated funds.</h1>
-            <p className="page-hero-copy">OPTN helps companies enforce spending rules around software-operated funds using Bitcoin Cash transaction rules. Applications can request actions. Transaction rules determine what the funds can actually do.</p>
+            <h1>Put clear limits around software-operated money.</h1>
+            <p className="page-hero-copy">OPTN is developing a Bitcoin Cash control layer that helps companies define what their software can do with funds. Applications make requests; transaction rules keep the permitted path clear.</p>
             <div className="hero-actions"><ButtonLink href="/#contact">Talk to OPTN</ButtonLink></div>
           </div>
           <ArchitectureGraphic />
@@ -40,7 +40,7 @@ export default function PlatformPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>What OPTN controls</SectionLabel>
-          <h2>Define what funds can do.</h2>
+          <h2>Make the rules visible before money moves.</h2>
           <div className="four-columns control-grid">
             {controls.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
           </div>
@@ -49,16 +49,16 @@ export default function PlatformPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Authorization vs. permitted outcomes</SectionLabel>
+          <SectionLabel>Authorization is only part of control</SectionLabel>
           <div className="boundary">
             <div>
-              <h2>A different layer of control.</h2>
-              <p className="section-intro">A wallet, signer, or MPC decides whether a transaction is authorized. OPTN helps define whether the resulting transaction is permitted, even if the signer is compromised or an application behaves unexpectedly.</p>
-              <ArrowLink href="/engineering">Learn more about the difference</ArrowLink>
+              <h2>Signing is not the same as permission.</h2>
+              <p className="section-intro">A wallet, signer, or MPC can approve a transaction. OPTN focuses on the next question: does the transaction itself match the rules the business set? That extra boundary is designed to reduce the damage from compromised keys or unexpected application behavior.</p>
+              <ArrowLink href="/engineering">See the engineering path</ArrowLink>
             </div>
             <div className="comparison">
               <div className="comparison-panel"><h3>Traditional flow</h3><p>Request</p><p>↓</p><p>Authorization<br /><small>(wallet / signer / MPC)</small></p><p>↓</p><p>Transaction executes</p></div>
-              <div className="comparison-panel good"><h3>With OPTN</h3><p>Request</p><p>↓</p><p>OPTN coordination</p><p>↓</p><p>BCH covenant rules determine outcome</p></div>
+              <div className="comparison-panel good"><h3>With OPTN</h3><p>Request</p><p>↓</p><p>OPTN workflow</p><p>↓</p><p>BCH rules keep the outcome within bounds</p></div>
             </div>
           </div>
         </div>
@@ -68,8 +68,8 @@ export default function PlatformPage() {
         <div className="site-container boundary">
           <div>
             <SectionLabel>Current enforcement boundary</SectionLabel>
-            <h2>BCH and CashToken funds under covenant control.</h2>
-            <p className="section-intro">Fund-level enforcement currently applies to Bitcoin Cash and CashToken funds placed under BCH covenant control. External-chain assets are outside the current enforcement boundary unless represented through a separately trusted bridge, custodian, or issuer layer.</p>
+            <h2>Starting with BCH and CashTokens.</h2>
+            <p className="section-intro">Today’s fund-level enforcement work is scoped to Bitcoin Cash and CashToken funds deliberately placed under BCH covenant control. Other chains or assets would require a separate trusted bridge, custodian, or issuer.</p>
           </div>
           <div className="boundary-list">
             <div className="boundary-item"><span className="icon-circle"><Icon name="stack" /></span><div><strong>Bitcoin Cash</strong><span>Supported</span></div></div>
@@ -78,7 +78,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <FinalCTA title="Have a technical question or use case?" body="Let’s talk about how OPTN can help." />
+      <FinalCTA title="Have a workflow that needs guardrails?" body="Tell us what the software should be allowed to do, and we’ll help map the next step." />
     </div>
   );
 }

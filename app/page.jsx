@@ -19,7 +19,7 @@ const ecosystem = [
     icon: "wallet",
     title: "OPTN Wallet",
     status: "Available now",
-    body: "Use BCH, CashTokens, and connected Bitcoin Cash applications from a self-custody wallet.",
+    body: "A self-custody wallet for everyday BCH, CashTokens, and connected apps.",
     href: "/wallet",
     label: "Explore Wallet",
   },
@@ -27,7 +27,7 @@ const ecosystem = [
     icon: "code",
     title: "Developer Tools",
     status: "Available now",
-    body: "Public developer tooling, documentation, examples, and integration resources for building on Bitcoin Cash.",
+    body: "Open resources that help you move from a product idea to a working Bitcoin Cash integration.",
     href: "/developers",
     label: "Explore Developers",
   },
@@ -35,7 +35,7 @@ const ecosystem = [
     icon: "building",
     title: "Infrastructure",
     status: "Available now",
-    body: "Public BCH network, indexing, and metadata infrastructure for applications and developers.",
+    body: "Hosted network, indexing, and metadata services that keep your app connected to BCH.",
     href: "/infrastructure",
     label: "Explore Infrastructure",
   },
@@ -43,7 +43,7 @@ const ecosystem = [
     icon: "shield",
     title: "Fund Control",
     status: "In development",
-    body: "Covenant-based transaction systems for defining how software-operated funds are permitted to move.",
+    body: "A developing way to put clear spending rules around software-operated funds.",
     href: "/platform",
     label: "Explore Platform",
   },
@@ -52,8 +52,8 @@ const ecosystem = [
 const capabilities = [
   "BCH & CashTokens",
   "WalletConnect",
-  "Application integrations",
-  "Advanced transaction tools",
+  "Connect to apps",
+  "Advanced BCH workflows",
 ];
 
 const contactHref = "mailto:info@optnlabs.com?subject=OPTN%20Labs%20inquiry";
@@ -80,17 +80,17 @@ function FundControlFlow() {
     <div className="home-fund-flow" aria-label="Illustrative fund-control flow">
       <div className="home-flow-node">
         <Icon name="code" size={24} />
-        <span>Software requests an action</span>
+        <span>A product requests an action</span>
       </div>
       <span className="home-flow-arrow" aria-hidden="true">↓</span>
       <div className="home-flow-node home-flow-node-accent">
         <Icon name="shield" size={24} />
-        <span>BCH covenant rules</span>
+        <span>BCH transaction rules</span>
       </div>
       <span className="home-flow-arrow" aria-hidden="true">↓</span>
       <div className="home-flow-node home-flow-node-dark">
         <Icon name="check" size={24} />
-        <span>Permitted transaction outcome</span>
+        <span>Only permitted outcomes proceed</span>
       </div>
       <p>Illustrative architecture. Not a live deployment.</p>
     </div>
@@ -118,14 +118,15 @@ export default function Home() {
         <div className="site-container home-hero-grid">
           <div className="home-hero-copy">
             <SectionLabel>OPTN Labs</SectionLabel>
-            <h1>Bitcoin Cash wallets, tools, and infrastructure.</h1>
+            <h1>Bitcoin Cash tools for people and products that move value.</h1>
             <p className="hero-copy">
-              OPTN Labs builds products for using BCH, developing applications,
-              and defining how software-operated funds can move.
+              OPTN Labs gives people and product teams a practical way to use
+              BCH—from a self-custody wallet to the infrastructure and
+              engineering behind better applications.
             </p>
             <p className="home-hero-detail">
-              From a self-custody wallet and developer tooling to infrastructure
-              and programmable transaction systems.
+              Start with a wallet. Build with open tools. Bring us the workflow
+              that needs more.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
@@ -144,7 +145,7 @@ export default function Home() {
       <section id="ecosystem" className="site-section home-ecosystem">
         <div className="site-container">
           <SectionLabel>What OPTN builds</SectionLabel>
-          <h2>One ecosystem. Several ways to build with it.</h2>
+          <h2>Everything you need to use, build, and scale on Bitcoin Cash.</h2>
           <div className="four-columns home-pillar-grid">
             {ecosystem.map((item) => <EcosystemPillar key={item.title} {...item} />)}
           </div>
@@ -159,10 +160,10 @@ export default function Home() {
           </div>
           <div>
             <SectionLabel>Available now</SectionLabel>
-            <h2>Start with OPTN Wallet.</h2>
+            <h2>A better way to use BCH.</h2>
             <p className="section-intro">
-              A self-custody Bitcoin Cash wallet for BCH, CashTokens,
-              application connections, and advanced transaction workflows.
+              Keep BCH, CashTokens, app connections, and advanced transactions
+              in one practical self-custody experience.
             </p>
             <ul className="home-capabilities">
               {capabilities.map((capability) => <li key={capability}>{capability}</li>)}
@@ -170,6 +171,7 @@ export default function Home() {
             <div className="home-inline-actions">
               <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
               <ArrowLink href="https://github.com/OPTNLabs/OPTNWallet">View on GitHub</ArrowLink>
+              <ArrowLink href="/blog/optn-wallet-update-2026">Read the latest update</ArrowLink>
             </div>
           </div>
         </div>
@@ -179,15 +181,14 @@ export default function Home() {
         <div className="site-container home-fund-grid">
           <div>
             <SectionLabel>In development</SectionLabel>
-            <h2>Control how funds move—not only who can sign.</h2>
+            <h2>Give software room to act—with clear limits.</h2>
             <p className="section-intro">
-              BCH covenant rules can restrict what transactions are valid for
-              funds deliberately placed under covenant control.
+              When software needs to move money, OPTN is exploring ways to make
+              the permitted path explicit in the transaction itself.
             </p>
             <p className="home-fund-detail">
-              Rules can constrain recipients, amounts, permitted next states,
-              and recovery paths—even when a transaction has otherwise been
-              authorized.
+              The design can cover recipients, amounts, next steps, and
+              recovery—so a signed request is not the only line of defense.
             </p>
             <ArrowLink href="/platform">Explore programmable fund control</ArrowLink>
           </div>
@@ -195,37 +196,10 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="engage" className="site-section home-build-section">
-        <div className="site-container">
-          <SectionLabel>How to engage</SectionLabel>
-          <h2>Use the tools, or bring us a workflow.</h2>
-          <div className="three-columns home-engagement-grid">
-            <article className="column-item home-build-item home-engagement-item">
-              <span className="icon-circle"><Icon name="code" /></span>
-              <h3>Use public tools</h3>
-              <p>Read the documentation, explore examples, and build with the public Bitcoin Cash developer resources.</p>
-              <ArrowLink href="/developers">Explore Developers</ArrowLink>
-            </article>
-            <article className="column-item home-build-item home-engagement-item">
-              <span className="icon-circle"><Icon name="building" /></span>
-              <h3>Use infrastructure</h3>
-              <p>Explore public network, indexing, and metadata services for BCH applications.</p>
-              <ArrowLink href="/infrastructure">Explore Infrastructure</ArrowLink>
-            </article>
-            <article className="column-item home-build-item home-engagement-item">
-              <span className="icon-circle"><Icon name="gear" /></span>
-              <h3>Bring a workflow</h3>
-              <p>Talk to OPTN about custom wallet, CashToken, covenant, agent-payment, or integration work.</p>
-              <ArrowLink href={contactHref}>Talk to OPTN</ArrowLink>
-            </article>
-          </div>
-        </div>
-      </section>
-
       <section className="site-container home-final-cta" id="contact">
         <div>
-          <h2>Use the tools. Build something new.</h2>
-          <p>Start with OPTN Wallet and the public developer ecosystem, or talk to us about a more specialized workflow.</p>
+          <h2>Ready to build on Bitcoin Cash?</h2>
+          <p>Use the open tools and shipped wallet, or bring OPTN a workflow you want to make real.</p>
         </div>
         <div className="home-final-actions">
           <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>

@@ -7,9 +7,9 @@ import Image from "next/image";
 import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navItems = [
-  { href: "/platform", label: "Platform" },
-  { href: "/solutions", label: "Solutions" },
   { href: "/wallet", label: "Wallet" },
+  { href: "/developers", label: "Build" },
+  { href: "/infrastructure", label: "Infrastructure" },
   { href: "/engineering", label: "Engineering" },
   { href: "/about", label: "About" },
 ];

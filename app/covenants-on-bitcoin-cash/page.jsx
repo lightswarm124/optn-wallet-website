@@ -56,12 +56,11 @@ export default function CovenantsPage() {
         <div className="site-container page-hero-grid">
           <div>
             <SectionLabel>Bitcoin Cash covenants</SectionLabel>
-            <h1>Covenants define enforceable transaction paths.</h1>
+            <h1>Give Bitcoin Cash transactions clear rules.</h1>
             <p className="page-hero-copy">
-              A Bitcoin Cash covenant can require the transaction spending a
-              controlled output to satisfy defined rules. This guide covers
-              what covenants can enforce, common BCH patterns, and the limits
-              teams need to design around.
+              Covenants let a BCH product define the paths controlled funds may
+              take. Use them when a workflow needs more than a signature—such
+              as escrow, staged payouts, recovery, or restricted spending.
             </p>
             <div className="hero-actions">
               <a className="button" href="#how-it-works">
@@ -105,11 +104,11 @@ export default function CovenantsPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>What a covenant can control</SectionLabel>
-          <h2>Rules are enforced when covenant-controlled funds are spent.</h2>
+          <h2>Build guardrails into the transaction itself.</h2>
           <p className="section-intro">
-            With the right script and transaction design, the spend conditions
-            are checked at the BCH transaction boundary instead of living only
-            in an application server or an operator checklist.
+            With the right script and transaction design, spend conditions are
+            checked at the BCH transaction boundary instead of living only in
+            an application server or an operator checklist.
           </p>
           <div className="four-columns technical-grid">
             {controls.map(([icon, title, body]) => (
@@ -126,11 +125,11 @@ export default function CovenantsPage() {
       <section className="site-section" id="how-it-works">
         <div className="site-container">
           <SectionLabel>How it works</SectionLabel>
-          <h2>The rule is checked at the transaction boundary.</h2>
+          <h2>Turn a business rule into a permitted path.</h2>
           <p className="section-intro">
-            A covenant does not approve a vague request. It evaluates the
-            concrete transaction that attempts to spend the controlled input.
-            The builder and the covenant therefore have separate jobs.
+            A covenant evaluates the actual transaction that attempts to spend
+            the controlled input. The builder assembles the transaction; the
+            covenant checks whether it follows the permitted path.
           </p>
           <FlowSteps
             className="pricing-steps"

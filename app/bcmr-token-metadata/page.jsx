@@ -54,13 +54,12 @@ export default function TokenMetadataPage() {
         <div className="site-container page-hero-grid">
           <div>
             <SectionLabel>BCMR on Bitcoin Cash</SectionLabel>
-            <h1>BCMR gives Bitcoin Cash wallets a shared way to resolve token metadata.</h1>
+            <h1>Make CashTokens easier for people to recognize and use.</h1>
             <p className="page-hero-copy">
-              Bitcoin Cash Metadata Registries (BCMR) are an application-layer
-              system for sharing authenticated metadata between BCH software.
-              For CashTokens, registries let wallets and applications associate
-              token categories with human-readable information for display and
-              discovery.
+              BCMR gives Bitcoin Cash wallets and apps a structured way to show
+              token names, symbols, icons, and other useful information. This
+              guide explains how metadata connects an on-chain token to a
+              better product experience.
             </p>
             <p className="hero-note">Specification status: draft application-layer standard.</p>
             <div className="hero-actions">
@@ -105,12 +104,12 @@ export default function TokenMetadataPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>What BCMR contributes</SectionLabel>
-          <h2>Metadata is part of the token experience.</h2>
+          <h2>Turn token IDs into useful product experiences.</h2>
           <p className="section-intro">
             A category identifies a CashToken, but people need more context
-            than a long identifier. BCMR gives wallets and applications a
-            structured way to resolve useful information without putting every
-            display field directly into each transaction.
+            than a long identifier. BCMR gives wallets and apps a structured
+            way to turn that identifier into useful information without putting
+            every display field directly into each transaction.
           </p>
           <div className="four-columns technical-grid">
             {metadataFields.map(([icon, title, body]) => (
@@ -128,12 +127,12 @@ export default function TokenMetadataPage() {
         <div className="site-container boundary">
           <div>
             <SectionLabel>Metadata resolution</SectionLabel>
-            <h2>The client connects an on-chain category to a usable display.</h2>
+            <h2>From an on-chain ID to a name users understand.</h2>
             <p className="section-intro">
-              Wallets and indexers are responsible for the resolution path. A
-              resilient implementation treats registry data as external input:
-              it validates what it can, handles unavailable data, and never
-              confuses a display label with the asset reference itself.
+              Wallets and indexers connect the on-chain category to the
+              information a user sees. A resilient implementation validates
+              registry data, handles unavailable sources, and keeps the asset
+              reference separate from its display name.
             </p>
             <div className="hero-actions">
               <ArrowLink href="/infrastructure">See the infrastructure layer</ArrowLink>
@@ -154,7 +153,7 @@ export default function TokenMetadataPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>BCMR in the product stack</SectionLabel>
-          <h2>Every layer has a different responsibility.</h2>
+          <h2>From token creation to a clear wallet experience.</h2>
           <div className="four-columns technical-grid">
             {productLayers.map(([title, body], index) => (
               <div className="column-item" key={title}>
@@ -171,7 +170,7 @@ export default function TokenMetadataPage() {
         <div className="site-container boundary">
           <div>
             <SectionLabel>Important boundary</SectionLabel>
-            <h2>Metadata is not consensus state.</h2>
+            <h2>Helpful context—not transaction authority.</h2>
             <p className="section-intro">
               BCMR can make a token understandable, but it does not change
               whether a BCH transaction is valid. Applications should keep the

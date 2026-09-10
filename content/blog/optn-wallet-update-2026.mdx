@@ -1,0 +1,191 @@
+---
+title: "OPTN Wallet Update: CashTokens, BCH Apps, and What’s Shipping in 2026"
+description: "A current-state update on OPTN Wallet: self-custody BCH and CashTokens support, WalletConnect, desktop builds, and experimental headless payment tooling."
+date: "2026-09-10"
+author: "OPTN Labs"
+tags:
+  - Bitcoin Cash
+  - BCH
+  - CashTokens
+  - Wallets
+  - WalletConnect
+  - Product Updates
+---
+
+# OPTN Wallet Update: CashTokens, BCH Apps, and What’s Shipping in 2026
+
+OPTN Wallet is a self-custody Bitcoin Cash wallet for BCH, CashTokens,
+connected applications, and advanced transaction workflows. In 2026, the
+project has expanded across Android, desktop, browser, and developer-facing
+surfaces while continuing to separate stable product behavior from prerelease
+experiments.
+
+[Google Play][1] currently shows 500+ downloads and lists the app as updated on
+August 16, 2026. The stable [v1.7.3 GitHub release][2] was also published on
+August 16. This is a current-state update: what is available now, what we are
+still refining, and what remains experimental.
+
+The goal is straightforward: make Bitcoin Cash useful without requiring users
+to understand every UTXO, token field, connection protocol, or transaction
+detail underneath it.
+
+## A Bitcoin Cash wallet built to interact
+
+At the product level, OPTN Wallet lets users send and receive BCH, manage
+CashTokens, connect to compatible applications through WalletConnect, and work
+with more capable transaction flows from one self-custody wallet. The [Wallet
+page](/wallet) describes the current user-facing surface.
+
+The wallet is being built around the BCH application layer. That means the
+product has to handle more than balances and addresses: applications may ask
+for a connection, token-aware transactions need a clear explanation, and
+advanced flows need boundaries that users can understand before they approve
+anything.
+
+The public app description also describes a capability-based add-on model. We
+are continuing to refine that integration boundary, so this update does not
+present add-ons as a finished, generally available third-party platform. The
+design goal is simple: an application should be able to request a wallet action
+without automatically receiving unrestricted control over the wallet itself.
+
+## Improving the everyday wallet first
+
+A lot of recent work has been less visible than adding a new headline feature.
+
+The August stable update focused on reliability. Its public release notes list
+improvements to wallet synchronization, balance updates, transaction history,
+watch-only PSBT and QR transfers, merchant-payment flows, CashConnect, payment
+handling, localization, diagnostics, and general stability. ([Google Play][1])
+
+That work matters because advanced transaction features are not very useful if
+the basic wallet experience is unreliable.
+
+A wallet needs to know what it owns, show it correctly, construct the intended
+transaction, make the result understandable to the user, and broadcast it
+reliably. Every higher-level integration depends on those foundations working
+first.
+
+## CashTokens as a first-class wallet primitive
+
+CashTokens are one of the areas where OPTN Wallet goes beyond basic BCH
+transfers.
+
+Bitcoin Cash can carry fungible token amounts and NFTs directly inside
+transaction outputs. That means token handling is part of the transaction
+model itself rather than a balance maintained by a separate smart-contract
+account.
+
+For a wallet, that creates additional responsibilities. It has to select
+token-bearing UTXOs correctly, construct token-aware outputs and change, and
+show the user what a transaction will do before it is signed.
+
+OPTN Wallet treats those flows as native wallet behavior rather than an
+external token interface bolted onto a BCH wallet.
+
+This article is not another CashTokens tutorial. For the protocol and
+implementation layers, see the [CashTokens guide](/cashtokens), [CashTokens in
+practice](/blog/cashtokens-practical-entry), and [production wallet failure
+cases](/blog/cashtokens-wallet-nft-failures). The wallet gives us a practical
+environment for testing the CashTokens and BCMR infrastructure we build across
+OPTN Labs.
+
+## Connecting the wallet to BCH applications
+
+Application connectivity is the other major direction. WalletConnect is the
+current public path for connecting OPTN Wallet to compatible external
+applications. The add-on system is a separate development direction, with its
+host, permission, and SDK boundaries still being refined.
+
+That opens the door to a wallet that can act as an interface to more of the BCH
+ecosystem.
+
+A user should eventually be able to discover an application, understand what
+it is requesting, review the transaction that results, and approve or reject it
+without needing to manually reconstruct what happened at the protocol layer.
+
+That is the direction behind our work on application connections, transaction
+construction, token support, merchant flows, and contract interaction. The
+[developer resources](/developers) provide the surrounding integration and
+implementation context.
+
+## Android, desktop, and browser distribution
+
+Google Play is the straightforward distribution path for the stable Android
+application. The [v1.7.3 GitHub release][2] also provides downloadable builds
+for Windows, macOS, and Linux, along with Chrome/Chromium and Firefox extension
+bundles.
+
+The release notes distinguish these channels for a reason. Mobile is the
+easiest path for everyday users, while GitHub exposes source code, release
+artifacts, and implementation context for developers and technical users. iOS
+is not included in the current v1.7.3 release.
+
+## Stable product and prerelease work are not the same thing
+
+It is important to distinguish the stable wallet from public development work.
+
+The [v1.7.3-alpha.41 prerelease][3], published on August 30, includes a
+headless wallet with x402 payments, CashTokens support, and agent skills,
+alongside additional desktop, PSBT, and connection work. It is explicitly
+prerelease work—not a promise that the stable Wallet is already an autonomous
+payment product.
+
+This direction is worth exploring because not every wallet requester will be a
+person holding a phone. It may also be another application, service, automated
+workflow, or agent.
+
+Machine-operated payments introduce different questions from simply making
+payments easier: who may request a transaction, which limits and destinations
+apply, and what remains enforceable if software or signing authority is
+compromised?
+
+Those are broader problems we are exploring at OPTN Labs. They should not be
+confused with features already promised by the stable Wallet. Our separate
+[fund-control work](/platform) examines how BCH covenant rules can constrain
+permitted outcomes for funds deliberately placed under that control.
+
+## The Wallet is also our proving ground
+
+OPTN Wallet matters to us for another reason: it forces us to work with Bitcoin
+Cash as a real product environment.
+
+CashTokens are not an abstract specification when a wallet has to handle token
+change correctly. WalletConnect is not just an integration standard when a user
+has to understand what an application is asking them to sign. Covenant
+contracts are not just scripts when a wallet has to construct the exact
+transaction that can spend them.
+
+The Wallet gives us a place to encounter those problems directly. That work
+feeds into the broader tools, infrastructure, and programmable transaction
+systems we are building at OPTN Labs.
+
+We do not want to build infrastructure in isolation from the products that
+have to use it.
+
+## Where we are now
+
+OPTN Wallet is already a usable Bitcoin Cash product, but we do not consider
+the work finished.
+
+The stable application today is centered on self-custody, BCH, CashTokens,
+application connections, and increasingly capable transaction workflows.
+Alongside it, we are experimenting with richer desktop experiences, developer
+interfaces, machine-operated payments, covenant interaction, and new ways to
+connect BCH applications without giving every application unrestricted access
+to the wallet.
+
+Some of those experiments will become stable product features. Others may
+remain developer tools or become separate OPTN products.
+
+The common thread is the same:
+
+**make Bitcoin Cash easier to use without hiding what controls the transaction.**
+
+You can try the current Android release through [Google Play][1], review the
+source and downloadable releases on [GitHub][2], or learn more about [OPTN
+Wallet](/wallet) and the wider [OPTN Labs](https://www.optnlabs.com/) product
+ecosystem.
+
+[1]: https://play.google.com/store/apps/details?id=optn.wallet.app "OPTN Wallet on Google Play"
+[2]: https://github.com/OPTNLabs/OPTNWallet/releases "OPTN Wallet releases on GitHub"
+[3]: https://github.com/OPTNLabs/OPTNWallet/releases/tag/v1.7.3-alpha.41 "OPTN Wallet v1.7.3-alpha.41 prerelease"

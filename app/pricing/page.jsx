@@ -19,7 +19,7 @@ const plans = [
     status: "Available now",
     title: "Community",
     price: "Free",
-    body: "Build directly with the open wallet, covenant and transaction tooling.",
+    body: "Everything you need to explore and build with OPTN's open BCH tools.",
     features: ["OPTN Wallet", "Open tools and templates", "Local testing and verification", "Public documentation"],
     href: "/developers",
     label: "Explore the tools",
@@ -28,7 +28,7 @@ const plans = [
     status: "Coming soon",
     title: "Builder",
     price: "Not yet priced",
-    body: "A future convenience layer for teams that want less wiring around OPTN's open tools.",
+    body: "A future convenience layer for teams that want a simpler setup and smoother path from idea to integration.",
     features: ["Convenience layer over open tools", "Guided setup as it develops", "Integration recipes as they mature", "Pricing to be announced"],
     href: "/#contact",
     label: "Ask about the roadmap",
@@ -37,7 +37,7 @@ const plans = [
     status: "Available now",
     title: "Custom engineering",
     price: "Scoped to project",
-    body: "Work directly with OPTN on specialized BCH, CashToken, covenant, and agent-payment engineering.",
+    body: "Hands-on support for specialized BCH products and transaction workflows.",
     features: ["Workflow and architecture scoping", "Wallet and CashToken integration", "Covenant and transaction design", "Testing and release support"],
     href: "/#contact",
     label: "Discuss custom work",
@@ -45,9 +45,9 @@ const plans = [
 ];
 
 const steps = [
-  { title: "Choose a path", body: "Start with open tools or identify where support will help." },
-  { title: "Configure", body: "Define the workflow, policy and integration boundaries." },
-  { title: "Build or review", body: "Use the tooling yourself or bring OPTN in for scoped work." },
+  { title: "Start", body: "Explore the open tools or identify where support will help." },
+  { title: "Set up", body: "Define the workflow, product needs, and integration boundaries." },
+  { title: "Ship", body: "Use the tooling yourself or bring OPTN in for focused work." },
 ];
 
 const questions = [
@@ -63,8 +63,8 @@ export default function PricingPage() {
       <section className="page-hero">
         <div className="site-container price-intro">
           <SectionLabel>Pricing</SectionLabel>
-          <h1>Start free. Pay for the easier path.</h1>
-          <p className="page-hero-copy">OPTN&apos;s core tooling is open and self-managed. Paid options make setup, configuration, integration and ongoing use easier without requiring OPTN to operate your financial authority.</p>
+          <h1>Start with open tools. Add support when it helps.</h1>
+          <p className="page-hero-copy">Explore OPTN&apos;s free wallet and developer tools. When you need a faster path, bring us in for setup, integration, testing, or ongoing support—without giving up control of your funds.</p>
           <div className="hero-actions"><ButtonLink href="/developers">Explore free tools</ButtonLink><ButtonLink href="/#contact" variant="secondary">Talk to OPTN</ButtonLink></div>
         </div>
       </section>
@@ -72,7 +72,7 @@ export default function PricingPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>Choose your path</SectionLabel>
-          <h2>Open tools, an upcoming Builder, or custom support.</h2>
+          <h2>Choose the level of support that fits.</h2>
           <div className="pricing-tier-grid">
             {plans.map((plan) => (
               <div className="pricing-tier" key={plan.title}>
@@ -86,7 +86,7 @@ export default function PricingPage() {
             ))}
           </div>
           <div className="custom-pricing-band">
-            <div><SectionLabel>Custom</SectionLabel><h3>Need a production workflow or deeper support?</h3><p>Scope engineering, covenant design, integration, adversarial testing, migration and deployment support with OPTN.</p></div>
+            <div><SectionLabel>Custom</SectionLabel><h3>Need a production workflow or a partner to help you ship?</h3><p>Get focused help with architecture, covenant and transaction design, integration, adversarial testing, migration, and release.</p></div>
             <ButtonLink href="/#contact">Talk to OPTN</ButtonLink>
           </div>
           <p className="fine-print">Builder is not yet generally available and has no public price. Additional integration, audit, compliance and specialized engineering work may require separate scope and pricing.</p>
@@ -96,11 +96,11 @@ export default function PricingPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>What support can mean</SectionLabel>
-          <h2>Get less wiring and better support.</h2>
+          <h2>Spend less time on setup. Move faster with confidence.</h2>
           <div className="three-columns pricing-value-grid">
-            <div className="column-item"><h3>Configure</h3><p>Guided policy and configuration helpers make the open tools easier to apply.</p></div>
-            <div className="column-item"><h3>Validate</h3><p>Recipes and local workflows help teams test integration points before release.</p></div>
-            <div className="column-item"><h3>Maintain</h3><p>Updates, migration guidance and bounded support reduce ongoing maintenance work.</p></div>
+            <div className="column-item"><h3>Configure</h3><p>Get a clearer starting point and turn open tools into a workflow that fits your product.</p></div>
+            <div className="column-item"><h3>Validate</h3><p>Test the important integration points before they reach your users.</p></div>
+            <div className="column-item"><h3>Maintain</h3><p>Keep moving with updates, migration guidance, and bounded support when you need it.</p></div>
           </div>
         </div>
       </section>
@@ -108,7 +108,7 @@ export default function PricingPage() {
       <section className="site-section">
         <div className="site-container">
           <SectionLabel>From open tools to supported implementation</SectionLabel>
-          <h2>Choose, configure, build.</h2>
+          <h2>Start, set up, ship.</h2>
           <FlowSteps steps={steps} className="pricing-steps" />
         </div>
       </section>
@@ -123,7 +123,7 @@ export default function PricingPage() {
         </div>
       </section>
 
-      <FinalCTA title="Have a workflow in mind?" body="Tell us what you need to control." />
+      <FinalCTA title="Have a workflow in mind?" body="Tell us what you need to build, simplify, or control." />
     </div>
   );
 }

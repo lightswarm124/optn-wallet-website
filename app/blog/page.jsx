@@ -29,8 +29,7 @@ export default function BlogIndex() {
             Builder notes, product updates, and technical field notes
           </h1>
           <p className="mt-3 max-w-2xl text-base text-slate-300">
-            CashTokens, covenants, wallet architecture, and the infrastructure
-            we’re shipping to make BCH easier to build on.
+            Start with the <Link href="/blog/optn-wallet-update-2026" className="text-cyan-300 hover:text-cyan-200">latest product update</Link> for what is available now, then explore CashTokens, covenants, wallet architecture, and the infrastructure we’re shipping to make BCH easier to build on.
           </p>
         </header>
 

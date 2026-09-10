@@ -16,10 +16,10 @@ export const metadata = createPageMetadata({
 });
 
 const capabilities = [
-  ["CashTokens", "View and manage fungible tokens and NFTs alongside BCH."],
-  ["Transaction construction", "Support richer BCH transactions and advanced wallet workflows."],
-  ["Wallet connections", "Connect the wallet to BCH applications and external experiences."],
-  ["Contract interaction", "Use BCH covenant and CashScript tooling through a wallet product surface."],
+  ["CashTokens", "See fungible tokens and NFTs alongside BCH."],
+  ["Advanced transactions", "Handle richer payments and advanced BCH workflows."],
+  ["Connect to apps", "Connect to BCH apps and experiences when you need them."],
+  ["Explore contracts", "Explore covenant-powered experiences through a wallet built for BCH."],
 ];
 
 export default function WalletPage() {
@@ -30,8 +30,8 @@ export default function WalletPage() {
           <div>
             <span className="wallet-status">Shipped</span>
             <SectionLabel>OPTN Wallet</SectionLabel>
-            <h1>The BCH wallet built to interact.</h1>
-            <p className="page-hero-copy">Send, receive, manage CashTokens, connect to applications, and work with advanced transaction flows from a self-custody wallet.</p>
+            <h1>A self-custody BCH wallet that connects to what&apos;s next.</h1>
+            <p className="page-hero-copy">Send BCH, manage CashTokens, connect to apps, and explore more capable transaction flows from one practical wallet.</p>
             <div className="hero-actions"><ButtonLink href="https://play.google.com/store/apps/details?id=optn.wallet.app">Get OPTN Wallet</ButtonLink><ButtonLink href="https://github.com/OPTNLabs/OPTNWallet" variant="secondary">View on GitHub</ButtonLink></div>
           </div>
           <div className="wallet-hero-image"><Image src="/assets/images/OPTNWelcome3.png" alt="OPTN Wallet app artwork" width={442} height={434} priority sizes="(max-width: 900px) 55vw, 300px" /></div>
@@ -40,8 +40,8 @@ export default function WalletPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Built for the BCH application layer</SectionLabel>
-          <h2>More than storage and sending.</h2>
+          <SectionLabel>Built for how BCH is used today</SectionLabel>
+          <h2>Use BCH with more confidence.</h2>
           <div className="wallet-capabilities">
             {capabilities.map(([title, body], index) => <div className="capability-row" key={title}><strong><span className="capability-marker">{index + 1}</span>{title}</strong><p>{body}</p></div>)}
           </div>
@@ -52,9 +52,9 @@ export default function WalletPage() {
         <div className="site-container proof-grid">
           <div>
             <SectionLabel>Part of OPTN Labs</SectionLabel>
-            <h2>Shipped proof for a broader control platform.</h2>
-            <p className="section-intro">OPTN Wallet is the product surface where OPTN builds and validates BCH transaction construction, CashTokens, application connections, and covenant-oriented workflows.</p>
-            <div className="hero-actions"><ArrowLink href="/engineering">Engineering</ArrowLink><ArrowLink href="/developers">Developers</ArrowLink></div>
+            <h2>The working product behind the wider OPTN platform.</h2>
+            <p className="section-intro">OPTN Wallet is where we test wallet UX, token handling, app connections, and advanced BCH transaction flows before applying those lessons elsewhere.</p>
+            <div className="hero-actions"><ArrowLink href="/engineering">Engineering</ArrowLink><ArrowLink href="/developers">Developers</ArrowLink><ArrowLink href="/blog/optn-wallet-update-2026">Latest Wallet update</ArrowLink></div>
           </div>
           <div className="wallet-gallery" aria-label="OPTN Wallet product artwork">
             <Image src="/assets/images/OPTNWelcome3.png" alt="OPTN Wallet app artwork" width={442} height={434} sizes="180px" />
@@ -63,7 +63,7 @@ export default function WalletPage() {
         </div>
       </section>
 
-      <FinalCTA title="Explore the shipped product." body="Use OPTN Wallet or review the implementation." label="Get OPTN Wallet" href="https://play.google.com/store/apps/details?id=optn.wallet.app" />
+      <FinalCTA title="Try OPTN Wallet." body="Download the shipped wallet or review the open implementation." label="Get OPTN Wallet" href="https://play.google.com/store/apps/details?id=optn.wallet.app" />
     </div>
   );
 }
