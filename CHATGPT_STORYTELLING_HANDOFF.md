@@ -4,7 +4,7 @@ This is a source-faithful handoff for the deeper storytelling review. It describ
 
 Repository: `/home/lightswarm/projects/optn-wallet-website`
 
-The current application changes are working-tree changes and have not been committed in this pass. Search Console and speculative SEO work are intentionally out of scope here because the site has not accumulated useful search data yet.
+Storytelling and investor-alignment changes were committed and pushed to `main` in commit `11590c8`. Search Console and speculative SEO changes were intentionally out of scope for this pass. The revised site has not yet accumulated enough post-change search data to justify further SEO edits.
 
 ## Canonical company story
 
