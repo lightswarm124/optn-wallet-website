@@ -2,7 +2,6 @@ import {
   ArrowLink,
   ButtonLink,
   FinalCTA,
-  FlowSteps,
   Icon,
   SectionLabel,
 } from "../components/SitePrimitives";
@@ -19,13 +18,6 @@ const useCases = [
   ["brain", "AI payments", "Give automated services room to act while setting clear limits on where and how much they can spend.", "Discuss AI payments"],
   ["building", "Treasury & business workflows", "Create repeatable payouts and delegated budgets with clear approval and recovery paths.", "Discuss treasury workflows"],
   ["cube", "BCH applications", "Turn BCH, CashTokens, and covenant capabilities into products people can actually use.", "Discuss BCH applications"],
-];
-
-const deploymentSteps = [
-  { title: "Define the outcome", body: "Identify what needs to happen and where control matters." },
-  { title: "Design the rules", body: "Turn the workflow into a clear policy and transaction plan." },
-  { title: "Build and test", body: "Integrate the pieces and validate them with your team." },
-  { title: "Launch", body: "Move toward release with a support plan that fits the workflow." },
 ];
 
 export default function SolutionsPage() {
@@ -54,11 +46,8 @@ export default function SolutionsPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Deployment path</SectionLabel>
-          <h2>From a real use case to deployment.</h2>
-          <FlowSteps steps={deploymentSteps} className="pricing-steps" />
           <div className="custom-offer-band solution-offer-band">
-            <div><SectionLabel>Ways to work with us</SectionLabel><strong>Start with public tools, or work with OPTN to ship.</strong><p>Explore on your own, or bring us in for the implementation, integration, testing, and support plan your workflow needs.</p></div>
+            <div><SectionLabel>Ways to work with us</SectionLabel><strong>Start with public tools, or work with OPTN to ship.</strong><p>Explore on your own, or bring us in when the workflow needs deeper design, integration, testing, or support.</p></div>
             <div className="solution-offer-links"><ArrowLink href="/developers">Explore developer tools</ArrowLink><ArrowLink href="/pricing">View pricing</ArrowLink><ButtonLink href="/#contact">Talk to OPTN</ButtonLink></div>
           </div>
         </div>

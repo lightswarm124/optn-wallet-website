@@ -30,7 +30,7 @@ export default function InfrastructurePage() {
           <div>
             <SectionLabel>Infrastructure</SectionLabel>
             <h1>The BCH services your product needs to keep moving.</h1>
-            <p className="page-hero-copy">Connect wallets and applications to hosted Bitcoin Cash network, indexing, token, and metadata services—without building every backend component yourself.</p>
+            <p className="page-hero-copy">OPTN Wallet needed reliable chain data, token indexing, metadata, and connectivity to feel usable. We make those supporting Bitcoin Cash services available to teams building their own products.</p>
             <div className="hero-actions"><ButtonLink href="/#contact">Request access</ButtonLink><ButtonLink href="#tokenindex" variant="secondary">View token data</ButtonLink></div>
           </div>
           <div className="architecture-graphic infrastructure-flow">
@@ -45,8 +45,8 @@ export default function InfrastructurePage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Public services</SectionLabel>
-          <h2>Spend your time on the product—not the plumbing.</h2>
+          <SectionLabel>The supporting layer</SectionLabel>
+          <h2>The foundation behind usable BCH apps.</h2>
           <div className="four-columns control-grid">
             {services.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
           </div>

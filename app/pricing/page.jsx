@@ -2,7 +2,6 @@ import {
   ArrowLink,
   ButtonLink,
   FinalCTA,
-  FlowSteps,
   SectionLabel,
 } from "../components/SitePrimitives";
 import { createPageMetadata } from "../../lib/seo";
@@ -42,12 +41,6 @@ const plans = [
     href: "/#contact",
     label: "Discuss custom work",
   },
-];
-
-const steps = [
-  { title: "Start", body: "Explore the open tools or identify where support will help." },
-  { title: "Set up", body: "Define the workflow, product needs, and integration boundaries." },
-  { title: "Ship", body: "Use the tooling yourself or bring OPTN in for focused work." },
 ];
 
 const questions = [
@@ -90,26 +83,6 @@ export default function PricingPage() {
             <ButtonLink href="/#contact">Talk to OPTN</ButtonLink>
           </div>
           <p className="fine-print">Builder is not yet generally available and has no public price. Additional integration, audit, compliance and specialized engineering work may require separate scope and pricing.</p>
-        </div>
-      </section>
-
-      <section className="site-section">
-        <div className="site-container">
-          <SectionLabel>What support can mean</SectionLabel>
-          <h2>Spend less time on setup. Move faster with confidence.</h2>
-          <div className="three-columns pricing-value-grid">
-            <div className="column-item"><h3>Configure</h3><p>Get a clearer starting point and turn open tools into a workflow that fits your product.</p></div>
-            <div className="column-item"><h3>Validate</h3><p>Test the important integration points before they reach your users.</p></div>
-            <div className="column-item"><h3>Maintain</h3><p>Keep moving with updates, migration guidance, and bounded support when you need it.</p></div>
-          </div>
-        </div>
-      </section>
-
-      <section className="site-section">
-        <div className="site-container">
-          <SectionLabel>From open tools to supported implementation</SectionLabel>
-          <h2>Start, set up, ship.</h2>
-          <FlowSteps steps={steps} className="pricing-steps" />
         </div>
       </section>
 

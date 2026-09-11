@@ -2,7 +2,6 @@ import Image from "next/image";
 import { createPageMetadata } from "../../lib/seo";
 
 import {
-  ArrowLink,
   ButtonLink,
   FinalCTA,
   Icon,
@@ -55,7 +54,7 @@ export default function AboutPage() {
             <p className="about-mission">
               <strong>Our mission:</strong> build open financial infrastructure
               that helps people and software move value through clear,
-              approved paths while preserving self-custody.
+              defined paths while preserving self-custody.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
@@ -80,6 +79,17 @@ export default function AboutPage() {
         </div>
       </section>
 
+      <section className="site-section about-story-section">
+        <div className="site-container">
+          <SectionLabel>Why OPTN exists</SectionLabel>
+          <h2>Make advanced Bitcoin Cash capabilities usable.</h2>
+          <div className="about-story-copy">
+            <p>Bitcoin Cash has native tokens, programmable transaction patterns, and a UTXO model capable of more than simple payments. But users and teams should not have to manage all that machinery themselves to build or use a product.</p>
+            <p>We started with a real wallet. Building it exposed the tooling and infrastructure BCH applications need—and led us to explore a deeper question: as software moves money, how can the transaction itself help define what is allowed?</p>
+          </div>
+        </div>
+      </section>
+
       <section className="site-section about-principles-section">
         <div className="site-container">
           <SectionLabel>How we work</SectionLabel>
@@ -98,7 +108,7 @@ export default function AboutPage() {
               <h3>OPTN does not hold customer funds.</h3>
             </div>
             <p>
-              We can help map requests to approved financial paths. For funds
+              We can help map requests to defined financial paths. For funds
               deliberately placed under covenant control, BCH transaction rules
               can enforce the permitted outcome.
             </p>
@@ -133,19 +143,6 @@ export default function AboutPage() {
             BCH workflows shaped the problem OPTN is building around:
             authorization alone does not guarantee an acceptable outcome.
           </p>
-        </div>
-      </section>
-
-      <section className="site-section about-next-section">
-        <div className="site-container">
-          <SectionLabel>Explore OPTN Labs</SectionLabel>
-          <h2>Find the right place to start.</h2>
-          <div className="about-next-grid">
-            <ArrowLink href="/wallet">Use the shipped wallet</ArrowLink>
-            <ArrowLink href="/developers">Build with the open tools</ArrowLink>
-            <ArrowLink href="/engineering">Discuss a technical project</ArrowLink>
-            <ArrowLink href="/platform">Understand fund control</ArrowLink>
-          </div>
         </div>
       </section>
 

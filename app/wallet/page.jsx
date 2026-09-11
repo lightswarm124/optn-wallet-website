@@ -19,7 +19,7 @@ const capabilities = [
   ["CashTokens", "See fungible tokens and NFTs alongside BCH."],
   ["Advanced transactions", "Handle richer payments and advanced BCH workflows."],
   ["Connect to apps", "Connect to BCH apps and experiences when you need them."],
-  ["Explore contracts", "Explore covenant-powered experiences through a wallet built for BCH."],
+  ["Explore contracts", "Support richer BCH transaction and contract workflows."],
 ];
 
 export default function WalletPage() {
@@ -29,9 +29,9 @@ export default function WalletPage() {
         <div className="site-container page-hero-grid">
           <div>
             <span className="wallet-status">Shipped</span>
-            <SectionLabel>OPTN Wallet</SectionLabel>
+            <SectionLabel>The product that proves the stack</SectionLabel>
             <h1>A self-custody BCH wallet that connects to what&apos;s next.</h1>
-            <p className="page-hero-copy">Send BCH, manage CashTokens, connect to apps, and explore more capable transaction flows from one practical wallet.</p>
+            <p className="page-hero-copy">We built OPTN Wallet to make more of BCH practical for real users: send BCH, manage CashTokens, connect to apps, and explore more capable transaction flows from one self-custody wallet.</p>
             <div className="hero-actions"><ButtonLink href="https://play.google.com/store/apps/details?id=optn.wallet.app">Get OPTN Wallet</ButtonLink><ButtonLink href="https://github.com/OPTNLabs/OPTNWallet" variant="secondary">View on GitHub</ButtonLink></div>
           </div>
           <div className="wallet-hero-image"><Image src="/assets/images/OPTNWelcome3.png" alt="OPTN Wallet app artwork" width={442} height={434} priority sizes="(max-width: 900px) 55vw, 300px" /></div>
@@ -51,9 +51,9 @@ export default function WalletPage() {
       <section className="site-section">
         <div className="site-container proof-grid">
           <div>
-            <SectionLabel>Part of OPTN Labs</SectionLabel>
-            <h2>The working product behind the wider OPTN platform.</h2>
-            <p className="section-intro">OPTN Wallet is where we test wallet UX, token handling, app connections, and advanced BCH transaction flows before applying those lessons elsewhere.</p>
+            <SectionLabel>Where the story starts</SectionLabel>
+            <h2>The working product behind the wider OPTN stack.</h2>
+            <p className="section-intro">We did not start with abstract infrastructure. We built a wallet, learned what users and applications need, and use those lessons to shape the tools, services, and transaction controls around it.</p>
             <div className="hero-actions"><ArrowLink href="/engineering">Engineering</ArrowLink><ArrowLink href="/developers">Developers</ArrowLink><ArrowLink href="/blog/optn-wallet-update-2026">Latest Wallet update</ArrowLink></div>
           </div>
           <div className="wallet-gallery" aria-label="OPTN Wallet product artwork">

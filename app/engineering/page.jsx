@@ -37,7 +37,7 @@ export default function EngineeringPage() {
           <div>
             <SectionLabel>Engineering</SectionLabel>
             <h1>Turn a BCH product idea into something people can use.</h1>
-            <p className="page-hero-copy">OPTN helps teams design, build, test, and ship Bitcoin Cash wallets, CashToken apps, and controlled transaction workflows.</p>
+            <p className="page-hero-copy">We built OPTN Wallet and the supporting BCH stack ourselves. Now we help teams apply those lessons to wallets, CashToken apps, and controlled transaction workflows of their own.</p>
             <div className="hero-actions"><ButtonLink href="/#contact">Talk to engineering</ButtonLink><ArrowLink href="/developers">Explore developer resources</ArrowLink></div>
           </div>
           <EngineeringGraphic />
@@ -46,8 +46,8 @@ export default function EngineeringPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Where we can help</SectionLabel>
-          <h2>Practical support across the BCH stack.</h2>
+          <SectionLabel>Apply the stack</SectionLabel>
+          <h2>The same expertise, applied to your product.</h2>
           <div className="technical-grid control-grid">
             {areas.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
           </div>
@@ -56,8 +56,8 @@ export default function EngineeringPage() {
 
       <section className="site-section">
         <div className="site-container process-grid">
-          <div><SectionLabel>A practical path to launch</SectionLabel><FlowSteps steps={process} /></div>
-          <div><SectionLabel>Experience behind the work</SectionLabel><div className="product-list proof-products">
+          <div><SectionLabel>From product idea to launch</SectionLabel><FlowSteps steps={process} /></div>
+          <div><SectionLabel>Proof behind the work</SectionLabel><div className="product-list proof-products">
             <div className="product-row"><span className="icon-circle"><Icon name="wallet" /></span><div><h3>OPTN Wallet <span className="status-inline">Shipped</span></h3><p>BCH and CashTokens wallet</p><ArrowLink href="/wallet">Explore Wallet</ArrowLink></div></div>
             <div className="product-row"><span className="icon-circle"><Icon name="stack" /></span><div><h3>FundMe.cash <span className="status-inline">Shipped</span></h3><p>Covenant-based crowdfunding</p></div></div>
             <div className="product-row"><span className="icon-circle"><Icon name="route" /></span><div><h3>Covenant coordination <span className="status-inline">Built and tested locally · In development</span></h3><p>Working research for controlled payment workflows</p></div></div>

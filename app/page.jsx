@@ -16,34 +16,22 @@ export const metadata = createPageMetadata({
 
 const ecosystem = [
   {
-    icon: "wallet",
-    title: "OPTN Wallet",
-    status: "Available now",
-    body: "A self-custody wallet for everyday BCH, CashTokens, and connected apps.",
-    href: "/wallet",
-    label: "Explore Wallet",
-  },
-  {
+    stage: "Build",
     icon: "code",
-    title: "Developer Tools",
+    title: "The BCH stack",
     status: "Available now",
-    body: "Open resources that help you move from a product idea to a working Bitcoin Cash integration.",
+    body: "Developer resources and infrastructure built around the problems a working wallet has to solve.",
     href: "/developers",
-    label: "Explore Developers",
+    label: "Explore developer resources",
+    secondaryHref: "/infrastructure",
+    secondaryLabel: "View infrastructure",
   },
   {
-    icon: "building",
-    title: "Infrastructure",
-    status: "Available now",
-    body: "Hosted network, indexing, and metadata services that keep your app connected to BCH.",
-    href: "/infrastructure",
-    label: "Explore Infrastructure",
-  },
-  {
+    stage: "Control",
     icon: "shield",
-    title: "Fund Control",
+    title: "Programmable fund control",
     status: "In development",
-    body: "A developing way to put clear spending rules around software-operated funds.",
+    body: "Explore transaction rules that limit what software-operated funds can do.",
     href: "/platform",
     label: "Explore Platform",
   },
@@ -97,16 +85,20 @@ function FundControlFlow() {
   );
 }
 
-function EcosystemPillar({ icon, title, status, body, href, label }) {
+function EcosystemPillar({ stage, icon, title, status, body, href, label, secondaryHref, secondaryLabel }) {
   return (
     <article className="column-item home-pillar">
       <span className="icon-circle"><Icon name={icon} /></span>
+      <span className="home-pillar-stage">{stage}</span>
       <div className="home-pillar-heading">
         <h3>{title}</h3>
         <span className="status-pill">{status}</span>
       </div>
       <p>{body}</p>
-      <ArrowLink href={href}>{label}</ArrowLink>
+      <div className="home-pillar-links">
+        <ArrowLink href={href}>{label}</ArrowLink>
+        {secondaryHref ? <ArrowLink href={secondaryHref}>{secondaryLabel}</ArrowLink> : null}
+      </div>
     </article>
   );
 }
@@ -118,19 +110,20 @@ export default function Home() {
         <div className="site-container home-hero-grid">
           <div className="home-hero-copy">
             <SectionLabel>OPTN Labs</SectionLabel>
-            <h1>Bitcoin Cash tools for people and products that move value.</h1>
+            <h1>Bitcoin Cash wallets, tools, and infrastructure.</h1>
             <p className="hero-copy">
-              OPTN Labs gives people and product teams a practical way to use
-              BCH—from a self-custody wallet to the infrastructure and
-              engineering behind better applications.
+              Bitcoin Cash can do more than simple payments. OPTN builds
+              practical products and supporting layers that make advanced BCH
+              capabilities usable—from a self-custody wallet to developing
+              systems designed to set clear limits around software-operated
+              funds.
             </p>
             <p className="home-hero-detail">
-              Start with a wallet. Build with open tools. Bring us the workflow
-              that needs more.
+              Use the wallet. Build with the stack. Explore what comes next.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
-              <ArrowLink href="/platform">Explore the Platform</ArrowLink>
+              <ArrowLink href="/developers">Explore developer resources</ArrowLink>
               <ArrowLink href={contactHref}>Talk to OPTN</ArrowLink>
             </div>
           </div>
@@ -142,16 +135,6 @@ export default function Home() {
         </div>
       </section>
 
-      <section id="ecosystem" className="site-section home-ecosystem">
-        <div className="site-container">
-          <SectionLabel>What OPTN builds</SectionLabel>
-          <h2>Everything you need to use, build, and scale on Bitcoin Cash.</h2>
-          <div className="four-columns home-pillar-grid">
-            {ecosystem.map((item) => <EcosystemPillar key={item.title} {...item} />)}
-          </div>
-        </div>
-      </section>
-
       <section id="wallet-proof" className="site-section home-wallet-section">
         <div className="site-container home-wallet-grid">
           <div className="home-wallet-artwork-wrap">
@@ -159,11 +142,11 @@ export default function Home() {
             <p className="home-art-caption">Canonical OPTN product artwork.</p>
           </div>
           <div>
-            <SectionLabel>Available now</SectionLabel>
-            <h2>A better way to use BCH.</h2>
+            <SectionLabel>Proof in use</SectionLabel>
+            <h2>The product that proves the stack.</h2>
             <p className="section-intro">
-              Keep BCH, CashTokens, app connections, and advanced transactions
-              in one practical self-custody experience.
+              We built OPTN Wallet to make BCH, CashTokens, app connections, and
+              advanced transaction flows practical for real users.
             </p>
             <ul className="home-capabilities">
               {capabilities.map((capability) => <li key={capability}>{capability}</li>)}
@@ -174,6 +157,26 @@ export default function Home() {
               <ArrowLink href="/blog/optn-wallet-update-2026">Read the latest update</ArrowLink>
             </div>
           </div>
+        </div>
+      </section>
+
+      <section id="ecosystem" className="site-section home-ecosystem">
+        <div className="site-container">
+          <SectionLabel>From proof to control</SectionLabel>
+          <h2>Build the stack. Control the outcome.</h2>
+          <p className="section-intro">
+            Once a real wallet works, the next layers become clear: give other
+            builders the tools and infrastructure they need, then explore
+            transaction rules that control what software-operated funds can do.
+          </p>
+          <div className="home-stack-grid">
+            {ecosystem.map((item) => <EcosystemPillar key={item.title} {...item} />)}
+          </div>
+          <p className="home-stack-transition">
+            As applications become more capable, the question shifts from who
+            can request a transaction to what transactions should be possible
+            at all.
+          </p>
         </div>
       </section>
 

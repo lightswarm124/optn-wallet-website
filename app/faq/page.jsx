@@ -4,43 +4,35 @@ import { createPageMetadata } from "../../lib/seo";
 const faqs = [
   {
     q: "What is OPTN Labs?",
-    a: "OPTN Labs builds Bitcoin Cash wallets, developer tools, infrastructure, and programmable transaction systems. OPTN Wallet is the shipped user product, while the broader platform work focuses on tools and transaction controls for BCH applications and software-operated funds.",
-  },
-  {
-    q: "Is OPTN only a wallet?",
-    a: "No. OPTN Wallet is the shipped user product, but OPTN also builds developer tools, Bitcoin Cash infrastructure, CashToken integrations, and programmable transaction systems for product teams.",
+    a: "OPTN Labs is a Canadian company building Bitcoin Cash wallets, developer tools, infrastructure, and transaction systems. OPTN Wallet is the shipped user product; the wider company helps teams make BCH products easier to use, integrate, and operate.",
   },
   {
     q: "What is OPTN Wallet?",
-    a: "OPTN Wallet is our BCH wallet and reference implementation. It proves the wallet UX, token flows, app connections, add-ons, and advanced transaction behavior we want to make easier for other teams.",
+    a: "OPTN Wallet is a self-custody BCH wallet and reference implementation. It supports everyday wallet use, CashTokens, connected applications, and advanced transaction work as the product continues to develop.",
   },
   {
-    q: "What does OPTN build?",
-    a: "OPTN builds wallet software, CashTokens support, token indexing, Bitcoin Cash infrastructure, covenant-aware transaction flows, and integration support.",
+    q: "Does OPTN hold customer keys or funds?",
+    a: "No. OPTN's open and paid tooling paths are designed around self-custody and do not require OPTN to hold your keys or funds. Any custom arrangement should be scoped explicitly.",
   },
   {
-    q: "What is TokenIndexer?",
-    a: "TokenIndexer is OPTN's token data layer for balances, holders, metadata, and app-facing APIs.",
+    q: "What is available today, and what is still in development?",
+    a: "OPTN Wallet, public developer resources, Bitcoin Cash infrastructure, and engineering support are available today. Some convenience layers, including Builder and the in-wallet add-on system, are still in development and are not generally available.",
   },
   {
     q: "What Bitcoin Cash services are available?",
-    a: "The public service surface includes Electrum, Chaingraph, BCMR, IPFS, and token data access, with public status for what is currently exposed.",
+    a: "The public infrastructure surface includes Electrum, Chaingraph, BCMR, IPFS, and token data access. TokenIndexer provides token balances, holders, metadata, and app-facing data, with public status for what is currently exposed.",
   },
   {
-    q: "Can OPTN help with CashTokens?",
-    a: "Yes. CashTokens are a core part of the stack, from wallet support to metadata and token-aware app flows.",
+    q: "Can I use OPTN's open tools without OPTN?",
+    a: "Yes. Public tools, documentation, and code are available for teams that want to explore and build independently. OPTN's engineering services are available when you want help shaping, integrating, testing, or shipping a workflow.",
   },
   {
-    q: "Can OPTN help with covenants?",
-    a: "Yes. We help with covenant patterns, transaction planning, and product flows that depend on constrained spend behavior.",
+    q: "Can OPTN help with CashTokens, covenants, or CashScript?",
+    a: "Yes. OPTN can help with CashToken-aware wallet and application flows, covenant patterns, transaction planning, and CashScript implementation. You do not need to know CashScript before starting a conversation.",
   },
   {
-    q: "Do I need to know CashScript?",
-    a: "No. If you already know CashScript, great. If not, OPTN can still help with the design and implementation path.",
-  },
-  {
-    q: "What does outcome control mean?",
-    a: "It means the app can shape what a valid transaction is allowed to do, not just who can authorize it.",
+    q: "When should I contact OPTN about engineering or custom work?",
+    a: "Reach out when you need production workflow design, covenant or transaction work, wallet or CashToken integration, infrastructure guidance, testing, security review, or release support.",
   },
   {
     q: "What should I send when I reach out?",
