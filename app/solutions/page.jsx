@@ -15,9 +15,9 @@ export const metadata = createPageMetadata({
 });
 
 const useCases = [
-  ["brain", "AI payments", "Give automated services room to act while setting clear limits on where and how much they can spend.", "Discuss AI payments"],
-  ["building", "Treasury & business workflows", "Create repeatable payouts and delegated budgets with clear approval and recovery paths.", "Discuss treasury workflows"],
-  ["cube", "BCH applications", "Turn BCH, CashTokens, and covenant capabilities into products people can actually use.", "Discuss BCH applications"],
+  ["brain", "AI payments", "Software needs to make payments without unrestricted spending authority. Define permitted recipients, bounded amounts, and recovery paths before money moves.", "Discuss AI payments", "Initial focus"],
+  ["building", "Treasury & business workflows", "Operations need repeatable payouts without giving every signer unrestricted discretion. Define approval, amount, continuation, and recovery rules for a more bounded workflow.", "Discuss treasury workflows"],
+  ["cube", "BCH applications", "Applications need advanced BCH capabilities without making every user manage transaction complexity. Turn BCH, CashTokens, and covenant patterns into product experiences people can actually use.", "Discuss BCH applications"],
 ];
 
 export default function SolutionsPage() {
@@ -39,7 +39,7 @@ export default function SolutionsPage() {
           <SectionLabel>Use cases</SectionLabel>
           <h2>Start with the workflow that matters most.</h2>
           <div className="three-columns control-grid">
-            {useCases.map(([icon, title, body, link]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p><ArrowLink href="/#contact">{link}</ArrowLink></div>)}
+            {useCases.map(([icon, title, body, link, focus]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span>{focus ? <span className="status-pill">{focus}</span> : null}<h3>{title}</h3><p>{body}</p><ArrowLink href="/#contact">{link}</ArrowLink></div>)}
           </div>
         </div>
       </section>

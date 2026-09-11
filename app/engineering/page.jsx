@@ -20,13 +20,13 @@ const areas = [
   ["wallet", "Wallet and application integration", "Connect your product to BCH apps, wallets, and transaction flows."],
   ["stack", "CashTokens and BCMR", "Make token balances, metadata, and user experiences work together."],
   ["code", "CashScript and covenant patterns", "Design transaction rules for workflows with real constraints."],
-  ["gear", "Backend and testing", "Build the services, test harnesses, and release checks that keep things moving."],
+  ["gear", "Backend, testing, and deployment", "Build services, adversarial test harnesses, and release checks that keep a workflow ready for launch."],
 ];
 
 const process = [
-  { title: "Plan", body: "Define the product, constraints, and outcome you want to reach." },
+  { title: "Plan", body: "Define the workflow, threat model, constraints, and outcome you want to reach." },
   { title: "Build or review", body: "Work through architecture, implementation, or transaction design." },
-  { title: "Test and prepare", body: "Check behavior, review integration points, and get ready for release." },
+  { title: "Test and prepare", body: "Test failure paths, review integration points, and get ready for release." },
 ];
 
 export default function EngineeringPage() {
@@ -59,8 +59,8 @@ export default function EngineeringPage() {
           <div><SectionLabel>From product idea to launch</SectionLabel><FlowSteps steps={process} /></div>
           <div><SectionLabel>Proof behind the work</SectionLabel><div className="product-list proof-products">
             <div className="product-row"><span className="icon-circle"><Icon name="wallet" /></span><div><h3>OPTN Wallet <span className="status-inline">Shipped</span></h3><p>BCH and CashTokens wallet</p><ArrowLink href="/wallet">Explore Wallet</ArrowLink></div></div>
-            <div className="product-row"><span className="icon-circle"><Icon name="stack" /></span><div><h3>FundMe.cash <span className="status-inline">Shipped</span></h3><p>Covenant-based crowdfunding</p></div></div>
-            <div className="product-row"><span className="icon-circle"><Icon name="route" /></span><div><h3>Covenant coordination <span className="status-inline">Built and tested locally · In development</span></h3><p>Working research for controlled payment workflows</p></div></div>
+            <div className="product-row"><span className="icon-circle"><Icon name="stack" /></span><div><h3>FundMe.cash <span className="status-inline">Shipped</span></h3><p>Live covenant-based campaign flows for contributions, claims, and refunds</p></div></div>
+            <div className="product-row"><span className="icon-circle"><Icon name="route" /></span><div><h3>Covenant coordination <span className="status-inline">Validated · In development</span></h3><p>Controlled payments, continuing states, and downstream covenant handoffs</p></div></div>
           </div></div>
         </div>
       </section>

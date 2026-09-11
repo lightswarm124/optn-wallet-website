@@ -9,11 +9,18 @@ import {
 import { createPageMetadata } from "../../lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Programmable Fund Control for Bitcoin Cash | OPTN Labs",
+  title: "Financial Coordination & Programmable Fund Control for Bitcoin Cash | OPTN Labs",
   description:
-    "Learn how OPTN uses Bitcoin Cash transaction rules to define permitted recipients, amounts, next states, and recovery paths for software-operated funds.",
+    "Learn how OPTN separates financial coordination from covenant enforcement to define permitted recipients, amounts, next states, and recovery paths for software-operated funds.",
   path: "/platform",
 });
+
+const coordinationStages = [
+  ["code", "Request", "A person, product, service, or AI agent requests an action."],
+  ["route", "Coordinate", "OPTN resolves recipients, amounts, workflow paths, and recovery rules into a permitted transaction path."],
+  ["shield", "Enforce", "For BCH or CashToken funds deliberately placed under covenant control, the covenant accepts only encoded outcomes."],
+  ["stack", "Operate", "Monitoring, reconciliation, integrations, and workflow state can surround enforcement without OPTN taking custody."],
+];
 
 const controls = [
   ["person", "Recipients", "Who can be paid."],
@@ -28,9 +35,9 @@ export default function PlatformPage() {
       <section className="page-hero">
         <div className="site-container page-hero-grid">
           <div>
-            <SectionLabel>Platform</SectionLabel>
+            <SectionLabel>Platform · Financial coordination</SectionLabel>
             <h1>Put clear limits around software-operated money.</h1>
-            <p className="page-hero-copy">OPTN is developing a Bitcoin Cash control layer that helps companies define what their software can do with funds. Applications make requests; transaction rules keep the permitted path clear.</p>
+            <p className="page-hero-copy">OPTN is developing a financial coordination layer for software-operated funds. Applications make requests; OPTN coordinates the permitted path; for funds deliberately placed under BCH covenant control, transaction rules enforce the encoded outcome.</p>
             <div className="hero-actions"><ButtonLink href="/#contact">Talk to OPTN</ButtonLink></div>
           </div>
           <ArchitectureGraphic />
@@ -39,7 +46,17 @@ export default function PlatformPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>What OPTN controls</SectionLabel>
+          <SectionLabel>How the platform fits together</SectionLabel>
+          <h2>Separate the request, the policy, and the enforcement.</h2>
+          <div className="four-columns control-grid">
+            {coordinationStages.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
+          </div>
+        </div>
+      </section>
+
+      <section className="site-section">
+        <div className="site-container">
+          <SectionLabel>Policy dimensions</SectionLabel>
           <h2>Make the rules visible before money moves.</h2>
           <div className="four-columns control-grid">
             {controls.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}

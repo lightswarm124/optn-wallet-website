@@ -36,7 +36,7 @@ const plans = [
     status: "Available now",
     title: "Custom engineering",
     price: "Scoped to project",
-    body: "Hands-on support for specialized BCH products and transaction workflows.",
+    body: "Hands-on support for specialized BCH products, transaction workflows, and enterprise deployments.",
     features: ["Workflow and architecture scoping", "Wallet and CashToken integration", "Covenant and transaction design", "Testing and release support"],
     href: "/#contact",
     label: "Discuss custom work",
@@ -83,6 +83,9 @@ export default function PricingPage() {
             <ButtonLink href="/#contact">Talk to OPTN</ButtonLink>
           </div>
           <p className="fine-print">Builder is not yet generally available and has no public price. Additional integration, audit, compliance and specialized engineering work may require separate scope and pricing.</p>
+          <div className="custom-pricing-band pricing-future-band">
+            <div><SectionLabel>Where this is going</SectionLabel><h3>Productizing managed coordination.</h3><p>OPTN is developing a managed coordination layer for recurring policy operations, monitoring, integrations, and workflow expansion. It is not yet generally available.</p></div>
+          </div>
         </div>
       </section>
 

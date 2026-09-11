@@ -261,6 +261,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .about-team-role { color: var(--green-dark); font-size: .78rem; font-weight: 700; }
 .about-team-card p { margin: 16px 0 0; color: var(--ink-soft); font-size: .86rem; line-height: 1.5; }
 .about-team-note { max-width: 760px; margin: 26px 0 0; color: var(--ink-soft); font-size: .88rem; line-height: 1.5; }
+.about-proof-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; margin-top: 32px; }
+.about-proof-item { padding: 22px; border: 1px solid var(--line); border-radius: 9px; background: var(--paper-deep); }
+.about-proof-item strong { display: block; color: var(--ink); font-size: .98rem; }
+.about-proof-item p { margin: 12px 0 0; color: var(--ink-soft); font-size: .84rem; line-height: 1.45; }
+.about-proof-note { margin: 20px 0 0; color: var(--ink-soft); font-size: .76rem; line-height: 1.45; }
 .about-next-section { background: var(--paper-deep); }
 .about-next-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 48px; margin-top: 28px; border-top: 1px solid var(--line); }
 .about-next-grid .arrow-link { justify-content: space-between; padding: 18px 0; border-bottom: 1px solid var(--line); }
@@ -441,6 +446,7 @@ button, a { -webkit-tap-highlight-color: transparent; }
   .home-final-actions { justify-content: flex-start; }
   .about-hero-grid, .about-story-copy { grid-template-columns: 1fr; gap: 34px; }
   .about-team-grid { grid-template-columns: 1fr; }
+  .about-proof-grid { grid-template-columns: 1fr; gap: 18px; }
   .hero h1, .page-hero h1 { max-width: 600px; font-size: clamp(2.45rem, 10vw, 4rem); }
   .hero-copy, .page-hero-copy { font-size: 1rem; }
   .four-columns, .technical-grid { grid-template-columns: repeat(2, 1fr); row-gap: 35px; }

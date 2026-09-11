@@ -53,9 +53,9 @@ export function ArchitectureGraphic() {
     <div className="architecture-graphic">
       <div className="architecture-node"><Icon name="code" size={25} /><div><strong>Your application</strong><small>Requests an action</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN workflow</strong><small>Plans and constructs the transaction</small></div></div>
+      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN coordination</strong><small>Resolves policy and constructs the path</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>BCH rules</strong><small>Keep outcomes within bounds</small></div></div>
+      <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>Covenant enforcement</strong><small>Accepts only permitted outcomes</small></div></div>
       <p>Illustrative architecture. Not a live deployment.</p>
     </div>
   );

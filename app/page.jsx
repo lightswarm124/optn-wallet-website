@@ -183,11 +183,12 @@ export default function Home() {
       <section id="fund-control" className="site-section home-fund-section">
         <div className="site-container home-fund-grid">
           <div>
-            <SectionLabel>In development</SectionLabel>
+            <SectionLabel>Financial coordination · In development</SectionLabel>
             <h2>Give software room to act—with clear limits.</h2>
             <p className="section-intro">
-              When software needs to move money, OPTN is exploring ways to make
-              the permitted path explicit in the transaction itself.
+              When people, software, or AI need to move money, OPTN is exploring
+              a financial coordination layer that maps requests to permitted
+              transaction outcomes.
             </p>
             <p className="home-fund-detail">
               The design can cover recipients, amounts, next steps, and

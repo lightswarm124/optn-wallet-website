@@ -32,7 +32,7 @@ const team = [
     name: "Kyle Wildeman",
     role: "Co-founder",
     image: "/assets/images/team/kyle-wildeman.png",
-    body: "Kyle created FundMe.cash and works on covenant applications, contract auditing, and real-fund workflows. His experience building covenant-based products informs OPTN Labs’ focus on practical, controlled transaction systems.",
+    body: "Kyle is the creator of FundMe.cash and works on production covenant applications, contract auditing, and real-fund workflows. His experience building covenant-based products informs OPTN Labs’ focus on practical, controlled transaction systems.",
   },
 ];
 
@@ -113,6 +113,19 @@ export default function AboutPage() {
               can enforce the permitted outcome.
             </p>
           </div>
+        </div>
+      </section>
+
+      <section className="site-section about-proof-section">
+        <div className="site-container">
+          <SectionLabel>Experience behind the stack</SectionLabel>
+          <h2>Built through working BCH products.</h2>
+          <div className="about-proof-grid">
+            <div className="about-proof-item"><strong>OPTN Wallet <span className="status-inline">Shipped</span></strong><p>Self-custody BCH wallet, CashTokens, transaction construction, and application integrations.</p></div>
+            <div className="about-proof-item"><strong>FundMe.cash <span className="status-inline">Shipped</span></strong><p>Covenant-based campaign flows for contributions, claims, and refunds.</p></div>
+            <div className="about-proof-item"><strong>Covenant coordination <span className="status-inline">Validated · In development</span></strong><p>Controlled payments, continuing states, and downstream covenant handoffs.</p></div>
+          </div>
+          <p className="about-proof-note"><strong>FundMe.cash: 3,000 BCH historical campaign contribution volume — not OPTN revenue.</strong></p>
         </div>
       </section>
 
