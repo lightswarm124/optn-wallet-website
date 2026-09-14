@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="900" viewBox="0 0 1600 900" role="img" aria-labelledby="title desc">
+<title id="title">OPTN Labs product story</title>
+<desc id="desc">Use, Build, Control, Work progression. OPTN Wallet is shipped. Developer resources and BCH infrastructure are available now. Programmable payments are in development. Scoped Engineering is available now. Covenant enforcement applies only to BCH and CashToken funds deliberately placed under covenant control.</desc>
+<defs><style>
+.t{font-family:'Noto Sans',Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.ey{font-size:17px;font-weight:700;letter-spacing:1.4px}
+.h1{font-size:46px;font-weight:760}
+.h2{font-size:24px;font-weight:720}
+.h3{font-size:19px;font-weight:700}
+.b{font-size:18px;font-weight:450}
+.s{font-size:15px;font-weight:500}
+.x{font-size:13px;font-weight:600}
+</style></defs>
+<rect width="1600" height="900" fill="#F5F4EF"/>
+<rect x="64" y="54" width="1472" height="792" rx="28" fill="#073D35"/>
+<text class="t ey" x="112" y="116" fill="#73E6BD">OPTN LABS · PRODUCT STORY</text>
+<text class="t h1" x="112" y="178" fill="#FFFFFF">From shipped product</text>
+<text class="t h1" x="112" y="228" fill="#FFFFFF">to programmable payments</text>
+<text class="t b" x="112" y="272" fill="#C8E8DC">A product-first path from OPTN Wallet to reusable developer resources, BCH infrastructure,</text>
+<text class="t b" x="112" y="300" fill="#C8E8DC">programmable payments in development, and scoped Engineering.</text>
+
+<text class="t ey" x="185" y="360" fill="#A9F4D7">USE</text>
+<text class="t ey" x="535" y="360" fill="#A9F4D7">BUILD</text>
+<text class="t ey" x="985" y="360" fill="#A9F4D7">CONTROL</text>
+<text class="t ey" x="1325" y="360" fill="#A9F4D7">WORK</text>
+<line x1="235" y1="390" x2="1365" y2="390" stroke="#62DDB3" stroke-width="3"/>
+<circle cx="235" cy="390" r="18" fill="#B8F5D9"/><text class="t x" x="231" y="395" fill="#073D35">1</text>
+<circle cx="585" cy="390" r="18" fill="#B8F5D9"/><text class="t x" x="581" y="395" fill="#073D35">2</text>
+<circle cx="1035" cy="390" r="18" fill="#B8F5D9"/><text class="t x" x="1031" y="395" fill="#073D35">3</text>
+<circle cx="1375" cy="390" r="18" fill="#B8F5D9"/><text class="t x" x="1371" y="395" fill="#073D35">4</text>
+
+<g transform="translate(112,435)">
+ <rect width="300" height="330" rx="22" fill="#FBFAF6"/>
+ <text class="t x" x="26" y="40" fill="#567269">USE</text>
+ <text class="t h2" x="26" y="80" fill="#102D26">OPTN Wallet</text>
+ <rect x="26" y="102" width="94" height="31" rx="15" fill="#CBF6E4"/>
+ <circle cx="45" cy="118" r="6" fill="#16A579"/><text class="t x" x="59" y="122" fill="#174C3E">SHIPPED</text>
+ <line x1="26" y1="157" x2="274" y2="157" stroke="#D8E0DC"/>
+ <text class="t s" x="26" y="194" fill="#284A41">Self-custody BCH wallet with</text>
+ <text class="t s" x="26" y="220" fill="#284A41">CashTokens, app connections,</text>
+ <text class="t s" x="26" y="246" fill="#284A41">and advanced transaction flows.</text>
+ <text class="t x" x="26" y="283" fill="#6C817A">Primary product proof.</text>
+</g>
+
+<g transform="translate(455,435)">
+ <rect width="390" height="330" rx="22" fill="#FBFAF6"/>
+ <text class="t x" x="26" y="40" fill="#567269">BUILD</text>
+ <text class="t h2" x="26" y="80" fill="#102D26">Developer resources</text>
+ <text class="t h2" x="26" y="110" fill="#102D26">and BCH infrastructure</text>
+ <rect x="26" y="132" width="136" height="31" rx="15" fill="#CBF6E4"/>
+ <circle cx="45" cy="148" r="6" fill="#16A579"/><text class="t x" x="59" y="152" fill="#174C3E">AVAILABLE NOW</text>
+ <line x1="26" y1="187" x2="364" y2="187" stroke="#D8E0DC"/>
+ <text class="t s" x="26" y="224" fill="#284A41">Public resources, integration guidance,</text>
+ <text class="t s" x="26" y="250" fill="#284A41">and service surfaces for BCH products.</text>
+ <text class="t x" x="26" y="283" fill="#6C817A">Foundation for builders.</text>
+</g>
+
+<g transform="translate(888,435)">
+ <rect width="300" height="330" rx="22" fill="#FBFAF6"/>
+ <text class="t x" x="26" y="40" fill="#567269">CONTROL</text>
+ <text class="t h2" x="26" y="80" fill="#102D26">Programmable</text>
+ <text class="t h2" x="26" y="110" fill="#102D26">payments</text>
+ <rect x="26" y="132" width="145" height="31" rx="15" fill="#FFF0C7"/>
+ <circle cx="45" cy="148" r="6" fill="#B48400"/><text class="t x" x="59" y="152" fill="#755500">IN DEVELOPMENT</text>
+ <line x1="26" y1="187" x2="274" y2="187" stroke="#D8E0DC"/>
+ <text class="t s" x="26" y="224" fill="#284A41">Bounded transaction paths</text>
+ <text class="t s" x="26" y="250" fill="#284A41">for software and AI payments.</text>
+ <text class="t x" x="26" y="280" fill="#6C817A">Covenant enforcement only applies</text>
+ <text class="t x" x="26" y="299" fill="#6C817A">to BCH/CashToken funds deliberately</text>
+ <text class="t x" x="26" y="318" fill="#6C817A">placed under covenant control.</text>
+</g>
+
+<g transform="translate(1231,435)">
+ <rect width="257" height="330" rx="22" fill="#FBFAF6"/>
+ <text class="t x" x="24" y="40" fill="#567269">WORK</text>
+ <text class="t h2" x="24" y="80" fill="#102D26">Scoped</text>
+ <text class="t h2" x="24" y="110" fill="#102D26">Engineering</text>
+ <rect x="24" y="132" width="136" height="31" rx="15" fill="#CBF6E4"/>
+ <circle cx="43" cy="148" r="6" fill="#16A579"/><text class="t x" x="57" y="152" fill="#174C3E">AVAILABLE NOW</text>
+ <line x1="24" y1="187" x2="233" y2="187" stroke="#D8E0DC"/>
+ <text class="t s" x="24" y="224" fill="#284A41">Apply OPTN product and stack</text>
+ <text class="t s" x="24" y="248" fill="#284A41">experience to real BCH</text>
+ <text class="t s" x="24" y="272" fill="#284A41">workflows.</text>
+ <text class="t x" x="24" y="307" fill="#6C817A">Architecture · integration · testing.</text>
+</g>
+</svg>

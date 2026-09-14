@@ -96,7 +96,7 @@ export default function TokenMetadataPage() {
                 <small>Resolve, validate, cache, and display</small>
               </div>
             </div>
-            <p>Educational overview. Client behavior can vary.</p>
+            <p>Reference metadata flow · Client behavior can vary</p>
           </div>
         </div>
       </section>
@@ -169,26 +169,26 @@ export default function TokenMetadataPage() {
       <section className="site-section">
         <div className="site-container boundary">
           <div>
-            <SectionLabel>Important boundary</SectionLabel>
-            <h2>Helpful context—not transaction authority.</h2>
+            <SectionLabel>Metadata and transaction authority</SectionLabel>
+            <h2>Two layers with different jobs.</h2>
             <p className="section-intro">
-              BCMR can make a token understandable, but it does not change
-              whether a BCH transaction is valid. Applications should keep the
-              on-chain category authoritative and treat names, icons, and
-              descriptions as resolved data with explicit fallback behavior.
+              BCMR enriches the wallet experience with token identity and
+              display information. The on-chain category remains the asset
+              reference, and BCH consensus determines whether a transaction is
+              valid.
             </p>
           </div>
           <div className="simple-list">
             <div>
-              <strong>It does not authorize a spend</strong>
-              <p>Metadata cannot make an otherwise invalid transaction valid.</p>
+              <strong>Transaction validity</strong>
+              <p>Metadata does not change whether a transaction meets BCH consensus rules.</p>
             </div>
             <div>
-              <strong>It can be unavailable</strong>
+              <strong>Metadata availability</strong>
               <p>Wallets should remain useful when a document, image, or registry endpoint cannot be reached.</p>
             </div>
             <div>
-              <strong>It needs product validation</strong>
+              <strong>Registry trust and updates</strong>
               <p>Clients should define which registries or resolution methods they trust, how updates are authenticated, when cached data expires, and how the interface falls back when metadata is unavailable.</p>
             </div>
           </div>

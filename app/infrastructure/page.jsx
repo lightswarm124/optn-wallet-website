@@ -2,10 +2,10 @@ import {
   ArrowLink,
   ButtonLink,
   FinalCTA,
-  Icon,
   SectionLabel,
 } from "../components/SitePrimitives";
 import ServiceStatusBlock from "../components/ServiceStatusBlock";
+import InfrastructureServiceMap from "../components/InfrastructureServiceMap";
 import { createPageMetadata } from "../../lib/seo";
 
 export const metadata = createPageMetadata({
@@ -15,41 +15,23 @@ export const metadata = createPageMetadata({
   path: "/infrastructure",
 });
 
-const services = [
-  ["wallet", "Connectivity", "Wallet connectivity and transaction access through Electrum endpoints."],
-  ["route", "Chain data", "Query BCH chain data for product features and operational workflows."],
-  ["stack", "Token data", "Give users balances, holders, portfolios, and metadata through BCMR and TokenIndexer."],
-  ["cube", "Content", "Deliver token media and application files through IPFS gateway and API access."],
-];
-
 export default function InfrastructurePage() {
   return (
     <div className="page-shell">
-      <section className="page-hero">
-        <div className="site-container page-hero-grid">
-          <div>
+      <section className="page-hero infrastructure-hero">
+        <div className="site-container">
+          <div className="infrastructure-hero-copy">
             <SectionLabel>Infrastructure</SectionLabel>
             <h1>The BCH services your product needs to keep moving.</h1>
-            <p className="page-hero-copy">OPTN Wallet needed reliable chain data, token indexing, metadata, and connectivity to feel usable. We make those supporting Bitcoin Cash services available to teams building their own products.</p>
+            <p className="page-hero-copy">OPTN Wallet needed reliable chain data, token indexing, metadata, and connectivity to deliver a reliable product experience. We make those supporting Bitcoin Cash services available to teams building their own products.</p>
             <div className="hero-actions"><ButtonLink href="/#contact">Request access</ButtonLink><ButtonLink href="#tokenindex" variant="secondary">View token data</ButtonLink></div>
-          </div>
-          <div className="architecture-graphic infrastructure-flow">
-            <div className="architecture-node"><Icon name="wallet" size={25} /><div><strong>Your app / wallet</strong><small>Product requests and token views</small></div></div>
-            <div className="architecture-arrow">↓</div>
-              <div className="architecture-node architecture-node-middle"><Icon name="route" size={25} /><div><strong>OPTN service layer</strong><small>Access and integration support</small></div></div>
-            <div className="architecture-arrow">↓</div>
-            <div className="architecture-node architecture-node-dark"><Icon name="stack" size={25} /><div><strong>BCH services you can use</strong><small>Electrum · Chaingraph · BCMR · TokenIndexer</small></div></div>
           </div>
         </div>
       </section>
 
-      <section className="site-section">
+      <section className="site-section infrastructure-map-section">
         <div className="site-container">
-          <SectionLabel>The supporting layer</SectionLabel>
-          <h2>The foundation behind usable BCH apps.</h2>
-          <div className="four-columns control-grid">
-            {services.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
-          </div>
+          <InfrastructureServiceMap />
         </div>
       </section>
 

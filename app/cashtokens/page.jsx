@@ -5,6 +5,7 @@ import {
   Icon,
   SectionLabel,
 } from "../components/SitePrimitives";
+import NftCommitmentTransition from "../components/NftCommitmentTransition";
 import { createPageMetadata } from "../../lib/seo";
 
 export const metadata = createPageMetadata({
@@ -76,7 +77,7 @@ export default function CashTokensPage() {
         <div className="site-container page-hero-grid">
           <div>
             <SectionLabel>CashTokens on Bitcoin Cash</SectionLabel>
-            <h1>CashTokens make Bitcoin Cash useful for more than payments.</h1>
+            <h1>Build token-enabled products on Bitcoin Cash.</h1>
             <p className="page-hero-copy">
               CashTokens let products issue, display, and move fungible tokens
               and NFTs directly on Bitcoin Cash. This guide explains what
@@ -93,32 +94,7 @@ export default function CashTokensPage() {
             </div>
           </div>
 
-          <div className="architecture-graphic" aria-label="CashTokens product flow">
-            <div className="architecture-node">
-              <Icon name="stack" size={25} />
-              <div>
-                <strong>CashToken output</strong>
-                <small>Category · fungible amount · NFT capability / commitment</small>
-              </div>
-            </div>
-            <div className="architecture-arrow">↓</div>
-            <div className="architecture-node architecture-node-middle">
-              <Icon name="wallet" size={25} />
-              <div>
-                <strong>Wallet or indexer</strong>
-                <small>Select, parse, and display token UTXOs</small>
-              </div>
-            </div>
-            <div className="architecture-arrow">↓</div>
-            <div className="architecture-node architecture-node-dark">
-              <Icon name="code" size={25} />
-              <div>
-                <strong>Application flow</strong>
-                <small>Build and sign a valid transaction</small>
-              </div>
-            </div>
-            <p>Educational overview. Product implementations vary.</p>
-          </div>
+          <NftCommitmentTransition />
         </div>
       </section>
 
@@ -212,8 +188,8 @@ export default function CashTokensPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>What CashTokens do not provide by themselves</SectionLabel>
-          <h2>The protocol primitive is only one part of the product.</h2>
+          <SectionLabel>Building complete CashToken products</SectionLabel>
+          <h2>From native token state to a usable product.</h2>
           <div className="four-columns technical-grid">
             <div className="column-item">
               <span className="icon-circle"><Icon name="wallet" /></span>

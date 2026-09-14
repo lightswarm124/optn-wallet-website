@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="940" viewBox="0 0 1600 940" role="img" aria-labelledby="title desc">
+<title id="title">Different jobs, purpose-built BCH services</title>
+<desc id="desc">Wallets and applications connect independently to Electrum on Chipnet, Chaingraph on Chipnet, TokenIndexer on Mainnet and Chipnet, BCMR on Chipnet, and IPFS for content delivery. Live availability is shown separately on the website.</desc>
+<defs><style>
+.t{font-family:'Noto Sans',Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,'Segoe UI',sans-serif}
+.ey{font-size:17px;font-weight:700;letter-spacing:1.4px}
+.h1{font-size:46px;font-weight:760}
+.h2{font-size:24px;font-weight:720}
+.h3{font-size:19px;font-weight:700}
+.b{font-size:18px;font-weight:450}
+.s{font-size:15px;font-weight:500}
+.x{font-size:13px;font-weight:600}
+</style></defs>
+<rect width="1600" height="940" fill="#F5F4EF"/>
+<text class="t ey" x="88" y="92" fill="#52736A">INFRASTRUCTURE</text>
+<text class="t h1" x="88" y="154" fill="#102D26">Different jobs.</text>
+<text class="t h1" x="88" y="202" fill="#102D26">Purpose-built BCH services.</text>
+<text class="t b" x="88" y="244" fill="#50665F">Your product can connect to each service independently for the job it needs.</text>
+<rect x="70" y="280" width="1460" height="580" rx="30" fill="#073D35"/>
+<g transform="translate(515,315)">
+ <rect width="570" height="110" rx="20" fill="#FBFAF6"/>
+ <text class="t x" x="28" y="38" fill="#567269">PRODUCT LAYER</text>
+ <text class="t h2" x="28" y="77" fill="#102D26">Wallets and applications</text>
+</g>
+<line x1="800" y1="425" x2="800" y2="460" stroke="#73E6BD" stroke-width="3"/>
+<line x1="190" y1="460" x2="1410" y2="460" stroke="#73E6BD" stroke-width="3"/>
+<line x1="190" y1="460" x2="190" y2="500" stroke="#73E6BD" stroke-width="3"/>
+<line x1="495" y1="460" x2="495" y2="500" stroke="#73E6BD" stroke-width="3"/>
+<line x1="800" y1="460" x2="800" y2="500" stroke="#73E6BD" stroke-width="3"/>
+<line x1="1105" y1="460" x2="1105" y2="500" stroke="#73E6BD" stroke-width="3"/>
+<line x1="1410" y1="460" x2="1410" y2="500" stroke="#73E6BD" stroke-width="3"/>
+
+<g transform="translate(95,500)">
+ <rect width="250" height="245" rx="20" fill="#15463B" stroke="#3E6C60"/>
+ <text class="t x" x="22" y="38" fill="#A9F4D7">CHAIN ACCESS</text><text class="t h2" x="22" y="78" fill="#FFF">Electrum</text>
+ <text class="t s" x="22" y="121" fill="#D6EEE5">Wallet connectivity</text><text class="t s" x="22" y="149" fill="#D6EEE5">Transaction access</text>
+ <rect x="22" y="182" width="94" height="34" rx="17" fill="#10392F"/><text class="t x" x="38" y="204" fill="#BDEEDB">CHIPNET</text>
+</g>
+
+<g transform="translate(400,500)">
+ <rect width="250" height="245" rx="20" fill="#15463B" stroke="#3E6C60"/>
+ <text class="t x" x="22" y="38" fill="#A9F4D7">CHAIN QUERIES</text><text class="t h2" x="22" y="78" fill="#FFF">Chaingraph</text>
+ <text class="t s" x="22" y="121" fill="#D6EEE5">Query BCH activity</text><text class="t s" x="22" y="149" fill="#D6EEE5">Support app workflows</text>
+ <rect x="22" y="182" width="94" height="34" rx="17" fill="#10392F"/><text class="t x" x="38" y="204" fill="#BDEEDB">CHIPNET</text>
+</g>
+
+<g transform="translate(705,500)">
+ <rect width="250" height="245" rx="20" fill="#15463B" stroke="#3E6C60"/>
+ <text class="t x" x="22" y="38" fill="#A9F4D7">TOKEN DATA</text><text class="t h2" x="22" y="78" fill="#FFF">TokenIndexer</text>
+ <text class="t s" x="22" y="121" fill="#D6EEE5">Balances · holders</text><text class="t s" x="22" y="149" fill="#D6EEE5">Application-ready views</text>
+ <rect x="22" y="182" width="186" height="34" rx="17" fill="#10392F"/><text class="t x" x="36" y="204" fill="#BDEEDB">MAINNET + CHIPNET</text>
+</g>
+
+<g transform="translate(1010,500)">
+ <rect width="250" height="245" rx="20" fill="#15463B" stroke="#3E6C60"/>
+ <text class="t x" x="22" y="38" fill="#A9F4D7">METADATA</text><text class="t h2" x="22" y="78" fill="#FFF">BCMR</text>
+ <text class="t s" x="22" y="121" fill="#D6EEE5">Resolve token metadata</text><text class="t s" x="22" y="149" fill="#D6EEE5">Display / discovery context</text>
+ <rect x="22" y="182" width="94" height="34" rx="17" fill="#10392F"/><text class="t x" x="38" y="204" fill="#BDEEDB">CHIPNET</text>
+</g>
+
+<g transform="translate(1315,500)">
+ <rect width="190" height="245" rx="20" fill="#15463B" stroke="#3E6C60"/>
+ <text class="t x" x="20" y="38" fill="#A9F4D7">CONTENT</text><text class="t h2" x="20" y="78" fill="#FFF">IPFS</text>
+ <text class="t s" x="20" y="121" fill="#D6EEE5">Token media</text><text class="t s" x="20" y="149" fill="#D6EEE5">Content delivery</text>
+ <rect x="20" y="182" width="148" height="34" rx="17" fill="#10392F"/><text class="t x" x="35" y="204" fill="#BDEEDB">CONTENT DELIVERY</text>
+</g>
+
+<text class="t x" x="95" y="812" fill="#A9F4D7">Each service is a direct product connection; no service-to-service data flow is implied here.</text>
+<text class="t x" x="95" y="835" fill="#A9F4D7">Live health and availability belong in the runtime status section, not in this diagram.</text>
+</svg>

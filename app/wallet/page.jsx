@@ -6,12 +6,13 @@ import {
   Icon,
   SectionLabel,
 } from "../components/SitePrimitives";
+import ScreenshotCarousel from "../components/ScreenshotCarousel";
 import { createPageMetadata } from "../../lib/seo";
 
 export const metadata = createPageMetadata({
   title: "OPTN Wallet | Bitcoin Cash & CashTokens Wallet",
   description:
-    "OPTN Wallet is a shipped Bitcoin Cash and CashTokens wallet built to interact with applications and advanced transaction flows from a self-custody wallet.",
+    "OPTN Wallet is a shipped self-custody Bitcoin Cash wallet for BCH, CashTokens, connected applications, and advanced transaction workflows.",
   path: "/wallet",
 });
 
@@ -29,37 +30,50 @@ export default function WalletPage() {
         <div className="site-container page-hero-grid">
           <div>
             <span className="wallet-status">Shipped</span>
-            <SectionLabel>The product that proves the stack</SectionLabel>
-            <h1>A self-custody BCH wallet that connects to what&apos;s next.</h1>
-            <p className="page-hero-copy">We built OPTN Wallet to make more of BCH practical for real users: send BCH, manage CashTokens, connect to apps, and explore more capable transaction flows from one self-custody wallet.</p>
+            <SectionLabel>Shipped product</SectionLabel>
+            <h1>A self-custody wallet for BCH, CashTokens, and connected apps.</h1>
+            <p className="page-hero-copy">Send BCH, manage CashTokens, and connect to compatible applications from one self-custody wallet. OPTN Wallet also supports advanced BCH transaction workflows.</p>
             <div className="hero-actions"><ButtonLink href="https://play.google.com/store/apps/details?id=optn.wallet.app">Get OPTN Wallet</ButtonLink><ButtonLink href="https://github.com/OPTNLabs/OPTNWallet" variant="secondary">View on GitHub</ButtonLink></div>
           </div>
-          <div className="wallet-hero-image"><Image src="/assets/images/OPTNWelcome3.png" alt="OPTN Wallet app artwork" width={442} height={434} priority sizes="(max-width: 900px) 55vw, 300px" /></div>
+          <figure className="wallet-hero-image">
+            <Image
+              src="/screenshots/IMG_20250511_111344.png"
+              alt="OPTN Wallet app browser showing BCH applications and category filters"
+              width={361}
+              height={749}
+              priority
+              sizes="(max-width: 900px) 180px, 178px"
+            />
+            <figcaption>Browse BCH-connected apps inside OPTN Wallet.</figcaption>
+          </figure>
         </div>
       </section>
 
+      <ScreenshotCarousel />
+
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Built for how BCH is used today</SectionLabel>
-          <h2>Use BCH with more confidence.</h2>
+          <SectionLabel>Payments, assets, and apps</SectionLabel>
+          <h2>Use BCH and CashTokens in connected experiences.</h2>
           <div className="wallet-capabilities">
             {capabilities.map(([title, body], index) => <div className="capability-row" key={title}><strong><span className="capability-marker">{index + 1}</span>{title}</strong><p>{body}</p></div>)}
           </div>
         </div>
       </section>
 
-      <section className="site-section">
-        <div className="site-container proof-grid">
-          <div>
-            <SectionLabel>Where the story starts</SectionLabel>
-            <h2>The working product behind the wider OPTN stack.</h2>
-            <p className="section-intro">We did not start with abstract infrastructure. We built a wallet, learned what users and applications need, and use those lessons to shape the tools, services, and transaction controls around it.</p>
-            <div className="hero-actions"><ArrowLink href="/engineering">Engineering</ArrowLink><ArrowLink href="/developers">Developers</ArrowLink><ArrowLink href="/blog/optn-wallet-update-2026">Latest Wallet update</ArrowLink></div>
+      <section className="site-section wallet-stack-section">
+        <div className="site-container wallet-stack-bridge">
+          <div className="wallet-stack-copy">
+            <SectionLabel>OPTN Wallet → the OPTN stack</SectionLabel>
+            <h2>The product that started the stack.</h2>
+            <p className="section-intro">Building OPTN Wallet meant solving real product needs across tokens, app connections, infrastructure, and transactions. That experience shaped our developer stack and informs our work on programmable payments.</p>
           </div>
-          <div className="wallet-gallery" aria-label="OPTN Wallet product artwork">
-            <Image src="/assets/images/OPTNWelcome3.png" alt="OPTN Wallet app artwork" width={442} height={434} sizes="180px" />
-            <Image src="/assets/images/OPTNWelcome2.png" alt="OPTN Wallet brand artwork" width={452} height={490} sizes="180px" />
-          </div>
+          <nav className="wallet-stack-links" aria-label="Explore the OPTN stack">
+            <ArrowLink href="/developers">Developer resources</ArrowLink>
+            <ArrowLink href="/infrastructure">BCH infrastructure</ArrowLink>
+            <ArrowLink href="/engineering">OPTN Engineering</ArrowLink>
+            <ArrowLink href="/blog/optn-wallet-update-2026">Latest Wallet update</ArrowLink>
+          </nav>
         </div>
       </section>
 

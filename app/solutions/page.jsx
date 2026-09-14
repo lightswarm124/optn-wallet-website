@@ -8,16 +8,16 @@ import {
 import { createPageMetadata } from "../../lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Controlled BCH Workflows for Software, AI & Treasury | OPTN Labs",
+  title: "Bitcoin Cash Payment Solutions for AI, Treasury & Apps | OPTN Labs",
   description:
-    "Use Bitcoin Cash transaction rules to build controlled payment workflows for software, AI agents, treasury operations, and BCH applications.",
+    "Explore AI-agent payments, treasury workflows, and BCH applications. OPTN is developing BCH-native payment infrastructure, with agent payments as its initial focus.",
   path: "/solutions",
 });
 
 const useCases = [
-  ["brain", "AI payments", "Software needs to make payments without unrestricted spending authority. Define permitted recipients, bounded amounts, and recovery paths before money moves.", "Discuss AI payments", "Initial focus"],
-  ["building", "Treasury & business workflows", "Operations need repeatable payouts without giving every signer unrestricted discretion. Define approval, amount, continuation, and recovery rules for a more bounded workflow.", "Discuss treasury workflows"],
-  ["cube", "BCH applications", "Applications need advanced BCH capabilities without making every user manage transaction complexity. Turn BCH, CashTokens, and covenant patterns into product experiences people can actually use.", "Discuss BCH applications"],
+  ["brain", "AI payments", "AI agents can pay APIs, purchase services, receive funds, and take part in automated workflows. OPTN's initial product focus is BCH-native payment infrastructure for these interactions.", "Discuss agent payments", "Initial focus · In development"],
+    ["building", "Treasury & business workflows", "Define repeatable payouts, grants, and delegated spending around clear transaction rules, workflow state, and recovery paths.", "Discuss treasury workflows"],
+  ["cube", "BCH applications", "Bring CashTokens, wallet connectivity, infrastructure, and transaction tooling into a product experience without exposing every protocol detail to the end user.", "Discuss BCH applications"],
 ];
 
 export default function SolutionsPage() {
@@ -27,8 +27,8 @@ export default function SolutionsPage() {
         <div className="site-container">
           <div className="solution-hero-copy">
             <SectionLabel>Solutions</SectionLabel>
-            <h1>Make money-moving workflows easier to control.</h1>
-            <p className="page-hero-copy">OPTN helps teams design and test Bitcoin Cash workflows for AI payments, treasury operations, and applications—so the rules are clear before money moves.</p>
+            <h1>Payments and financial workflows for autonomous software.</h1>
+            <p className="page-hero-copy">OPTN is developing BCH-native payment infrastructure, beginning with AI-agent payments. We also work with teams on scoped engineering for treasury workflows and Bitcoin Cash applications.</p>
             <div className="hero-actions"><ButtonLink href="/#contact">Discuss your workflow</ButtonLink></div>
           </div>
         </div>
@@ -36,8 +36,8 @@ export default function SolutionsPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Use cases</SectionLabel>
-          <h2>Start with the workflow that matters most.</h2>
+          <SectionLabel>Focus areas</SectionLabel>
+          <h2>Start with the financial workflow.</h2>
           <div className="three-columns control-grid">
             {useCases.map(([icon, title, body, link, focus]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span>{focus ? <span className="status-pill">{focus}</span> : null}<h3>{title}</h3><p>{body}</p><ArrowLink href="/#contact">{link}</ArrowLink></div>)}
           </div>
@@ -47,13 +47,13 @@ export default function SolutionsPage() {
       <section className="site-section">
         <div className="site-container">
           <div className="custom-offer-band solution-offer-band">
-            <div><SectionLabel>Ways to work with us</SectionLabel><strong>Start with public tools, or work with OPTN to ship.</strong><p>Explore on your own, or bring us in when the workflow needs deeper design, integration, testing, or support.</p></div>
+            <div><SectionLabel>Ways to work with us</SectionLabel><strong>Start with public tools, or build with OPTN.</strong><p>Use the developer stack independently, or engage OPTN for workflow design, integration, testing, and delivery.</p></div>
             <div className="solution-offer-links"><ArrowLink href="/developers">Explore developer tools</ArrowLink><ArrowLink href="/pricing">View pricing</ArrowLink><ButtonLink href="/#contact">Talk to OPTN</ButtonLink></div>
           </div>
         </div>
       </section>
 
-      <FinalCTA title="Have a workflow worth building?" body="Tell us what needs to move, who needs control, and where you want help." />
+      <FinalCTA title="Planning an agent-payment workflow?" body="Talk with OPTN about payment composition, BCH integration, and the transaction rules your product needs." />
     </div>
   );
 }

@@ -39,7 +39,7 @@ export function Icon({ name, size = 28 }) {
 export function PolicyGraphic({ compact = false }) {
   return (
     <div className={`policy-graphic ${compact ? "policy-graphic-compact" : ""}`}>
-      <div className="policy-heading"><strong>Illustrative policy</strong><span>Not a live deployment</span></div>
+      <div className="policy-heading"><strong>Example policy</strong><span>Reference example</span></div>
       <div className="policy-rule"><Icon name="person" /><div><strong>Approved recipient</strong><small>api.provider.com</small></div></div>
       <div className="policy-rule"><Icon name="stack" /><div><strong>Payment limit</strong><small>0.25 BCH per payment</small></div></div>
       <div className="policy-rule"><Icon name="shield" /><div><strong>Owner recovery</strong><small>Return to owner</small></div></div>
@@ -51,12 +51,12 @@ export function PolicyGraphic({ compact = false }) {
 export function ArchitectureGraphic() {
   return (
     <div className="architecture-graphic">
-      <div className="architecture-node"><Icon name="code" size={25} /><div><strong>Your application</strong><small>Requests an action</small></div></div>
+      <div className="architecture-node"><Icon name="code" size={25} /><div><strong>Your application</strong><small>Requests a payment</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN coordination</strong><small>Resolves policy and constructs the path</small></div></div>
+      <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN coordination</strong><small>Composes the BCH transaction</small></div></div>
       <div className="architecture-arrow">↓</div>
-      <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>Covenant enforcement</strong><small>Accepts only permitted outcomes</small></div></div>
-      <p>Illustrative architecture. Not a live deployment.</p>
+      <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>BCH covenant rules</strong><small>Validate defined transaction conditions</small></div></div>
+      <p>Reference architecture · Platform in development</p>
     </div>
   );
 }

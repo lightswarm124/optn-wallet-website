@@ -1,6 +1,6 @@
 ---
-title: "CashTokens in Practice: Why Web3 Teams Should Build on BCH with Native Tokens"
-description: "A follow-up to our BCH introduction for developers and founders. This post explains how CashTokens work in practice, what wallets and contracts actually need to support, and why native token infrastructure matters for BCH ecosystem growth."
+title: "CashTokens in Practice: Building Native Token Products on Bitcoin Cash"
+description: "An engineering guide to building CashTokens products on Bitcoin Cash, covering token-aware wallets, transaction construction, covenants, metadata, and integration testing."
 date: "2026-05-12"
 author: "OPTN Labs"
 tags:
@@ -15,16 +15,13 @@ tags:
 
 import { Callout } from "@/components/Callout";
 
-# CashTokens in Practice: Why BCH Teams Should Build on Native Tokens
+# CashTokens in Practice: Building Native Token Products on Bitcoin Cash
 
-Our last post was the high-level case for Bitcoin Cash as an alternative for teams that want lower-fee, simpler transaction flow and less dependency on account-based state systems.
+Our last post introduced Bitcoin Cash transaction design and the UTXO model.
+This follow-up applies that foundation to token-enabled products.
 
-This follow-up is for teams coming from other ecosystems - Ethereum, Solana, or
-any account-based stack - who want to understand what changes when tokens live
-natively inside BCH transactions.
-
-The core shift is simple: token state lives on UTXOs, and the application must
-build valid transactions around that state.<sup>[1](https://cashtokens.org/docs/spec/chip)</sup>
+With CashTokens, token state lives on UTXOs, and applications must build valid
+transactions around each state transition.<sup>[1](https://cashtokens.org/docs/spec/chip)</sup>
 
 If you already understand account-based tokens, translate that into this model:
 
@@ -194,10 +191,9 @@ If you are a founder or technical lead, the next questions are usually not abstr
 
 Those are the questions we help teams answer.
 
-CashTokens are a good example of why BCH can be more than "cheap
-transactions." They are a protocol-native primitive that turns token design
-into a transaction design problem, which is much easier to reason about when
-you are shipping a product.
+CashTokens make token behavior part of transaction design. Their UTXO-based
+state gives wallet builders, transaction constructors, and covenants explicit
+responsibilities that can be modeled and tested as teams ship a product.
 
 <Callout type="info" title="Continue the series">
   Next we can go deeper into one of three directions:

@@ -30,10 +30,10 @@ const patterns = [
 ];
 
 const limits = [
-  ["Only controlled funds", "A covenant governs funds deliberately placed under that covenant. It does not control unrelated assets or an entire wallet."],
-  ["Explicit transaction design", "The rule can only enforce conditions expressible using the BCH VM and the transaction information available to the script."],
-  ["Builder responsibility", "A wallet or backend still has to construct the intended outputs, handle fees and change, and preserve or intentionally transform token state."],
-  ["Recovery is a design choice", "A recovery path must be included and tested; an incomplete design can make funds difficult or impossible to move."],
+  ["Scope each covenant intentionally", "Covenant rules apply to funds deliberately placed under them; they do not govern unrelated assets or an entire wallet."],
+  ["Define expressible transaction rules", "A covenant enforces conditions expressible using the BCH VM and transaction information available to the script."],
+  ["Build the surrounding transaction flow", "A wallet or backend constructs the intended outputs, handles fees and change, and preserves or intentionally transforms token state."],
+  ["Design and test recovery", "Include a recovery path in the transaction design and test it; incomplete designs can make funds difficult or impossible to move."],
 ];
 
 const relatedResources = [
@@ -96,7 +96,7 @@ export default function CovenantsPage() {
                 <small>Valid transaction proceeds; invalid paths fail</small>
               </div>
             </div>
-            <p>Illustrative architecture. Not a live deployment.</p>
+            <p>Reference covenant flow · Implementations vary</p>
           </div>
         </div>
       </section>
@@ -181,12 +181,13 @@ export default function CovenantsPage() {
       <section className="site-section">
         <div className="site-container boundary">
           <div>
-            <SectionLabel>Important limitations</SectionLabel>
-            <h2>Covenants are narrow by design.</h2>
+            <SectionLabel>Design considerations</SectionLabel>
+            <h2>Design for explicit transaction paths.</h2>
             <p className="section-intro">
-              A covenant can make a specific transaction path enforceable, but
-              it is not a universal policy engine or a substitute for wallet,
-              builder, and operational design.
+              Covenants work well when a financial workflow can be expressed as
+              explicit rules about transaction inputs, outputs, values, tokens,
+              or continuation state. The surrounding wallet or application
+              still constructs the transaction and manages the user experience.
             </p>
           </div>
           <div className="simple-list">

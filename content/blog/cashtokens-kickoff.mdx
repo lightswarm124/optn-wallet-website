@@ -1,6 +1,6 @@
 ---
-title: "CashTokens Kickoff: Tokens & Covenants on Bitcoin Cash – A Practical Alternative for Web3 Builders"
-description: "Introduction to CashTokens and covenants on BCH. Explore the UTXO token model and transaction constraints as an option beyond EVM gas costs, state management issues, and Solana reliability concerns. With ongoing upgrades and growing community momentum, BCH is positioning itself as an emerging contender with significant upside."
+title: "CashTokens Kickoff: Building with Native Tokens and Covenants on Bitcoin Cash"
+description: "An introduction to Bitcoin Cash's native token and covenant model: how CashTokens represent assets on UTXOs, how transaction rules add programmable behavior, and what this architecture enables for wallets and applications."
 date: "2026-01-26"
 author: "OPTN Labs"
 tags:
@@ -10,20 +10,18 @@ tags:
   - Covenants
   - UTXO
   - Smart Contracts
-  - Web3 Alternatives
+  - BCH Applications
 ---
 
 import { Callout } from "@/components/Callout";
 
-# CashTokens Kickoff: Tokens & Covenants on Bitcoin Cash
+# CashTokens Kickoff: Building with Native Tokens and Covenants on Bitcoin Cash
 
-If you're navigating high gas fees on EVM chains, intermittent outages on Solana, or the ongoing complexities of state migrations and reentrancy risks, **Bitcoin Cash offers a compelling alternative path** that's gaining real traction in 2026.
+Bitcoin Cash combines low-cost UTXO transactions with native token state and transaction-level programmability.
 
-CashTokens bring tokens natively into the UTXO model, paired with covenants for enforceable spend rules—delivering programmable capabilities without persistent contract storage or global state overhead.
+CashTokens let fungible tokens and NFTs live directly on BCH outputs, while covenants can define how selected funds and state may move next.
 
-From its current modest position (relative TVL and adoption), BCH is building serious momentum through network upgrades, ecosystem funding, and a dedicated community pushing scalable, low-cost utility.<sup>[1](https://coinmarketcap.com/cmc-ai/bitcoin-cash/latest-updates)</sup>
-
-Tokens on BCH move exactly like native coins: consume inputs to create new outputs. This design reduces certain vulnerabilities tied to mutable state systems and sets the stage for broader growth.
+For builders, this creates an application model based on composing transactions from UTXOs and validating the resulting state at the transaction boundary. This article introduces that model and the product patterns it enables.
 
 <Callout type="info" title="Quick start">
   This post covers the conceptual model—no code yet. For hands-on examples, move
@@ -32,11 +30,11 @@ Tokens on BCH move exactly like native coins: consume inputs to create new outpu
 
 ## The UTXO Model: How It Differs and Where It Provides Value
 
-In EVM or Solana setups:
+In account-based systems, token balances are commonly tracked in contract storage:
 
-- Token balances live in **contract storage**.
+- Token balances are tracked in **contract storage**.
 - Transfers update that storage through calls or instructions.
-- Risks include reentrancy (historical exploits) and upgrade-related state challenges.
+- Applications can layer additional business logic around those contract calls.
 
 On BCH with CashTokens:
 
@@ -45,13 +43,13 @@ On BCH with CashTokens:
 - Transfers spend existing UTXOs to produce new ones.
 - Ownership enforces natively at the protocol level.
 
-Observed benefits in current deployments:
+This UTXO model is useful for workflows built around discrete outputs and transaction-level validation:
 
-- **Cost efficiency** — Transactions frequently cost fractions of a cent.
-- **Verification simplicity** — Protocol handles ownership checks.
-- **Reduced migration friction** — Assets transfer via standard spends.
+- **Low-cost payments** — BCH transaction fees support frequent, low-value transfers.
+- **Protocol-level token validation** — BCH nodes validate token state according to CashTokens rules.
+- **UTXO-based transfers** — Token movements consume existing outputs and create new ones.
 
-This model suits applications prioritizing predictable, atomic operations—exactly the foundation attracting growing developer and user interest as BCH upgrades roll out.
+This model suits applications built around explicit inputs, outputs, and transaction-level state transitions.
 
 ---
 
@@ -124,14 +122,13 @@ This creates **constraint-based programming**: enforce what the next tx must loo
 
 ### Differences from EVM-Style Contracts
 
-Covenants trade unbounded loops/global storage for:
+Covenants define transaction conditions without relying on persistent contract storage:
 
-- Predictable, lightweight validation
-- No reentrancy risk (single tx execution)
-- Easier auditing (tx boundary focus)
-- Movable state via NFTs instead of upgrades
+- Transaction-bound validation
+- Rules evaluated against the spending transaction
+- State carried forward through UTXOs and NFTs
 
-While less flexible than Turing-complete VMs, they provide strong guarantees in financial primitives.
+This model is less general than a Turing-complete VM, but can be a good fit when the required financial behavior can be expressed as explicit transaction conditions.
 
 <Callout type="tip" title="Application considerations">
   DEXs with minimal intermediation, stablecoins with peg logic, funding models
@@ -143,10 +140,11 @@ While less flexible than Turing-complete VMs, they provide strong guarantees in 
 
 ## Translating Authority Patterns: NFTs as Control Mechanisms
 
-EVM: Admin = stored address/role → upgrade dependencies.  
-Solana: Authority = signers/PDAs → still mutable.
+Account-based systems commonly represent administrative authority through
+stored roles or program-defined signer addresses.
 
-BCH: Authority via **NFT**
+On BCH, a product can represent authority with an **NFT** and transaction
+rules:
 
 - Covenant requires NFT inclusion (often specific capability) for sensitive ops.
 - Transfer NFT → reassign control. No code changes, no migrations.
@@ -178,8 +176,4 @@ All on local CashScript mocknet for clear, testable mechanics.
 
 </Callout>
 
-At OPTN Labs, we're building on these primitives in live scenarios—from efficient payments to tokenized assets and covenant-driven protocols.
-
-For a reference view of the stack, continue with the [CashTokens guide](/cashtokens), the [Bitcoin Cash covenants guide](/covenants-on-bitcoin-cash), or the broader [developer resources](/developers).
-
-Bitcoin Cash sits at an exciting inflection point in 2026: low relative TVL today, but with recent ecosystem investments, upcoming upgrades (like the May 2026 hard fork),<sup>[4](https://bitcoincashresearch.org/t/2026-layla-upgrade-lock-in-chip-endorsements-thread/1672)</sup> and a vibrant community fueling massive potential upside. If you're scouting alternatives to established account models, this series shows a grounded, high-potential path forward.
+OPTN Labs builds products and infrastructure around these primitives, including self-custody wallets, token-aware application flows, and covenant-based transaction workflows. For the technical guides and builder resources, use the links above to continue into the CashTokens, covenants, and developer material.

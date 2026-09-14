@@ -1,6 +1,6 @@
 # OPTN Labs website storytelling handoff
 
-This is a source-faithful handoff for the deeper storytelling review. It describes the implementation currently in the repository and includes an i18n-style English copy set for the wording that is now live in the page source.
+This handoff records the approved story architecture and the earlier investor-alignment pass. Its detailed implementation notes and copy set below are a historical snapshot from before the September 12 voice pass; do not use those old quotations as current website copy. For current page placement and review guidance, use [`content-map.md`](content-map.md); for exact current source strings, use the generated [`content/current-copy.en.md`](content/current-copy.en.md).
 
 Repository: `/home/lightswarm/projects/optn-wallet-website`
 
@@ -8,9 +8,9 @@ Storytelling and investor-alignment changes were committed and pushed to `main` 
 
 ## Canonical company story
 
-OPTN builds products that make advanced Bitcoin Cash capabilities usable. OPTN Wallet is the proof. The developer tooling and infrastructure behind it form a reusable stack. That work leads to the differentiated direction: enforcing how software-operated funds are allowed to move.
+OPTN builds Bitcoin Cash products and infrastructure for self-custody, digital assets, developer integrations, and programmable payments. OPTN Wallet is the shipped product; developer tooling and infrastructure form the reusable stack; programmable payments for software and AI agents are the in-development direction; Engineering is the current commercial way to apply the team’s product experience.
 
-The visitor-facing mental model is:
+The visitor-facing mental model remains:
 
 ```text
 Use      -> OPTN Wallet, a shipped self-custody product
@@ -28,12 +28,15 @@ This pass keeps the public website distinct from the pre-seed pitch deck while m
 - Home now names the broader financial-coordination direction inside the existing in-development fund-control section.
 - Platform now shows the deck-compatible separation: `Request -> Coordinate -> Enforce -> Operate`.
 - Platform makes the boundary explicit: OPTN coordinates the permitted path; BCH covenant enforcement applies only to BCH or CashToken funds deliberately placed under covenant control.
-- About now provides investor-verifiable proof points for OPTN Wallet, FundMe.cash, and covenant coordination. The 3,000 BCH figure is qualified as historical campaign contribution volume and explicitly not OPTN revenue.
+- About links directly to the public Google Play listing for OPTN Wallet; other product cards retain their stated maturity without unsupported volume metrics.
 - Kyle’s bio identifies him as the creator of FundMe.cash and describes production covenant applications, contract auditing, and real-fund workflows.
 - Solutions marks AI payments as the initial focus while retaining Treasury and BCH applications as broader use cases.
 - Pricing now explains that managed coordination is a future product direction, not a generally available SaaS offering.
 - Engineering now makes workflow design, integration, failure-path testing, adversarial testing, and deployment support visible as the bridge to enterprise work.
 - Fundraising details, investor milestones, $25K+ pricing, x402 market statistics, competitor comparisons, and use of funds remain deck-only.
+- Home now states the why-now tension in visitor-readable terms; Platform adds a single long-term vision sentence without changing its structure.
+- Solutions copy addresses the reader directly through concrete AI-payment, treasury, and BCH-app problems rather than narrating only from OPTN’s perspective.
+- The site still has capability proof, not verified paid-demand or pilot-conversion proof. Add customer outcomes only when a real pilot or deployment can be named and substantiated.
 
 ## Page-by-page narrative responsibilities
 
@@ -69,6 +72,7 @@ This pass keeps the public website distinct from the pre-seed pitch deck while m
 - The Wallet proof is now explicitly titled `The product that proves the stack.`
 - The fund-control section remains the narrative turn after the product and stack proof. Its transaction flow is still labeled illustrative and not a live deployment.
 - The fund-control copy now connects the direction to financial coordination: requests from people, software, or AI are mapped to permitted transaction outcomes.
+- The transition now explains why the problem matters as software takes on financial actions: a valid transaction can still do something the business never intended.
 - The final CTA remains the single choice point for the homepage: use the Wallet, contact OPTN, or explore developer resources.
 
 ### Wallet — `app/wallet/page.jsx`
@@ -106,7 +110,7 @@ This pass keeps the public website distinct from the pre-seed pitch deck while m
 - The mission now uses `clear, defined paths` instead of `clear, approved paths` to avoid implying an external transaction gatekeeper.
 - The page continues with principles, the self-custody boundary, and the founders after the mission has context. The boundary now consistently refers to `defined financial paths`.
 - A small responsive two-column story layout was added for the new About narrative.
-- An `Experience behind the stack` section now connects OPTN Wallet, FundMe.cash, and covenant coordination to investor-facing proof. The 3,000 BCH point is labeled historical campaign contribution volume and not OPTN revenue.
+- An `Experience behind the stack` section connects OPTN Wallet, FundMe.cash, and covenant coordination to the company story. Wallet proof links to the official Google Play listing.
 
 ### Solutions — `app/solutions/page.jsx`
 
@@ -130,6 +134,7 @@ This pass keeps the public website distinct from the pre-seed pitch deck while m
 ### Deliberately unchanged
 
 - `/platform` remains the conceptual center for authorization versus permitted transaction outcomes, now with an explicit coordination/enforcement model.
+- The Platform page includes one long-term vision sentence but does not claim that managed coordination is generally available.
 - `/cashtokens`, `/covenants-on-bitcoin-cash`, and `/bcmr-token-metadata` remain technical teaching pages with distinct subjects.
 - The primary header navigation remains a utility navigation: Wallet, Build, Infrastructure, Engineering, About. The homepage storytelling sequence does not require duplicating that sequence in the header.
 - No Search Console, sitemap, metadata, schema, or speculative keyword changes were made for this storytelling pass.
@@ -174,7 +179,7 @@ home.stack.control.title = "Programmable fund control"
 home.stack.control.status = "In development"
 home.stack.control.body = "Explore transaction rules that limit what software-operated funds can do."
 home.stack.control.cta = "Explore Platform"
-home.stack.transition = "As applications become more capable, the question shifts from who can request a transaction to what transactions should be possible at all."
+home.stack.transition = "As software takes on more financial actions, authorization alone may not be enough. The risk is not only a stolen key: a perfectly valid transaction can still do something the business never intended."
 
 home.fund_control.eyebrow = "Financial coordination · In development"
 home.fund_control.title = "Give software room to act—with clear limits."
@@ -258,7 +263,7 @@ about.proof.title = "Built through working BCH products."
 about.proof.wallet = "Self-custody BCH wallet, CashTokens, transaction construction, and application integrations."
 about.proof.fundme = "Covenant-based campaign flows for contributions, claims, and refunds."
 about.proof.coordination = "Controlled payments, continuing states, and downstream covenant handoffs."
-about.proof.note = "FundMe.cash: 3,000 BCH historical campaign contribution volume — not OPTN revenue."
+about.proof.walletLink = "View the Google Play listing"
 about.team.eyebrow = "The team"
 about.team.title = "Built by people who build on BCH."
 about.team.kyle.body = "Kyle is the creator of FundMe.cash and works on production covenant applications, contract auditing, and real-fund workflows. His experience building covenant-based products informs OPTN Labs’ focus on practical, controlled transaction systems."
@@ -353,9 +358,9 @@ solutions.hero.cta = "Discuss your workflow"
 solutions.use_cases.eyebrow = "Use cases"
 solutions.use_cases.title = "Start with the workflow that matters most."
 solutions.use_cases.ai_payments.focus = "Initial focus"
-solutions.use_cases.ai_payments = "Software needs to make payments without unrestricted spending authority. Define permitted recipients, bounded amounts, and recovery paths before money moves."
-solutions.use_cases.treasury = "Operations need repeatable payouts without giving every signer unrestricted discretion. Define approval, amount, continuation, and recovery rules for a more bounded workflow."
-solutions.use_cases.applications = "Applications need advanced BCH capabilities without making every user manage transaction complexity. Turn BCH, CashTokens, and covenant patterns into product experiences people can actually use."
+solutions.use_cases.ai_payments = "Need an AI agent to pay for services without unrestricted spending authority? Explore rules for permitted recipients, bounded amounts, and recovery paths before money moves."
+solutions.use_cases.treasury = "Need your operations team to make repeatable payouts without improvising destinations? Define who can be paid, how much, and what happens next."
+solutions.use_cases.applications = "Building a BCH app with advanced features? Make CashTokens and richer transaction flows usable without asking every user to manage the underlying complexity."
 solutions.work.eyebrow = "Ways to work with us"
 solutions.work.title = "Start with public tools, or work with OPTN to ship."
 solutions.work.body = "Explore on your own, or bring us in when the workflow needs deeper design, integration, testing, or support."
@@ -413,6 +418,7 @@ platform.coordination.request = "A person, product, service, or AI agent request
 platform.coordination.coordinate = "OPTN resolves recipients, amounts, workflow paths, and recovery rules into a permitted transaction path."
 platform.coordination.enforce = "For BCH or CashToken funds deliberately placed under covenant control, the covenant accepts only encoded outcomes."
 platform.coordination.operate = "Monitoring, reconciliation, integrations, and workflow state can surround enforcement without OPTN taking custody."
+platform.vision = "Long-term direction: people, applications, and AI can use money with useful authority—without automatically receiving unrestricted control over it."
 platform.policy.eyebrow = "Policy dimensions"
 platform.policy.title = "Make the rules visible before money moves."
 platform.boundary.body = "Today’s fund-level enforcement work is scoped to Bitcoin Cash and CashToken funds deliberately placed under BCH covenant control. Other chains or assets would require a separate trusted bridge, custodian, or issuer."

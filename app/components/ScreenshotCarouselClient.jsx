@@ -1,55 +1,99 @@
 "use client";
 
-import React from "react";
+import { useRef, useState } from "react";
 import Image from "next/image";
-import Carousel from "react-multi-carousel";
-import "react-multi-carousel/lib/styles.css";
 
-const defaultResponsive = {
-  superLargeDesktop: { breakpoint: { max: 4000, min: 3000 }, items: 1 },
-  desktop: { breakpoint: { max: 3000, min: 1024 }, items: 1 },
-  tablet: { breakpoint: { max: 1024, min: 464 }, items: 1 },
-  mobile: { breakpoint: { max: 464, min: 0 }, items: 1 },
-};
+export default function ScreenshotCarouselClient({ screenshots }) {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const touchStartX = useRef(null);
 
-export default function ScreenshotCarouselClient({ images }) {
-  if (!images || images.length === 0) {
-    return <div className="text-sm">No product artwork is available.</div>;
+  if (!screenshots || screenshots.length === 0) {
+    return null;
   }
 
+  const activeScreenshot = screenshots[activeIndex];
+  const showPrevious = () => setActiveIndex((index) => (index - 1 + screenshots.length) % screenshots.length);
+  const showNext = () => setActiveIndex((index) => (index + 1) % screenshots.length);
+
+  const handleKeyDown = (event) => {
+    if (event.key === "ArrowLeft") {
+      event.preventDefault();
+      showPrevious();
+    } else if (event.key === "ArrowRight") {
+      event.preventDefault();
+      showNext();
+    }
+  };
+
+  const handleTouchStart = (event) => {
+    touchStartX.current = event.changedTouches[0]?.clientX ?? null;
+  };
+
+  const handleTouchEnd = (event) => {
+    if (touchStartX.current === null) return;
+
+    const deltaX = event.changedTouches[0].clientX - touchStartX.current;
+    touchStartX.current = null;
+
+    if (deltaX < -45) showNext();
+    if (deltaX > 45) showPrevious();
+  };
+
   return (
-    <Carousel
-      swipeable
-      draggable
-      showDots
-      responsive={defaultResponsive}
-      infinite
-      autoPlay
-      autoPlaySpeed={3500}
-      keyBoardControl
-      customTransition="transform 500ms ease-in-out"
-      transitionDuration={500}
-      containerClass="carousel-container w-full min-w-0"
-      removeArrowOnDeviceType={["tablet", "mobile"]}
-      dotListClass="custom-dot-list-style"
-      itemClass="carousel-item-spacing"
-      shouldResetAutoplay
+    <div
+      className="wallet-screenshot-carousel"
+      role="region"
+      aria-roledescription="carousel"
+      aria-label="OPTN Wallet screenshots"
+      tabIndex={0}
+      onKeyDown={handleKeyDown}
     >
-      {images.map((src, idx) => (
-        <div key={src} className="flex min-w-0 items-center justify-center px-3">
-          <div className="w-full min-w-0 md:w-[95%] lg:w-[92%] xl:w-[88%]">
-            <Image
-              src={src}
-              alt={`OPTN Labs product artwork ${idx + 1}`}
-              width={2156}
-              height={1080}
-              className="h-auto w-full rounded-xl border border-white/10 object-contain"
-              priority={idx === 0}
-              sizes="100vw"
+      <div className="wallet-screenshot-stage">
+        <button className="wallet-screenshot-arrow" type="button" onClick={showPrevious} aria-label="Previous screenshot">
+          <span aria-hidden="true">←</span>
+        </button>
+        <figure
+          className="wallet-screenshot-figure"
+          aria-roledescription="slide"
+          aria-label={`${activeScreenshot.title}, ${activeIndex + 1} of ${screenshots.length}`}
+          onTouchStart={handleTouchStart}
+          onTouchEnd={handleTouchEnd}
+        >
+          <Image
+            src={activeScreenshot.src}
+            alt={activeScreenshot.alt}
+            width={361}
+            height={749}
+            className="wallet-screenshot-image"
+            priority={activeIndex === 0}
+            sizes="(max-width: 820px) 70vw, 280px"
+          />
+          <figcaption className="wallet-screenshot-caption" aria-live="polite">
+            <strong>{activeScreenshot.title}</strong>
+            <span>{activeScreenshot.description}</span>
+          </figcaption>
+        </figure>
+        <button className="wallet-screenshot-arrow" type="button" onClick={showNext} aria-label="Next screenshot">
+          <span aria-hidden="true">→</span>
+        </button>
+      </div>
+      <div className="wallet-screenshot-pagination">
+        <span className="wallet-screenshot-count" aria-live="polite">
+          {String(activeIndex + 1).padStart(2, "0")} / {String(screenshots.length).padStart(2, "0")}
+        </span>
+        <div className="wallet-screenshot-dots" role="group" aria-label="Choose a wallet screenshot">
+          {screenshots.map((screenshot, index) => (
+            <button
+              key={screenshot.src}
+              className="wallet-screenshot-dot"
+              type="button"
+              aria-label={`Show ${screenshot.title} screenshot`}
+              aria-current={index === activeIndex ? "true" : undefined}
+              onClick={() => setActiveIndex(index)}
             />
-          </div>
+          ))}
         </div>
-      ))}
-    </Carousel>
+      </div>
+    </div>
   );
 }

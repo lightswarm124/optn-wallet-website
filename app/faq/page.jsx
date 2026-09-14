@@ -4,19 +4,19 @@ import { createPageMetadata } from "../../lib/seo";
 const faqs = [
   {
     q: "What is OPTN Labs?",
-    a: "OPTN Labs is a Canadian company building Bitcoin Cash wallets, developer tools, infrastructure, and transaction systems. OPTN Wallet is the shipped user product; the wider company helps teams make BCH products easier to use, integrate, and operate.",
+    a: "OPTN Labs is a Canadian technology company building Bitcoin Cash products and infrastructure for self-custody, digital assets, developer integrations, and programmable payments. OPTN Wallet is its shipped product; the programmable-payment platform is in development.",
   },
   {
     q: "What is OPTN Wallet?",
-    a: "OPTN Wallet is a self-custody BCH wallet and reference implementation. It supports everyday wallet use, CashTokens, connected applications, and advanced transaction work as the product continues to develop.",
+    a: "OPTN Wallet is a shipped self-custody BCH wallet for everyday payments, CashTokens, connected applications, and advanced transaction workflows. Its open implementation also serves as a reference for BCH builders.",
   },
   {
     q: "Does OPTN hold customer keys or funds?",
-    a: "No. OPTN's open and paid tooling paths are designed around self-custody and do not require OPTN to hold your keys or funds. Any custom arrangement should be scoped explicitly.",
+    a: "No. OPTN Wallet and its open tools are designed around self-custody, so users retain control of their keys and funds. Any custom operating architecture is scoped explicitly.",
   },
   {
     q: "What is available today, and what is still in development?",
-    a: "OPTN Wallet, public developer resources, Bitcoin Cash infrastructure, and engineering support are available today. Some convenience layers, including Builder and the in-wallet add-on system, are still in development and are not generally available.",
+    a: "OPTN Wallet, public developer resources, Bitcoin Cash infrastructure, and scoped engineering are available today. Builder and the in-wallet add-on system remain in development.",
   },
   {
     q: "What Bitcoin Cash services are available?",

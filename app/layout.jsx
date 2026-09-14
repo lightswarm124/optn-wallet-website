@@ -2,6 +2,7 @@
 import "./globals.css";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
+import Script from "next/script";
 import { Inter } from "next/font/google";
 
 const inter = Inter({
@@ -10,24 +11,26 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
+const siteTitle = "OPTN Labs | Bitcoin Cash Products & Programmable Payments";
+const siteDescription =
+  "Bitcoin Cash products and infrastructure for people, applications, and AI agents—from OPTN Wallet and developer tooling to programmable payment systems in development.";
+
 // SEO + social
 export const metadata = {
   metadataBase: new URL("https://www.optnlabs.com"),
   title: {
-    default: "OPTN Labs | Bitcoin Cash Wallets, Tools & Infrastructure",
+    default: siteTitle,
     template: "%s | OPTN Labs",
   },
-  description:
-    "OPTN Labs builds Bitcoin Cash wallets, developer tools, infrastructure, CashToken integrations, and programmable transaction systems.",
+  description: siteDescription,
   alternates: {
     canonical: "https://www.optnlabs.com/",
   },
   openGraph: {
     type: "website",
     url: "https://www.optnlabs.com/",
-    title: "OPTN Labs | Bitcoin Cash Wallets, Tools & Infrastructure",
-    description:
-      "Bitcoin Cash products for users and builders, from OPTN Wallet and developer tooling to infrastructure and programmable transaction systems.",
+    title: siteTitle,
+    description: siteDescription,
     siteName: "OPTN Labs",
     images: [
       {
@@ -40,9 +43,8 @@ export const metadata = {
   },
   twitter: {
     card: "summary_large_image",
-    title: "OPTN Labs | Bitcoin Cash Wallets, Tools & Infrastructure",
-    description:
-      "Bitcoin Cash products for users and builders, from OPTN Wallet and developer tooling to infrastructure and programmable transaction systems.",
+    title: siteTitle,
+    description: siteDescription,
     images: ["/og.png"],
   },
 };
@@ -51,6 +53,23 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${inter.variable} ${inter.className}`}>
       <body className="min-h-screen">
+        <Script id="optn-theme-bootstrap" strategy="beforeInteractive">
+          {`(function () {
+            var theme = "light";
+            try {
+              var saved = window.localStorage.getItem("optn-theme");
+              if (saved === "dark" || saved === "light") {
+                theme = saved;
+              } else {
+                theme = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
+              }
+            } catch (error) {
+              theme = window.matchMedia?.("(prefers-color-scheme: dark)")?.matches ? "dark" : "light";
+            }
+            document.documentElement.dataset.theme = theme;
+            document.documentElement.style.colorScheme = theme;
+          })();`}
+        </Script>
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
@@ -72,7 +91,7 @@ export default function RootLayout({ children }) {
                   "@type": "WebSite",
                   name: "OPTN Labs",
                   url: "https://www.optnlabs.com",
-                  description: "Bitcoin Cash products for users and builders, from OPTN Wallet and developer tooling to infrastructure and programmable transaction systems.",
+                  description: siteDescription,
                 },
               ],
             }),
