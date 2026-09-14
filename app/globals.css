@@ -356,12 +356,11 @@ button, a { -webkit-tap-highlight-color: transparent; }
 .faq-item[open] summary::after { content: "−"; }
 .faq-item p { margin: 12px 24px 0 0; color: var(--ink-soft); font-size: .8rem; font-weight: 400; line-height: 1.45; }
 
-.wallet-page { background: #f4f8f3; }
-.wallet-hero .page-hero-grid { align-items: end; }
+.wallet-page { background: var(--paper); }
+.wallet-hero .page-hero-grid { grid-template-columns: minmax(0, 1fr); align-items: start; }
+.wallet-hero-copy { max-width: 920px; }
+.wallet-hero-copy .page-hero-copy { max-width: 760px; }
 .wallet-status { display: inline-flex; padding: 6px 10px; border-radius: 999px; background: #dff2e3; color: var(--green-dark); font-size: .68rem; font-weight: 700; }
-.wallet-hero-image { display: flex; min-height: 450px; flex-direction: column; justify-content: flex-end; align-items: center; gap: 12px; margin: 0; padding: 20px 28px; border-radius: 14px; background: #073d35; overflow: hidden; }
-.wallet-hero-image img { display: block; width: min(100%, 178px); height: auto; border: 1px solid rgba(124, 230, 154, .35); border-radius: 16px; box-shadow: 0 15px 28px rgba(0,0,0,.2); }
-.wallet-hero-image figcaption { color: #c8e8dc; font-size: .72rem; line-height: 1.35; text-align: center; }
 .wallet-screen { min-height: 315px; padding: 20px; border-radius: 14px; background: #073d35; color: white; }
 .wallet-screen-bar { display: flex; justify-content: space-between; color: #d6e8dc; font-size: .75rem; }
 .wallet-screen-layout { display: grid; grid-template-columns: 100px 1fr; gap: 14px; margin-top: 16px; }
@@ -429,7 +428,6 @@ button, a { -webkit-tap-highlight-color: transparent; }
 :root[data-theme="dark"] .button-secondary { border-color: var(--line); }
 :root[data-theme="dark"] .architecture-node { background: var(--paper-deep); }
 :root[data-theme="dark"] .architecture-node-middle { background: var(--mint); border-color: var(--line); }
-:root[data-theme="dark"] .wallet-page { background: var(--paper); }
 :root[data-theme="dark"] .supporting-page .surface-panel { background: var(--paper-deep); }
 :root[data-theme="dark"] .wallet-dashboard { background: #e7f1eb; color: #093b37; }
 :root[data-theme="dark"] .wallet-dashboard p { color: #3c5b56; }

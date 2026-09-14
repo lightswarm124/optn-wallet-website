@@ -1,4 +1,3 @@
-import Image from "next/image";
 import {
   ArrowLink,
   ButtonLink,
@@ -28,24 +27,13 @@ export default function WalletPage() {
     <div className="page-shell wallet-page">
       <section className="page-hero wallet-hero">
         <div className="site-container page-hero-grid">
-          <div>
+          <div className="wallet-hero-copy">
             <span className="wallet-status">Shipped</span>
             <SectionLabel>Shipped product</SectionLabel>
             <h1>A self-custody wallet for BCH, CashTokens, and connected apps.</h1>
             <p className="page-hero-copy">Send BCH, manage CashTokens, and connect to compatible applications from one self-custody wallet. OPTN Wallet also supports advanced BCH transaction workflows.</p>
             <div className="hero-actions"><ButtonLink href="https://play.google.com/store/apps/details?id=optn.wallet.app">Get OPTN Wallet</ButtonLink><ButtonLink href="https://github.com/OPTNLabs/OPTNWallet" variant="secondary">View on GitHub</ButtonLink></div>
           </div>
-          <figure className="wallet-hero-image">
-            <Image
-              src="/screenshots/IMG_20250511_111344.png"
-              alt="OPTN Wallet app browser showing BCH applications and category filters"
-              width={361}
-              height={749}
-              priority
-              sizes="(max-width: 900px) 180px, 178px"
-            />
-            <figcaption>Browse BCH-connected apps inside OPTN Wallet.</figcaption>
-          </figure>
         </div>
       </section>
 

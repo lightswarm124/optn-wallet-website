@@ -3295,135 +3295,127 @@ This catalog is extracted from the current working tree. It includes App Router 
 
 ```json
 {
-  "L0013_C010": {
+  "L0012_C010": {
     "text": "OPTN Wallet | Bitcoin Cash & CashTokens Wallet",
     "kind": "property:title"
   },
-  "L0015_C005": {
+  "L0014_C005": {
     "text": "OPTN Wallet is a shipped self-custody Bitcoin Cash wallet for BCH, CashTokens, connected applications, and advanced transaction workflows.",
     "kind": "property:description"
   },
-  "L0020_C004": {
+  "L0019_C004": {
     "text": "CashTokens",
     "kind": "array-copy-candidate"
   },
-  "L0020_C018": {
+  "L0019_C018": {
     "text": "See fungible tokens and NFTs alongside BCH.",
     "kind": "array-copy-candidate"
   },
-  "L0021_C004": {
+  "L0020_C004": {
     "text": "Advanced transactions",
     "kind": "array-copy-candidate"
   },
-  "L0021_C029": {
+  "L0020_C029": {
     "text": "Handle richer payments and advanced BCH workflows.",
     "kind": "array-copy-candidate"
   },
-  "L0022_C004": {
+  "L0021_C004": {
     "text": "Connect to apps",
     "kind": "array-copy-candidate"
   },
-  "L0022_C023": {
+  "L0021_C023": {
     "text": "Connect to BCH apps and experiences when you need them.",
     "kind": "array-copy-candidate"
   },
-  "L0023_C004": {
+  "L0022_C004": {
     "text": "Explore contracts",
     "kind": "array-copy-candidate"
   },
-  "L0023_C025": {
+  "L0022_C025": {
     "text": "Support richer BCH transaction and contract workflows.",
     "kind": "array-copy-candidate"
   },
-  "L0032_C045": {
+  "L0031_C045": {
     "text": "Shipped",
     "kind": "jsx-text"
   },
-  "L0033_C027": {
+  "L0032_C027": {
     "text": "Shipped product",
     "kind": "jsx-text"
   },
-  "L0034_C017": {
+  "L0033_C017": {
     "text": "A self-custody wallet for BCH, CashTokens, and connected apps.",
     "kind": "jsx-text"
   },
-  "L0035_C043": {
+  "L0034_C043": {
     "text": "Send BCH, manage CashTokens, and connect to compatible applications from one self-custody wallet. OPTN Wallet also supports advanced BCH transaction workflows.",
     "kind": "jsx-text"
   },
-  "L0036_C124": {
+  "L0035_C124": {
     "text": "Get OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0036_C230": {
+  "L0035_C230": {
     "text": "View on GitHub",
     "kind": "jsx-text"
   },
-  "L0041_C015": {
-    "text": "OPTN Wallet app browser showing BCH applications and category filters",
-    "kind": "jsx-attribute:alt"
-  },
-  "L0047_C025": {
-    "text": "Browse BCH-connected apps inside OPTN Wallet.",
-    "kind": "jsx-text"
-  },
-  "L0056_C025": {
+  "L0044_C025": {
     "text": "Payments, assets, and apps",
     "kind": "jsx-text"
   },
-  "L0057_C015": {
+  "L0045_C015": {
     "text": "Use BCH and CashTokens in connected experiences.",
     "kind": "jsx-text"
   },
-  "L0058_C011": {
+  "L0046_C011": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0059_C101": {
+  "L0047_C101": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0059_C109": {
+  "L0047_C109": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0059_C179": {
+  "L0047_C179": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0067_C027": {
+  "L0055_C027": {
     "text": "OPTN Wallet → the OPTN stack",
     "kind": "jsx-text"
   },
-  "L0068_C017": {
+  "L0056_C017": {
     "text": "The product that started the stack.",
     "kind": "jsx-text"
   },
-  "L0069_C042": {
+  "L0057_C042": {
     "text": "Building OPTN Wallet meant solving real product needs across tokens, app connections, infrastructure, and transactions. That experience shaped our developer stack and informs our work on programmable payments.",
     "kind": "jsx-text"
   },
-  "L0071_C047": {
+  "L0059_C047": {
     "text": "Explore the OPTN stack",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0072_C043": {
+  "L0060_C043": {
     "text": "Developer resources",
     "kind": "jsx-text"
   },
-  "L0073_C047": {
+  "L0061_C047": {
     "text": "BCH infrastructure",
     "kind": "jsx-text"
   },
-  "L0074_C044": {
+  "L0062_C044": {
     "text": "OPTN Engineering",
     "kind": "jsx-text"
   },
-  "L0075_C061": {
+  "L0063_C061": {
     "text": "Latest Wallet update",
     "kind": "jsx-text"
   },
-  "L0080_C017": {
+  "L0068_C017": {
     "text": "Try OPTN Wallet.",
     "kind": "jsx-attribute:title"
   }

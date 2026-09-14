@@ -157,7 +157,7 @@ This is a conceptual route, not a forced linear funnel. Technical readers can en
 
 **Section order:**
 
-1. **Hero:** Shipped status; “A self-custody wallet for BCH, CashTokens, and connected apps.” Describes sending BCH, managing CashTokens, connecting to apps, and advanced transaction workflows. Actions: Google Play and GitHub; a real Wallet app-browser screenshot provides product proof instead of logo artwork.
+1. **Hero:** Shipped status; “A self-custody wallet for BCH, CashTokens, and connected apps.” Describes sending BCH, managing CashTokens, connecting to apps, and advanced transaction workflows. Actions: Google Play and GitHub. Keep the hero text-led; the following carousel is the single place for Wallet screen imagery.
 2. **Inside OPTN Wallet:** an eight-screen, manually controlled carousel shows Wallet home, assets, CashTokens, actions, sending, receiving, app browsing, and airdrop setup.
 3. **Payments, assets, and apps — “Use BCH and CashTokens in connected experiences.”** Four capability rows: CashTokens; advanced transactions; connecting to apps; richer BCH transaction/contract workflows.
 4. **From wallet to stack — “The product that started the stack.”** Explains how solving real product needs across tokens, app connections, infrastructure, and transactions shaped the developer stack and programmable-payment work. A compact link panel routes to Developers, Infrastructure, Engineering, and the latest Wallet update; decorative logo artwork was removed.
