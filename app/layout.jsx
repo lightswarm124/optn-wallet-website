@@ -11,9 +11,9 @@ const inter = Inter({
   variable: "--font-inter",
 });
 
-const siteTitle = "OPTN Labs | Bitcoin Cash Products & Programmable Payments";
+const siteTitle = "OPTN Labs | OPTN Wallet & Bitcoin Cash Ecosystem";
 const siteDescription =
-  "Bitcoin Cash products and infrastructure for people, applications, and AI agents—from OPTN Wallet and developer tooling to programmable payment systems in development.";
+  "OPTN Labs builds OPTN Wallet and supports the Bitcoin Cash ecosystem with open resources, infrastructure, engineering, and controlled-payment pilot projects.";
 
 // SEO + social
 export const metadata = {

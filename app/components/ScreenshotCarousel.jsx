@@ -45,20 +45,14 @@ export default function ScreenshotCarousel() {
       description: "Explore connected BCH apps and wallet experiences.",
       alt: "OPTN Wallet app browser with category filters and app cards",
     },
-    {
-      src: "/screenshots/IMG_20250511_111157.png",
-      title: "Airdrop setup",
-      description: "Set up recipient addresses for a token or BCH distribution.",
-      alt: "OPTN Wallet airdrop setup screen with manual and token-based recipient options",
-    },
   ];
 
   return (
     <section id="screenshots" className="site-section wallet-screenshots-section">
       <div className="site-container wallet-screenshots-grid">
         <div className="wallet-screenshots-copy">
-          <SectionLabel>Inside OPTN Wallet</SectionLabel>
-          <h2>A closer look at the shipped wallet.</h2>
+          <SectionLabel>Product tour</SectionLabel>
+          <h2>Inside OPTN Wallet</h2>
           <p className="section-intro">
             Explore the app’s wallet, assets, CashTokens, connected apps, and payment screens.
           </p>

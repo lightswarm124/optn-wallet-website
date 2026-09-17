@@ -9,16 +9,16 @@ import {
 } from "../components/SitePrimitives";
 
 export const metadata = createPageMetadata({
-  title: "About OPTN Labs | Bitcoin Cash Products & Infrastructure",
+  title: "About OPTN Labs | OPTN Wallet & BCH Ecosystem",
   description:
-    "OPTN Labs is a Canadian technology company building Bitcoin Cash products for self-custody, digital assets, developer integrations, and programmable payments.",
+    "Meet the team behind OPTN Wallet, open Bitcoin Cash resources, infrastructure, and controlled-payment pilot projects.",
   path: "/about",
 });
 
 const principles = [
-  ["Open foundation", "We build reusable Bitcoin Cash tools and infrastructure that other teams can use directly."],
-  ["Self-custody by design", "We build self-custody products and tools that let users retain control of their keys and funds."],
-  ["Practical engineering", "We turn hard transaction and integration problems into useful products."],
+  ["Useful products", "We start with practical experiences that make Bitcoin Cash easier to use in everyday products."],
+  ["Self-custody by design", "We build products and tools that let users retain control of their keys and funds."],
+  ["Open ecosystem", "We publish reusable resources and support infrastructure that other teams can inspect, use, and extend."],
 ];
 
 const team = [
@@ -36,7 +36,7 @@ const team = [
   },
 ];
 
-const contactHref = "mailto:info@optnlabs.com?subject=OPTN%20Labs%20inquiry";
+const contactHref = "/#contact";
 
 export default function AboutPage() {
   return (
@@ -45,35 +45,34 @@ export default function AboutPage() {
         <div className="site-container about-hero-grid">
           <div>
             <SectionLabel>About OPTN Labs</SectionLabel>
-            <h1>Building Bitcoin Cash products for people, apps, and AI agents.</h1>
+            <h1>Building useful Bitcoin Cash products.</h1>
             <p className="page-hero-copy">
-              Founded in Canada in 2025, OPTN Labs builds Bitcoin Cash products
-              and infrastructure for self-custody, digital assets, developer
-              integrations, and programmable payments.
+              Founded in Canada in 2025, OPTN Labs is the company behind OPTN
+              Wallet. We also contribute open resources, infrastructure, and
+              engineering for the wider Bitcoin Cash ecosystem.
             </p>
             <p className="about-mission">
-              <strong>Our mission:</strong> make Bitcoin Cash useful across
-              self-custody products, connected applications, and programmable
-              payment workflows.
+              <strong>Our mission:</strong> make Bitcoin Cash easier to use,
+              integrate, and extend.
             </p>
             <div className="hero-actions">
               <ButtonLink href="/wallet">Explore OPTN Wallet</ButtonLink>
-              <ButtonLink href={contactHref} variant="secondary">Talk to OPTN</ButtonLink>
+              <ButtonLink href={contactHref} variant="secondary">Contact us</ButtonLink>
             </div>
           </div>
           <div className="about-hero-panel">
             <SectionLabel>At a glance</SectionLabel>
             <div className="about-panel-row">
               <Icon name="wallet" size={24} />
-              <div><strong>Use Bitcoin Cash</strong><span>Wallets, digital assets, and connected applications</span></div>
+              <div><strong>Ship user products</strong><span>Self-custody, digital assets, and connected applications</span></div>
             </div>
             <div className="about-panel-row">
               <Icon name="code" size={24} />
-              <div><strong>Build BCH products</strong><span>Open tooling, infrastructure, and engineering</span></div>
+              <div><strong>Support the ecosystem</strong><span>Open resources, infrastructure, and implementation experience</span></div>
             </div>
             <div className="about-panel-row">
               <Icon name="shield" size={24} />
-              <div><strong>Program financial workflows</strong><span>Payments, transaction rules, and autonomous software</span></div>
+              <div><strong>Explore new workflows</strong><span>Controlled-payment pilots for software and AI agents</span></div>
             </div>
           </div>
         </div>
@@ -81,19 +80,19 @@ export default function AboutPage() {
 
       <section className="site-section about-story-section">
         <div className="site-container">
-          <SectionLabel>Why OPTN exists</SectionLabel>
-          <h2>Make advanced Bitcoin Cash capabilities usable.</h2>
+          <SectionLabel>From product to ecosystem</SectionLabel>
+          <h2>Build the product. Share the foundation.</h2>
           <div className="about-story-copy">
-            <p>Bitcoin Cash combines low-cost UTXO transactions, native tokens, and transaction-level programmability. OPTN turns these primitives into wallets, infrastructure, and payment workflows that people and development teams can use.</p>
-            <p>We started with OPTN Wallet. Building a complete wallet exposed the tooling and infrastructure BCH applications need and led naturally to our next focus: payment and transaction infrastructure for software that can operate money autonomously.</p>
+            <p>OPTN Wallet brings BCH payments, CashTokens, connected apps, and advanced tools into one self-custody product. The work behind it also produces resources that can help other teams build better Bitcoin Cash experiences.</p>
+            <p>That product and ecosystem experience now informs a newer area of exploration: controlled-payment pilots where software can act within owner-defined financial boundaries.</p>
           </div>
         </div>
       </section>
 
       <section className="site-section about-principles-section">
         <div className="site-container">
-          <SectionLabel>How we work</SectionLabel>
-          <h2>Open where it helps. Clear where it matters.</h2>
+          <SectionLabel>Principles</SectionLabel>
+          <h2>How we work</h2>
           <div className="three-columns about-principles-grid">
             {principles.map(([title, body]) => (
               <article className="column-item about-principle" key={title}>
@@ -119,8 +118,8 @@ export default function AboutPage() {
 
       <section className="site-section about-proof-section">
         <div className="site-container">
-          <SectionLabel>Track record</SectionLabel>
-          <h2>Built through working BCH products.</h2>
+          <SectionLabel>Current work</SectionLabel>
+          <h2>One released product, a broader ecosystem.</h2>
           <div className="about-proof-grid">
             <article className="about-proof-item about-proof-wallet-item">
               <Image
@@ -131,23 +130,23 @@ export default function AboutPage() {
                 height={749}
               />
               <div className="about-proof-wallet-copy">
-                <strong>OPTN Wallet <span className="status-inline">Shipped</span></strong>
-                <p>Self-custody BCH wallet, CashTokens, transaction construction, and application integrations.</p>
+                <strong>OPTN Wallet · Released</strong>
+                <p>Self-custody BCH wallet with CashTokens, app connections, and advanced transaction tools.</p>
                 <a className="about-proof-link" href="https://play.google.com/store/apps/details?id=optn.wallet.app" target="_blank" rel="noopener noreferrer">
                   View the Google Play listing <span aria-hidden="true">↗</span>
                 </a>
               </div>
             </article>
-            <article className="about-proof-item"><strong>FundMe.cash <span className="status-inline">Shipped</span></strong><p>Covenant-based campaign flows for contributions, claims, and refunds.</p></article>
-            <article className="about-proof-item"><strong>Programmable payments <span className="status-inline">In development</span></strong><p>Agent payments, transaction composition, and covenant-based workflows.</p></article>
+            <article className="about-proof-item"><strong>Bitcoin Cash ecosystem</strong><p>Open resources, token and metadata guidance, infrastructure, and engineering for BCH builders.</p></article>
+            <article className="about-proof-item"><strong>Controlled-payment pilots</strong><p>WIP explorations for software and AI payments with defined recipients, amounts, paths, and recovery.</p></article>
           </div>
         </div>
       </section>
 
       <section className="site-section about-team-section">
         <div className="site-container">
-          <SectionLabel>The team</SectionLabel>
-          <h2>Built by people with BCH product experience.</h2>
+          <SectionLabel>Company</SectionLabel>
+          <h2>The team</h2>
           <div className="about-team-grid">
             {team.map((member) => (
               <article className="about-team-card" key={member.name}>
@@ -167,17 +166,17 @@ export default function AboutPage() {
             ))}
           </div>
           <p className="about-team-note">
-            Our work across wallets, covenant applications, and production BCH
-            workflows shaped our current focus: payment infrastructure that
-            lets software act within defined transaction rules.
+            Our work across wallets, CashTokens, covenant applications, and BCH
+            infrastructure shapes both the products we ship and the ecosystem
+            work we share.
           </p>
         </div>
       </section>
 
       <FinalCTA
-        title="Have a product idea?"
-        body="Tell us what you are building and we will help identify the right next step."
-        label="Talk to OPTN"
+        title="Want to build with OPTN?"
+        body="Ask about OPTN Wallet, the Bitcoin Cash ecosystem, or a controlled-payment pilot project."
+        label="Contact us"
         href={contactHref}
       />
     </div>

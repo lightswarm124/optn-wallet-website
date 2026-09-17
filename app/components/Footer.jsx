@@ -1,23 +1,15 @@
 import Link from "next/link";
 import Image from "next/image";
-import { FaGithub, FaLinkedin, FaTwitter } from "react-icons/fa";
+import { FaGithub, FaLinkedin, FaTelegramPlane, FaTwitter } from "react-icons/fa";
 
 const footerGroups = [
   {
     title: "Explore",
     links: [
       ["Wallet", "/wallet"],
-      ["Platform", "/platform"],
-      ["Solutions", "/solutions"],
-      ["Pricing", "/pricing"],
-    ],
-  },
-  {
-    title: "Build",
-    links: [
-      ["Developers", "/developers"],
+      ["Ecosystem", "/ecosystem"],
       ["Engineering", "/engineering"],
-      ["Infrastructure", "/infrastructure"],
+      ["Work with OPTN", "/pricing"],
     ],
   },
   {
@@ -58,18 +50,19 @@ export default function Footer() {
               height={153}
             />
           </Link>
-          <p>Wallet, infrastructure, and programmable payments on Bitcoin Cash.</p>
+          <p>OPTN Wallet, open BCH resources, infrastructure, and engineering.</p>
         </div>
         <div className="footer-links">
           {footerGroups.map((group) => <LinkGroup key={group.title} {...group} />)}
         </div>
         <div className="footer-contact">
           <h2>Contact</h2>
-          <a className="footer-contact-link" href="mailto:info@optnlabs.com?subject=OPTN%20Labs%20inquiry">Talk to OPTN →</a>
+          <Link className="footer-contact-link" href="/#contact">Contact us →</Link>
           <a className="footer-email" href="mailto:info@optnlabs.com">info@optnlabs.com</a>
           <div className="footer-social" aria-label="Social links">
             <a href="https://x.com/OPTNLabs" target="_blank" rel="noopener noreferrer" aria-label="OPTN Labs on X"><FaTwitter aria-hidden="true" /></a>
             <a href="https://www.linkedin.com/company/optnlabs/" target="_blank" rel="noopener noreferrer" aria-label="OPTN Labs on LinkedIn"><FaLinkedin aria-hidden="true" /></a>
+            <a href="https://t.me/+KLBMsVW0xHY1YWI5" target="_blank" rel="noopener noreferrer" aria-label="Join the OPTN Telegram group" title="Join the OPTN Telegram group"><FaTelegramPlane aria-hidden="true" /></a>
             <a href="https://github.com/OPTNLabs/OPTNWallet" target="_blank" rel="noopener noreferrer" aria-label="OPTN Labs on GitHub"><FaGithub aria-hidden="true" /></a>
           </div>
         </div>

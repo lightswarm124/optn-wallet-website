@@ -40,7 +40,7 @@ const relatedResources = [
   ["OPTN Platform", "/platform"],
   ["CashTokens", "/cashtokens"],
   ["Engineering support", "/engineering"],
-  ["Developer resources", "/developers"],
+  ["Ecosystem", "/ecosystem"],
 ];
 
 const relatedReading = [
@@ -238,7 +238,7 @@ export default function CovenantsPage() {
       <FinalCTA
         title="Have a covenant pattern in mind?"
         body="Bring the transaction path, recovery behavior, and product context. We can help scope the implementation."
-        label="Talk to OPTN"
+        label="Contact us"
       />
     </div>
   );

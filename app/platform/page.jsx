@@ -9,9 +9,9 @@ import {
 import { createPageMetadata } from "../../lib/seo";
 
 export const metadata = createPageMetadata({
-  title: "Programmable Payments for Bitcoin Cash | OPTN Labs",
+  title: "Controlled Payment Pilot Projects | OPTN Labs",
   description:
-    "OPTN is developing BCH-native payment infrastructure for software and AI agents, with transaction rules for amounts, destinations, successor states, and recovery.",
+    "Explore pilot projects for software and AI payments with defined recipient, amount, transaction-path, and recovery rules on Bitcoin Cash.",
   path: "/platform",
 });
 
@@ -35,10 +35,10 @@ export default function PlatformPage() {
       <section className="page-hero">
         <div className="site-container page-hero-grid">
           <div>
-            <SectionLabel>Platform · Programmable payments · In development</SectionLabel>
-            <h1>Payment infrastructure for software and AI agents.</h1>
-            <p className="page-hero-copy">OPTN is developing BCH-native payment infrastructure for software and AI agents. Applications can request payments while OPTN coordinates transaction composition and financial rules. Where funds are placed under BCH covenant control, transaction rules validate the spending path.</p>
-            <div className="hero-actions"><ButtonLink href="/#contact">Talk to OPTN</ButtonLink></div>
+            <SectionLabel>Pilot projects · WIP</SectionLabel>
+            <h1>Controlled payments for software.</h1>
+            <p className="page-hero-copy">OPTN is open to pilot projects that let software and AI agents operate within defined rules for recipients, spending limits, transaction paths, and recovery.</p>
+            <div className="hero-actions"><ButtonLink href="/#contact">Contact us</ButtonLink></div>
           </div>
           <ArchitectureGraphic />
         </div>
@@ -46,19 +46,19 @@ export default function PlatformPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>How the platform fits together</SectionLabel>
-          <h2>From payment request to an enforceable transaction path.</h2>
+          <SectionLabel>Pilot model</SectionLabel>
+          <h2>How it works</h2>
           <div className="four-columns control-grid">
             {coordinationStages.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
           </div>
-          <p className="section-intro platform-vision"><strong>Long-term direction:</strong> let people, applications, and AI use money programmatically, with transaction rules that reflect the financial policy of each workflow.</p>
+          <p className="section-intro platform-vision"><strong>The goal:</strong> let people, applications, and AI use money programmatically, with transaction rules that reflect the financial policy of each workflow.</p>
         </div>
       </section>
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Payment and transaction rules</SectionLabel>
-          <h2>Define how software can use money.</h2>
+          <SectionLabel>Controls</SectionLabel>
+          <h2>Financial rules</h2>
           <div className="four-columns control-grid">
             {controls.map(([icon, title, body]) => <div className="column-item" key={title}><span className="icon-circle"><Icon name={icon} /></span><h3>{title}</h3><p>{body}</p></div>)}
           </div>
@@ -67,11 +67,11 @@ export default function PlatformPage() {
 
       <section className="site-section">
         <div className="site-container">
-          <SectionLabel>Programmable authority</SectionLabel>
+          <SectionLabel>Core model</SectionLabel>
           <div className="boundary">
             <div>
-              <h2>Define what a transaction is allowed to do.</h2>
-              <p className="section-intro">A signature establishes which key authorized a transaction. Programmable rules add a financial policy layer: how much moves, where it goes, what state continues, and how funds may be recovered. OPTN is developing this layer for BCH workflows where software needs financial authority.</p>
+              <h2>Programmable authority</h2>
+              <p className="section-intro">A signature establishes which key authorized a transaction. Programmable rules add a financial policy layer: how much moves, where it goes, what state continues, and how funds may be recovered. OPTN applies this model to BCH workflows where software needs financial authority.</p>
               <ArrowLink href="/engineering">See the engineering path</ArrowLink>
             </div>
             <div className="comparison">
@@ -85,8 +85,8 @@ export default function PlatformPage() {
       <section className="site-section">
         <div className="site-container boundary">
           <div>
-            <SectionLabel>Built on Bitcoin Cash</SectionLabel>
-            <h2>Starting with BCH and CashTokens.</h2>
+            <SectionLabel>Technical foundation</SectionLabel>
+            <h2>Why Bitcoin Cash</h2>
             <p className="section-intro">OPTN’s programmable-finance work uses BCH and CashTokens, with covenant rules applying to funds deliberately placed under BCH covenant control. Other chains or assets require a separate trusted bridge, custodian, or issuer.</p>
           </div>
           <div className="boundary-list">
@@ -96,7 +96,7 @@ export default function PlatformPage() {
         </div>
       </section>
 
-      <FinalCTA title="Planning an agent-payment or programmable-finance workflow?" body="Tell us about the application, payment flow, and transaction outcomes you need to define." />
+      <FinalCTA title="Exploring a pilot project?" body="Tell us about the application, payment flow, and transaction outcomes you need to define." />
     </div>
   );
 }

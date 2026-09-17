@@ -61,7 +61,7 @@ const relatedResources = [
   ["Covenants", "/covenants-on-bitcoin-cash"],
   ["BCMR metadata", "/bcmr-token-metadata"],
   ["OPTN Wallet", "/wallet"],
-  ["Developer resources", "/developers"],
+  ["Ecosystem", "/ecosystem"],
 ];
 
 const relatedReading = [
@@ -252,7 +252,7 @@ export default function CashTokensPage() {
       <FinalCTA
         title="Building a CashTokens product?"
         body="Start with the protocol layer, then bring us the wallet, application, or integration problem."
-        label="Talk to OPTN"
+        label="Contact us"
       />
     </div>
   );

@@ -2,143 +2,127 @@
 
 import { useState } from "react";
 
+const endpoint = "https://formsubmit.co/ajax/info@optnlabs.com";
 const initialState = {
   name: "",
-  company: "",
   email: "",
-  need: "BCH infrastructure access",
-  timeline: "",
-  details: "",
+  company: "",
+  topic: "General inquiry",
+  message: "",
+  website: "",
 };
 
 export default function ContactForm() {
   const [form, setForm] = useState(initialState);
+  const [status, setStatus] = useState("idle");
+  const [statusMessage, setStatusMessage] = useState("");
 
   function updateField(event) {
     const { name, value } = event.target;
     setForm((current) => ({ ...current, [name]: value }));
   }
 
-  function handleSubmit(event) {
+  async function handleSubmit(event) {
     event.preventDefault();
+    if (form.website) return;
 
-    const subject = encodeURIComponent(
-      `OPTN Labs inquiry: ${form.need || "General inquiry"}`,
-    );
+    setStatus("submitting");
+    setStatusMessage("");
 
-    const body = encodeURIComponent(
-      [
-        `Name: ${form.name || "-"}`,
-        `Company: ${form.company || "-"}`,
-        `Email: ${form.email || "-"}`,
-        `Need: ${form.need || "-"}`,
-        `Timeline: ${form.timeline || "-"}`,
-        "",
-        "Project details:",
-        form.details || "-",
-      ].join("\n"),
-    );
+    try {
+      const response = await fetch(endpoint, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          company: form.company || "Not provided",
+          topic: form.topic,
+          message: form.message,
+          _subject: `OPTN Labs website inquiry: ${form.topic}`,
+          _template: "table",
+        }),
+      });
+      const result = await response.json();
 
-    window.location.href = `mailto:info@optnlabs.com?subject=${subject}&body=${body}`;
+      if (!response.ok || result.success === "false" || result.success === false) {
+        throw new Error(result.message || "The message could not be sent.");
+      }
+
+      setForm(initialState);
+      setStatus("success");
+      setStatusMessage("Thanks—your message has been sent to the OPTN team.");
+    } catch {
+      setStatus("error");
+      setStatusMessage(
+        "We could not send your message. Please try again or email info@optnlabs.com.",
+      );
+    }
   }
 
   return (
-    <form
-      onSubmit={handleSubmit}
-      className="rounded-3xl border border-white/10 bg-white/[0.04] p-6 md:p-8"
-    >
-      <div className="mb-5 text-left">
-        <h3 className="text-xl font-semibold text-white">Send a note</h3>
-        <p className="mt-2 text-sm text-white/65">
-          This opens a pre-filled email to info@optnlabs.com.
-        </p>
-      </div>
-
-      <div className="grid gap-4 md:grid-cols-2">
-        <label className="text-left">
-          <span className="mb-2 block text-sm text-white/70">Name</span>
-          <input
-            type="text"
-            name="name"
-            value={form.name}
-            onChange={updateField}
-            className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition-colors focus:border-accent-primary/60"
-          />
+    <form className="contact-form" onSubmit={handleSubmit}>
+      <div className="contact-form-grid">
+        <label>
+          <span>Name</span>
+          <input name="name" value={form.name} onChange={updateField} autoComplete="name" required />
         </label>
-
-        <label className="text-left">
-          <span className="mb-2 block text-sm text-white/70">Company</span>
-          <input
-            type="text"
-            name="company"
-            value={form.company}
-            onChange={updateField}
-            className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition-colors focus:border-accent-primary/60"
-          />
+        <label>
+          <span>Email</span>
+          <input name="email" type="email" value={form.email} onChange={updateField} autoComplete="email" required />
         </label>
-
-        <label className="text-left">
-          <span className="mb-2 block text-sm text-white/70">Email</span>
-          <input
-            type="email"
-            name="email"
-            value={form.email}
-            onChange={updateField}
-            className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition-colors focus:border-accent-primary/60"
-          />
+        <label>
+          <span>Company or project <small>Optional</small></span>
+          <input name="company" value={form.company} onChange={updateField} autoComplete="organization" />
         </label>
-
-        <label className="text-left">
-          <span className="mb-2 block text-sm text-white/70">
-            What do you need?
-          </span>
-          <select
-            name="need"
-            value={form.need}
-            onChange={updateField}
-            className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition-colors focus:border-accent-primary/60"
-          >
-            <option>BCH infrastructure access</option>
-            <option>Wallet / token implementation help</option>
-            <option>Covenant design / transaction planning</option>
-            <option>Partnership / ecosystem support</option>
+        <label>
+          <span>What can we help with?</span>
+          <select name="topic" value={form.topic} onChange={updateField}>
             <option>General inquiry</option>
+            <option>OPTN Wallet</option>
+            <option>BCH ecosystem or infrastructure</option>
+            <option>Engineering</option>
+            <option>Controlled-payment pilot</option>
+            <option>Partnership</option>
           </select>
         </label>
       </div>
 
-      <label className="mt-4 block text-left">
-        <span className="mb-2 block text-sm text-white/70">Timeline</span>
-        <input
-          type="text"
-          name="timeline"
-          value={form.timeline}
-          onChange={updateField}
-          placeholder="e.g. within 30 days"
-          className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition-colors placeholder:text-white/35 focus:border-accent-primary/60"
-        />
-      </label>
-
-      <label className="mt-4 block text-left">
-        <span className="mb-2 block text-sm text-white/70">Project details</span>
+      <label className="contact-form-message">
+        <span>Message</span>
         <textarea
-          name="details"
-          value={form.details}
+          name="message"
+          value={form.message}
           onChange={updateField}
-          rows={6}
-          placeholder="What are you building, what BCH components are involved, and where are you blocked?"
-          className="w-full rounded-2xl border border-white/10 bg-black/20 px-4 py-3 text-white outline-none transition-colors placeholder:text-white/35 focus:border-accent-primary/60"
+          rows={5}
+          placeholder="Tell us what you are working on and what you need."
+          required
         />
       </label>
 
-      <div className="mt-6 flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
-        <button
-          type="submit"
-          className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-background-dark hover:bg-white/90"
-        >
-          Open email draft
+      <label className="contact-form-trap" aria-hidden="true">
+        Website
+        <input name="website" value={form.website} onChange={updateField} tabIndex={-1} autoComplete="off" />
+      </label>
+
+      <div className="contact-form-footer">
+        <button className="button" type="submit" disabled={status === "submitting"}>
+          {status === "submitting" ? "Sending…" : "Send message"}
+          {status !== "submitting" && <span aria-hidden="true">→</span>}
         </button>
+        <p className="contact-form-privacy">
+          Your details are used to respond to this inquiry and are relayed by{" "}
+          <a href="https://formsubmit.co/privacy.pdf" target="_blank" rel="noopener noreferrer">FormSubmit</a>,
+          which may retain submissions for up to 30 days.
+        </p>
       </div>
+
+      <p className={`contact-form-status contact-form-status-${status}`} role="status" aria-live="polite">
+        {statusMessage}
+      </p>
     </form>
   );
 }

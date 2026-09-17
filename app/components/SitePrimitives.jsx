@@ -56,7 +56,7 @@ export function ArchitectureGraphic() {
       <div className="architecture-node architecture-node-middle"><Icon name="stack" size={25} /><div><strong>OPTN coordination</strong><small>Composes the BCH transaction</small></div></div>
       <div className="architecture-arrow">↓</div>
       <div className="architecture-node architecture-node-dark"><Icon name="shield" size={25} /><div><strong>BCH covenant rules</strong><small>Validate defined transaction conditions</small></div></div>
-      <p>Reference architecture · Platform in development</p>
+      <p>Policy-aware payment flow</p>
     </div>
   );
 }
@@ -100,7 +100,7 @@ export function Offer({ eyebrow, title, price, body, href, label }) {
   );
 }
 
-export function FinalCTA({ title = "Have a workflow to deploy?", body = "Tell us what you are building. We will help scope the right path.", label = "Talk to OPTN", href = "mailto:info@optnlabs.com?subject=OPTN%20Labs%20workflow%20inquiry" }) {
+export function FinalCTA({ title = "Have a workflow to deploy?", body = "Tell us what you are building. We will help scope the right path.", label = "Contact us", href = "/#contact" }) {
   return (
     <section className="site-container final-cta">
       <div><h2>{title}</h2><p>{body}</p></div>

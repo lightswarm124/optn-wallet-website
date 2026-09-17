@@ -152,7 +152,7 @@ home.hero.body = "Bitcoin Cash can do more than simple payments. OPTN builds pra
 home.hero.detail = "Use the wallet. Build with the stack. Explore what comes next."
 home.hero.primary_cta = "Explore OPTN Wallet"
 home.hero.secondary_cta = "Explore developer resources"
-home.hero.contact_cta = "Talk to OPTN"
+home.hero.contact_cta = "Contact us"
 
 home.wallet_proof.eyebrow = "Proof in use"
 home.wallet_proof.title = "The product that proves the stack."
@@ -194,7 +194,7 @@ home.fund_control.cta = "Explore programmable fund control"
 home.final_cta.title = "Ready to build on Bitcoin Cash?"
 home.final_cta.body = "Use the open tools and shipped wallet, or bring OPTN a workflow you want to make real."
 home.final_cta.wallet_cta = "Explore OPTN Wallet"
-home.final_cta.contact_cta = "Talk to OPTN"
+home.final_cta.contact_cta = "Contact us"
 home.final_cta.developers_cta = "Developer resources"
 ```
 
@@ -235,7 +235,7 @@ about.hero.body = "Founded in Canada in 2025, OPTN Labs builds products that mak
 about.hero.mission_label = "Our mission:"
 about.hero.mission = "build open financial infrastructure that helps people and software move value through clear, defined paths while preserving self-custody."
 about.hero.wallet_cta = "Explore OPTN Wallet"
-about.hero.contact_cta = "Talk to OPTN"
+about.hero.contact_cta = "Contact us"
 
 about.glance.eyebrow = "At a glance"
 about.glance.use.title = "Use BCH with confidence"
@@ -270,7 +270,7 @@ about.team.kyle.body = "Kyle is the creator of FundMe.cash and works on producti
 about.team.note = "The team’s work across wallets, covenant applications, and working BCH workflows shaped the problem OPTN is building around: authorization alone does not guarantee an acceptable outcome."
 about.final_cta.title = "Have a product idea?"
 about.final_cta.body = "Tell us what you are building and we will help identify the right next step."
-about.final_cta.cta = "Talk to OPTN"
+about.final_cta.cta = "Contact us"
 ```
 
 ### Developers
@@ -295,7 +295,7 @@ developers.support.testing = "Catch integration issues before they reach users."
 developers.support.hosted_services = "Use BCH infrastructure without running every backend component yourself."
 developers.final_cta.title = "Building something on BCH?"
 developers.final_cta.body = "Tell us what you’re making and where the path gets difficult."
-developers.final_cta.cta = "Talk to OPTN"
+developers.final_cta.cta = "Contact us"
 ```
 
 ### Infrastructure
@@ -366,7 +366,7 @@ solutions.work.title = "Start with public tools, or work with OPTN to ship."
 solutions.work.body = "Explore on your own, or bring us in when the workflow needs deeper design, integration, testing, or support."
 solutions.work.developers_cta = "Explore developer tools"
 solutions.work.pricing_cta = "View pricing"
-solutions.work.contact_cta = "Talk to OPTN"
+solutions.work.contact_cta = "Contact us"
 solutions.final_cta.title = "Have a workflow worth building?"
 solutions.final_cta.body = "Tell us what needs to move, who needs control, and where you want help."
 ```
@@ -378,7 +378,7 @@ pricing.hero.eyebrow = "Pricing"
 pricing.hero.title = "Start with open tools. Add support when it helps."
 pricing.hero.body = "Explore OPTN's free wallet and developer tools. When you need a faster path, bring us in for setup, integration, testing, or ongoing support—without giving up control of your funds."
 pricing.hero.primary_cta = "Explore free tools"
-pricing.hero.secondary_cta = "Talk to OPTN"
+pricing.hero.secondary_cta = "Contact us"
 pricing.plans.eyebrow = "Choose your path"
 pricing.plans.title = "Choose the level of support that fits."
 pricing.community.status = "Available now"
@@ -395,7 +395,7 @@ pricing.custom.price = "Scoped to project"
 pricing.custom.body = "Hands-on support for specialized BCH products, transaction workflows, and enterprise deployments."
 pricing.custom.band_title = "Need a production workflow or a partner to help you ship?"
 pricing.custom.band_body = "Get focused help with architecture, covenant and transaction design, integration, adversarial testing, migration, and release."
-pricing.custom.band_cta = "Talk to OPTN"
+pricing.custom.band_cta = "Contact us"
 pricing.fine_print = "Builder is not yet generally available and has no public price. Additional integration, audit, compliance and specialized engineering work may require separate scope and pricing."
 pricing.faq.eyebrow = "Common questions"
 pricing.faq.title = "Clear boundaries matter."

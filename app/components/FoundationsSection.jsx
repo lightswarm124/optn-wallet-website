@@ -39,7 +39,7 @@ export default function FoundationsSection() {
             <div>
               <div className="section-chip">Working product foundations</div>
               <h2 className="mt-4 text-3xl font-semibold text-white md:text-4xl">
-                Proof from the wallet, infrastructure, and notes
+                Built across wallet, infrastructure, and tooling
               </h2>
               <p className="mt-4 max-w-xl text-base leading-7 text-white/75">
                 OPTN Wallet, TokenIndexer, public BCH services, and builder
@@ -47,7 +47,7 @@ export default function FoundationsSection() {
                 repo.
               </p>
               <p className="mt-4 max-w-xl text-sm leading-6 text-white/60">
-                Public proof includes the wallet, token data, public services,
+                Available resources include the wallet, token data, public services,
                 builder notes, and public infrastructure or status where
                 already available.
               </p>

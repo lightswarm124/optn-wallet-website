@@ -1,7 +1,7 @@
 import Link from "next/link";
 
 const ctaPaths = [
-  { href: "/infrastructure", label: "I need BCH infrastructure" },
+  { href: "/ecosystem#infrastructure", label: "I need BCH infrastructure" },
   { href: "/wallet", label: "I need wallet integration" },
   { href: "/cashtokens", label: "I am building with CashTokens" },
   { href: "/covenants-on-bitcoin-cash", label: "I need covenant support" },
@@ -112,7 +112,7 @@ export default function Contact() {
                     rel="noopener noreferrer"
                     className="block text-accent-primary hover:underline"
                   >
-                    Telegram →
+                    Join Telegram group →
                   </a>
                 </div>
               </ContactCard>

@@ -10,196 +10,256 @@ This catalog is extracted from the current working tree. It includes App Router 
 
 ```json
 {
-  "L0012_C010": {
-    "text": "OPTN Labs | Bitcoin Cash Wallet, Infrastructure & Programmable Payments",
+  "L0013_C010": {
+    "text": "OPTN Labs | OPTN Wallet & Bitcoin Cash Ecosystem",
     "kind": "property:title"
   },
-  "L0014_C005": {
-    "text": "OPTN Labs builds Bitcoin Cash products and infrastructure, from the shipped self-custody OPTN Wallet and developer stack to programmable payment systems in development for applications and AI agents.",
+  "L0015_C005": {
+    "text": "Start with OPTN Wallet, explore the Bitcoin Cash ecosystem around it, or contact OPTN about controlled-payment pilot projects.",
     "kind": "property:description"
   },
-  "L0019_C003": {
-    "text": "BCH & CashTokens",
+  "L0020_C014": {
+    "text": "Everyday payments",
     "kind": "array-copy-candidate"
   },
-  "L0020_C003": {
-    "text": "WalletConnect",
+  "L0020_C035": {
+    "text": "Send and receive BCH, scan payment QR codes, and follow recent activity.",
     "kind": "array-copy-candidate"
   },
-  "L0021_C003": {
-    "text": "Connect to apps",
+  "L0021_C012": {
+    "text": "CashTokens",
     "kind": "array-copy-candidate"
   },
-  "L0022_C003": {
-    "text": "Advanced transactions",
+  "L0021_C026": {
+    "text": "Keep fungible tokens and NFTs alongside BCH in one self-custody wallet.",
     "kind": "array-copy-candidate"
   },
-  "L0032_C009": {
-    "text": "OPTN Wallet app mark",
-    "kind": "jsx-attribute:alt"
+  "L0022_C013": {
+    "text": "Connected apps",
+    "kind": "array-copy-candidate"
   },
-  "L0037_C017": {
+  "L0022_C031": {
+    "text": "Pair with compatible applications through WalletConnect and approve requests in the wallet.",
+    "kind": "array-copy-candidate"
+  },
+  "L0023_C012": {
+    "text": "Advanced tools",
+    "kind": "array-copy-candidate"
+  },
+  "L0023_C030": {
+    "text": "Use fresh addresses, paper-wallet sweeping, custom transactions, and contract workflows.",
+    "kind": "array-copy-candidate"
+  },
+  "L0027_C014": {
     "text": "OPTN Wallet",
-    "kind": "jsx-text"
+    "kind": "array-copy-candidate"
   },
-  "L0038_C015": {
-    "text": "Self-custody · BCH · CashTokens",
-    "kind": "jsx-text"
+  "L0027_C029": {
+    "text": "The self-custody product at the center of the ecosystem.",
+    "kind": "array-copy-candidate"
   },
-  "L0047_C052": {
-    "text": "OPTN Wallet app screen previews",
-    "kind": "jsx-attribute:aria-label"
+  "L0028_C012": {
+    "text": "Tokens and metadata",
+    "kind": "array-copy-candidate"
   },
-  "L0051_C011": {
-    "text": "OPTN Wallet airdrop setup screen with recipient entry options",
-    "kind": "jsx-attribute:alt"
+  "L0028_C035": {
+    "text": "CashTokens and BCMR resources for assets people can understand and use.",
+    "kind": "array-copy-candidate"
   },
-  "L0059_C011": {
-    "text": "OPTN Wallet app browser screen",
-    "kind": "jsx-attribute:alt"
+  "L0029_C014": {
+    "text": "Covenants and contracts",
+    "kind": "array-copy-candidate"
   },
-  "L0068_C011": {
-    "text": "OPTN Wallet actions screen with send, receive, QR, and token tools",
-    "kind": "jsx-attribute:alt"
+  "L0029_C041": {
+    "text": "Patterns for transaction rules, contract workflows, and controlled fund paths.",
+    "kind": "array-copy-candidate"
   },
-  "L0076_C022": {
-    "text": "OPTN Wallet",
-    "kind": "jsx-text"
+  "L0030_C013": {
+    "text": "Infrastructure and data",
+    "kind": "array-copy-candidate"
   },
-  "L0076_C048": {
-    "text": "Shipped · Self-custody · BCH · CashTokens",
-    "kind": "jsx-text"
+  "L0030_C040": {
+    "text": "Connectivity, indexing, metadata, and public services for BCH applications.",
+    "kind": "array-copy-candidate"
   },
-  "L0084_C037": {
+  "L0037_C037": {
     "text": "Reference payment and transaction flow",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0087_C015": {
+  "L0040_C015": {
     "text": "Software requests a financial action",
     "kind": "jsx-text"
   },
-  "L0089_C060": {
+  "L0042_C060": {
     "text": "↓",
     "kind": "jsx-text"
   },
-  "L0092_C015": {
+  "L0045_C015": {
     "text": "OPTN composes the transaction",
     "kind": "jsx-text"
   },
-  "L0094_C060": {
+  "L0047_C060": {
     "text": "↓",
     "kind": "jsx-text"
   },
-  "L0097_C015": {
+  "L0050_C015": {
     "text": "BCH validates transaction rules",
     "kind": "jsx-text"
   },
-  "L0099_C010": {
-    "text": "Reference architecture · Platform in development",
+  "L0052_C010": {
+    "text": "Policy-aware payment flow",
     "kind": "jsx-text"
   },
-  "L0110_C027": {
-    "text": "OPTN Labs",
-    "kind": "jsx-text"
-  },
-  "L0111_C017": {
-    "text": "Bitcoin Cash products for people, applications, and AI agents.",
-    "kind": "jsx-text"
-  },
-  "L0112_C038": {
-    "text": "OPTN Labs builds a self-custody Bitcoin Cash wallet and the developer infrastructure around it. From OPTN Wallet, we are extending the stack toward programmable payments for software and AI agents.",
-    "kind": "jsx-text"
-  },
-  "L0118_C045": {
-    "text": "Use the wallet. Build with the stack. Explore programmable payments.",
-    "kind": "jsx-text"
-  },
-  "L0122_C042": {
-    "text": "Explore OPTN Wallet",
-    "kind": "jsx-text"
-  },
-  "L0123_C045": {
-    "text": "Explore developer resources",
-    "kind": "jsx-text"
-  },
-  "L0124_C045": {
-    "text": "Talk to OPTN",
-    "kind": "jsx-text"
-  },
-  "L0137_C045": {
+  "L0063_C027": {
     "text": "OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0140_C027": {
-    "text": "Shipped product",
+  "L0064_C017": {
+    "text": "Bitcoin Cash, tokens, and apps—in one wallet.",
     "kind": "jsx-text"
   },
-  "L0141_C017": {
-    "text": "The product at the foundation of the OPTN stack.",
+  "L0065_C038": {
+    "text": "Send and receive BCH, manage CashTokens, connect to compatible applications, and access advanced wallet tools while keeping control of your keys.",
     "kind": "jsx-text"
   },
-  "L0142_C042": {
-    "text": "OPTN Wallet brings BCH, CashTokens, connected applications, and advanced transaction flows into one self-custody product.",
+  "L0070_C045": {
+    "text": "OPTN Wallet is the released product at the center of the OPTN ecosystem.",
     "kind": "jsx-text"
   },
-  "L0146_C013": {
+  "L0075_C096": {
+    "text": "Get OPTN Wallet",
+    "kind": "jsx-text"
+  },
+  "L0076_C041": {
+    "text": "Explore the wallet",
+    "kind": "jsx-text"
+  },
+  "L0077_C045": {
+    "text": "Contact us",
+    "kind": "jsx-text"
+  },
+  "L0085_C017": {
+    "text": "OPTN Labs",
+    "kind": "jsx-attribute:alt"
+  },
+  "L0092_C052": {
+    "text": "Download or review OPTN Wallet",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0100_C030": {
+    "text": "Get it on",
+    "kind": "jsx-text"
+  },
+  "L0100_C055": {
+    "text": "Google Play",
+    "kind": "jsx-text"
+  },
+  "L0109_C030": {
+    "text": "View releases on",
+    "kind": "jsx-text"
+  },
+  "L0109_C062": {
+    "text": "GitHub",
+    "kind": "jsx-text"
+  },
+  "L0118_C025": {
+    "text": "Wallet capabilities",
+    "kind": "jsx-text"
+  },
+  "L0119_C015": {
+    "text": "More than send and receive",
+    "kind": "jsx-text"
+  },
+  "L0120_C011": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0147_C049": {
+  "L0121_C158": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0150_C042": {
-    "text": "Explore OPTN Wallet",
+  "L0121_C174": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0123_C074": {
+    "text": "See all wallet features",
     "kind": "jsx-text"
   },
-  "L0151_C072": {
-    "text": "View on GitHub",
+  "L0129_C025": {
+    "text": "Ecosystem",
     "kind": "jsx-text"
   },
-  "L0152_C063": {
-    "text": "Read the latest update",
+  "L0130_C015": {
+    "text": "Build around the wallet",
     "kind": "jsx-text"
   },
-  "L0167_C027": {
-    "text": "Programmable payments · In development",
+  "L0131_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0132_C162": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0132_C178": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0132_C214": {
+    "text": "Explore",
     "kind": "jsx-text"
   },
-  "L0168_C017": {
-    "text": "Payment infrastructure for autonomous software.",
+  "L0134_C098": {
+    "text": "Explore the ecosystem",
     "kind": "jsx-text"
   },
-  "L0169_C042": {
-    "text": "Software and AI agents are beginning to pay for APIs and services, receive funds, and take part in automated workflows. OPTN is developing BCH-native payment infrastructure to compose those transactions and add programmable financial rules.",
+  "L0141_C027": {
+    "text": "Pilot exploration · WIP",
     "kind": "jsx-text"
   },
-  "L0175_C045": {
-    "text": "Those rules can define amounts, destinations, transaction composition, continuation paths, and recovery.",
+  "L0142_C017": {
+    "text": "Controlled payments for software",
     "kind": "jsx-text"
   },
-  "L0179_C041": {
-    "text": "Explore programmable payments",
+  "L0143_C042": {
+    "text": "We are exploring pilot projects for software and AI agents that need bounded payment authority, including recipient, amount, transaction-path, and recovery rules.",
     "kind": "jsx-text"
   },
-  "L0187_C015": {
-    "text": "Ready to build on Bitcoin Cash?",
+  "L0148_C045": {
+    "text": "This work is separate from the released Wallet product and is open for scoped pilot exploration.",
     "kind": "jsx-text"
   },
-  "L0188_C014": {
-    "text": "Start with OPTN Wallet and our developer stack, or work with our team to build a specialized Bitcoin Cash product or payment workflow.",
+  "L0149_C079": {
+    "text": "Explore pilot projects",
     "kind": "jsx-text"
   },
-  "L0191_C038": {
-    "text": "Explore OPTN Wallet",
+  "L0149_C144": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0192_C062": {
-    "text": "Talk to OPTN",
+  "L0157_C025": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0193_C041": {
-    "text": "Developer resources",
+  "L0158_C015": {
+    "text": "What are you working on?",
+    "kind": "jsx-text"
+  },
+  "L0159_C014": {
+    "text": "Ask about OPTN Wallet, the BCH ecosystem, engineering support, partnerships, or a controlled-payment pilot.",
+    "kind": "jsx-text"
+  },
+  "L0160_C048": {
+    "text": "Prefer email? Write to",
+    "kind": "jsx-text"
+  },
+  "L0160_C106": {
+    "text": "info@optnlabs.com",
+    "kind": "jsx-text"
+  },
+  "L0160_C127": {
+    "text": ".",
     "kind": "jsx-text"
   }
 }
@@ -210,19 +270,19 @@ This catalog is extracted from the current working tree. It includes App Router 
 ```json
 {
   "L0012_C010": {
-    "text": "About OPTN Labs | Bitcoin Cash Products & Infrastructure",
+    "text": "About OPTN Labs | OPTN Wallet & BCH Ecosystem",
     "kind": "property:title"
   },
   "L0014_C005": {
-    "text": "OPTN Labs is a Canadian technology company building Bitcoin Cash products for self-custody, digital assets, developer integrations, and programmable payments.",
+    "text": "Meet the team behind OPTN Wallet, open Bitcoin Cash resources, infrastructure, and controlled-payment pilot projects.",
     "kind": "property:description"
   },
   "L0019_C004": {
-    "text": "Open foundation",
+    "text": "Useful products",
     "kind": "array-copy-candidate"
   },
   "L0019_C023": {
-    "text": "We build reusable Bitcoin Cash tools and infrastructure that other teams can use directly.",
+    "text": "We start with practical experiences that make Bitcoin Cash easier to use in everyday products.",
     "kind": "array-copy-candidate"
   },
   "L0020_C004": {
@@ -230,15 +290,15 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "array-copy-candidate"
   },
   "L0020_C030": {
-    "text": "We build self-custody products and tools that let users retain control of their keys and funds.",
+    "text": "We build products and tools that let users retain control of their keys and funds.",
     "kind": "array-copy-candidate"
   },
   "L0021_C004": {
-    "text": "Practical engineering",
+    "text": "Open ecosystem",
     "kind": "array-copy-candidate"
   },
-  "L0021_C029": {
-    "text": "We turn hard transaction and integration problems into useful products.",
+  "L0021_C022": {
+    "text": "We publish reusable resources and support infrastructure that other teams can inspect, use, and extend.",
     "kind": "array-copy-candidate"
   },
   "L0026_C011": {
@@ -270,11 +330,11 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-text"
   },
   "L0048_C017": {
-    "text": "Building Bitcoin Cash products for people, apps, and AI agents.",
+    "text": "Building useful Bitcoin Cash products.",
     "kind": "jsx-text"
   },
   "L0049_C043": {
-    "text": "Founded in Canada in 2025, OPTN Labs builds Bitcoin Cash products and infrastructure for self-custody, digital assets, developer integrations, and programmable payments.",
+    "text": "Founded in Canada in 2025, OPTN Labs is the company behind OPTN Wallet. We also contribute open resources, infrastructure, and engineering for the wider Bitcoin Cash ecosystem.",
     "kind": "jsx-text"
   },
   "L0055_C023": {
@@ -282,70 +342,74 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-text"
   },
   "L0055_C044": {
-    "text": "make Bitcoin Cash useful across self-custody products, connected applications, and programmable payment workflows.",
+    "text": "make Bitcoin Cash easier to use, integrate, and extend.",
     "kind": "jsx-text"
   },
-  "L0060_C042": {
+  "L0059_C042": {
     "text": "Explore OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0061_C066": {
-    "text": "Talk to OPTN",
+  "L0060_C066": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0065_C027": {
+  "L0064_C027": {
     "text": "At a glance",
     "kind": "jsx-text"
   },
-  "L0068_C028": {
-    "text": "Use Bitcoin Cash",
+  "L0067_C028": {
+    "text": "Ship user products",
     "kind": "jsx-text"
   },
-  "L0068_C059": {
-    "text": "Wallets, digital assets, and connected applications",
+  "L0067_C061": {
+    "text": "Self-custody, digital assets, and connected applications",
     "kind": "jsx-text"
   },
-  "L0072_C028": {
-    "text": "Build BCH products",
+  "L0071_C028": {
+    "text": "Support the ecosystem",
     "kind": "jsx-text"
   },
-  "L0072_C061": {
-    "text": "Open tooling, infrastructure, and engineering",
+  "L0071_C064": {
+    "text": "Open resources, infrastructure, and implementation experience",
     "kind": "jsx-text"
   },
-  "L0076_C028": {
-    "text": "Program financial workflows",
+  "L0075_C028": {
+    "text": "Explore new workflows",
     "kind": "jsx-text"
   },
-  "L0076_C070": {
-    "text": "Payments, transaction rules, and autonomous software",
+  "L0075_C064": {
+    "text": "Controlled-payment pilots for software and AI agents",
     "kind": "jsx-text"
   },
-  "L0084_C025": {
-    "text": "Why OPTN exists",
+  "L0083_C025": {
+    "text": "From product to ecosystem",
     "kind": "jsx-text"
   },
-  "L0085_C015": {
-    "text": "Make advanced Bitcoin Cash capabilities usable.",
+  "L0084_C015": {
+    "text": "Build the product. Share the foundation.",
+    "kind": "jsx-text"
+  },
+  "L0086_C016": {
+    "text": "OPTN Wallet brings BCH payments, CashTokens, connected apps, and advanced tools into one self-custody product. The work behind it also produces resources that can help other teams build better Bitcoin Cash experiences.",
     "kind": "jsx-text"
   },
   "L0087_C016": {
-    "text": "Bitcoin Cash combines low-cost UTXO transactions, native tokens, and transaction-level programmability. OPTN turns these primitives into wallets, infrastructure, and payment workflows that people and development teams can use.",
+    "text": "That product and ecosystem experience now informs a newer area of exploration: controlled-payment pilots where software can act within owner-defined financial boundaries.",
     "kind": "jsx-text"
   },
-  "L0088_C016": {
-    "text": "We started with OPTN Wallet. Building a complete wallet exposed the tooling and infrastructure BCH applications need and led naturally to our next focus: payment and transaction infrastructure for software that can operate money autonomously.",
+  "L0094_C025": {
+    "text": "Principles",
     "kind": "jsx-text"
   },
-  "L0095_C025": {
+  "L0095_C015": {
     "text": "How we work",
     "kind": "jsx-text"
   },
-  "L0096_C015": {
-    "text": "Open where it helps. Clear where it matters.",
-    "kind": "jsx-text"
+  "L0096_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
   },
-  "L0097_C011": {
+  "L0099_C017": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
@@ -353,93 +417,81 @@ This catalog is extracted from the current working tree. It includes App Router 
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0101_C017": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0107_C029": {
+  "L0106_C029": {
     "text": "Self-custody architecture",
     "kind": "jsx-text"
   },
-  "L0108_C019": {
+  "L0107_C019": {
     "text": "Customers retain control of their keys and funds.",
     "kind": "jsx-text"
   },
-  "L0110_C016": {
+  "L0109_C016": {
     "text": "OPTN provides application and transaction infrastructure around customer-controlled funds. Where a workflow uses BCH covenants, transaction rules can enforce defined financial conditions for funds placed in that workflow.",
     "kind": "jsx-text"
   },
-  "L0122_C025": {
-    "text": "Track record",
+  "L0121_C025": {
+    "text": "Current work",
     "kind": "jsx-text"
   },
-  "L0123_C015": {
-    "text": "Built through working BCH products.",
+  "L0122_C015": {
+    "text": "One released product, a broader ecosystem.",
     "kind": "jsx-text"
   },
-  "L0129_C017": {
+  "L0128_C017": {
     "text": "OPTN Wallet home screen shown on its Google Play listing",
     "kind": "jsx-attribute:alt"
   },
-  "L0134_C025": {
-    "text": "OPTN Wallet",
+  "L0133_C025": {
+    "text": "OPTN Wallet · Released",
     "kind": "jsx-text"
   },
-  "L0134_C069": {
-    "text": "Shipped",
+  "L0134_C020": {
+    "text": "Self-custody BCH wallet with CashTokens, app connections, and advanced transaction tools.",
     "kind": "jsx-text"
   },
-  "L0135_C020": {
-    "text": "Self-custody BCH wallet, CashTokens, transaction construction, and application integrations.",
-    "kind": "jsx-text"
-  },
-  "L0136_C160": {
+  "L0135_C160": {
     "text": "View the Google Play listing",
     "kind": "jsx-text"
   },
-  "L0137_C073": {
+  "L0136_C073": {
     "text": "↗",
     "kind": "jsx-text"
   },
+  "L0140_C059": {
+    "text": "Bitcoin Cash ecosystem",
+    "kind": "jsx-text"
+  },
+  "L0140_C093": {
+    "text": "Open resources, token and metadata guidance, infrastructure, and engineering for BCH builders.",
+    "kind": "jsx-text"
+  },
   "L0141_C059": {
-    "text": "FundMe.cash",
+    "text": "Controlled-payment pilots",
     "kind": "jsx-text"
   },
-  "L0141_C103": {
-    "text": "Shipped",
+  "L0141_C096": {
+    "text": "WIP explorations for software and AI payments with defined recipients, amounts, paths, and recovery.",
     "kind": "jsx-text"
   },
-  "L0141_C129": {
-    "text": "Covenant-based campaign flows for contributions, claims, and refunds.",
+  "L0148_C025": {
+    "text": "Company",
     "kind": "jsx-text"
   },
-  "L0142_C059": {
-    "text": "Programmable payments",
-    "kind": "jsx-text"
-  },
-  "L0142_C113": {
-    "text": "In development",
-    "kind": "jsx-text"
-  },
-  "L0142_C146": {
-    "text": "Agent payments, transaction composition, and covenant-based workflows.",
-    "kind": "jsx-text"
-  },
-  "L0149_C025": {
+  "L0149_C015": {
     "text": "The team",
     "kind": "jsx-text"
   },
-  "L0150_C015": {
-    "text": "Built by people with BCH product experience.",
-    "kind": "jsx-text"
-  },
-  "L0151_C011": {
+  "L0150_C011": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0157_C019": {
+  "L0156_C019": {
     "text": "{value}, {value} at OPTN Labs",
     "kind": "jsx-attribute:alt"
+  },
+  "L0161_C019": {
+    "text": "{value}",
+    "kind": "jsx-composed"
   },
   "L0162_C019": {
     "text": "{value}",
@@ -449,16 +501,12 @@ This catalog is extracted from the current working tree. It includes App Router 
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0164_C019": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0169_C042": {
-    "text": "Our work across wallets, covenant applications, and production BCH workflows shaped our current focus: payment infrastructure that lets software act within defined transaction rules.",
+  "L0168_C042": {
+    "text": "Our work across wallets, CashTokens, covenant applications, and BCH infrastructure shapes both the products we ship and the ecosystem work we share.",
     "kind": "jsx-text"
   },
-  "L0178_C009": {
-    "text": "Have a product idea?",
+  "L0177_C009": {
+    "text": "Want to build with OPTN?",
     "kind": "jsx-attribute:title"
   }
 }
@@ -585,7 +633,7 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "array-copy-candidate"
   },
   "L0042_C004": {
-    "text": "Developer resources",
+    "text": "Ecosystem",
     "kind": "array-copy-candidate"
   },
   "L0046_C004": {
@@ -700,12 +748,12 @@ This catalog is extracted from the current working tree. It includes App Router 
     "text": "Wallets and indexers connect the on-chain category to the information a user sees. A resilient implementation validates registry data, handles unavailable sources, and keeps the asset reference separate from its display name.",
     "kind": "jsx-text"
   },
-  "L0138_C049": {
+  "L0138_C059": {
     "text": "See the infrastructure layer",
     "kind": "jsx-text"
   },
-  "L0139_C045": {
-    "text": "Open developer resources",
+  "L0139_C044": {
+    "text": "Explore the ecosystem",
     "kind": "jsx-text"
   },
   "L0142_C011": {
@@ -1206,7 +1254,7 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "array-copy-candidate"
   },
   "L0064_C004": {
-    "text": "Developer resources",
+    "text": "Ecosystem",
     "kind": "array-copy-candidate"
   },
   "L0068_C004": {
@@ -1557,7 +1605,7 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "array-copy-candidate"
   },
   "L0043_C004": {
-    "text": "Developer resources",
+    "text": "Ecosystem",
     "kind": "array-copy-candidate"
   },
   "L0047_C004": {
@@ -1819,164 +1867,657 @@ This catalog is extracted from the current working tree. It includes App Router 
 }
 ```
 
-### /developers — `app/developers/page.jsx`
+### /demo — `app/demo/page.jsx`
 
 ```json
 {
-  "L0011_C010": {
-    "text": "Bitcoin Cash Developer Resources | OPTN Labs",
+  "L0012_C010": {
+    "text": "Controlled Agent Payments | Pilot Concept Demo",
     "kind": "property:title"
   },
-  "L0013_C005": {
-    "text": "Developer resources for building Bitcoin Cash applications with CashTokens, covenants, BCMR, wallet integrations, and OPTN infrastructure.",
+  "L0014_C005": {
+    "text": "Preview a controlled-payment pilot concept where the same agent authority completes an approved payment while funds remain within the owner's policy.",
     "kind": "property:description"
   },
-  "L0018_C013": {
-    "text": "CashTokens",
+  "L0033_C012": {
+    "text": "Approved transaction",
+    "kind": "property:title"
+  },
+  "L0034_C011": {
+    "text": "Open the public transaction or reproducible test vector for this exact demo flow.",
+    "kind": "property:body"
+  },
+  "L0035_C012": {
+    "text": "Open transaction",
+    "kind": "property:label"
+  },
+  "L0041_C005": {
+    "text": "01",
     "kind": "array-copy-candidate"
   },
-  "L0018_C027": {
-    "text": "Make tokens useful in wallets and apps.",
+  "L0042_C005": {
+    "text": "Owner defines policy",
     "kind": "array-copy-candidate"
   },
-  "L0019_C014": {
-    "text": "Covenants",
+  "L0043_C005": {
+    "text": "Set the approved provider, payment limit, and recovery path.",
     "kind": "array-copy-candidate"
   },
-  "L0019_C027": {
-    "text": "Design transaction paths with clear guardrails.",
+  "L0046_C005": {
+    "text": "02",
     "kind": "array-copy-candidate"
   },
-  "L0020_C013": {
-    "text": "BCMR",
+  "L0047_C005": {
+    "text": "Funds are prepared",
     "kind": "array-copy-candidate"
   },
-  "L0020_C021": {
-    "text": "Give tokens names and context users can understand.",
+  "L0048_C005": {
+    "text": "Place funds under the policy-bound control path.",
     "kind": "array-copy-candidate"
   },
-  "L0021_C014": {
-    "text": "Wallet integration",
+  "L0051_C005": {
+    "text": "03",
     "kind": "array-copy-candidate"
   },
-  "L0021_C036": {
-    "text": "Use a shipped wallet as a practical product reference.",
+  "L0052_C005": {
+    "text": "Agent requests payment",
     "kind": "array-copy-candidate"
   },
-  "L0029_C030": {
-    "text": "Developers",
+  "L0053_C005": {
+    "text": "Software asks to pay the approved provider.",
+    "kind": "array-copy-candidate"
+  },
+  "L0056_C005": {
+    "text": "04",
+    "kind": "array-copy-candidate"
+  },
+  "L0057_C005": {
+    "text": "Approved payment completes",
+    "kind": "array-copy-candidate"
+  },
+  "L0058_C005": {
+    "text": "The same agent/signing authority pays within policy.",
+    "kind": "array-copy-candidate"
+  },
+  "L0061_C005": {
+    "text": "05",
+    "kind": "array-copy-candidate"
+  },
+  "L0062_C005": {
+    "text": "Policy protects the boundary",
+    "kind": "array-copy-candidate"
+  },
+  "L0063_C005": {
+    "text": "The same authority tries a different transaction; the funds follow only a permitted path.",
+    "kind": "array-copy-candidate"
+  },
+  "L0072_C012": {
+    "text": "Approved provider payment",
+    "kind": "property:title"
+  },
+  "L0073_C011": {
+    "text": "An agent completes an API payment within the provider and amount defined by the owner.",
+    "kind": "property:body"
+  },
+  "L0074_C016": {
+    "text": "Allowed provider payment",
+    "kind": "property:visualAlt"
+  },
+  "L0080_C012": {
+    "text": "Policy-based execution",
+    "kind": "property:title"
+  },
+  "L0081_C011": {
+    "text": "The same agent/signing authority can request another payment, while the funds follow only a permitted transaction path.",
+    "kind": "property:body"
+  },
+  "L0082_C016": {
+    "text": "Policy-based payment execution",
+    "kind": "property:visualAlt"
+  },
+  "L0088_C012": {
+    "text": "Owner control",
+    "kind": "property:title"
+  },
+  "L0089_C011": {
+    "text": "The owner keeps a defined recovery and control path for the remaining funds.",
+    "kind": "property:body"
+  },
+  "L0090_C016": {
+    "text": "Owner recovery path",
+    "kind": "property:visualAlt"
+  },
+  "L0096_C005": {
+    "text": "Released product",
+    "kind": "array-copy-candidate"
+  },
+  "L0097_C005": {
+    "text": "OPTN Wallet brings BCH, CashTokens, WalletConnect, and advanced transaction tools into one self-custody product.",
+    "kind": "array-copy-candidate"
+  },
+  "L0100_C005": {
+    "text": "Ecosystem experience",
+    "kind": "array-copy-candidate"
+  },
+  "L0101_C005": {
+    "text": "CashToken tooling, covenant workflow experience from FundMe.cash, and open Bitcoin Cash infrastructure.",
+    "kind": "array-copy-candidate"
+  },
+  "L0104_C005": {
+    "text": "Pilot exploration",
+    "kind": "array-copy-candidate"
+  },
+  "L0105_C005": {
+    "text": "Controlled payments, agent integration, monitoring, and organizational policy workflows for scoped pilot projects.",
+    "kind": "array-copy-candidate"
+  },
+  "L0111_C005": {
+    "text": "OPTN Wallet",
+    "kind": "array-copy-candidate"
+  },
+  "L0112_C005": {
+    "text": "The released BCH and CashTokens wallet at the center of the OPTN ecosystem.",
+    "kind": "array-copy-candidate"
+  },
+  "L0114_C005": {
+    "text": "Explore OPTN Wallet",
+    "kind": "array-copy-candidate"
+  },
+  "L0117_C005": {
+    "text": "FundMe.cash",
+    "kind": "array-copy-candidate"
+  },
+  "L0118_C005": {
+    "text": "Real-fund covenant workflows for contributions, claims, and refunds.",
+    "kind": "array-copy-candidate"
+  },
+  "L0120_C005": {
+    "text": "Explore FundMe.cash",
+    "kind": "array-copy-candidate"
+  },
+  "L0123_C005": {
+    "text": "Open-source implementation",
+    "kind": "array-copy-candidate"
+  },
+  "L0124_C005": {
+    "text": "Review the public OPTN Wallet implementation and transaction tooling.",
+    "kind": "array-copy-candidate"
+  },
+  "L0126_C005": {
+    "text": "View GitHub",
+    "kind": "array-copy-candidate"
+  },
+  "L0129_C005": {
+    "text": "How enforcement works",
+    "kind": "array-copy-candidate"
+  },
+  "L0130_C005": {
+    "text": "See how programmable payment coordination and rule enforcement fit together on BCH.",
+    "kind": "array-copy-candidate"
+  },
+  "L0132_C005": {
+    "text": "Explore the model",
+    "kind": "array-copy-candidate"
+  },
+  "L0138_C005": {
+    "text": "{value} Your browser does not support embedded video.",
+    "kind": "jsx-composed"
+  },
+  "L0182_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0183_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0185_C007": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0196_C027": {
+    "text": "Pilot concept demo · WIP",
     "kind": "jsx-text"
   },
-  "L0029_C059": {
-    "text": "Build your BCH product on a stronger foundation.",
+  "L0197_C017": {
+    "text": "Payments with rules the agent cannot rewrite.",
     "kind": "jsx-text"
   },
-  "L0029_C142": {
-    "text": "Building OPTN Wallet exposed the practical integration challenges of a complete BCH product. These public resources help you work through the same primitives—CashTokens, covenants, metadata, wallet connections, and infrastructure—on your own.",
+  "L0198_C043": {
+    "text": "Let software and AI agents pay for services with clear, owner-defined financial boundaries.",
     "kind": "jsx-text"
   },
-  "L0029_C450": {
-    "text": "Talk to engineering",
+  "L0203_C023": {
+    "text": "One policy. Multiple payment outcomes.",
     "kind": "jsx-text"
   },
-  "L0029_C560": {
+  "L0203_C070": {
+    "text": "See an agent complete an approved provider payment while the owner keeps control of the remaining funds.",
+    "kind": "jsx-text"
+  },
+  "L0208_C064": {
+    "text": "Explore the model",
+    "kind": "jsx-text"
+  },
+  "L0213_C044": {
+    "text": "Demo scenario summary",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0215_C021": {
+    "text": "A policy-bound payment flow",
+    "kind": "jsx-text"
+  },
+  "L0216_C023": {
+    "text": "Owner → Agent → Funds → Provider",
+    "kind": "jsx-text"
+  },
+  "L0223_C025": {
+    "text": "Owner",
+    "kind": "jsx-text"
+  },
+  "L0224_C024": {
+    "text": "Defines policy",
+    "kind": "jsx-text"
+  },
+  "L0226_C040": {
+    "text": "→",
+    "kind": "jsx-text"
+  },
+  "L0231_C025": {
+    "text": "Agent",
+    "kind": "jsx-text"
+  },
+  "L0232_C024": {
+    "text": "Initiates payment",
+    "kind": "jsx-text"
+  },
+  "L0234_C040": {
+    "text": "→",
+    "kind": "jsx-text"
+  },
+  "L0239_C025": {
+    "text": "Funds",
+    "kind": "jsx-text"
+  },
+  "L0240_C024": {
+    "text": "Enforce policy",
+    "kind": "jsx-text"
+  },
+  "L0242_C040": {
+    "text": "→",
+    "kind": "jsx-text"
+  },
+  "L0247_C025": {
+    "text": "Provider",
+    "kind": "jsx-text"
+  },
+  "L0248_C024": {
+    "text": "Receives valid payment",
+    "kind": "jsx-text"
+  },
+  "L0254_C025": {
+    "text": "Owner-defined policy travels with the funds.",
+    "kind": "jsx-text"
+  },
+  "L0262_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0265_C029": {
+    "text": "Policy in action",
+    "kind": "jsx-text"
+  },
+  "L0266_C019": {
+    "text": "Same authority. Different result.",
+    "kind": "jsx-text"
+  },
+  "L0268_C016": {
+    "text": "From policy to provider payment, with owner control preserved throughout the flow.",
+    "kind": "jsx-text"
+  },
+  "L0277_C023": {
+    "text": "Useful autonomy, with policy carried through the payment flow.",
+    "kind": "jsx-text"
+  },
+  "L0280_C018": {
+    "text": "For the critical comparison, use the same agent/signing authority twice. The approved transaction completes; the rules attached to the funds determine the permitted path for the second request.",
+    "kind": "jsx-text"
+  },
+  "L0288_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0288_C047": {
+    "text": "Demo scenario steps",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0291_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0292_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0293_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0303_C027": {
+    "text": "Foundation",
+    "kind": "jsx-text"
+  },
+  "L0304_C017": {
+    "text": "Built across the stack",
+    "kind": "jsx-text"
+  },
+  "L0305_C042": {
+    "text": "The pilot concept draws on Wallet delivery, Bitcoin Cash ecosystem experience, and controlled-payment research.",
+    "kind": "jsx-text"
+  },
+  "L0310_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0313_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0318_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0327_C025": {
+    "text": "Value",
+    "kind": "jsx-text"
+  },
+  "L0328_C015": {
+    "text": "Autonomy with owner control",
+    "kind": "jsx-text"
+  },
+  "L0329_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0339_C019": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0340_C019": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0349_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0350_C025": {
+    "text": "Resources",
+    "kind": "jsx-text"
+  },
+  "L0351_C015": {
+    "text": "Explore the foundation",
+    "kind": "jsx-text"
+  },
+  "L0352_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0360_C055": {
+    "text": "Transaction reference",
+    "kind": "jsx-text"
+  },
+  "L0361_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0362_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0364_C015": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0373_C009": {
+    "text": "Build with OPTN",
+    "kind": "jsx-attribute:title"
+  }
+}
+```
+
+### /developers — `app/developers/page.jsx`
+
+```json
+{}
+```
+
+### /ecosystem — `app/ecosystem/page.jsx`
+
+```json
+{
+  "L0013_C010": {
+    "text": "Bitcoin Cash Ecosystem | OPTN Labs",
+    "kind": "property:title"
+  },
+  "L0015_C005": {
+    "text": "Explore OPTN Wallet, CashTokens, covenants, BCMR, open-source code, and Bitcoin Cash infrastructure in one ecosystem.",
+    "kind": "property:description"
+  },
+  "L0020_C014": {
+    "text": "Wallet and app connections",
+    "kind": "array-copy-candidate"
+  },
+  "L0020_C044": {
+    "text": "Use OPTN Wallet and WalletConnect as the product and application layer.",
+    "kind": "array-copy-candidate"
+  },
+  "L0021_C012": {
+    "text": "CashTokens and metadata",
+    "kind": "array-copy-candidate"
+  },
+  "L0021_C039": {
+    "text": "Explore fungible tokens, NFTs, BCMR, and user-facing asset context.",
+    "kind": "array-copy-candidate"
+  },
+  "L0022_C014": {
+    "text": "Covenants and contracts",
+    "kind": "array-copy-candidate"
+  },
+  "L0022_C041": {
+    "text": "Learn how BCH transaction rules support richer financial workflows.",
+    "kind": "array-copy-candidate"
+  },
+  "L0023_C013": {
+    "text": "Infrastructure and data",
+    "kind": "array-copy-candidate"
+  },
+  "L0023_C040": {
+    "text": "Use connectivity, indexing, metadata, and public BCH services.",
+    "kind": "array-copy-candidate"
+  },
+  "L0032_C027": {
+    "text": "Ecosystem",
+    "kind": "jsx-text"
+  },
+  "L0033_C017": {
+    "text": "Explore the OPTN ecosystem.",
+    "kind": "jsx-text"
+  },
+  "L0034_C043": {
+    "text": "OPTN Wallet sits alongside open-source code, Bitcoin Cash standards, public infrastructure, and practical resources for tokens, contracts, and connected applications.",
+    "kind": "jsx-text"
+  },
+  "L0035_C070": {
+    "text": "Explore OPTN Wallet",
+    "kind": "jsx-text"
+  },
+  "L0035_C180": {
     "text": "View GitHub",
     "kind": "jsx-text"
   },
-  "L0030_C127": {
-    "text": "Your product question",
+  "L0038_C093": {
+    "text": "Wallet and apps",
     "kind": "jsx-text"
   },
-  "L0030_C164": {
-    "text": "Find the BCH capability you need",
+  "L0038_C124": {
+    "text": "Products people can use",
     "kind": "jsx-text"
   },
-  "L0030_C252": {
+  "L0039_C049": {
     "text": "↓",
     "kind": "jsx-text"
   },
-  "L0030_C363": {
-    "text": "The right resource",
+  "L0040_C116": {
+    "text": "Tokens and transaction rules",
     "kind": "jsx-text"
   },
-  "L0030_C397": {
-    "text": "Read, test, and integrate",
+  "L0040_C160": {
+    "text": "CashTokens, BCMR, and covenants",
     "kind": "jsx-text"
   },
-  "L0030_C478": {
+  "L0041_C049": {
     "text": "↓",
     "kind": "jsx-text"
   },
-  "L0030_C586": {
-    "text": "A working integration",
+  "L0042_C115": {
+    "text": "Infrastructure and open source",
     "kind": "jsx-text"
   },
-  "L0030_C623": {
-    "text": "Turn ideas into product behavior",
+  "L0042_C161": {
+    "text": "Services, code, and integration resources",
     "kind": "jsx-text"
   },
-  "L0033_C087": {
-    "text": "The supporting layer",
+  "L0049_C025": {
+    "text": "Ecosystem map",
     "kind": "jsx-text"
   },
-  "L0033_C126": {
-    "text": "Build on the foundation behind OPTN Wallet.",
+  "L0050_C015": {
+    "text": "Find the layer you need",
     "kind": "jsx-text"
   },
-  "L0033_C174": {
+  "L0051_C011": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0033_C361": {
+  "L0052_C157": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0033_C377": {
+  "L0052_C173": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0033_C413": {
+  "L0052_C209": {
     "text": "Explore",
     "kind": "jsx-text"
   },
-  "L0034_C101": {
-    "text": "Need help getting to launch?",
+  "L0059_C030": {
+    "text": "Open resources",
     "kind": "jsx-text"
   },
-  "L0034_C148": {
-    "text": "From first integration to production readiness.",
+  "L0059_C063": {
+    "text": "Go from product to protocol",
     "kind": "jsx-text"
   },
-  "L0034_C229": {
-    "text": "OPTN can help turn a technical question into a working plan, a tested integration, and a clearer path to release.",
+  "L0059_C124": {
+    "text": "Start with the wallet experience, then follow the standards, infrastructure, code, and technical notes behind it.",
     "kind": "jsx-text"
   },
-  "L0034_C394": {
-    "text": "Architecture and implementation",
+  "L0060_C053": {
+    "text": "Open-source wallet",
     "kind": "jsx-text"
   },
-  "L0034_C437": {
-    "text": "Shape the right wallet, app, and transaction design.",
+  "L0060_C083": {
+    "text": "Review the product implementation and contribute on GitHub.",
     "kind": "jsx-text"
   },
-  "L0034_C512": {
-    "text": "Testing and review",
+  "L0060_C165": {
+    "text": "Technical learning",
     "kind": "jsx-text"
   },
-  "L0034_C542": {
-    "text": "Catch integration issues before they reach users.",
+  "L0060_C195": {
+    "text": "Explore CashTokens, covenants, BCMR, and builder notes.",
     "kind": "jsx-text"
   },
-  "L0034_C614": {
-    "text": "Hosted services",
+  "L0060_C273": {
+    "text": "Public infrastructure",
     "kind": "jsx-text"
   },
-  "L0034_C641": {
-    "text": "Use BCH infrastructure without running every backend component yourself.",
+  "L0060_C306": {
+    "text": "Connect to BCH services and inspect current service status below.",
     "kind": "jsx-text"
   },
-  "L0035_C017": {
-    "text": "Building something on BCH?",
+  "L0067_C027": {
+    "text": "Infrastructure and data",
+    "kind": "jsx-text"
+  },
+  "L0068_C017": {
+    "text": "BCH services that keep products moving",
+    "kind": "jsx-text"
+  },
+  "L0069_C042": {
+    "text": "OPTN Wallet relies on chain data, token indexing, metadata, and connectivity. These supporting services are also available to teams building Bitcoin Cash products.",
+    "kind": "jsx-text"
+  },
+  "L0070_C072": {
+    "text": "Request access",
+    "kind": "jsx-text"
+  },
+  "L0070_C150": {
+    "text": "View token data",
+    "kind": "jsx-text"
+  },
+  "L0078_C030": {
+    "text": "TokenIndexer",
+    "kind": "jsx-text"
+  },
+  "L0078_C061": {
+    "text": "Make CashTokens easier to show and use.",
+    "kind": "jsx-text"
+  },
+  "L0078_C134": {
+    "text": "TokenIndexer turns on-chain token activity into app-ready balances, holder data, metadata, and portfolio views.",
+    "kind": "jsx-text"
+  },
+  "L0078_C308": {
+    "text": "Ask about token data access",
+    "kind": "jsx-text"
+  },
+  "L0078_C387": {
+    "text": "Explore BCMR",
+    "kind": "jsx-text"
+  },
+  "L0079_C053": {
+    "text": "App-ready token data",
+    "kind": "jsx-text"
+  },
+  "L0079_C085": {
+    "text": "Give users clearer balances, portfolios, and token details.",
+    "kind": "jsx-text"
+  },
+  "L0079_C167": {
+    "text": "Built for integration",
+    "kind": "jsx-text"
+  },
+  "L0079_C200": {
+    "text": "A service surface for apps, mobile clients, and backend systems.",
+    "kind": "jsx-text"
+  },
+  "L0079_C287": {
+    "text": "Choose your operating model",
+    "kind": "jsx-text"
+  },
+  "L0079_C326": {
+    "text": "Run the stack yourself where supported, or ask about service access for a specific product.",
+    "kind": "jsx-text"
+  },
+  "L0083_C111": {
+    "text": "Public service status",
+    "kind": "jsx-attribute:title"
+  },
+  "L0084_C017": {
+    "text": "Building in the BCH ecosystem?",
     "kind": "jsx-attribute:title"
   }
 }
@@ -1987,43 +2528,43 @@ This catalog is extracted from the current working tree. It includes App Router 
 ```json
 {
   "L0013_C010": {
-    "text": "Bitcoin Cash Product Engineering | OPTN Labs",
+    "text": "Bitcoin Cash Engineering | OPTN Labs",
     "kind": "property:title"
   },
   "L0015_C005": {
-    "text": "Product engineering from the team behind OPTN Wallet: BCH wallet and application integration, CashTokens, transaction design, testing, and release.",
+    "text": "Work with OPTN on Bitcoin Cash products, integrations, CashTokens, transaction workflows, and controlled-payment pilot projects.",
     "kind": "property:description"
   },
   "L0020_C014": {
-    "text": "Wallet and application integration",
+    "text": "Wallet and app integration",
     "kind": "array-copy-candidate"
   },
-  "L0020_C052": {
-    "text": "Connect your product to BCH apps, wallets, and transaction flows.",
+  "L0020_C044": {
+    "text": "Connect BCH products, wallets, applications, and user-facing payment flows.",
     "kind": "array-copy-candidate"
   },
-  "L0021_C013": {
-    "text": "CashTokens and BCMR",
+  "L0021_C012": {
+    "text": "CashTokens and metadata",
     "kind": "array-copy-candidate"
   },
-  "L0021_C036": {
-    "text": "Make token balances, metadata, and user experiences work together.",
+  "L0021_C039": {
+    "text": "Build token-aware experiences with useful asset context and reliable data paths.",
     "kind": "array-copy-candidate"
   },
   "L0022_C012": {
-    "text": "CashScript and covenant patterns",
+    "text": "Transaction and covenant design",
     "kind": "array-copy-candidate"
   },
-  "L0022_C048": {
-    "text": "Design transaction rules for workflows with real constraints.",
+  "L0022_C047": {
+    "text": "Shape BCH transaction patterns and CashScript workflows around real product requirements.",
     "kind": "array-copy-candidate"
   },
   "L0023_C012": {
-    "text": "Backend, testing, and deployment",
+    "text": "Testing and release preparation",
     "kind": "array-copy-candidate"
   },
-  "L0023_C048": {
-    "text": "Build services, adversarial test harnesses, and release checks that keep a workflow ready for launch.",
+  "L0023_C047": {
+    "text": "Exercise failure paths, review integration points, and prepare the product for release.",
     "kind": "array-copy-candidate"
   },
   "L0027_C012": {
@@ -2055,27 +2596,27 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-text"
   },
   "L0039_C017": {
-    "text": "Product engineering for Bitcoin Cash applications.",
+    "text": "Build on Bitcoin Cash with OPTN.",
     "kind": "jsx-text"
   },
   "L0040_C043": {
-    "text": "The OPTN team builds across wallets, CashTokens, infrastructure, and covenant-based transaction flows. We apply that product experience to teams moving from architecture and transaction design through integration, testing, and release.",
+    "text": "Shape, implement, test, and ship BCH products and transaction workflows with a team that has built them firsthand.",
     "kind": "jsx-text"
   },
   "L0041_C072": {
-    "text": "Discuss a project",
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0041_C132": {
-    "text": "Explore developer resources",
+  "L0041_C124": {
+    "text": "Explore the ecosystem",
     "kind": "jsx-text"
   },
   "L0049_C025": {
-    "text": "Apply the stack",
+    "text": "Capabilities",
     "kind": "jsx-text"
   },
   "L0050_C015": {
-    "text": "Apply OPTN's product experience to your build.",
+    "text": "Bitcoin Cash product engineering",
     "kind": "jsx-text"
   },
   "L0051_C011": {
@@ -2091,95 +2632,87 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-composed"
   },
   "L0059_C030": {
-    "text": "From product idea to launch",
+    "text": "Delivery process",
     "kind": "jsx-text"
   },
   "L0060_C030": {
-    "text": "Built from working products",
+    "text": "Experience",
     "kind": "jsx-text"
   },
   "L0061_C110": {
     "text": "OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0061_C154": {
-    "text": "Shipped",
+  "L0061_C129": {
+    "text": "Released self-custody wallet for BCH, CashTokens, and connected apps",
     "kind": "jsx-text"
   },
-  "L0061_C176": {
-    "text": "BCH and CashTokens wallet",
-    "kind": "jsx-text"
-  },
-  "L0061_C231": {
+  "L0061_C227": {
     "text": "Explore Wallet",
     "kind": "jsx-text"
   },
   "L0062_C109": {
-    "text": "FundMe.cash",
+    "text": "Covenant workflows",
     "kind": "jsx-text"
   },
-  "L0062_C153": {
-    "text": "Shipped",
-    "kind": "jsx-text"
-  },
-  "L0062_C175": {
-    "text": "Live covenant-based campaign flows for contributions, claims, and refunds",
+  "L0062_C135": {
+    "text": "Experience from FundMe.cash contribution, claim, and refund flows",
     "kind": "jsx-text"
   },
   "L0063_C109": {
-    "text": "Programmable payments",
+    "text": "Controlled-payment pilots",
     "kind": "jsx-text"
   },
-  "L0063_C163": {
-    "text": "In development",
+  "L0063_C142": {
+    "text": "WIP pilot exploration for software and AI payment workflows",
     "kind": "jsx-text"
   },
-  "L0063_C192": {
-    "text": "Agent payments, transaction composition, and covenant-based workflows",
+  "L0063_C233": {
+    "text": "Explore pilot projects",
     "kind": "jsx-text"
   },
   "L0070_C030": {
     "text": "Go deeper",
     "kind": "jsx-text"
   },
-  "L0070_C116": {
-    "text": "Developers",
+  "L0070_C115": {
+    "text": "Ecosystem",
     "kind": "jsx-text"
   },
-  "L0070_C168": {
+  "L0070_C166": {
     "text": "CashTokens",
     "kind": "jsx-text"
   },
-  "L0070_C235": {
+  "L0070_C233": {
     "text": "Covenants",
     "kind": "jsx-text"
   },
-  "L0070_C295": {
+  "L0070_C293": {
     "text": "BCMR",
     "kind": "jsx-text"
   },
-  "L0070_C335": {
+  "L0070_C333": {
     "text": "Blog",
     "kind": "jsx-text"
   },
-  "L0070_C408": {
+  "L0070_C406": {
     "text": "GitHub",
     "kind": "jsx-text"
   },
   "L0071_C056": {
-    "text": "Current platform scope",
+    "text": "Pilot projects",
     "kind": "jsx-text"
   },
-  "L0071_C096": {
-    "text": "Covenant-based enforcement is in development for BCH and CashToken funds placed under covenant control.",
+  "L0071_C088": {
+    "text": "Explore bounded payment workflows for software and AI agents using BCH and CashTokens.",
     "kind": "jsx-text"
   },
-  "L0071_C231": {
-    "text": "Explore programmable payments",
+  "L0071_C206": {
+    "text": "Explore pilot projects",
     "kind": "jsx-text"
   },
   "L0075_C017": {
-    "text": "Build with the team behind OPTN Wallet.",
+    "text": "Build your next BCH product with OPTN.",
     "kind": "jsx-attribute:title"
   }
 }
@@ -2194,126 +2727,150 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "property:q"
   },
   "L0007_C008": {
-    "text": "OPTN Labs is a Canadian technology company building Bitcoin Cash products and infrastructure for self-custody, digital assets, developer integrations, and programmable payments. OPTN Wallet is its shipped product; the programmable-payment platform is in development.",
+    "text": "OPTN Labs is the company behind OPTN Wallet. We also publish resources for the Bitcoin Cash ecosystem, operate supporting infrastructure, provide engineering services, and explore controlled-payment pilot projects.",
     "kind": "property:a"
   },
   "L0010_C008": {
-    "text": "What is OPTN Wallet?",
+    "text": "What can I use today?",
     "kind": "property:q"
   },
   "L0011_C008": {
-    "text": "OPTN Wallet is a shipped self-custody BCH wallet for everyday payments, CashTokens, connected applications, and advanced transaction workflows. Its open implementation also serves as a reference for BCH builders.",
+    "text": "OPTN Wallet is our released product for self-custody BCH and CashTokens. Builders can also use our public code, technical resources, token and metadata guidance, and available Bitcoin Cash infrastructure services.",
     "kind": "property:a"
   },
   "L0014_C008": {
-    "text": "Does OPTN hold customer keys or funds?",
+    "text": "What can I do with OPTN Wallet?",
     "kind": "property:q"
   },
   "L0015_C008": {
-    "text": "No. OPTN Wallet and its open tools are designed around self-custody, so users retain control of their keys and funds. Any custom operating architecture is scoped explicitly.",
+    "text": "You can send and receive BCH, manage fungible tokens and NFTs, connect to compatible apps through WalletConnect, review transaction and message requests, protect and restore your wallet, and use advanced transaction and contract tools.",
     "kind": "property:a"
   },
   "L0018_C008": {
-    "text": "What is available today, and what is still in development?",
+    "text": "Does OPTN hold Wallet users' keys or funds?",
     "kind": "property:q"
   },
   "L0019_C008": {
-    "text": "OPTN Wallet, public developer resources, Bitcoin Cash infrastructure, and scoped engineering are available today. Builder and the in-wallet add-on system remain in development.",
+    "text": "No. OPTN Wallet is self-custody software: users control their own wallet and recovery phrase. Protecting and securely backing up that recovery phrase is essential.",
     "kind": "property:a"
   },
   "L0022_C008": {
-    "text": "What Bitcoin Cash services are available?",
+    "text": "What does the ecosystem section include?",
     "kind": "property:q"
   },
   "L0023_C008": {
-    "text": "The public infrastructure surface includes Electrum, Chaingraph, BCMR, IPFS, and token data access. TokenIndexer provides token balances, holders, metadata, and app-facing data, with public status for what is currently exposed.",
+    "text": "It connects builders to OPTN Wallet, CashTokens and BCMR metadata guidance, covenant and contract resources, infrastructure, token data, open-source code, and practical implementation experience.",
     "kind": "property:a"
   },
   "L0026_C008": {
-    "text": "Can I use OPTN's open tools without OPTN?",
+    "text": "What Bitcoin Cash services are available?",
     "kind": "property:q"
   },
   "L0027_C008": {
-    "text": "Yes. Public tools, documentation, and code are available for teams that want to explore and build independently. OPTN's engineering services are available when you want help shaping, integrating, testing, or shipping a workflow.",
+    "text": "The infrastructure section covers Electrum connectivity, Chaingraph queries, BCMR metadata, IPFS content, and TokenIndexer data. Check the live service status or contact us for the current access options.",
     "kind": "property:a"
   },
   "L0030_C008": {
-    "text": "Can OPTN help with CashTokens, covenants, or CashScript?",
+    "text": "Can I use OPTN's open tools independently?",
     "kind": "property:q"
   },
   "L0031_C008": {
-    "text": "Yes. OPTN can help with CashToken-aware wallet and application flows, covenant patterns, transaction planning, and CashScript implementation. You do not need to know CashScript before starting a conversation.",
+    "text": "Yes. Public code, documentation, and technical resources are available for teams that want to explore and build independently. OPTN engineering is available when you want help with architecture, integration, testing, or release preparation.",
     "kind": "property:a"
   },
   "L0034_C008": {
-    "text": "When should I contact OPTN about engineering or custom work?",
+    "text": "What are controlled-payment pilot projects?",
     "kind": "property:q"
   },
   "L0035_C008": {
-    "text": "Reach out when you need production workflow design, covenant or transaction work, wallet or CashToken integration, infrastructure guidance, testing, security review, or release support.",
+    "text": "They are WIP explorations for software and AI agents that need to make payments within defined rules. A pilot can examine permitted recipients, amounts, transaction paths, failure cases, and owner recovery for a specific workflow.",
     "kind": "property:a"
   },
   "L0038_C008": {
-    "text": "What should I send when I reach out?",
+    "text": "Why separate signing authority from payment rules?",
     "kind": "property:q"
   },
   "L0039_C008": {
+    "text": "A key establishes who may authorize a transaction. It does not necessarily restrict the recipient, amount, structure, or next state. Controlled-payment pilots explore how those financial boundaries can be defined separately for funds placed in a specific workflow.",
+    "kind": "property:a"
+  },
+  "L0042_C008": {
+    "text": "Can OPTN help with CashTokens, covenants, or CashScript?",
+    "kind": "property:q"
+  },
+  "L0043_C008": {
+    "text": "Yes. OPTN can help with CashToken-aware wallet and application flows, covenant patterns, transaction planning, and CashScript implementation. You do not need to know the implementation details before contacting us.",
+    "kind": "property:a"
+  },
+  "L0046_C008": {
+    "text": "When should I contact OPTN?",
+    "kind": "property:q"
+  },
+  "L0047_C008": {
+    "text": "Contact us when you need help with OPTN Wallet, BCH infrastructure, an ecosystem integration, engineering work, or a controlled-payment pilot project.",
+    "kind": "property:a"
+  },
+  "L0050_C008": {
+    "text": "What should I send when I reach out?",
+    "kind": "property:q"
+  },
+  "L0051_C008": {
     "text": "Send what you are building, the part of the stack you need help with, your timeline, and any repo or architecture notes that will help us understand the scope.",
     "kind": "property:a"
   },
-  "L0044_C010": {
-    "text": "OPTN Labs FAQ | Wallets, Infrastructure & BCH Engineering",
+  "L0056_C010": {
+    "text": "OPTN Labs FAQ | Wallet, Ecosystem & Pilot Projects",
     "kind": "property:title"
   },
-  "L0046_C005": {
-    "text": "Frequently asked questions about OPTN Labs, OPTN Wallet, Bitcoin Cash infrastructure, and BCH implementation support.",
+  "L0058_C005": {
+    "text": "Answers about OPTN Wallet, self-custody, Bitcoin Cash ecosystem resources, infrastructure, engineering, and controlled-payment pilot projects.",
     "kind": "property:description"
   },
-  "L0053_C007": {
+  "L0065_C007": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0056_C007": {
+  "L0068_C007": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0066_C097": {
+  "L0078_C097": {
     "text": "Visitor guide",
     "kind": "jsx-text"
   },
-  "L0069_C093": {
+  "L0081_C093": {
     "text": "Frequently asked questions",
     "kind": "jsx-text"
   },
-  "L0072_C089": {
-    "text": "A short answer page for teams deciding whether OPTN Labs is the right fit for their BCH product, wallet, or infrastructure work.",
+  "L0084_C089": {
+    "text": "Straight answers about OPTN Wallet, self-custody, ecosystem resources, engineering, and controlled-payment pilot projects.",
     "kind": "jsx-text"
   },
-  "L0080_C014": {
-    "text": "Contact OPTN",
+  "L0092_C014": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0086_C014": {
+  "L0098_C014": {
     "text": "Explore OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0094_C009": {
+  "L0106_C009": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0103_C061": {
+  "L0115_C061": {
     "text": "Still unsure?",
     "kind": "jsx-text"
   },
-  "L0106_C076": {
+  "L0118_C076": {
     "text": "Send a short note and we will point you to the right route or the right part of the stack.",
     "kind": "jsx-text"
   },
-  "L0114_C014": {
-    "text": "Build with OPTN",
+  "L0126_C014": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0120_C014": {
+  "L0132_C014": {
     "text": "Read builder notes",
     "kind": "jsx-text"
   }
@@ -2323,88 +2880,7 @@ This catalog is extracted from the current working tree. It includes App Router 
 ### /infrastructure — `app/infrastructure/page.jsx`
 
 ```json
-{
-  "L0012_C010": {
-    "text": "Bitcoin Cash Infrastructure | Electrum, Indexing & Metadata",
-    "kind": "property:title"
-  },
-  "L0014_C005": {
-    "text": "OPTN operates BCH network, indexing, token-data, and metadata services used by wallets and applications, including Electrum, Chaingraph, BCMR, and TokenIndexer infrastructure.",
-    "kind": "property:description"
-  },
-  "L0024_C027": {
-    "text": "Infrastructure",
-    "kind": "jsx-text"
-  },
-  "L0025_C017": {
-    "text": "The BCH services your product needs to keep moving.",
-    "kind": "jsx-text"
-  },
-  "L0026_C043": {
-    "text": "OPTN Wallet needed reliable chain data, token indexing, metadata, and connectivity to deliver a reliable product experience. We make those supporting Bitcoin Cash services available to teams building their own products.",
-    "kind": "jsx-text"
-  },
-  "L0027_C072": {
-    "text": "Request access",
-    "kind": "jsx-text"
-  },
-  "L0027_C150": {
-    "text": "View token data",
-    "kind": "jsx-text"
-  },
-  "L0040_C030": {
-    "text": "TokenIndexer",
-    "kind": "jsx-text"
-  },
-  "L0040_C061": {
-    "text": "Make CashTokens easier to show and use.",
-    "kind": "jsx-text"
-  },
-  "L0040_C134": {
-    "text": "TokenIndexer turns on-chain token activity into app-ready balances, holder data, metadata, and portfolio views.",
-    "kind": "jsx-text"
-  },
-  "L0040_C308": {
-    "text": "Ask about token data access",
-    "kind": "jsx-text"
-  },
-  "L0040_C387": {
-    "text": "Explore BCMR",
-    "kind": "jsx-text"
-  },
-  "L0041_C053": {
-    "text": "App-ready token data",
-    "kind": "jsx-text"
-  },
-  "L0041_C085": {
-    "text": "Give users clearer balances, portfolios, and token details.",
-    "kind": "jsx-text"
-  },
-  "L0041_C167": {
-    "text": "Built for integration",
-    "kind": "jsx-text"
-  },
-  "L0041_C200": {
-    "text": "A service surface for apps, mobile clients, and backend systems.",
-    "kind": "jsx-text"
-  },
-  "L0041_C287": {
-    "text": "Choose your operating model",
-    "kind": "jsx-text"
-  },
-  "L0041_C326": {
-    "text": "Run the stack yourself where supported, or ask about service access for a specific product.",
-    "kind": "jsx-text"
-  },
-  "L0045_C111": {
-    "text": "Public service status",
-    "kind": "jsx-attribute:title"
-  },
-  "L0046_C017": {
-    "text": "Need the BCH backend without all the overhead?",
-    "kind": "jsx-attribute:title"
-  }
-}
+{}
 ```
 
 ### /platform — `app/platform/page.jsx`
@@ -2412,11 +2888,11 @@ This catalog is extracted from the current working tree. It includes App Router 
 ```json
 {
   "L0012_C010": {
-    "text": "Programmable Payments for Bitcoin Cash | OPTN Labs",
+    "text": "Controlled Payment Pilot Projects | OPTN Labs",
     "kind": "property:title"
   },
   "L0014_C005": {
-    "text": "OPTN is developing BCH-native payment infrastructure for software and AI agents, with transaction rules for amounts, destinations, successor states, and recovery.",
+    "text": "Explore pilot projects for software and AI payments with defined recipient, amount, transaction-path, and recovery rules on Bitcoin Cash.",
     "kind": "property:description"
   },
   "L0019_C012": {
@@ -2484,27 +2960,27 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "array-copy-candidate"
   },
   "L0038_C027": {
-    "text": "Platform · Programmable payments · In development",
+    "text": "Pilot projects · WIP",
     "kind": "jsx-text"
   },
   "L0039_C017": {
-    "text": "Payment infrastructure for software and AI agents.",
+    "text": "Controlled payments for software.",
     "kind": "jsx-text"
   },
   "L0040_C043": {
-    "text": "OPTN is developing BCH-native payment infrastructure for software and AI agents. Applications can request payments while OPTN coordinates transaction composition and financial rules. Where funds are placed under BCH covenant control, transaction rules validate the spending path.",
+    "text": "OPTN is open to pilot projects that let software and AI agents operate within defined rules for recipients, spending limits, transaction paths, and recovery.",
     "kind": "jsx-text"
   },
   "L0041_C072": {
-    "text": "Talk to OPTN",
+    "text": "Contact us",
     "kind": "jsx-text"
   },
   "L0049_C025": {
-    "text": "How the platform fits together",
+    "text": "Pilot model",
     "kind": "jsx-text"
   },
   "L0050_C015": {
-    "text": "From payment request to an enforceable transaction path.",
+    "text": "How it works",
     "kind": "jsx-text"
   },
   "L0051_C011": {
@@ -2520,19 +2996,19 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-composed"
   },
   "L0054_C064": {
-    "text": "Long-term direction:",
+    "text": "The goal:",
     "kind": "jsx-text"
   },
-  "L0054_C093": {
+  "L0054_C082": {
     "text": "let people, applications, and AI use money programmatically, with transaction rules that reflect the financial policy of each workflow.",
     "kind": "jsx-text"
   },
   "L0060_C025": {
-    "text": "Payment and transaction rules",
+    "text": "Controls",
     "kind": "jsx-text"
   },
   "L0061_C015": {
-    "text": "Define how software can use money.",
+    "text": "Financial rules",
     "kind": "jsx-text"
   },
   "L0062_C011": {
@@ -2548,15 +3024,15 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-composed"
   },
   "L0070_C025": {
-    "text": "Programmable authority",
+    "text": "Core model",
     "kind": "jsx-text"
   },
   "L0073_C019": {
-    "text": "Define what a transaction is allowed to do.",
+    "text": "Programmable authority",
     "kind": "jsx-text"
   },
   "L0074_C044": {
-    "text": "A signature establishes which key authorized a transaction. Programmable rules add a financial policy layer: how much moves, where it goes, what state continues, and how funds may be recovered. OPTN is developing this layer for BCH workflows where software needs financial authority.",
+    "text": "A signature establishes which key authorized a transaction. Programmable rules add a financial policy layer: how much moves, where it goes, what state continues, and how funds may be recovered. OPTN applies this model to BCH workflows where software needs financial authority.",
     "kind": "jsx-text"
   },
   "L0075_C046": {
@@ -2616,11 +3092,11 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-text"
   },
   "L0088_C027": {
-    "text": "Built on Bitcoin Cash",
+    "text": "Technical foundation",
     "kind": "jsx-text"
   },
   "L0089_C017": {
-    "text": "Starting with BCH and CashTokens.",
+    "text": "Why Bitcoin Cash",
     "kind": "jsx-text"
   },
   "L0090_C042": {
@@ -2644,7 +3120,7 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-text"
   },
   "L0099_C017": {
-    "text": "Planning an agent-payment or programmable-finance workflow?",
+    "text": "Exploring a pilot project?",
     "kind": "jsx-attribute:title"
   }
 }
@@ -2898,83 +3374,83 @@ This catalog is extracted from the current working tree. It includes App Router 
 ```json
 {
   "L0010_C010": {
-    "text": "OPTN Labs Pricing | Free Tools, Builder & Custom Engineering",
+    "text": "Work with OPTN | Wallet, Ecosystem & Engineering",
     "kind": "property:title"
   },
   "L0012_C005": {
-    "text": "Start with OPTN's free Bitcoin Cash tools and Wallet, follow Builder as it develops, or work with OPTN on custom BCH, CashToken, covenant, and agent-payment engineering.",
+    "text": "Use OPTN Wallet, explore open Bitcoin Cash resources, work with OPTN engineering, or scope a controlled-payment pilot project.",
     "kind": "property:description"
   },
   "L0018_C013": {
-    "text": "Available now",
+    "text": "Released product",
     "kind": "property:status"
   },
   "L0019_C012": {
-    "text": "Community",
+    "text": "Use OPTN Wallet",
     "kind": "property:title"
   },
   "L0020_C012": {
-    "text": "Free",
+    "text": "Available now",
     "kind": "property:price"
   },
   "L0021_C011": {
-    "text": "Everything you need to explore and build with OPTN's open BCH tools.",
+    "text": "Use the self-custody wallet for BCH, CashTokens, connected apps, and advanced wallet workflows.",
     "kind": "property:body"
   },
   "L0022_C016": {
-    "text": "OPTN Wallet",
+    "text": "BCH payments",
     "kind": "array-copy-candidate"
   },
-  "L0022_C031": {
-    "text": "Open tools and templates",
+  "L0022_C032": {
+    "text": "CashTokens and NFTs",
     "kind": "array-copy-candidate"
   },
-  "L0022_C059": {
-    "text": "Local testing and verification",
+  "L0022_C055": {
+    "text": "WalletConnect",
     "kind": "array-copy-candidate"
   },
-  "L0022_C093": {
-    "text": "Public documentation",
+  "L0022_C072": {
+    "text": "Advanced wallet tools",
     "kind": "array-copy-candidate"
   },
   "L0024_C012": {
-    "text": "Explore the tools",
+    "text": "Explore OPTN Wallet",
     "kind": "property:label"
   },
-  "L0027_C013": {
-    "text": "Coming soon",
-    "kind": "property:status"
-  },
   "L0028_C012": {
-    "text": "Builder",
+    "text": "Explore the ecosystem",
     "kind": "property:title"
   },
   "L0029_C011": {
-    "text": "A guided product layer for teams building with OPTN's open tools, with simpler setup and reusable integration workflows.",
+    "text": "Use open code, technical guides, token and metadata resources, and available BCH infrastructure.",
     "kind": "property:body"
   },
   "L0030_C016": {
-    "text": "Guided setup",
+    "text": "Open-source Wallet",
     "kind": "array-copy-candidate"
   },
-  "L0030_C032": {
-    "text": "Reusable integration workflows",
+  "L0030_C038": {
+    "text": "CashTokens and BCMR",
     "kind": "array-copy-candidate"
   },
-  "L0030_C066": {
-    "text": "A smoother developer experience",
+  "L0030_C061": {
+    "text": "Covenant resources",
     "kind": "array-copy-candidate"
+  },
+  "L0030_C083": {
+    "text": "Infrastructure and token data",
+    "kind": "array-copy-candidate"
+  },
+  "L0031_C012": {
+    "text": "Open resources",
+    "kind": "property:price"
   },
   "L0033_C012": {
-    "text": "Follow Builder development",
+    "text": "Explore the ecosystem",
     "kind": "property:label"
   },
-  "L0036_C013": {
-    "text": "Available now",
-    "kind": "property:status"
-  },
   "L0037_C012": {
-    "text": "Custom engineering",
+    "text": "Build with OPTN",
     "kind": "property:title"
   },
   "L0038_C012": {
@@ -2982,179 +3458,207 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "property:price"
   },
   "L0039_C011": {
-    "text": "Hands-on support for specialized BCH products, transaction workflows, and enterprise deployments.",
+    "text": "Work with OPTN on a Bitcoin Cash product, integration, transaction workflow, or production release.",
     "kind": "property:body"
   },
   "L0040_C016": {
-    "text": "Workflow and architecture scoping",
+    "text": "Wallet and application integration",
     "kind": "array-copy-candidate"
   },
-  "L0040_C053": {
-    "text": "Wallet and CashToken integration",
+  "L0040_C054": {
+    "text": "CashTokens and metadata",
     "kind": "array-copy-candidate"
   },
-  "L0040_C089": {
-    "text": "Covenant and transaction design",
+  "L0040_C081": {
+    "text": "Transaction and covenant design",
     "kind": "array-copy-candidate"
   },
-  "L0040_C124": {
+  "L0040_C116": {
     "text": "Testing and release support",
     "kind": "array-copy-candidate"
   },
   "L0042_C012": {
-    "text": "Discuss custom work",
+    "text": "Contact us",
     "kind": "property:label"
   },
-  "L0047_C004": {
-    "text": "What is the managed platform direction?",
+  "L0045_C013": {
+    "text": "WIP exploration",
+    "kind": "property:status"
+  },
+  "L0046_C012": {
+    "text": "Pilot projects",
+    "kind": "property:title"
+  },
+  "L0047_C012": {
+    "text": "Scoped pilot",
+    "kind": "property:price"
+  },
+  "L0048_C011": {
+    "text": "Explore a bounded payment workflow for software or AI with defined financial rules.",
+    "kind": "property:body"
+  },
+  "L0049_C016": {
+    "text": "Workflow definition",
     "kind": "array-copy-candidate"
   },
-  "L0047_C047": {
-    "text": "OPTN is developing a managed coordination layer; it is not available today. Teams can use available OPTN tools and infrastructure or work with OPTN through scoped engineering.",
+  "L0049_C039": {
+    "text": "Financial policy design",
     "kind": "array-copy-candidate"
   },
-  "L0048_C004": {
-    "text": "Does OPTN hold customer keys or funds?",
+  "L0049_C066": {
+    "text": "Threat and failure modeling",
     "kind": "array-copy-candidate"
   },
-  "L0048_C046": {
-    "text": "OPTN's standard tooling is built around customer-controlled keys and funds. Any non-standard operating model is scoped explicitly.",
+  "L0049_C097": {
+    "text": "Pilot implementation",
     "kind": "array-copy-candidate"
   },
-  "L0049_C004": {
-    "text": "When should I choose Custom?",
+  "L0051_C012": {
+    "text": "Contact us",
+    "kind": "property:label"
+  },
+  "L0056_C004": {
+    "text": "Is OPTN Wallet available now?",
     "kind": "array-copy-candidate"
   },
-  "L0049_C036": {
-    "text": "Choose Custom for production workflow design, covenant or transaction work, wallet and CashToken integration, testing, security review, or deployment support.",
+  "L0056_C037": {
+    "text": "Yes. OPTN Wallet is the released product and is available through Google Play. Its open-source implementation is also available on GitHub.",
     "kind": "array-copy-candidate"
   },
-  "L0050_C004": {
-    "text": "When can I use Builder?",
+  "L0057_C004": {
+    "text": "Can I use the ecosystem resources independently?",
     "kind": "array-copy-candidate"
   },
-  "L0050_C031": {
-    "text": "Builder is in development. We will share access and pricing information when it is ready for teams.",
+  "L0057_C056": {
+    "text": "Yes. Public code, technical guides, and available services can be explored without an engineering engagement.",
     "kind": "array-copy-candidate"
   },
-  "L0058_C025": {
-    "text": "Pricing",
-    "kind": "jsx-text"
+  "L0058_C004": {
+    "text": "What can an engineering project include?",
+    "kind": "array-copy-candidate"
   },
-  "L0059_C015": {
-    "text": "Start with the open stack. Work with OPTN when you need more.",
-    "kind": "jsx-text"
+  "L0058_C048": {
+    "text": "A project can cover architecture, wallet or application integration, CashTokens, transaction and covenant design, testing, and release preparation.",
+    "kind": "array-copy-candidate"
   },
-  "L0060_C041": {
-    "text": "Use OPTN Wallet, public developer resources, and infrastructure directly. Engage the team for specialized integration, transaction design, testing, and engineering delivery.",
-    "kind": "jsx-text"
+  "L0059_C004": {
+    "text": "What does a pilot project include?",
+    "kind": "array-copy-candidate"
   },
-  "L0061_C072": {
-    "text": "Explore free tools",
-    "kind": "jsx-text"
-  },
-  "L0061_C152": {
-    "text": "Talk to OPTN",
-    "kind": "jsx-text"
+  "L0059_C042": {
+    "text": "A pilot can examine workflow definition, policy and recovery design, threat modeling, transaction implementation, and permitted and rejected paths.",
+    "kind": "array-copy-candidate"
   },
   "L0067_C025": {
-    "text": "Choose your path",
+    "text": "Work with OPTN",
     "kind": "jsx-text"
   },
   "L0068_C015": {
-    "text": "Choose the level of support that fits.",
+    "text": "Use, explore, or build with OPTN.",
     "kind": "jsx-text"
   },
-  "L0069_C011": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0071_C015": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0072_C017": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0073_C017": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0074_C031": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0075_C017": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0076_C017": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0076_C076": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0077_C017": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0082_C032": {
-    "text": "Custom",
+  "L0069_C041": {
+    "text": "Start with the released Wallet, follow the open BCH ecosystem around it, or work with OPTN on engineering and pilot projects.",
     "kind": "jsx-text"
   },
-  "L0082_C057": {
-    "text": "Need a production workflow or a partner to help you ship?",
+  "L0070_C068": {
+    "text": "Explore OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0082_C122": {
-    "text": "Get focused help with architecture, covenant and transaction design, integration, adversarial testing, migration, and release.",
+  "L0070_C149": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0083_C042": {
-    "text": "Talk to OPTN",
+  "L0076_C025": {
+    "text": "Engagements",
     "kind": "jsx-text"
   },
-  "L0085_C037": {
+  "L0077_C015": {
+    "text": "Start with what you need",
+    "kind": "jsx-text"
+  },
+  "L0078_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0080_C015": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0080_C015_2": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0081_C032": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0082_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0083_C031": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0084_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0085_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0085_C076": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0086_C017": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0091_C032": {
+    "text": "Not sure where to start?",
+    "kind": "jsx-text"
+  },
+  "L0091_C075": {
+    "text": "Tell us what you are trying to use or build.",
+    "kind": "jsx-text"
+  },
+  "L0091_C127": {
+    "text": "We will point you to the Wallet, an open ecosystem resource, an engineering path, or a suitable pilot conversation.",
+    "kind": "jsx-text"
+  },
+  "L0092_C042": {
+    "text": "Contact us",
+    "kind": "jsx-text"
+  },
+  "L0094_C037": {
     "text": "Additional integration, audit, compliance, and specialized engineering work may require separate scope and pricing.",
     "kind": "jsx-text"
   },
-  "L0087_C032": {
-    "text": "Long-term direction",
+  "L0100_C025": {
+    "text": "Details",
     "kind": "jsx-text"
   },
-  "L0087_C070": {
-    "text": "A managed layer for programmable financial workflows.",
-    "kind": "jsx-text"
-  },
-  "L0087_C131": {
-    "text": "OPTN's longer-term platform direction brings payment coordination, programmable transaction rules, monitoring, integrations, reconciliation, and workflow operations into a managed product experience.",
-    "kind": "jsx-text"
-  },
-  "L0094_C025": {
+  "L0101_C015": {
     "text": "Common questions",
     "kind": "jsx-text"
   },
-  "L0095_C015": {
-    "text": "Availability and engagement details.",
-    "kind": "jsx-text"
-  },
-  "L0096_C011": {
+  "L0102_C011": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0097_C097": {
+  "L0103_C097": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0097_C126": {
+  "L0103_C126": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0102_C017": {
-    "text": "Have a workflow in mind?",
+  "L0108_C017": {
+    "text": "Have a project in mind?",
     "kind": "jsx-attribute:title"
   }
 }
@@ -3163,259 +3667,254 @@ This catalog is extracted from the current working tree. It includes App Router 
 ### /solutions — `app/solutions/page.jsx`
 
 ```json
-{
-  "L0011_C010": {
-    "text": "Bitcoin Cash Payment Solutions for AI, Treasury & Apps | OPTN Labs",
-    "kind": "property:title"
-  },
-  "L0013_C005": {
-    "text": "Explore AI-agent payments, treasury workflows, and BCH applications. OPTN is developing BCH-native payment infrastructure, with agent payments as its initial focus.",
-    "kind": "property:description"
-  },
-  "L0018_C013": {
-    "text": "AI payments",
-    "kind": "array-copy-candidate"
-  },
-  "L0018_C028": {
-    "text": "AI agents can pay APIs, purchase services, receive funds, and take part in automated workflows. OPTN's initial product focus is BCH-native payment infrastructure for these interactions.",
-    "kind": "array-copy-candidate"
-  },
-  "L0018_C217": {
-    "text": "Discuss agent payments",
-    "kind": "array-copy-candidate"
-  },
-  "L0018_C243": {
-    "text": "Initial focus · In development",
-    "kind": "array-copy-candidate"
-  },
-  "L0019_C018": {
-    "text": "Treasury & business workflows",
-    "kind": "array-copy-candidate"
-  },
-  "L0019_C051": {
-    "text": "Define repeatable payouts, grants, and delegated spending around clear transaction rules, workflow state, and recovery paths.",
-    "kind": "array-copy-candidate"
-  },
-  "L0019_C180": {
-    "text": "Discuss treasury workflows",
-    "kind": "array-copy-candidate"
-  },
-  "L0020_C012": {
-    "text": "BCH applications",
-    "kind": "array-copy-candidate"
-  },
-  "L0020_C032": {
-    "text": "Bring CashTokens, wallet connectivity, infrastructure, and transaction tooling into a product experience without exposing every protocol detail to the end user.",
-    "kind": "array-copy-candidate"
-  },
-  "L0020_C196": {
-    "text": "Discuss BCH applications",
-    "kind": "array-copy-candidate"
-  },
-  "L0029_C027": {
-    "text": "Solutions",
-    "kind": "jsx-text"
-  },
-  "L0030_C017": {
-    "text": "Payments and financial workflows for autonomous software.",
-    "kind": "jsx-text"
-  },
-  "L0031_C043": {
-    "text": "OPTN is developing BCH-native payment infrastructure, beginning with AI-agent payments. We also work with teams on scoped engineering for treasury workflows and Bitcoin Cash applications.",
-    "kind": "jsx-text"
-  },
-  "L0032_C072": {
-    "text": "Discuss your workflow",
-    "kind": "jsx-text"
-  },
-  "L0039_C025": {
-    "text": "Focus areas",
-    "kind": "jsx-text"
-  },
-  "L0040_C015": {
-    "text": "Start with the financial workflow.",
-    "kind": "jsx-text"
-  },
-  "L0041_C011": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0042_C065": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0042_C172": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0042_C224": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0042_C240": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0042_C253": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0050_C032": {
-    "text": "Ways to work with us",
-    "kind": "jsx-text"
-  },
-  "L0050_C075": {
-    "text": "Start with public tools, or build with OPTN.",
-    "kind": "jsx-text"
-  },
-  "L0050_C131": {
-    "text": "Use the developer stack independently, or engage OPTN for workflow design, integration, testing, and delivery.",
-    "kind": "jsx-text"
-  },
-  "L0051_C081": {
-    "text": "Explore developer tools",
-    "kind": "jsx-text"
-  },
-  "L0051_C143": {
-    "text": "View pricing",
-    "kind": "jsx-text"
-  },
-  "L0051_C196": {
-    "text": "Talk to OPTN",
-    "kind": "jsx-text"
-  },
-  "L0056_C017": {
-    "text": "Planning an agent-payment workflow?",
-    "kind": "jsx-attribute:title"
-  }
-}
+{}
 ```
 
 ### /wallet — `app/wallet/page.jsx`
 
 ```json
 {
-  "L0012_C010": {
+  "L0013_C010": {
     "text": "OPTN Wallet | Bitcoin Cash & CashTokens Wallet",
     "kind": "property:title"
   },
-  "L0014_C005": {
-    "text": "OPTN Wallet is a shipped self-custody Bitcoin Cash wallet for BCH, CashTokens, connected applications, and advanced transaction workflows.",
+  "L0015_C005": {
+    "text": "OPTN Wallet is a self-custody Bitcoin Cash wallet for BCH, CashTokens, connected applications, and advanced transaction workflows.",
     "kind": "property:description"
   },
-  "L0019_C004": {
+  "L0021_C014": {
+    "text": "Everyday wallet",
+    "kind": "property:eyebrow"
+  },
+  "L0022_C017": {
+    "text": "Payments",
+    "kind": "property:shortTitle"
+  },
+  "L0023_C012": {
+    "text": "Send, receive, and keep track",
+    "kind": "property:title"
+  },
+  "L0024_C011": {
+    "text": "Use BCH and CashTokens from a clear wallet home with balances, quick actions, and recent activity.",
+    "kind": "property:body"
+  },
+  "L0025_C015": {
+    "text": "Send and receive BCH",
+    "kind": "array-copy-candidate"
+  },
+  "L0025_C039": {
+    "text": "Scan supported payment QR codes",
+    "kind": "array-copy-candidate"
+  },
+  "L0025_C074": {
+    "text": "Review transaction activity",
+    "kind": "array-copy-candidate"
+  },
+  "L0028_C014": {
+    "text": "Digital assets",
+    "kind": "property:eyebrow"
+  },
+  "L0029_C017": {
     "text": "CashTokens",
+    "kind": "property:shortTitle"
+  },
+  "L0030_C012": {
+    "text": "CashTokens alongside BCH",
+    "kind": "property:title"
+  },
+  "L0031_C011": {
+    "text": "View fungible tokens and NFTs in the same wallet and use token-aware payment flows.",
+    "kind": "property:body"
+  },
+  "L0032_C015": {
+    "text": "Fungible token balances",
     "kind": "array-copy-candidate"
   },
-  "L0019_C018": {
-    "text": "See fungible tokens and NFTs alongside BCH.",
+  "L0032_C042": {
+    "text": "NFT holdings",
     "kind": "array-copy-candidate"
   },
-  "L0020_C004": {
-    "text": "Advanced transactions",
+  "L0032_C058": {
+    "text": "Token family tools",
     "kind": "array-copy-candidate"
   },
-  "L0020_C029": {
-    "text": "Handle richer payments and advanced BCH workflows.",
+  "L0035_C014": {
+    "text": "Connected experiences",
+    "kind": "property:eyebrow"
+  },
+  "L0036_C017": {
+    "text": "Apps",
+    "kind": "property:shortTitle"
+  },
+  "L0037_C012": {
+    "text": "Connect to compatible apps",
+    "kind": "property:title"
+  },
+  "L0038_C011": {
+    "text": "Pair with BCH applications through WalletConnect and review requests before approving them.",
+    "kind": "property:body"
+  },
+  "L0039_C015": {
+    "text": "WalletConnect sessions",
     "kind": "array-copy-candidate"
   },
-  "L0021_C004": {
-    "text": "Connect to apps",
+  "L0039_C041": {
+    "text": "Transaction approval",
     "kind": "array-copy-candidate"
   },
-  "L0021_C023": {
-    "text": "Connect to BCH apps and experiences when you need them.",
+  "L0039_C065": {
+    "text": "Message approval",
     "kind": "array-copy-candidate"
   },
-  "L0022_C004": {
-    "text": "Explore contracts",
+  "L0042_C014": {
+    "text": "Self-custody",
+    "kind": "property:eyebrow"
+  },
+  "L0043_C017": {
+    "text": "Security",
+    "kind": "property:shortTitle"
+  },
+  "L0044_C012": {
+    "text": "Your keys, recovery, and access",
+    "kind": "property:title"
+  },
+  "L0045_C011": {
+    "text": "Create or restore a wallet with a recovery phrase and protect local access with wallet security controls.",
+    "kind": "property:body"
+  },
+  "L0046_C015": {
+    "text": "Recovery phrase backup",
     "kind": "array-copy-candidate"
   },
-  "L0022_C025": {
-    "text": "Support richer BCH transaction and contract workflows.",
+  "L0046_C041": {
+    "text": "Password and app lock",
     "kind": "array-copy-candidate"
   },
-  "L0031_C045": {
-    "text": "Shipped",
+  "L0046_C066": {
+    "text": "Wallet export and restore tools",
+    "kind": "array-copy-candidate"
+  },
+  "L0049_C014": {
+    "text": "Wallet utilities",
+    "kind": "property:eyebrow"
+  },
+  "L0050_C017": {
+    "text": "Utilities",
+    "kind": "property:shortTitle"
+  },
+  "L0051_C012": {
+    "text": "Useful tools when you need them",
+    "kind": "property:title"
+  },
+  "L0052_C011": {
+    "text": "Handle common wallet tasks without leaving the app or exposing implementation details.",
+    "kind": "property:body"
+  },
+  "L0053_C015": {
+    "text": "Generate fresh receive addresses",
+    "kind": "array-copy-candidate"
+  },
+  "L0053_C051": {
+    "text": "Sweep supported paper wallets",
+    "kind": "array-copy-candidate"
+  },
+  "L0053_C084": {
+    "text": "Switch between Mainnet and Chipnet",
+    "kind": "array-copy-candidate"
+  },
+  "L0056_C014": {
+    "text": "Advanced workflows",
+    "kind": "property:eyebrow"
+  },
+  "L0057_C017": {
+    "text": "Advanced",
+    "kind": "property:shortTitle"
+  },
+  "L0058_C012": {
+    "text": "Go beyond a standard send",
+    "kind": "property:title"
+  },
+  "L0059_C011": {
+    "text": "Use deeper wallet tools for custom BCH transactions and contract-based workflows.",
+    "kind": "property:body"
+  },
+  "L0060_C015": {
+    "text": "Custom transaction builder",
+    "kind": "array-copy-candidate"
+  },
+  "L0060_C045": {
+    "text": "Contract instance management",
+    "kind": "array-copy-candidate"
+  },
+  "L0060_C077": {
+    "text": "Advanced review flows",
+    "kind": "array-copy-candidate"
+  },
+  "L0070_C027": {
+    "text": "OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0032_C027": {
-    "text": "Shipped product",
+  "L0071_C017": {
+    "text": "Self-custody for BCH and CashTokens.",
     "kind": "jsx-text"
   },
-  "L0033_C017": {
-    "text": "A self-custody wallet for BCH, CashTokens, and connected apps.",
-    "kind": "jsx-text"
-  },
-  "L0034_C043": {
+  "L0072_C043": {
     "text": "Send BCH, manage CashTokens, and connect to compatible applications from one self-custody wallet. OPTN Wallet also supports advanced BCH transaction workflows.",
     "kind": "jsx-text"
   },
-  "L0035_C124": {
+  "L0073_C124": {
     "text": "Get OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0035_C230": {
+  "L0073_C230": {
     "text": "View on GitHub",
     "kind": "jsx-text"
   },
-  "L0044_C025": {
-    "text": "Payments, assets, and apps",
+  "L0082_C025": {
+    "text": "Features",
     "kind": "jsx-text"
   },
-  "L0045_C015": {
-    "text": "Use BCH and CashTokens in connected experiences.",
+  "L0083_C015": {
+    "text": "What you can do",
     "kind": "jsx-text"
   },
-  "L0046_C011": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0047_C101": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0047_C109": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0047_C179": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0055_C027": {
-    "text": "OPTN Wallet → the OPTN stack",
+  "L0084_C040": {
+    "text": "From everyday payments to connected applications and advanced wallet workflows.",
     "kind": "jsx-text"
   },
-  "L0056_C017": {
-    "text": "The product that started the stack.",
+  "L0092_C027": {
+    "text": "Ecosystem bridge",
     "kind": "jsx-text"
   },
-  "L0057_C042": {
-    "text": "Building OPTN Wallet meant solving real product needs across tokens, app connections, infrastructure, and transactions. That experience shaped our developer stack and informs our work on programmable payments.",
+  "L0093_C017": {
+    "text": "Explore what surrounds the wallet",
     "kind": "jsx-text"
   },
-  "L0059_C047": {
+  "L0094_C042": {
+    "text": "Building OPTN Wallet created practical resources and experience across tokens, app connections, infrastructure, and transaction construction. Follow those layers through the wider BCH ecosystem.",
+    "kind": "jsx-text"
+  },
+  "L0096_C047": {
     "text": "Explore the OPTN stack",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0060_C043": {
-    "text": "Developer resources",
+  "L0097_C042": {
+    "text": "BCH ecosystem",
     "kind": "jsx-text"
   },
-  "L0061_C047": {
+  "L0098_C057": {
     "text": "BCH infrastructure",
     "kind": "jsx-text"
   },
-  "L0062_C044": {
+  "L0099_C044": {
     "text": "OPTN Engineering",
     "kind": "jsx-text"
   },
-  "L0063_C061": {
+  "L0100_C061": {
     "text": "Latest Wallet update",
     "kind": "jsx-text"
   },
-  "L0068_C017": {
+  "L0105_C017": {
     "text": "Try OPTN Wallet.",
     "kind": "jsx-attribute:title"
   }
@@ -3543,6 +4042,109 @@ This catalog is extracted from the current working tree. It includes App Router 
 {}
 ```
 
+### `app/components/ContactForm.jsx`
+
+```json
+{
+  "L0036_C011": {
+    "text": "Content-Type",
+    "kind": "property:Content-Type"
+  },
+  "L0036_C027": {
+    "text": "application/json",
+    "kind": "property:Content-Type"
+  },
+  "L0070_C017": {
+    "text": "Name",
+    "kind": "jsx-text"
+  },
+  "L0074_C017": {
+    "text": "Email",
+    "kind": "jsx-text"
+  },
+  "L0078_C017": {
+    "text": "Company or project",
+    "kind": "jsx-text"
+  },
+  "L0078_C043": {
+    "text": "Optional",
+    "kind": "jsx-text"
+  },
+  "L0082_C017": {
+    "text": "What can we help with?",
+    "kind": "jsx-text"
+  },
+  "L0084_C021": {
+    "text": "General inquiry",
+    "kind": "jsx-text"
+  },
+  "L0085_C021": {
+    "text": "OPTN Wallet",
+    "kind": "jsx-text"
+  },
+  "L0086_C021": {
+    "text": "BCH ecosystem or infrastructure",
+    "kind": "jsx-text"
+  },
+  "L0087_C021": {
+    "text": "Engineering",
+    "kind": "jsx-text"
+  },
+  "L0088_C021": {
+    "text": "Controlled-payment pilot",
+    "kind": "jsx-text"
+  },
+  "L0089_C021": {
+    "text": "Partnership",
+    "kind": "jsx-text"
+  },
+  "L0095_C015": {
+    "text": "Message",
+    "kind": "jsx-text"
+  },
+  "L0101_C011": {
+    "text": "Tell us what you are working on and what you need.",
+    "kind": "jsx-attribute:placeholder"
+  },
+  "L0106_C063": {
+    "text": "Website",
+    "kind": "jsx-text"
+  },
+  "L0112_C009": {
+    "text": "Sending… {value}",
+    "kind": "jsx-composed"
+  },
+  "L0113_C011_variant_1": {
+    "text": "Sending…",
+    "kind": "jsx-expression"
+  },
+  "L0113_C011_variant_2": {
+    "text": "Send message",
+    "kind": "jsx-expression"
+  },
+  "L0114_C064": {
+    "text": "→",
+    "kind": "jsx-text"
+  },
+  "L0116_C045": {
+    "text": "Your details are used to respond to this inquiry and are relayed by",
+    "kind": "jsx-text"
+  },
+  "L0118_C097": {
+    "text": "FormSubmit",
+    "kind": "jsx-text"
+  },
+  "L0118_C111": {
+    "text": ", which may retain submissions for up to 30 days.",
+    "kind": "jsx-text"
+  },
+  "L0123_C007": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  }
+}
+```
+
 ### `app/components/Footer.jsx`
 
 ```json
@@ -3556,126 +4158,118 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "array-copy-candidate"
   },
   "L0010_C008": {
-    "text": "Platform",
+    "text": "Ecosystem",
     "kind": "array-copy-candidate"
   },
   "L0011_C008": {
-    "text": "Solutions",
-    "kind": "array-copy-candidate"
-  },
-  "L0012_C008": {
-    "text": "Pricing",
-    "kind": "array-copy-candidate"
-  },
-  "L0016_C012": {
-    "text": "Build",
-    "kind": "property:title"
-  },
-  "L0018_C008": {
-    "text": "Developers",
-    "kind": "array-copy-candidate"
-  },
-  "L0019_C008": {
     "text": "Engineering",
     "kind": "array-copy-candidate"
   },
-  "L0020_C008": {
-    "text": "Infrastructure",
+  "L0012_C008": {
+    "text": "Work with OPTN",
     "kind": "array-copy-candidate"
   },
-  "L0024_C012": {
+  "L0016_C012": {
     "text": "Learn",
     "kind": "property:title"
   },
-  "L0026_C008": {
+  "L0018_C008": {
     "text": "About",
     "kind": "array-copy-candidate"
   },
-  "L0027_C008": {
+  "L0019_C008": {
     "text": "Blog",
     "kind": "array-copy-candidate"
   },
-  "L0028_C008": {
+  "L0020_C008": {
     "text": "CashTokens",
     "kind": "array-copy-candidate"
   },
-  "L0029_C008": {
+  "L0021_C008": {
     "text": "Covenants",
     "kind": "array-copy-candidate"
   },
-  "L0030_C008": {
+  "L0022_C008": {
     "text": "BCMR",
     "kind": "array-copy-candidate"
   },
-  "L0031_C008": {
+  "L0023_C008": {
     "text": "FAQ",
     "kind": "array-copy-candidate"
   },
-  "L0038_C005": {
+  "L0030_C005": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0039_C007": {
+  "L0031_C007": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0041_C009": {
+  "L0033_C009": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0052_C044": {
+  "L0044_C044": {
     "text": "OPTN Labs home",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0056_C015": {
+  "L0048_C015": {
     "text": "OPTN Labs",
     "kind": "jsx-attribute:alt"
   },
-  "L0061_C014": {
-    "text": "Wallet, infrastructure, and programmable payments on Bitcoin Cash.",
+  "L0053_C014": {
+    "text": "OPTN Wallet, open BCH resources, infrastructure, and engineering.",
     "kind": "jsx-text"
   },
-  "L0063_C009": {
+  "L0055_C009": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0067_C015": {
+  "L0059_C015": {
     "text": "Contact",
     "kind": "jsx-text"
   },
-  "L0068_C108": {
-    "text": "Talk to OPTN →",
+  "L0060_C066": {
+    "text": "Contact us →",
     "kind": "jsx-text"
   },
-  "L0069_C071": {
+  "L0061_C071": {
     "text": "info@optnlabs.com",
     "kind": "jsx-text"
   },
-  "L0070_C042": {
+  "L0062_C042": {
     "text": "Social links",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0071_C088": {
+  "L0063_C088": {
     "text": "OPTN Labs on X",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0072_C108": {
+  "L0064_C108": {
     "text": "OPTN Labs on LinkedIn",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0073_C104": {
+  "L0065_C096": {
+    "text": "Join the OPTN Telegram group",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0065_C138": {
+    "text": "Join the OPTN Telegram group",
+    "kind": "jsx-attribute:title"
+  },
+  "L0066_C104": {
     "text": "OPTN Labs on GitHub",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0078_C009": {
+  "L0071_C009": {
     "text": "© {value} OPTN Labs Inc.",
     "kind": "jsx-composed"
   },
-  "L0080_C032": {
+  "L0073_C032": {
     "text": "Privacy",
     "kind": "jsx-text"
   },
-  "L0081_C046": {
+  "L0074_C046": {
     "text": "info@optnlabs.com",
     "kind": "jsx-text"
   }
@@ -3690,148 +4284,101 @@ This catalog is extracted from the current working tree. It includes App Router 
     "text": "Wallet",
     "kind": "property:label"
   },
-  "L0011_C033": {
-    "text": "Build",
+  "L0011_C032": {
+    "text": "Ecosystem",
     "kind": "property:label"
   },
-  "L0012_C037": {
-    "text": "Infrastructure",
-    "kind": "property:label"
-  },
-  "L0013_C034": {
+  "L0012_C034": {
     "text": "Engineering",
     "kind": "property:label"
   },
-  "L0014_C028": {
+  "L0013_C028": {
     "text": "About",
     "kind": "property:label"
   },
-  "L0044_C042": {
+  "L0043_C042": {
     "text": "OPTN Labs home",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0048_C013": {
+  "L0047_C013": {
     "text": "OPTN Labs",
     "kind": "jsx-attribute:alt"
   },
-  "L0055_C009": {
+  "L0054_C009": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0055_C038": {
+  "L0054_C038": {
     "text": "Primary navigation",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0057_C013": {
+  "L0056_C013": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0061_C080_variant_1": {
+  "L0060_C080_variant_1": {
     "text": "Use light theme",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0061_C080_variant_2": {
+  "L0060_C080_variant_2": {
     "text": "Use dark theme",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0061_C144_variant_1": {
+  "L0060_C144_variant_1": {
     "text": "Use light theme",
     "kind": "jsx-attribute:title"
   },
-  "L0061_C144_variant_2": {
+  "L0060_C144_variant_2": {
     "text": "Use dark theme",
     "kind": "jsx-attribute:title"
   },
-  "L0062_C038_variant_1": {
+  "L0061_C038_variant_1": {
     "text": "☀",
     "kind": "jsx-expression"
   },
-  "L0062_C038_variant_2": {
+  "L0061_C038_variant_2": {
     "text": "☾",
     "kind": "jsx-expression"
   },
-  "L0064_C066": {
-    "text": "Talk to OPTN",
+  "L0063_C066": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0067_C009": {
+  "L0066_C009": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0070_C011_variant_1": {
+  "L0069_C011_variant_1": {
     "text": "Close menu",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0070_C011_variant_2": {
+  "L0069_C011_variant_2": {
     "text": "Open menu",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0078_C009": {
+  "L0077_C009": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0078_C014": {
+  "L0077_C014": {
     "text": "Mobile navigation",
     "kind": "jsx-attribute:aria-label"
   },
-  "L0080_C013": {
+  "L0079_C013": {
     "text": "{value}",
     "kind": "jsx-composed"
   },
-  "L0084_C076": {
-    "text": "Talk to OPTN",
+  "L0083_C076": {
+    "text": "Contact us",
     "kind": "jsx-text"
   },
-  "L0088_C013_variant_1": {
+  "L0087_C013_variant_1": {
     "text": "Use light theme",
     "kind": "jsx-expression"
   },
-  "L0088_C013_variant_2": {
+  "L0087_C013_variant_2": {
     "text": "Use dark theme",
     "kind": "jsx-expression"
-  }
-}
-```
-
-### `app/components/HomeStackStory.jsx`
-
-```json
-{
-  "L0005_C015": {
-    "text": "Use: OPTN Wallet",
-    "kind": "array-copy-candidate"
-  },
-  "L0006_C019": {
-    "text": "Build: developer resources",
-    "kind": "array-copy-candidate"
-  },
-  "L0007_C023": {
-    "text": "Build: BCH infrastructure",
-    "kind": "array-copy-candidate"
-  },
-  "L0008_C017": {
-    "text": "Control: programmable payments",
-    "kind": "array-copy-candidate"
-  },
-  "L0009_C020": {
-    "text": "Work: scoped Engineering",
-    "kind": "array-copy-candidate"
-  },
-  "L0021_C011": {
-    "text": "OPTN Labs progression: shipped OPTN Wallet; available developer resources and BCH infrastructure; programmable payments in development; and available scoped Engineering. Covenant enforcement applies only to BCH and CashToken funds deliberately placed under covenant control.",
-    "kind": "jsx-attribute:alt"
-  },
-  "L0029_C007": {
-    "text": "{value}",
-    "kind": "jsx-composed"
-  },
-  "L0029_C045": {
-    "text": "Explore OPTN products and services",
-    "kind": "jsx-attribute:aria-label"
-  },
-  "L0031_C011": {
-    "text": "{value}",
-    "kind": "jsx-composed"
   }
 }
 ```
@@ -4018,27 +4565,15 @@ This catalog is extracted from the current working tree. It includes App Router 
     "text": "OPTN Wallet app browser with category filters and app cards",
     "kind": "property:alt"
   },
-  "L0050_C014": {
-    "text": "Airdrop setup",
-    "kind": "property:title"
+  "L0054_C025": {
+    "text": "Product tour",
+    "kind": "jsx-text"
   },
-  "L0051_C020": {
-    "text": "Set up recipient addresses for a token or BCH distribution.",
-    "kind": "property:description"
-  },
-  "L0052_C012": {
-    "text": "OPTN Wallet airdrop setup screen with manual and token-based recipient options",
-    "kind": "property:alt"
-  },
-  "L0060_C025": {
+  "L0055_C015": {
     "text": "Inside OPTN Wallet",
     "kind": "jsx-text"
   },
-  "L0061_C015": {
-    "text": "A closer look at the shipped wallet.",
-    "kind": "jsx-text"
-  },
-  "L0062_C040": {
+  "L0056_C040": {
     "text": "Explore the app’s wallet, assets, CashTokens, connected apps, and payment screens.",
     "kind": "jsx-text"
   }
@@ -4256,7 +4791,7 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "jsx-text"
   },
   "L0059_C010": {
-    "text": "Reference architecture · Platform in development",
+    "text": "Policy-aware payment flow",
     "kind": "jsx-text"
   },
   "L0067_C087": {
@@ -4360,6 +4895,73 @@ This catalog is extracted from the current working tree. It includes App Router 
 {}
 ```
 
+### `app/components/WalletFeatureCarouselClient.jsx`
+
+```json
+{
+  "L0042_C007": {
+    "text": "OPTN Wallet features",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0047_C009": {
+    "text": "{value} / {value}",
+    "kind": "jsx-composed"
+  },
+  "L0049_C056": {
+    "text": "Previous wallet feature",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0049_C093": {
+    "text": "←",
+    "kind": "jsx-text"
+  },
+  "L0050_C052": {
+    "text": "Next wallet feature",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0050_C085": {
+    "text": "→",
+    "kind": "jsx-text"
+  },
+  "L0057_C009": {
+    "text": "{value}, {value} of {value}",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0061_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0062_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0063_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0064_C009": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0065_C050": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0069_C007": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  },
+  "L0069_C057": {
+    "text": "Choose a wallet feature",
+    "kind": "jsx-attribute:aria-label"
+  },
+  "L0071_C011": {
+    "text": "{value}",
+    "kind": "jsx-composed"
+  }
+}
+```
+
 ### `app/layout.jsx`
 
 ```json
@@ -4373,11 +4975,11 @@ This catalog is extracted from the current working tree. It includes App Router 
     "kind": "property:variable"
   },
   "L0014_C019": {
-    "text": "OPTN Labs | Bitcoin Cash Products & Programmable Payments",
+    "text": "OPTN Labs | OPTN Wallet & Bitcoin Cash Ecosystem",
     "kind": "variable-copy-candidate"
   },
   "L0016_C003": {
-    "text": "Bitcoin Cash products and infrastructure for people, applications, and AI agents—from OPTN Wallet and developer tooling to programmable payment systems in development.",
+    "text": "OPTN Labs builds OPTN Wallet and supports the Bitcoin Cash ecosystem with open resources, infrastructure, engineering, and controlled-payment pilot projects.",
     "kind": "variable-copy-candidate"
   },
   "L0034_C015": {

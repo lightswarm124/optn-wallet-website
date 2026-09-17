@@ -4,35 +4,47 @@ import { createPageMetadata } from "../../lib/seo";
 const faqs = [
   {
     q: "What is OPTN Labs?",
-    a: "OPTN Labs is a Canadian technology company building Bitcoin Cash products and infrastructure for self-custody, digital assets, developer integrations, and programmable payments. OPTN Wallet is its shipped product; the programmable-payment platform is in development.",
+    a: "OPTN Labs is the company behind OPTN Wallet. We also publish resources for the Bitcoin Cash ecosystem, operate supporting infrastructure, provide engineering services, and explore controlled-payment pilot projects.",
   },
   {
-    q: "What is OPTN Wallet?",
-    a: "OPTN Wallet is a shipped self-custody BCH wallet for everyday payments, CashTokens, connected applications, and advanced transaction workflows. Its open implementation also serves as a reference for BCH builders.",
+    q: "What can I use today?",
+    a: "OPTN Wallet is our released product for self-custody BCH and CashTokens. Builders can also use our public code, technical resources, token and metadata guidance, and available Bitcoin Cash infrastructure services.",
   },
   {
-    q: "Does OPTN hold customer keys or funds?",
-    a: "No. OPTN Wallet and its open tools are designed around self-custody, so users retain control of their keys and funds. Any custom operating architecture is scoped explicitly.",
+    q: "What can I do with OPTN Wallet?",
+    a: "You can send and receive BCH, manage fungible tokens and NFTs, connect to compatible apps through WalletConnect, review transaction and message requests, protect and restore your wallet, and use advanced transaction and contract tools.",
   },
   {
-    q: "What is available today, and what is still in development?",
-    a: "OPTN Wallet, public developer resources, Bitcoin Cash infrastructure, and scoped engineering are available today. Builder and the in-wallet add-on system remain in development.",
+    q: "Does OPTN hold Wallet users' keys or funds?",
+    a: "No. OPTN Wallet is self-custody software: users control their own wallet and recovery phrase. Protecting and securely backing up that recovery phrase is essential.",
+  },
+  {
+    q: "What does the ecosystem section include?",
+    a: "It connects builders to OPTN Wallet, CashTokens and BCMR metadata guidance, covenant and contract resources, infrastructure, token data, open-source code, and practical implementation experience.",
   },
   {
     q: "What Bitcoin Cash services are available?",
-    a: "The public infrastructure surface includes Electrum, Chaingraph, BCMR, IPFS, and token data access. TokenIndexer provides token balances, holders, metadata, and app-facing data, with public status for what is currently exposed.",
+    a: "The infrastructure section covers Electrum connectivity, Chaingraph queries, BCMR metadata, IPFS content, and TokenIndexer data. Check the live service status or contact us for the current access options.",
   },
   {
-    q: "Can I use OPTN's open tools without OPTN?",
-    a: "Yes. Public tools, documentation, and code are available for teams that want to explore and build independently. OPTN's engineering services are available when you want help shaping, integrating, testing, or shipping a workflow.",
+    q: "Can I use OPTN's open tools independently?",
+    a: "Yes. Public code, documentation, and technical resources are available for teams that want to explore and build independently. OPTN engineering is available when you want help with architecture, integration, testing, or release preparation.",
+  },
+  {
+    q: "What are controlled-payment pilot projects?",
+    a: "They are WIP explorations for software and AI agents that need to make payments within defined rules. A pilot can examine permitted recipients, amounts, transaction paths, failure cases, and owner recovery for a specific workflow.",
+  },
+  {
+    q: "Why separate signing authority from payment rules?",
+    a: "A key establishes who may authorize a transaction. It does not necessarily restrict the recipient, amount, structure, or next state. Controlled-payment pilots explore how those financial boundaries can be defined separately for funds placed in a specific workflow.",
   },
   {
     q: "Can OPTN help with CashTokens, covenants, or CashScript?",
-    a: "Yes. OPTN can help with CashToken-aware wallet and application flows, covenant patterns, transaction planning, and CashScript implementation. You do not need to know CashScript before starting a conversation.",
+    a: "Yes. OPTN can help with CashToken-aware wallet and application flows, covenant patterns, transaction planning, and CashScript implementation. You do not need to know the implementation details before contacting us.",
   },
   {
-    q: "When should I contact OPTN about engineering or custom work?",
-    a: "Reach out when you need production workflow design, covenant or transaction work, wallet or CashToken integration, infrastructure guidance, testing, security review, or release support.",
+    q: "When should I contact OPTN?",
+    a: "Contact us when you need help with OPTN Wallet, BCH infrastructure, an ecosystem integration, engineering work, or a controlled-payment pilot project.",
   },
   {
     q: "What should I send when I reach out?",
@@ -41,9 +53,9 @@ const faqs = [
 ];
 
 export const metadata = createPageMetadata({
-  title: "OPTN Labs FAQ | Wallets, Infrastructure & BCH Engineering",
+  title: "OPTN Labs FAQ | Wallet, Ecosystem & Pilot Projects",
   description:
-    "Frequently asked questions about OPTN Labs, OPTN Wallet, Bitcoin Cash infrastructure, and BCH implementation support.",
+    "Answers about OPTN Wallet, self-custody, Bitcoin Cash ecosystem resources, infrastructure, engineering, and controlled-payment pilot projects.",
   path: "/faq",
 });
 
@@ -70,15 +82,15 @@ export default function FaqPage() {
             Frequently asked questions
           </h1>
           <p className="mt-5 text-base leading-7 text-white/75 md:text-lg md:leading-8">
-            A short answer page for teams deciding whether OPTN Labs is the
-            right fit for their BCH product, wallet, or infrastructure work.
+            Straight answers about OPTN Wallet, self-custody, ecosystem
+            resources, engineering, and controlled-payment pilot projects.
           </p>
           <div className="mt-8 flex flex-col gap-3 sm:flex-row sm:justify-center">
             <Link
               href="/#contact"
               className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-medium text-background-dark transition-colors hover:bg-white/90"
             >
-              Contact OPTN
+              Contact us
             </Link>
             <Link
               href="/wallet"
@@ -112,7 +124,7 @@ export default function FaqPage() {
               href="/#contact"
               className="inline-flex h-12 items-center justify-center rounded-full bg-white px-6 text-sm font-medium text-background-dark transition-colors hover:bg-white/90"
             >
-              Build with OPTN
+              Contact us
             </Link>
             <Link
               href="/blog"

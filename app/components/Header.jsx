@@ -8,8 +8,7 @@ import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/outline";
 
 const navItems = [
   { href: "/wallet", label: "Wallet" },
-  { href: "/developers", label: "Build" },
-  { href: "/infrastructure", label: "Infrastructure" },
+  { href: "/ecosystem", label: "Ecosystem" },
   { href: "/engineering", label: "Engineering" },
   { href: "/about", label: "About" },
 ];
@@ -61,7 +60,7 @@ export default function Header() {
           <button type="button" className="theme-toggle" onClick={toggleTheme} aria-label={`Use ${theme === "dark" ? "light" : "dark"} theme`} title={`Use ${theme === "dark" ? "light" : "dark"} theme`}>
             <span aria-hidden="true">{theme === "dark" ? "☀" : "☾"}</span>
           </button>
-          <Link href="/#contact" className="button button-small">Talk to OPTN</Link>
+          <Link href="/#contact" className="button button-small">Contact us</Link>
         </nav>
 
         <button
@@ -82,7 +81,7 @@ export default function Header() {
             </Link>
           ))}
           <Link href="/#contact" className="button" onClick={closeSidebar}>
-            Talk to OPTN
+            Contact us
           </Link>
           <button type="button" className="theme-toggle mobile-theme" onClick={toggleTheme}>
             {theme === "dark" ? "Use light theme" : "Use dark theme"}

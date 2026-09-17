@@ -37,9 +37,9 @@ const productLayers = [
 
 const relatedResources = [
   ["CashTokens", "/cashtokens"],
-  ["Infrastructure", "/infrastructure"],
+  ["Infrastructure", "/ecosystem#infrastructure"],
   ["OPTN Wallet", "/wallet"],
-  ["Developer resources", "/developers"],
+  ["Ecosystem", "/ecosystem"],
 ];
 
 const relatedReading = [
@@ -135,8 +135,8 @@ export default function TokenMetadataPage() {
               reference separate from its display name.
             </p>
             <div className="hero-actions">
-              <ArrowLink href="/infrastructure">See the infrastructure layer</ArrowLink>
-              <ArrowLink href="/developers">Open developer resources</ArrowLink>
+              <ArrowLink href="/ecosystem#infrastructure">See the infrastructure layer</ArrowLink>
+              <ArrowLink href="/ecosystem">Explore the ecosystem</ArrowLink>
             </div>
           </div>
           <div className="simple-list">
@@ -232,7 +232,7 @@ export default function TokenMetadataPage() {
       <FinalCTA
         title="Building a token-aware BCH product?"
         body="Bring the category, wallet surface, metadata, and integration problem. We can help connect the layers."
-        label="Talk to OPTN"
+        label="Contact us"
       />
     </div>
   );
